@@ -1,0 +1,21 @@
+{
+  "train/loss": true,
+  "train/graded_frame_acc": true,
+  "train/grad_norm": true,
+  "train/lr": true,
+  "throughput/samples_per_s": true,
+  "epoch": true,
+
+  "eval/loss": true,
+  "eval/WER": true,
+  "eval/CER": true,
+  "eval/SER": true,
+  "eval/graded_frame_acc": true,
+  "eval/content_frame_acc": true,
+  "eval/fill_frame_acc": true,
+  "eval/fill_pred_rate": true,
+  "eval/pred_entropy": true,
+  "eval/distinct_nonfill_tokens": true,
+
+  "samples": true
+}

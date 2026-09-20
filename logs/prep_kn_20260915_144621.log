@@ -1,0 +1,45 @@
+[dev] reading 37240 wav headers ...
+== dev: in=37240 (73.8 h)  kept=31997 (64.3 h)  dropped=5243
+     drop has_digit                    2683
+     drop dur<0.5                      1718
+     drop too_many_chars_for_50fps     468
+     drop dur>20.0                     373
+     drop empty_after_norm             1
+     lang en     in=3738 kept=3619 drop=119
+     lang kn     in=27846 kept=22852 drop=4994
+     lang kn-en  in=5656 kept=5526 drop=130
+[train] reading 532245 wav headers ...
+== train: in=532245 (1168.0 h)  kept=478302 (1071.1 h)  dropped=53943
+     drop has_digit                    27442
+     drop dur<0.5                      19142
+     drop too_many_chars_for_50fps     3978
+     drop dur>20.0                     3319
+     drop empty_after_norm             62
+     lang en     in=82570 kept=77104 drop=5466
+     lang kn     in=237036 kept=193322 drop=43714
+     lang kn-en  in=212639 kept=207876 drop=4763
+args: {'train': '/speech/abhishek/kannada_data/merged/train_kn_en_merged.jsonl', 'dev': '/speech/abhishek/kannada_data/merged/dev_kn_en_merged.jsonl', 'test_glob': '/speech/abhishek/kannada_data/testsets/jsonl/*_kannada_test.jsonl', 'out_dir': '/speech/abhishek/indic-nar-filler_asr/data_kn', 'vocab_dir': '/speech/abhishek/indic-nar-filler_asr/vocab_kn', 'min_dur': 0.5, 'max_dur': 20.0, 'eos_repeat': 3, 'workers': 32, 'limit': 0}
+== dev: in=37240 (73.8 h)  kept=31997 (64.3 h)  dropped=5243
+     drop has_digit                    2683
+     drop dur<0.5                      1718
+     drop too_many_chars_for_50fps     468
+     drop dur>20.0                     373
+     drop empty_after_norm             1
+     lang en     in=3738 kept=3619 drop=119
+     lang kn     in=27846 kept=22852 drop=4994
+     lang kn-en  in=5656 kept=5526 drop=130
+== train: in=532245 (1168.0 h)  kept=478302 (1071.1 h)  dropped=53943
+     drop has_digit                    27442
+     drop dur<0.5                      19142
+     drop too_many_chars_for_50fps     3978
+     drop dur>20.0                     3319
+     drop empty_after_norm             62
+     lang en     in=82570 kept=77104 drop=5466
+     lang kn     in=237036 kept=193322 drop=43714
+     lang kn-en  in=212639 kept=207876 drop=4763
+== vocab: 98 entries (93 chars + | <unk> <pad> <s> </s>) from 478302 train utts -> /speech/abhishek/indic-nar-filler_asr/vocab_kn; tokenizer adds <fill>,<mask>
+     dev chars not in train vocab (-> <unk>): {}
+== test_fleurs: 838 utts, 3.18 h, refs_with_digits=165, oov_chars={}
+== test_indictts: 100 utts, 0.22 h, refs_with_digits=2, oov_chars={}
+== test_kathbath: 1388 utts, 3.09 h, refs_with_digits=26, oov_chars={}
+== test_kathbath_noisy: 1388 utts, 3.09 h, refs_with_digits=26, oov_chars={}

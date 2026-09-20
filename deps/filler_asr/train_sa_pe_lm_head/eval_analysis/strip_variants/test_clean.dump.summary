@@ -1,0 +1,10 @@
+{
+  "run": "full960_sa8_pe_fps25_lin",
+  "set": "test_clean",
+  "n": 2620,
+  "WER": 0.12043517954960438,
+  "CER": 0.06132916563066103,
+  "SER": 0.34961832061068704,
+  "cap": "min(first </s>, n_keep)",
+  "ckpt": "runs/full960_sa8_pe_fps25_lin/best.pt"
+}

@@ -1,0 +1,57 @@
+{
+  "run": "full960_sa8_pe_fps25_lin",
+  "set": "test_clean",
+  "n": 2620,
+  "fillrun_k": 3,
+  "ckpt": "runs/full960_sa8_pe_fps25_lin/best.pt",
+  "variants": [
+    {
+      "variant": "eos",
+      "cut": "eos",
+      "collapse": false,
+      "WER": 0.12043517954960438,
+      "CER": 0.06132916563066103,
+      "SER": 0.34961832061068704
+    },
+    {
+      "variant": "eos+collapse",
+      "cut": "eos",
+      "collapse": true,
+      "WER": 0.20235468654899574,
+      "CER": 0.07899335772386602,
+      "SER": 0.8187022900763359
+    },
+    {
+      "variant": "fillrun3",
+      "cut": "fillrun",
+      "collapse": false,
+      "WER": 0.12039713937918442,
+      "CER": 0.061545838809363124,
+      "SER": 0.34961832061068704
+    },
+    {
+      "variant": "eos_or_fillrun3",
+      "cut": "eos_or_fillrun",
+      "collapse": false,
+      "WER": 0.12039713937918442,
+      "CER": 0.06154939082868611,
+      "SER": 0.34961832061068704
+    },
+    {
+      "variant": "eos|fillrun+coll",
+      "cut": "eos_or_fillrun",
+      "collapse": true,
+      "WER": 0.20231664637857577,
+      "CER": 0.07920647888324513,
+      "SER": 0.8187022900763359
+    }
+  ],
+  "best": {
+    "variant": "fillrun3",
+    "cut": "fillrun",
+    "collapse": false,
+    "WER": 0.12039713937918442,
+    "CER": 0.061545838809363124,
+    "SER": 0.34961832061068704
+  }
+}

@@ -1,0 +1,142 @@
+/speech/tomson/indic-nar-filler_asr/decode_hindi_testsets.py:124: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(ckpt, map_location="cpu")
+[ckpt] runs/hi_d2vaqcCTC_sa8_ACMLM_alibi_fps50_fw003_exp150/best.pt  step=31000 epoch=138
+[enc ] /speech/akshaya/fairseq_expxx/hindi/24kup_model/checkpoint_best.pt
+[cfg ] fps=50 steps=32 sa=8 pos=alibi pe=True dev=cuda
+INFO:Data2VecAQCEncoder:[data2vec_aqc] ckpt:             /speech/akshaya/fairseq_expxx/hindi/24kup_model/checkpoint_best.pt
+INFO:Data2VecAQCEncoder:[data2vec_aqc] outer _name:      wav2vec_ctc  (CTC fine-tuned)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] inner _name:      data2vec_audio
+INFO:Data2VecAQCEncoder:[data2vec_aqc] layer_norm_first: False
+INFO:Data2VecAQCEncoder:[data2vec_aqc] tgt_layer:        None (None=run all blocks)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped outside w2v_model.*: ['w2v_encoder.proj.bias', 'w2v_encoder.proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped INSIDE body (AQC extras): ['contr_proj.bias', 'contr_proj.weight', 'project_q.bias', 'project_q.weight', 'quantizer.vars', 'quantizer.weight_proj.bias', 'quantizer.weight_proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] missing keys (expect empty/pretraining-only): []
+
+== indictts  (100 utts) -> /speech/akshaya/fairseq_expxx/hindi/data_fs/indictts_hindi_test ==
+  [indictts] 100/100  5.1 utt/s
+  [indictts] done 100 utts in 20s
+  [indictts] %WER 30.39  %SER 91.0  (words=2030)
+
+== fleurs  (418 utts) -> /speech/akshaya/fairseq_expxx/hindi/data_fs/fleurs_hindi_test ==
+  [fleurs] 100/418  5.1 utt/s
+  [fleurs] 200/418  5.2 utt/s
+  [fleurs] 300/418  5.2 utt/s
+  [fleurs] 400/418  5.2 utt/s
+  [fleurs] done 418 utts in 80s
+  [fleurs] %WER 30.59  %SER 99.28  (words=10237)
+
+== kathbath  (1929 utts) -> /speech/akshaya/fairseq_expxx/hindi/data_fs/kathbath_hindi_test ==
+  [kathbath] 100/1929  5.4 utt/s
+  [kathbath] 200/1929  5.4 utt/s
+  [kathbath] 300/1929  5.4 utt/s
+  [kathbath] 400/1929  5.4 utt/s
+  [kathbath] 500/1929  5.4 utt/s
+  [kathbath] 600/1929  5.4 utt/s
+  [kathbath] 700/1929  5.4 utt/s
+  [kathbath] 800/1929  5.4 utt/s
+  [kathbath] 900/1929  5.4 utt/s
+  [kathbath] 1000/1929  5.4 utt/s
+  [kathbath] 1100/1929  5.4 utt/s
+  [kathbath] 1200/1929  5.4 utt/s
+  [kathbath] 1300/1929  5.5 utt/s
+  [kathbath] 1400/1929  5.5 utt/s
+  [kathbath] 1500/1929  5.5 utt/s
+  [kathbath] 1600/1929  5.5 utt/s
+  [kathbath] 1700/1929  5.5 utt/s
+  [kathbath] 1800/1929  5.5 utt/s
+  [kathbath] 1900/1929  5.5 utt/s
+  [kathbath] done 1929 utts in 352s
+  [kathbath] %WER 25.82  %SER 94.61  (words=22598)
+
+== kathbath_noisy  (1929 utts) -> /speech/akshaya/fairseq_expxx/hindi/data_fs/kathbath_noisy_hindi_test ==
+  [kathbath_noisy] 100/1929  5.5 utt/s
+  [kathbath_noisy] 200/1929  5.5 utt/s
+  [kathbath_noisy] 300/1929  5.5 utt/s
+  [kathbath_noisy] 400/1929  5.5 utt/s
+  [kathbath_noisy] 500/1929  5.5 utt/s
+  [kathbath_noisy] 600/1929  5.5 utt/s
+  [kathbath_noisy] 700/1929  5.5 utt/s
+  [kathbath_noisy] 800/1929  5.5 utt/s
+  [kathbath_noisy] 900/1929  5.5 utt/s
+  [kathbath_noisy] 1000/1929  5.5 utt/s
+  [kathbath_noisy] 1100/1929  5.5 utt/s
+  [kathbath_noisy] 1200/1929  5.5 utt/s
+  [kathbath_noisy] 1300/1929  5.5 utt/s
+  [kathbath_noisy] 1400/1929  5.5 utt/s
+  [kathbath_noisy] 1500/1929  5.5 utt/s
+  [kathbath_noisy] 1600/1929  5.5 utt/s
+  [kathbath_noisy] 1700/1929  5.5 utt/s
+  [kathbath_noisy] 1800/1929  5.5 utt/s
+  [kathbath_noisy] 1900/1929  5.5 utt/s
+  [kathbath_noisy] done 1929 utts in 350s
+  [kathbath_noisy] %WER 26.91  %SER 95.59  (words=22598)
+
+== evaliitm  (2566 utts) -> /speech/akshaya/fairseq_expxx/hindi/data_fs/eval_IITM_Hindi ==
+  [evaliitm] 100/2566  5.4 utt/s
+  [evaliitm] 200/2566  5.4 utt/s
+  [evaliitm] 300/2566  5.4 utt/s
+  [evaliitm] 400/2566  5.4 utt/s
+  [evaliitm] 500/2566  5.4 utt/s
+  [evaliitm] 600/2566  5.4 utt/s
+  [evaliitm] 700/2566  5.4 utt/s
+  [evaliitm] 800/2566  5.4 utt/s
+  [evaliitm] 900/2566  5.4 utt/s
+  [evaliitm] 1000/2566  5.4 utt/s
+  [evaliitm] 1100/2566  5.4 utt/s
+  [evaliitm] 1200/2566  5.4 utt/s
+  [evaliitm] 1300/2566  5.5 utt/s
+  [evaliitm] 1400/2566  5.4 utt/s
+  [evaliitm] 1500/2566  5.4 utt/s
+  [evaliitm] 1600/2566  5.4 utt/s
+  [evaliitm] 1700/2566  5.4 utt/s
+  [evaliitm] 1800/2566  5.4 utt/s
+  [evaliitm] 1900/2566  5.4 utt/s
+  [evaliitm] 2000/2566  5.4 utt/s
+  [evaliitm] 2100/2566  5.4 utt/s
+  [evaliitm] 2200/2566  5.4 utt/s
+  [evaliitm] 2300/2566  5.4 utt/s
+  [evaliitm] 2400/2566  5.4 utt/s
+  [evaliitm] 2500/2566  5.4 utt/s
+  [evaliitm] done 2566 utts in 471s
+  [evaliitm] %WER 33.3  %SER 99.14  (words=40208)
+
+== commonvoice  (1727 utts) -> /speech/akshaya/fairseq_expxx/hindi/data_fs/commonvoice_hindi_test ==
+  [commonvoice] 100/1727  5.5 utt/s
+  [commonvoice] 200/1727  5.6 utt/s
+  [commonvoice] 300/1727  5.6 utt/s
+  [commonvoice] 400/1727  5.6 utt/s
+  [commonvoice] 500/1727  5.6 utt/s
+  [commonvoice] 600/1727  5.6 utt/s
+  [commonvoice] 700/1727  5.6 utt/s
+  [commonvoice] 800/1727  5.6 utt/s
+  [commonvoice] 900/1727  5.6 utt/s
+  [commonvoice] 1000/1727  5.6 utt/s
+  [commonvoice] 1100/1727  5.6 utt/s
+  [commonvoice] 1200/1727  5.6 utt/s
+  [commonvoice] 1300/1727  5.6 utt/s
+  [commonvoice] 1400/1727  5.6 utt/s
+  [commonvoice] 1500/1727  5.6 utt/s
+  [commonvoice] 1600/1727  5.6 utt/s
+  [commonvoice] 1700/1727  5.6 utt/s
+  [commonvoice] done 1727 utts in 311s
+  [commonvoice] %WER 31.55  %SER 91.6  (words=16550)
+
+==============================================================
+testset            utts    words     WER%     SER%
+--------------------------------------------------------------
+indictts            100     2030    30.39     91.0
+fleurs              418    10237    30.59    99.28
+kathbath           1929    22598    25.82    94.61
+kathbath_noisy     1929    22598    26.91    95.59
+evaliitm           2566    40208     33.3    99.14
+commonvoice        1727    16550    31.55     91.6
+==============================================================
+[out] per-set .ref/.hyp/.wer + SUMMARY.tsv -> runs/hi_d2vaqcCTC_sa8_ACMLM_alibi_fps50_fw003_exp150/decode_testsets_N32
+DEBUG:filelock:Attempting to acquire lock 128732776662448 on /speech/tomson/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Lock 128732776662448 acquired on /speech/tomson/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Attempting to release lock 128732776662448 on /speech/tomson/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Lock 128732776662448 released on /speech/tomson/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Attempting to acquire lock 128732776662976 on /speech/tomson/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Lock 128732776662976 acquired on /speech/tomson/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Attempting to release lock 128732776662976 on /speech/tomson/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Lock 128732776662976 released on /speech/tomson/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock

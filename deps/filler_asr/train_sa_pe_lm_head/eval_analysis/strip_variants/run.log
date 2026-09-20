@@ -1,0 +1,52 @@
+Loading weights:   0%|          | 0/808 [00:00<?, ?it/s]Loading weights:  19%|█▉        | 153/808 [00:00<00:00, 1413.52it/s]Loading weights:  37%|███▋      | 295/808 [00:00<00:00, 1153.73it/s]Loading weights:  51%|█████     | 413/808 [00:00<00:00, 1143.44it/s]Loading weights:  65%|██████▌   | 529/808 [00:00<00:00, 1101.29it/s]Loading weights:  79%|███████▉  | 640/808 [00:00<00:00, 1085.43it/s]Loading weights:  93%|█████████▎| 749/808 [00:00<00:00, 982.54it/s] Loading weights: 100%|██████████| 808/808 [00:00<00:00, 1112.99it/s]
+[transformers] [1mFillerHubertSAModel LOAD REPORT[0m from: /speech/tomson/filler_asr/models/hubert-xlarge-ls960-ft
+Key                                                          | Status   |                                                                                           
+-------------------------------------------------------------+----------+-------------------------------------------------------------------------------------------
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.self_attn.out_proj.weight | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.norm1.bias                | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.norm1.weight              | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.norm2.bias                | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.linear2.weight            | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.norm2.weight              | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.self_attn.in_proj_bias    | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.linear1.weight            | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.self_attn.in_proj_weight  | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.linear1.bias              | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.self_attn.out_proj.bias   | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.linear2.bias              | MISSING  |                                                                                           
+lm_head.bias                                                 | MISMATCH | Reinit due to size mismatch - ckpt: torch.Size([32]) vs model:torch.Size([33])            
+lm_head.weight                                               | MISMATCH | Reinit due to size mismatch - ckpt: torch.Size([32, 1280]) vs model:torch.Size([33, 1280])
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+- MISMATCH:	ckpt weights were loaded, but they did not match the original empty weight shapes.
+[ckpt] runs/full960_sa8_pe_fps25_lin/best.pt  sa_layers=8  step=28000  best_wer=0.2051676407259305
+[transformers] `use_return_dict` is deprecated! Use `return_dict` instead!
+  ..200/2620  running WER=0.1284
+  ..400/2620  running WER=0.0945
+  ..600/2620  running WER=0.1084
+  ..800/2620  running WER=0.0997
+  ..1000/2620  running WER=0.1005
+  ..1200/2620  running WER=0.1106
+  ..1400/2620  running WER=0.1175
+  ..1600/2620  running WER=0.1204
+  ..1800/2620  running WER=0.1174
+  ..2000/2620  running WER=0.1136
+  ..2200/2620  running WER=0.1108
+  ..2400/2620  running WER=0.1173
+  ..2600/2620  running WER=0.1205
+
+[done] full960_sa8_pe_fps25_lin test_clean n=2620 WER=0.1204 CER=0.0613 SER=0.3496
+[out ] eval_analysis/strip_variants/test_clean.decodes.txt
+[out ] eval_analysis/strip_variants/test_clean.hyp.txt
+[out ] eval_analysis/strip_variants/test_clean.ref.txt
+
+=== stripping-variant comparison  (n=2620, fillrun_k=3) ===
+variant                     WER      CER      SER
+eos                      0.1204   0.0613   0.3496
+eos+collapse             0.2024   0.0790   0.8187
+fillrun3                 0.1204   0.0615   0.3496
+eos_or_fillrun3          0.1204   0.0615   0.3496
+eos|fillrun+coll         0.2023   0.0792   0.8187
+[best] fillrun3  WER=0.1204  (baseline eos=0.1204)
+[out ] eval_analysis/strip_variants/test_clean.strip_variants.summary

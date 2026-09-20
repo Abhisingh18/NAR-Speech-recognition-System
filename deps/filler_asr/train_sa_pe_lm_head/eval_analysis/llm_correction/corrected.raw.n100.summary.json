@@ -1,0 +1,13 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "mode": "raw",
+  "n": 100,
+  "corpus_wer_before": 0.11167945439045183,
+  "corpus_wer_after": 0.24254049445865303,
+  "utts_improved": 15,
+  "utts_worsened": 45,
+  "utts_same_wer": 40,
+  "gate": false,
+  "llm_edits_rejected_by_gate": 0,
+  "seconds": 75
+}

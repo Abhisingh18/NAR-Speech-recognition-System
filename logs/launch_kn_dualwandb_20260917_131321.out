@@ -1,0 +1,379 @@
+[run_kn] log -> /speech/abhishek/indic-nar-filler_asr/logs/train_kn_ep15resume_constlr2e6_75ep_dualwandb_20260917_131321.log
+[run] env=/speech/abhishek/miniconda3/envs/indic-nar-filler_asr GPUs=6,7,8,9 (n=4)  eff_batch=256  out=/speech/abhishek/indic-nar-filler_asr/runs/kn_en_d2vaqcKN_sa8_ACMLM_alibi_fps50_fw003_exp
+[run] encoder=/speech/abhishek/kannada_data/encoders/SPRING_INX_data2vec_aqc_Kannada.pt
+W0917 13:13:23.278000 133327368234048 torch/distributed/run.py:779] 
+W0917 13:13:23.278000 133327368234048 torch/distributed/run.py:779] *****************************************
+W0917 13:13:23.278000 133327368234048 torch/distributed/run.py:779] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0917 13:13:23.278000 133327368234048 torch/distributed/run.py:779] *****************************************
+[W917 13:13:26.537689525 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+[W917 13:13:27.137288160 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+[W917 13:13:27.144720799 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+[W917 13:13:27.179526170 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+INFO:Data2VecAQCEncoder:[data2vec_aqc] ckpt:             /speech/abhishek/kannada_data/encoders/SPRING_INX_data2vec_aqc_Kannada.pt
+INFO:Data2VecAQCEncoder:[data2vec_aqc] outer _name:      wav2vec_ctc  (CTC fine-tuned)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] inner _name:      data2vec_audio
+INFO:Data2VecAQCEncoder:[data2vec_aqc] layer_norm_first: False
+INFO:Data2VecAQCEncoder:[data2vec_aqc] tgt_layer:        None (None=run all blocks)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped outside w2v_model.*: ['w2v_encoder.proj.bias', 'w2v_encoder.proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped INSIDE body (AQC extras): ['contr_proj.bias', 'contr_proj.weight', 'project_q.bias', 'project_q.weight', 'quantizer.vars', 'quantizer.weight_proj.bias', 'quantizer.weight_proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] missing keys (expect empty/pretraining-only): []
+INFO:Data2VecAQCEncoder:[data2vec_aqc] ckpt:             /speech/abhishek/kannada_data/encoders/SPRING_INX_data2vec_aqc_Kannada.pt
+INFO:Data2VecAQCEncoder:[data2vec_aqc] outer _name:      wav2vec_ctc  (CTC fine-tuned)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] inner _name:      data2vec_audio
+INFO:Data2VecAQCEncoder:[data2vec_aqc] layer_norm_first: False
+INFO:Data2VecAQCEncoder:[data2vec_aqc] tgt_layer:        None (None=run all blocks)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped outside w2v_model.*: ['w2v_encoder.proj.bias', 'w2v_encoder.proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped INSIDE body (AQC extras): ['contr_proj.bias', 'contr_proj.weight', 'project_q.bias', 'project_q.weight', 'quantizer.vars', 'quantizer.weight_proj.bias', 'quantizer.weight_proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] missing keys (expect empty/pretraining-only): []
+INFO:Data2VecAQCEncoder:[data2vec_aqc] ckpt:             /speech/abhishek/kannada_data/encoders/SPRING_INX_data2vec_aqc_Kannada.pt
+INFO:Data2VecAQCEncoder:[data2vec_aqc] outer _name:      wav2vec_ctc  (CTC fine-tuned)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] inner _name:      data2vec_audio
+INFO:Data2VecAQCEncoder:[data2vec_aqc] layer_norm_first: False
+INFO:Data2VecAQCEncoder:[data2vec_aqc] tgt_layer:        None (None=run all blocks)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped outside w2v_model.*: ['w2v_encoder.proj.bias', 'w2v_encoder.proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped INSIDE body (AQC extras): ['contr_proj.bias', 'contr_proj.weight', 'project_q.bias', 'project_q.weight', 'quantizer.vars', 'quantizer.weight_proj.bias', 'quantizer.weight_proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] missing keys (expect empty/pretraining-only): []
+INFO:Data2VecAQCEncoder:[data2vec_aqc] ckpt:             /speech/abhishek/kannada_data/encoders/SPRING_INX_data2vec_aqc_Kannada.pt
+INFO:Data2VecAQCEncoder:[data2vec_aqc] outer _name:      wav2vec_ctc  (CTC fine-tuned)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] inner _name:      data2vec_audio
+INFO:Data2VecAQCEncoder:[data2vec_aqc] layer_norm_first: False
+INFO:Data2VecAQCEncoder:[data2vec_aqc] tgt_layer:        None (None=run all blocks)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped outside w2v_model.*: ['w2v_encoder.proj.bias', 'w2v_encoder.proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped INSIDE body (AQC extras): ['contr_proj.bias', 'contr_proj.weight', 'project_q.bias', 'project_q.weight', 'quantizer.vars', 'quantizer.weight_proj.bias', 'quantizer.weight_proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] missing keys (expect empty/pretraining-only): []
+/speech/abhishek/indic-nar-filler_asr/train.py:109: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(path, map_location="cpu")
+/speech/abhishek/indic-nar-filler_asr/train.py:109: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(path, map_location="cpu")
+/speech/abhishek/indic-nar-filler_asr/train.py:109: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(path, map_location="cpu")
+/speech/abhishek/indic-nar-filler_asr/train.py:109: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(path, map_location="cpu")
+[resume] constant LR pinned to 2.00e-06
+[resume] from /speech/abhishek/indic-nar-filler_asr/runs/kn_en_d2vaqcKN_sa8_ACMLM_alibi_fps50_fw003_exp/best_ep15.pt: step=28020 -> epoch=16 (skip 0 micro-batches) best_val=0.5689
+[wandb] resuming run id 06tgvd3w
+DEBUG:asyncio:Using selector: EpollSelector
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/speech/abhishek/indic-nar-filler_asr, stdin=None, shell=False, universal_newlines=False)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/speech/abhishek/indic-nar-filler_asr, stdin=None, shell=False, universal_newlines=False)
+DEBUG:git.util:sys.platform='linux', git_executable='git'
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /speech/abhishek/.netrc.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.wandb.ai:443
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 380
+wandb: Currently logged in as: abhisingh964800 (abhisingh964800-iit-madras-foundation) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+DEBUG:git.util:sys.platform='linux', git_executable='git'
+wandb: setting up run 06tgvd3w
+wandb: Tracking run with wandb version 0.27.0
+wandb: Run data is saved locally in /speech/abhishek/indic-nar-filler_asr/wandb/run-20260917_131349-06tgvd3w
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Resuming run kn_en_d2vaqcKN_sa8_ACMLM_alibi_fps50_fw003_exp
+wandb: ⭐️ View project at https://wandb.ai/abhisingh964800-iit-madras-foundation/indic_nar_kn_en
+wandb: 🚀 View run at https://wandb.ai/abhisingh964800-iit-madras-foundation/indic_nar_kn_en/runs/06tgvd3w
+wandb run (resumed): https://wandb.ai/abhisingh964800-iit-madras-foundation/indic_nar_kn_en/runs/06tgvd3w
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.wandb.ai:443
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 380
+DEBUG:git.util:sys.platform='linux', git_executable='git'
+wandb: setting up run 0l3tcvsn
+wandb: Tracking run with wandb version 0.27.0
+wandb: Run data is saved locally in /speech/abhishek/indic-nar-filler_asr/wandb/run-20260917_131351-0l3tcvsn
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run kn_en_ep15resume_constlr2e6_75ep_LIVE
+wandb: ⭐️ View project at https://wandb.ai/abhisingh964800-iit-madras-foundation/indic_nar_kn_en
+wandb: 🚀 View run at https://wandb.ai/abhisingh964800-iit-madras-foundation/indic_nar_kn_en/runs/0l3tcvsn
+wandb run (live mirror): https://wandb.ai/abhisingh964800-iit-madras-foundation/indic_nar_kn_en/runs/0l3tcvsn
+[setup] world=4 train=478302 dev=500 trainable=100.97M pos_mode=alibi PE=True sa_layers=8 fps=50 sched=constant mask=0.2-0.3x10 eff_batch=256 steps/epoch=1868 total_steps=140100
+[log] config=/speech/abhishek/indic-nar-filler_asr/log_config.json disabled=none
+/speech/abhishek/indic-nar-filler_asr/deps/fairseq/examples/data2vec/models/data2vec_audio.py:190: FutureWarning: Positional args are being deprecated, use kwargs instead. Refer to https://pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  state = super().state_dict(destination, prefix, keep_vars)
+[ckpt-audit] checkpoint will save 100 trainable tensors / 100.97M params  (hubert tensors included=0)
+[select] best.pt = argmin eval/iter_WER; other metrics are diagnostics only
+[data-audit] ACMLM transform, 1 train clip: T=656 graded(masked)_slots=266
+   frame:input[->CEtarget], first 24/656  (<mask>=input hole; -> = supervised slot)
+   0:<s> 1:<mask>->ನ 2:ಿ 3:ರ 4:<mask>->ು 5:ದ 6:್ 7:ಯ 8:<mask>->ೋ 9:ಗ 10:| 11:ಸ 12:<mask>->ಮ 13:<mask>->ಸ 14:್ 15:ಸ 16:<mask>->ೆ 17:| 18:ಬ 19:<mask>->ಗ 20:<mask>->್ 21:<mask>->ಗ 22:<mask>->ೆ 23:<mask>->|
+[frozen-audit] after model.train(): hubert.training=False hubert_trainable_tensors=0  (expect False / 0 -> no layerdrop, no dropout, deterministic tap)
+ep16 step28025/140100 loss=0.8750 acc=0.886 lr=2.00e-06 gnorm=1.78 131 smp/s
+wandb: WARNING Tried to log to step 28025 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28050/140100 loss=1.0274 acc=0.929 lr=2.00e-06 gnorm=1.71 159 smp/s
+wandb: WARNING Tried to log to step 28050 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28075/140100 loss=1.2109 acc=0.914 lr=2.00e-06 gnorm=2.17 161 smp/s
+wandb: WARNING Tried to log to step 28075 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28100/140100 loss=0.9786 acc=0.902 lr=2.00e-06 gnorm=1.69 162 smp/s
+wandb: WARNING Tried to log to step 28100 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28125/140100 loss=0.7987 acc=0.925 lr=2.00e-06 gnorm=1.53 162 smp/s
+wandb: WARNING Tried to log to step 28125 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28150/140100 loss=0.6861 acc=0.954 lr=2.00e-06 gnorm=3.29 162 smp/s
+wandb: WARNING Tried to log to step 28150 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28175/140100 loss=0.8268 acc=0.871 lr=2.00e-06 gnorm=1.68 162 smp/s
+wandb: WARNING Tried to log to step 28175 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28200/140100 loss=0.6984 acc=0.896 lr=2.00e-06 gnorm=2.31 161 smp/s
+wandb: WARNING Tried to log to step 28200 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28225/140100 loss=0.9836 acc=0.877 lr=2.00e-06 gnorm=1.68 162 smp/s
+wandb: WARNING Tried to log to step 28225 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28250/140100 loss=1.0821 acc=0.919 lr=2.00e-06 gnorm=2.65 161 smp/s
+wandb: WARNING Tried to log to step 28250 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28275/140100 loss=0.4999 acc=0.971 lr=2.00e-06 gnorm=1.94 161 smp/s
+wandb: WARNING Tried to log to step 28275 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28300/140100 loss=0.7094 acc=0.908 lr=2.00e-06 gnorm=1.81 161 smp/s
+wandb: WARNING Tried to log to step 28300 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28325/140100 loss=0.9210 acc=0.921 lr=2.00e-06 gnorm=3.00 161 smp/s
+wandb: WARNING Tried to log to step 28325 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28350/140100 loss=0.9429 acc=0.913 lr=2.00e-06 gnorm=4.46 161 smp/s
+wandb: WARNING Tried to log to step 28350 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28375/140100 loss=1.2597 acc=0.913 lr=2.00e-06 gnorm=1.60 161 smp/s
+wandb: WARNING Tried to log to step 28375 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28400/140100 loss=1.2273 acc=0.831 lr=2.00e-06 gnorm=1.98 161 smp/s
+wandb: WARNING Tried to log to step 28400 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28425/140100 loss=0.8588 acc=0.914 lr=2.00e-06 gnorm=2.20 161 smp/s
+wandb: WARNING Tried to log to step 28425 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28450/140100 loss=0.9730 acc=0.936 lr=2.00e-06 gnorm=1.97 161 smp/s
+wandb: WARNING Tried to log to step 28450 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28475/140100 loss=0.9260 acc=0.951 lr=2.00e-06 gnorm=4.20 161 smp/s
+wandb: WARNING Tried to log to step 28475 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28500/140100 loss=0.8356 acc=0.885 lr=2.00e-06 gnorm=1.44 161 smp/s
+wandb: WARNING Tried to log to step 28500 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28525/140100 loss=0.9526 acc=0.870 lr=2.00e-06 gnorm=1.76 161 smp/s
+wandb: WARNING Tried to log to step 28525 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28550/140100 loss=0.7684 acc=0.894 lr=2.00e-06 gnorm=1.68 161 smp/s
+wandb: WARNING Tried to log to step 28550 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28575/140100 loss=0.6272 acc=0.943 lr=2.00e-06 gnorm=1.72 161 smp/s
+wandb: WARNING Tried to log to step 28575 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28600/140100 loss=0.9982 acc=0.905 lr=2.00e-06 gnorm=1.68 161 smp/s
+wandb: WARNING Tried to log to step 28600 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28625/140100 loss=0.8902 acc=0.907 lr=2.00e-06 gnorm=2.04 161 smp/s
+wandb: WARNING Tried to log to step 28625 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28650/140100 loss=0.8910 acc=0.944 lr=2.00e-06 gnorm=2.03 161 smp/s
+wandb: WARNING Tried to log to step 28650 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28675/140100 loss=0.9491 acc=0.903 lr=2.00e-06 gnorm=1.42 161 smp/s
+wandb: WARNING Tried to log to step 28675 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28700/140100 loss=1.0488 acc=0.903 lr=2.00e-06 gnorm=2.38 161 smp/s
+wandb: WARNING Tried to log to step 28700 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28725/140100 loss=0.8725 acc=0.933 lr=2.00e-06 gnorm=1.93 161 smp/s
+wandb: WARNING Tried to log to step 28725 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28750/140100 loss=0.8651 acc=0.918 lr=2.00e-06 gnorm=2.18 161 smp/s
+wandb: WARNING Tried to log to step 28750 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28775/140100 loss=0.5898 acc=0.938 lr=2.00e-06 gnorm=2.64 161 smp/s
+wandb: WARNING Tried to log to step 28775 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28800/140100 loss=0.8716 acc=0.910 lr=2.00e-06 gnorm=1.31 161 smp/s
+wandb: WARNING Tried to log to step 28800 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28825/140100 loss=0.8098 acc=0.935 lr=2.00e-06 gnorm=2.35 161 smp/s
+wandb: WARNING Tried to log to step 28825 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28850/140100 loss=1.1963 acc=0.869 lr=2.00e-06 gnorm=2.23 161 smp/s
+wandb: WARNING Tried to log to step 28850 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28875/140100 loss=1.0191 acc=0.902 lr=2.00e-06 gnorm=2.51 161 smp/s
+wandb: WARNING Tried to log to step 28875 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28900/140100 loss=0.9913 acc=0.892 lr=2.00e-06 gnorm=1.80 161 smp/s
+wandb: WARNING Tried to log to step 28900 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28925/140100 loss=1.2836 acc=0.879 lr=2.00e-06 gnorm=3.33 161 smp/s
+wandb: WARNING Tried to log to step 28925 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28950/140100 loss=1.0357 acc=0.889 lr=2.00e-06 gnorm=2.49 161 smp/s
+wandb: WARNING Tried to log to step 28950 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step28975/140100 loss=1.1269 acc=0.887 lr=2.00e-06 gnorm=2.68 161 smp/s
+wandb: WARNING Tried to log to step 28975 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29000/140100 loss=1.0004 acc=0.884 lr=2.00e-06 gnorm=2.11 161 smp/s
+wandb: WARNING Tried to log to step 29000 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29025/140100 loss=0.8195 acc=0.940 lr=2.00e-06 gnorm=1.67 161 smp/s
+wandb: WARNING Tried to log to step 29025 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29050/140100 loss=0.8573 acc=0.971 lr=2.00e-06 gnorm=3.08 161 smp/s
+wandb: WARNING Tried to log to step 29050 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29075/140100 loss=0.7050 acc=0.972 lr=2.00e-06 gnorm=1.97 161 smp/s
+wandb: WARNING Tried to log to step 29075 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29100/140100 loss=0.8518 acc=0.900 lr=2.00e-06 gnorm=1.94 161 smp/s
+wandb: WARNING Tried to log to step 29100 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29125/140100 loss=0.9378 acc=0.953 lr=2.00e-06 gnorm=1.48 161 smp/s
+wandb: WARNING Tried to log to step 29125 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29150/140100 loss=0.9236 acc=0.906 lr=2.00e-06 gnorm=2.12 161 smp/s
+wandb: WARNING Tried to log to step 29150 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29175/140100 loss=1.0434 acc=0.901 lr=2.00e-06 gnorm=5.59 161 smp/s
+wandb: WARNING Tried to log to step 29175 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29200/140100 loss=1.1243 acc=0.910 lr=2.00e-06 gnorm=2.26 161 smp/s
+wandb: WARNING Tried to log to step 29200 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29225/140100 loss=0.9124 acc=0.958 lr=2.00e-06 gnorm=1.83 161 smp/s
+wandb: WARNING Tried to log to step 29225 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29250/140100 loss=0.8426 acc=0.898 lr=2.00e-06 gnorm=1.44 161 smp/s
+wandb: WARNING Tried to log to step 29250 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29275/140100 loss=0.7887 acc=0.968 lr=2.00e-06 gnorm=1.51 161 smp/s
+wandb: WARNING Tried to log to step 29275 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29300/140100 loss=0.9524 acc=0.885 lr=2.00e-06 gnorm=2.53 161 smp/s
+wandb: WARNING Tried to log to step 29300 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29325/140100 loss=1.1501 acc=0.917 lr=2.00e-06 gnorm=1.86 161 smp/s
+wandb: WARNING Tried to log to step 29325 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29350/140100 loss=1.1195 acc=0.884 lr=2.00e-06 gnorm=2.21 161 smp/s
+wandb: WARNING Tried to log to step 29350 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29375/140100 loss=0.9812 acc=0.924 lr=2.00e-06 gnorm=1.86 161 smp/s
+wandb: WARNING Tried to log to step 29375 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29400/140100 loss=1.0027 acc=0.979 lr=2.00e-06 gnorm=1.69 161 smp/s
+wandb: WARNING Tried to log to step 29400 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29425/140100 loss=1.2161 acc=0.815 lr=2.00e-06 gnorm=2.02 161 smp/s
+wandb: WARNING Tried to log to step 29425 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29450/140100 loss=1.0356 acc=0.873 lr=2.00e-06 gnorm=2.52 161 smp/s
+wandb: WARNING Tried to log to step 29450 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29475/140100 loss=0.7041 acc=0.966 lr=2.00e-06 gnorm=1.81 161 smp/s
+wandb: WARNING Tried to log to step 29475 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29500/140100 loss=0.9694 acc=0.930 lr=2.00e-06 gnorm=1.86 161 smp/s
+wandb: WARNING Tried to log to step 29500 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29525/140100 loss=0.7964 acc=0.896 lr=2.00e-06 gnorm=1.82 161 smp/s
+wandb: WARNING Tried to log to step 29525 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29550/140100 loss=0.9998 acc=0.845 lr=2.00e-06 gnorm=1.74 161 smp/s
+wandb: WARNING Tried to log to step 29550 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29575/140100 loss=1.0113 acc=0.910 lr=2.00e-06 gnorm=1.88 161 smp/s
+wandb: WARNING Tried to log to step 29575 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29600/140100 loss=1.1375 acc=0.908 lr=2.00e-06 gnorm=1.98 161 smp/s
+wandb: WARNING Tried to log to step 29600 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29625/140100 loss=0.8797 acc=0.933 lr=2.00e-06 gnorm=1.72 161 smp/s
+wandb: WARNING Tried to log to step 29625 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29650/140100 loss=0.9249 acc=0.897 lr=2.00e-06 gnorm=3.04 161 smp/s
+wandb: WARNING Tried to log to step 29650 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29675/140100 loss=0.7933 acc=0.941 lr=2.00e-06 gnorm=3.18 161 smp/s
+wandb: WARNING Tried to log to step 29675 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29700/140100 loss=0.8048 acc=0.978 lr=2.00e-06 gnorm=1.44 161 smp/s
+wandb: WARNING Tried to log to step 29700 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29725/140100 loss=1.0959 acc=0.866 lr=2.00e-06 gnorm=3.28 161 smp/s
+wandb: WARNING Tried to log to step 29725 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29750/140100 loss=1.0706 acc=0.888 lr=2.00e-06 gnorm=2.26 161 smp/s
+wandb: WARNING Tried to log to step 29750 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29775/140100 loss=0.8451 acc=0.960 lr=2.00e-06 gnorm=1.66 161 smp/s
+wandb: WARNING Tried to log to step 29775 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29800/140100 loss=1.0225 acc=0.879 lr=2.00e-06 gnorm=1.60 161 smp/s
+wandb: WARNING Tried to log to step 29800 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29825/140100 loss=1.1162 acc=0.892 lr=2.00e-06 gnorm=3.47 161 smp/s
+wandb: WARNING Tried to log to step 29825 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29850/140100 loss=0.7357 acc=0.932 lr=2.00e-06 gnorm=2.45 161 smp/s
+wandb: WARNING Tried to log to step 29850 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep16 step29875/140100 loss=0.8824 acc=0.906 lr=2.00e-06 gnorm=2.28 161 smp/s
+wandb: WARNING Tried to log to step 29875 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep17 step29900/140100 loss=0.7226 acc=0.895 lr=2.00e-06 gnorm=1.99 161 smp/s
+wandb: WARNING Tried to log to step 29900 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep17 step29925/140100 loss=1.0201 acc=0.922 lr=2.00e-06 gnorm=3.10 161 smp/s
+wandb: WARNING Tried to log to step 29925 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep17 step29950/140100 loss=0.8980 acc=0.940 lr=2.00e-06 gnorm=1.76 161 smp/s
+wandb: WARNING Tried to log to step 29950 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep17 step29975/140100 loss=0.8156 acc=0.938 lr=2.00e-06 gnorm=2.72 161 smp/s
+wandb: WARNING Tried to log to step 29975 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep17 step30000/140100 loss=1.0970 acc=0.806 lr=2.00e-06 gnorm=3.66 161 smp/s
+wandb: WARNING Tried to log to step 30000 that is less than the current step 37651. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[eval @ 30000] WER=0.830 CER=0.414 SER=1.000 loss=0.727 content_acc=0.367 fill_rate=0.687 entropy=0.683 distinct=82
+[eval @ 30000] iter32  WER=0.567 CER=0.207 SER=0.915 (mask-predict decode, n=200 clips)
+   Full: ಸ ಾ ಂ ಸ ್ ಕ ೃ ೃ ಿ ಕ | ನ ಗ ರ ಿ | ಮ ೈ ಸ ೂ ರ ಿ ನ ಲ ್ ಲ ಿ | ಕ ೊ ರ ರ ನ ನ ಾ | ಸ ೋ ಕ ಕ ು | ಹ ೆ ಚ ್ ಚ ತ ತ ತ ಿ ಿ ರ ು ವ | ಹ ಿ ನ ನ ನ ೆ ೆ ಯ ಲ ಲ ್ ಲ ಿ | 
+   Hyp : ಸಸಾಂಸ್ಕೃೃಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರರನನಾ ಸೋಕಕು ಹೆಚ್ಚತತತಿಿರುವ ಹಿನನನೆೆಯಲಲ್ಲಿ ಇಂಿಿಿಿಂದಐ
+   Ref : ಸಾಂಸ್ಕೃತಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರೋನಾ ಸೋಂಕು ಹೆಚ್ಚುತ್ತಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಇಂದಿನಿಂದ ಐದ
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.wandb.ai:443
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 49
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.wandb.ai:443
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 1040
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.wandb.ai:443
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 380
+Traceback (most recent call last):
+  File "/speech/abhishek/indic-nar-filler_asr/train.py", line 736, in <module>
+    main()
+  File "/speech/abhishek/indic-nar-filler_asr/train.py", line 714, in main
+    if is_main: log_eval(step)
+  File "/speech/abhishek/indic-nar-filler_asr/train.py", line 618, in log_eval
+    if log: run.log(log, step=step)
+  File "/speech/abhishek/indic-nar-filler_asr/train.py", line 551, in log
+    r.log(data, step=step)
+  File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 329, in wrapper
+    return func(self, *args, **kwargs)
+  File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 387, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 374, in wrapper
+    return func(self, *args, **kwargs)
+  File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1984, in log
+    self._log(data=data, step=step, commit=commit)
+  File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1695, in _log
+    self._partial_history_callback(data, step, commit)
+  File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 329, in wrapper
+    return func(self, *args, **kwargs)
+  File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1526, in _partial_history_callback
+    self._interface.publish_partial_history(
+  File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 690, in publish_partial_history
+    data = history_dict_to_json(run, data, step=user_step, ignore_copy_err=True)
+  File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/wandb/sdk/data_types/utils.py", line 57, in history_dict_to_json
+    payload[key] = val_to_json(
+  File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/wandb/sdk/data_types/utils.py", line 163, in val_to_json
+    res = val.to_json(run)
+  File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/wandb/sdk/data_types/table.py", line 713, in to_json
+    json_dict = super().to_json(run_or_artifact)
+  File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/wandb/sdk/data_types/base_types/media.py", line 211, in to_json
+    assert self._run is run, (
+AssertionError: We don't support referring to media files across runs.
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/speech/abhishek/indic-nar-filler_asr/train.py", line 736, in <module>
+[rank0]:     main()
+[rank0]:   File "/speech/abhishek/indic-nar-filler_asr/train.py", line 714, in main
+[rank0]:     if is_main: log_eval(step)
+[rank0]:   File "/speech/abhishek/indic-nar-filler_asr/train.py", line 618, in log_eval
+[rank0]:     if log: run.log(log, step=step)
+[rank0]:   File "/speech/abhishek/indic-nar-filler_asr/train.py", line 551, in log
+[rank0]:     r.log(data, step=step)
+[rank0]:   File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 329, in wrapper
+[rank0]:     return func(self, *args, **kwargs)
+[rank0]:   File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 387, in wrapper_fn
+[rank0]:     return func(self, *args, **kwargs)
+[rank0]:   File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 374, in wrapper
+[rank0]:     return func(self, *args, **kwargs)
+[rank0]:   File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1984, in log
+[rank0]:     self._log(data=data, step=step, commit=commit)
+[rank0]:   File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1695, in _log
+[rank0]:     self._partial_history_callback(data, step, commit)
+[rank0]:   File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 329, in wrapper
+[rank0]:     return func(self, *args, **kwargs)
+[rank0]:   File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1526, in _partial_history_callback
+[rank0]:     self._interface.publish_partial_history(
+[rank0]:   File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 690, in publish_partial_history
+[rank0]:     data = history_dict_to_json(run, data, step=user_step, ignore_copy_err=True)
+[rank0]:   File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/wandb/sdk/data_types/utils.py", line 57, in history_dict_to_json
+[rank0]:     payload[key] = val_to_json(
+[rank0]:   File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/wandb/sdk/data_types/utils.py", line 163, in val_to_json
+[rank0]:     res = val.to_json(run)
+[rank0]:   File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/wandb/sdk/data_types/table.py", line 713, in to_json
+[rank0]:     json_dict = super().to_json(run_or_artifact)
+[rank0]:   File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/wandb/sdk/data_types/base_types/media.py", line 211, in to_json
+[rank0]:     assert self._run is run, (
+[rank0]: AssertionError: We don't support referring to media files across runs.
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mkn_en_ep15resume_constlr2e6_75ep_LIVE[0m at: [34mhttps://wandb.ai/abhisingh964800-iit-madras-foundation/indic_nar_kn_en/runs/0l3tcvsn[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260917_131351-0l3tcvsn/logs[0m
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mkn_en_d2vaqcKN_sa8_ACMLM_alibi_fps50_fw003_exp[0m at: [34mhttps://wandb.ai/abhisingh964800-iit-madras-foundation/indic_nar_kn_en/runs/06tgvd3w[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260917_131349-06tgvd3w/logs[0m
+DEBUG:filelock:Attempting to acquire lock 136079946039200 on /speech/abhishek/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Lock 136079946039200 acquired on /speech/abhishek/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Attempting to release lock 136079946039200 on /speech/abhishek/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Lock 136079946039200 released on /speech/abhishek/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Attempting to acquire lock 136079946030752 on /speech/abhishek/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Lock 136079946030752 acquired on /speech/abhishek/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Attempting to release lock 136079946030752 on /speech/abhishek/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Lock 136079946030752 released on /speech/abhishek/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+W0917 14:07:26.339000 133327368234048 torch/distributed/elastic/multiprocessing/api.py:858] Sending process 2976398 closing signal SIGTERM
+W0917 14:07:26.346000 133327368234048 torch/distributed/elastic/multiprocessing/api.py:858] Sending process 2976399 closing signal SIGTERM
+W0917 14:07:26.350000 133327368234048 torch/distributed/elastic/multiprocessing/api.py:858] Sending process 2976400 closing signal SIGTERM
+E0917 14:07:26.365000 133327368234048 torch/distributed/elastic/multiprocessing/api.py:833] failed (exitcode: 1) local_rank: 0 (pid: 2976397) of binary: /speech/abhishek/miniconda3/envs/indic-nar-filler_asr/bin/python3.10
+Traceback (most recent call last):
+  File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/bin/torchrun", line 6, in <module>
+    sys.exit(main())
+  File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 348, in wrapper
+    return f(*args, **kwargs)
+  File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/torch/distributed/run.py", line 901, in main
+    run(args)
+  File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/torch/distributed/run.py", line 892, in run
+    elastic_launch(
+  File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 133, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/speech/abhishek/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-09-17_14:07:26
+  host      : gpu17
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 2976397)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

@@ -1,0 +1,85 @@
+[run_kn] log -> /speech/abhishek/indic-nar-filler_asr/logs/train_kn_ep15resume_constlr2e6_75ep_20260917_122209.log
+[run] env=/speech/abhishek/miniconda3/envs/indic-nar-filler_asr GPUs=6,7,8,9 (n=4)  eff_batch=256  out=/speech/abhishek/indic-nar-filler_asr/runs/kn_en_d2vaqcKN_sa8_ACMLM_alibi_fps50_fw003_ep15resume_constlr2e6_75ep
+[run] encoder=/speech/abhishek/kannada_data/encoders/SPRING_INX_data2vec_aqc_Kannada.pt
+W0917 12:22:10.468000 138002714649664 torch/distributed/run.py:779] 
+W0917 12:22:10.468000 138002714649664 torch/distributed/run.py:779] *****************************************
+W0917 12:22:10.468000 138002714649664 torch/distributed/run.py:779] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0917 12:22:10.468000 138002714649664 torch/distributed/run.py:779] *****************************************
+[W917 12:22:14.742052360 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+[W917 12:22:14.292419642 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+[W917 12:22:14.301506249 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+[W917 12:22:14.310605336 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+INFO:Data2VecAQCEncoder:[data2vec_aqc] ckpt:             /speech/abhishek/kannada_data/encoders/SPRING_INX_data2vec_aqc_Kannada.pt
+INFO:Data2VecAQCEncoder:[data2vec_aqc] outer _name:      wav2vec_ctc  (CTC fine-tuned)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] inner _name:      data2vec_audio
+INFO:Data2VecAQCEncoder:[data2vec_aqc] layer_norm_first: False
+INFO:Data2VecAQCEncoder:[data2vec_aqc] tgt_layer:        None (None=run all blocks)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped outside w2v_model.*: ['w2v_encoder.proj.bias', 'w2v_encoder.proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped INSIDE body (AQC extras): ['contr_proj.bias', 'contr_proj.weight', 'project_q.bias', 'project_q.weight', 'quantizer.vars', 'quantizer.weight_proj.bias', 'quantizer.weight_proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] missing keys (expect empty/pretraining-only): []
+INFO:Data2VecAQCEncoder:[data2vec_aqc] ckpt:             /speech/abhishek/kannada_data/encoders/SPRING_INX_data2vec_aqc_Kannada.pt
+INFO:Data2VecAQCEncoder:[data2vec_aqc] outer _name:      wav2vec_ctc  (CTC fine-tuned)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] inner _name:      data2vec_audio
+INFO:Data2VecAQCEncoder:[data2vec_aqc] layer_norm_first: False
+INFO:Data2VecAQCEncoder:[data2vec_aqc] tgt_layer:        None (None=run all blocks)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped outside w2v_model.*: ['w2v_encoder.proj.bias', 'w2v_encoder.proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped INSIDE body (AQC extras): ['contr_proj.bias', 'contr_proj.weight', 'project_q.bias', 'project_q.weight', 'quantizer.vars', 'quantizer.weight_proj.bias', 'quantizer.weight_proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] missing keys (expect empty/pretraining-only): []
+INFO:Data2VecAQCEncoder:[data2vec_aqc] ckpt:             /speech/abhishek/kannada_data/encoders/SPRING_INX_data2vec_aqc_Kannada.pt
+INFO:Data2VecAQCEncoder:[data2vec_aqc] outer _name:      wav2vec_ctc  (CTC fine-tuned)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] inner _name:      data2vec_audio
+INFO:Data2VecAQCEncoder:[data2vec_aqc] layer_norm_first: False
+INFO:Data2VecAQCEncoder:[data2vec_aqc] tgt_layer:        None (None=run all blocks)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped outside w2v_model.*: ['w2v_encoder.proj.bias', 'w2v_encoder.proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped INSIDE body (AQC extras): ['contr_proj.bias', 'contr_proj.weight', 'project_q.bias', 'project_q.weight', 'quantizer.vars', 'quantizer.weight_proj.bias', 'quantizer.weight_proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] missing keys (expect empty/pretraining-only): []
+INFO:Data2VecAQCEncoder:[data2vec_aqc] ckpt:             /speech/abhishek/kannada_data/encoders/SPRING_INX_data2vec_aqc_Kannada.pt
+INFO:Data2VecAQCEncoder:[data2vec_aqc] outer _name:      wav2vec_ctc  (CTC fine-tuned)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] inner _name:      data2vec_audio
+INFO:Data2VecAQCEncoder:[data2vec_aqc] layer_norm_first: False
+INFO:Data2VecAQCEncoder:[data2vec_aqc] tgt_layer:        None (None=run all blocks)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped outside w2v_model.*: ['w2v_encoder.proj.bias', 'w2v_encoder.proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped INSIDE body (AQC extras): ['contr_proj.bias', 'contr_proj.weight', 'project_q.bias', 'project_q.weight', 'quantizer.vars', 'quantizer.weight_proj.bias', 'quantizer.weight_proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] missing keys (expect empty/pretraining-only): []
+/speech/abhishek/indic-nar-filler_asr/train.py:109: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(path, map_location="cpu")
+/speech/abhishek/indic-nar-filler_asr/train.py:109: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(path, map_location="cpu")
+/speech/abhishek/indic-nar-filler_asr/train.py:109: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(path, map_location="cpu")
+/speech/abhishek/indic-nar-filler_asr/train.py:109: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(path, map_location="cpu")
+[resume] constant LR pinned to 2.00e-06
+[resume] from /speech/abhishek/indic-nar-filler_asr/runs/kn_en_d2vaqcKN_sa8_ACMLM_alibi_fps50_fw003_exp/best_ep15.pt: step=28020 -> epoch=16 (skip 0 micro-batches) best_val=0.5689
+DEBUG:asyncio:Using selector: EpollSelector
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/speech/abhishek/indic-nar-filler_asr, stdin=None, shell=False, universal_newlines=False)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/speech/abhishek/indic-nar-filler_asr, stdin=None, shell=False, universal_newlines=False)
+DEBUG:git.util:sys.platform='linux', git_executable='git'
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /speech/abhishek/.netrc.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.wandb.ai:443
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 380
+wandb: Currently logged in as: abhisingh964800 (abhisingh964800-iit-madras-foundation) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+DEBUG:git.util:sys.platform='linux', git_executable='git'
+wandb: setting up run 85d74141
+wandb: Tracking run with wandb version 0.27.0
+wandb: Run data is saved locally in /speech/abhishek/indic-nar-filler_asr/wandb/run-20260917_122238-85d74141
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run kn_en_d2vaqcKN_sa8_ACMLM_alibi_fps50_fw003_ep15resume_constlr2e6_75ep
+wandb: ⭐️ View project at https://wandb.ai/abhisingh964800-iit-madras-foundation/indic_nar_kn_en
+wandb: 🚀 View run at https://wandb.ai/abhisingh964800-iit-madras-foundation/indic_nar_kn_en/runs/85d74141
+wandb run: https://wandb.ai/abhisingh964800-iit-madras-foundation/indic_nar_kn_en/runs/85d74141
+[setup] world=4 train=478302 dev=500 trainable=100.97M pos_mode=alibi PE=True sa_layers=8 fps=50 sched=constant mask=0.2-0.3x10 eff_batch=256 steps/epoch=1868 total_steps=140100
+[log] config=/speech/abhishek/indic-nar-filler_asr/log_config.json disabled=none
+/speech/abhishek/indic-nar-filler_asr/deps/fairseq/examples/data2vec/models/data2vec_audio.py:190: FutureWarning: Positional args are being deprecated, use kwargs instead. Refer to https://pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  state = super().state_dict(destination, prefix, keep_vars)
+[ckpt-audit] checkpoint will save 100 trainable tensors / 100.97M params  (hubert tensors included=0)
+[select] best.pt = argmin eval/iter_WER; other metrics are diagnostics only
+[data-audit] ACMLM transform, 1 train clip: T=656 graded(masked)_slots=46
+   frame:input[->CEtarget], first 24/656  (<mask>=input hole; -> = supervised slot)
+   0:<s> 1:ನ 2:ಿ 3:ರ 4:<mask>->ು 5:ದ 6:<mask>->್ 7:ಯ 8:ೋ 9:ಗ 10:| 11:ಸ 12:ಮ 13:<mask>->ಸ 14:್ 15:ಸ 16:ೆ 17:| 18:ಬ 19:ಗ 20:<mask>->್ 21:ಗ 22:ೆ 23:|
+[frozen-audit] after model.train(): hubert.training=False hubert_trainable_tensors=0  (expect False / 0 -> no layerdrop, no dropout, deterministic tap)
+ep16 step28025/140100 loss=0.8478 acc=0.920 lr=2.00e-06 gnorm=3.38 136 smp/s
+ep16 step28050/140100 loss=0.9696 acc=0.895 lr=2.00e-06 gnorm=1.85 161 smp/s
+ep16 step28075/140100 loss=1.0874 acc=0.899 lr=2.00e-06 gnorm=3.80 162 smp/s
+ep16 step28100/140100 loss=0.7200 acc=0.915 lr=2.00e-06 gnorm=1.67 163 smp/s
+ep16 step28125/140100 loss=0.8478 acc=0.925 lr=2.00e-06 gnorm=2.55 163 smp/s

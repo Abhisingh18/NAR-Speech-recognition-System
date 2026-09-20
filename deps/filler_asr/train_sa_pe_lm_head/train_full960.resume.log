@@ -1,0 +1,287 @@
+W0626 14:59:22.528000 2579484 site-packages/torch/distributed/run.py:766] 
+W0626 14:59:22.528000 2579484 site-packages/torch/distributed/run.py:766] *****************************************
+W0626 14:59:22.528000 2579484 site-packages/torch/distributed/run.py:766] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0626 14:59:22.528000 2579484 site-packages/torch/distributed/run.py:766] *****************************************
+[rank0]:[W626 14:59:26.353077219 ProcessGroupNCCL.cpp:4715] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+[rank1]:[W626 14:59:26.403300152 ProcessGroupNCCL.cpp:4715] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+Loading weights:   0%|          | 0/808 [00:00<?, ?it/s]Loading weights:   0%|          | 0/808 [00:00<?, ?it/s]Loading weights:  86%|████████▌ | 696/808 [00:00<00:00, 6929.13it/s]Loading weights: 100%|██████████| 808/808 [00:00<00:00, 7054.75it/s]
+Loading weights:  89%|████████▉ | 720/808 [00:00<00:00, 7197.96it/s]Loading weights: 100%|██████████| 808/808 [00:00<00:00, 7216.30it/s]
+[transformers] [1mFillerHubertSAModel LOAD REPORT[0m from: /speech/tomson/filler_asr/models/hubert-xlarge-ls960-ft
+Key                                        | Status   |                                                                                           
+-------------------------------------------+----------+-------------------------------------------------------------------------------------------
+sa.layers.{0, 1}.norm1.bias                | MISSING  |                                                                                           
+sa.layers.{0, 1}.norm1.weight              | MISSING  |                                                                                           
+sa.layers.{0, 1}.self_attn.in_proj_bias    | MISSING  |                                                                                           
+sa.layers.{0, 1}.linear2.bias              | MISSING  |                                                                                           
+sa.layers.{0, 1}.self_attn.out_proj.weight | MISSING  |                                                                                           
+sa.layers.{0, 1}.norm2.bias                | MISSING  |                                                                                           
+sa.layers.{0, 1}.norm2.weight              | MISSING  |                                                                                           
+sa.layers.{0, 1}.linear1.weight            | MISSING  |                                                                                           
+sa.layers.{0, 1}.self_attn.out_proj.bias   | MISSING  |                                                                                           
+sa.layers.{0, 1}.self_attn.in_proj_weight  | MISSING  |                                                                                           
+sa.layers.{0, 1}.linear1.bias              | MISSING  |                                                                                           
+sa.layers.{0, 1}.linear2.weight            | MISSING  |                                                                                           
+lm_head.bias                               | MISMATCH | Reinit due to size mismatch - ckpt: torch.Size([32]) vs model:torch.Size([33])            
+lm_head.weight                             | MISMATCH | Reinit due to size mismatch - ckpt: torch.Size([32, 1280]) vs model:torch.Size([33, 1280])
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+- MISMATCH:	ckpt weights were loaded, but they did not match the original empty weight shapes.
+[transformers] [1mFillerHubertSAModel LOAD REPORT[0m from: /speech/tomson/filler_asr/models/hubert-xlarge-ls960-ft
+Key                                        | Status   |                                                                                           
+-------------------------------------------+----------+-------------------------------------------------------------------------------------------
+sa.layers.{0, 1}.linear1.bias              | MISSING  |                                                                                           
+sa.layers.{0, 1}.self_attn.in_proj_weight  | MISSING  |                                                                                           
+sa.layers.{0, 1}.norm1.weight              | MISSING  |                                                                                           
+sa.layers.{0, 1}.norm1.bias                | MISSING  |                                                                                           
+sa.layers.{0, 1}.norm2.weight              | MISSING  |                                                                                           
+sa.layers.{0, 1}.linear2.bias              | MISSING  |                                                                                           
+sa.layers.{0, 1}.self_attn.out_proj.bias   | MISSING  |                                                                                           
+sa.layers.{0, 1}.linear2.weight            | MISSING  |                                                                                           
+sa.layers.{0, 1}.self_attn.in_proj_bias    | MISSING  |                                                                                           
+sa.layers.{0, 1}.self_attn.out_proj.weight | MISSING  |                                                                                           
+sa.layers.{0, 1}.linear1.weight            | MISSING  |                                                                                           
+sa.layers.{0, 1}.norm2.bias                | MISSING  |                                                                                           
+lm_head.bias                               | MISMATCH | Reinit due to size mismatch - ckpt: torch.Size([32]) vs model:torch.Size([33])            
+lm_head.weight                             | MISMATCH | Reinit due to size mismatch - ckpt: torch.Size([32, 1280]) vs model:torch.Size([33, 1280])
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+- MISMATCH:	ckpt weights were loaded, but they did not match the original empty weight shapes.
+[resume] from runs/full960_sa_pe_lmhead/latest.pt: step=26000 epoch=6 best_wer=0.764
+[transformers] `use_return_dict` is deprecated! Use `return_dict` instead!
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /speech/tomson/.netrc.
+wandb: Currently logged in as: tomjrlaishram (tomjrlaishram-iit-madras) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run g75v7eqh
+wandb: Tracking run with wandb version 0.26.1
+wandb: Run data is saved locally in /speech/tomson/filler_asr/train_sa_pe_lm_head/wandb/run-20260626_145936-g75v7eqh
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Resuming run full960_sa_pe_lmhead_PE_hubert-xlarge-ls960-ft
+wandb: ⭐️ View project at https://wandb.ai/tomjrlaishram-iit-madras/filler_asr
+wandb: 🚀 View run at https://wandb.ai/tomjrlaishram-iit-madras/filler_asr/runs/g75v7eqh
+wandb run: https://wandb.ai/tomjrlaishram-iit-madras/filler_asr/runs/g75v7eqh
+[setup] world=2 train=281241 dev=500 trainable=39.40M PE=True eff_batch=64 steps/epoch=4394 total_steps=43940
+[transformers] `use_return_dict` is deprecated! Use `return_dict` instead!
+ep6 step26050/43940 loss=1.2751 acc=0.515 lr=7.71e-05 gnorm=10.49 64 smp/s
+wandb: WARNING Tried to log to step 26050 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step26100/43940 loss=1.2315 acc=0.514 lr=7.68e-05 gnorm=7.60 64 smp/s
+wandb: WARNING Tried to log to step 26100 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step26150/43940 loss=1.1474 acc=0.542 lr=7.64e-05 gnorm=4.47 63 smp/s
+wandb: WARNING Tried to log to step 26150 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step26200/43940 loss=1.2159 acc=0.508 lr=7.60e-05 gnorm=3.08 63 smp/s
+wandb: WARNING Tried to log to step 26200 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step26250/43940 loss=1.3216 acc=0.485 lr=7.57e-05 gnorm=3.71 63 smp/s
+wandb: WARNING Tried to log to step 26250 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step26300/43940 loss=1.3707 acc=0.472 lr=7.53e-05 gnorm=12.16 63 smp/s
+wandb: WARNING Tried to log to step 26300 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step26350/43940 loss=1.1161 acc=0.550 lr=7.50e-05 gnorm=15.06 62 smp/s
+wandb: WARNING Tried to log to step 26350 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step26400/43940 loss=1.1319 acc=0.546 lr=7.46e-05 gnorm=3.37 62 smp/s
+wandb: WARNING Tried to log to step 26400 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step26450/43940 loss=1.1518 acc=0.531 lr=7.42e-05 gnorm=6.91 62 smp/s
+wandb: WARNING Tried to log to step 26450 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step26500/43940 loss=1.3017 acc=0.502 lr=7.39e-05 gnorm=15.53 62 smp/s
+wandb: WARNING Tried to log to step 26500 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step26550/43940 loss=1.2025 acc=0.533 lr=7.35e-05 gnorm=1.99 62 smp/s
+wandb: WARNING Tried to log to step 26550 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step26600/43940 loss=1.2901 acc=0.477 lr=7.31e-05 gnorm=10.07 62 smp/s
+wandb: WARNING Tried to log to step 26600 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step26650/43940 loss=1.2635 acc=0.513 lr=7.28e-05 gnorm=4.98 62 smp/s
+wandb: WARNING Tried to log to step 26650 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step26700/43940 loss=1.3205 acc=0.499 lr=7.24e-05 gnorm=12.94 62 smp/s
+wandb: WARNING Tried to log to step 26700 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step26750/43940 loss=1.2011 acc=0.519 lr=7.21e-05 gnorm=8.80 62 smp/s
+wandb: WARNING Tried to log to step 26750 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step26800/43940 loss=1.3740 acc=0.477 lr=7.17e-05 gnorm=10.90 62 smp/s
+wandb: WARNING Tried to log to step 26800 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step26850/43940 loss=1.2412 acc=0.546 lr=7.13e-05 gnorm=8.26 62 smp/s
+wandb: WARNING Tried to log to step 26850 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step26900/43940 loss=1.2026 acc=0.551 lr=7.10e-05 gnorm=5.18 62 smp/s
+wandb: WARNING Tried to log to step 26900 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step26950/43940 loss=1.1381 acc=0.544 lr=7.06e-05 gnorm=2.17 62 smp/s
+wandb: WARNING Tried to log to step 26950 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step27000/43940 loss=1.2882 acc=0.489 lr=7.03e-05 gnorm=6.04 62 smp/s
+wandb: WARNING Tried to log to step 27000 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step27050/43940 loss=1.3548 acc=0.490 lr=6.99e-05 gnorm=3.23 62 smp/s
+wandb: WARNING Tried to log to step 27050 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step27100/43940 loss=1.2811 acc=0.486 lr=6.96e-05 gnorm=7.67 62 smp/s
+wandb: WARNING Tried to log to step 27100 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step27150/43940 loss=1.2934 acc=0.486 lr=6.92e-05 gnorm=5.35 62 smp/s
+wandb: WARNING Tried to log to step 27150 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step27200/43940 loss=1.0676 acc=0.549 lr=6.88e-05 gnorm=13.65 62 smp/s
+wandb: WARNING Tried to log to step 27200 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step27250/43940 loss=1.4910 acc=0.479 lr=6.85e-05 gnorm=13.70 62 smp/s
+wandb: WARNING Tried to log to step 27250 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step27300/43940 loss=1.5090 acc=0.448 lr=6.81e-05 gnorm=15.68 62 smp/s
+wandb: WARNING Tried to log to step 27300 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step27350/43940 loss=1.4612 acc=0.471 lr=6.78e-05 gnorm=7.91 62 smp/s
+wandb: WARNING Tried to log to step 27350 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step27400/43940 loss=1.4089 acc=0.471 lr=6.74e-05 gnorm=18.67 62 smp/s
+wandb: WARNING Tried to log to step 27400 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step27450/43940 loss=1.1124 acc=0.570 lr=6.71e-05 gnorm=8.81 62 smp/s
+wandb: WARNING Tried to log to step 27450 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step27500/43940 loss=1.1675 acc=0.537 lr=6.67e-05 gnorm=12.98 62 smp/s
+wandb: WARNING Tried to log to step 27500 that is less than the current step 27501. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ep6 step27550/43940 loss=1.2124 acc=0.518 lr=6.64e-05 gnorm=7.21 62 smp/s
+ep6 step27600/43940 loss=1.1968 acc=0.519 lr=6.60e-05 gnorm=6.90 62 smp/s
+ep6 step27650/43940 loss=1.0985 acc=0.551 lr=6.57e-05 gnorm=5.79 62 smp/s
+ep6 step27700/43940 loss=1.2813 acc=0.493 lr=6.53e-05 gnorm=4.12 62 smp/s
+ep6 step27750/43940 loss=1.0844 acc=0.556 lr=6.50e-05 gnorm=8.88 62 smp/s
+ep6 step27800/43940 loss=1.1920 acc=0.536 lr=6.46e-05 gnorm=13.22 62 smp/s
+ep6 step27850/43940 loss=1.3244 acc=0.500 lr=6.43e-05 gnorm=1.76 62 smp/s
+ep6 step27900/43940 loss=1.2747 acc=0.523 lr=6.39e-05 gnorm=2.25 62 smp/s
+ep6 step27950/43940 loss=1.1787 acc=0.533 lr=6.36e-05 gnorm=9.88 62 smp/s
+ep6 step28000/43940 loss=1.1866 acc=0.536 lr=6.32e-05 gnorm=6.35 62 smp/s
+[eval @ 28000] WER=0.760 CER=0.694 SER=0.982 loss=1.559 content_acc=0.292 fill_rate=0.288 entropy=0.918 distinct=30
+   Full: <s> m i s t e r | q u i l t e r | i s | t e e | p o s t e e | o f | t h e m i d d e e | c l a s s s s | | a n | w | | a r r e g l a d | t | 
+   Hyp : mister quilter is tee postee of themiddee classss  an w  arreglad t  wweccoe hii
+   Ref : mister quilter is the apostle of the middle classes and we are glad to welcome h
+   ** new best WER=0.760 -> best.pt
+ep6 step28050/43940 loss=1.1898 acc=0.534 lr=6.29e-05 gnorm=4.84 61 smp/s
+ep6 step28100/43940 loss=1.3830 acc=0.501 lr=6.25e-05 gnorm=11.99 61 smp/s
+ep6 step28150/43940 loss=1.0790 acc=0.558 lr=6.22e-05 gnorm=7.51 61 smp/s
+ep6 step28200/43940 loss=1.1960 acc=0.518 lr=6.18e-05 gnorm=2.05 61 smp/s
+ep6 step28250/43940 loss=1.1262 acc=0.530 lr=6.15e-05 gnorm=5.09 61 smp/s
+ep6 step28300/43940 loss=1.1734 acc=0.548 lr=6.11e-05 gnorm=3.16 61 smp/s
+ep6 step28350/43940 loss=1.5750 acc=0.482 lr=6.08e-05 gnorm=13.17 61 smp/s
+ep6 step28400/43940 loss=1.2743 acc=0.502 lr=6.04e-05 gnorm=12.40 61 smp/s
+ep6 step28450/43940 loss=1.3301 acc=0.491 lr=6.01e-05 gnorm=9.18 61 smp/s
+ep6 step28500/43940 loss=1.3216 acc=0.538 lr=5.98e-05 gnorm=2.82 61 smp/s
+ep6 step28550/43940 loss=1.3128 acc=0.523 lr=5.94e-05 gnorm=11.08 61 smp/s
+ep6 step28600/43940 loss=1.3037 acc=0.486 lr=5.91e-05 gnorm=1.75 61 smp/s
+ep6 step28650/43940 loss=1.2111 acc=0.533 lr=5.87e-05 gnorm=11.44 61 smp/s
+ep6 step28700/43940 loss=1.1785 acc=0.522 lr=5.84e-05 gnorm=2.33 61 smp/s
+ep6 step28750/43940 loss=1.3200 acc=0.480 lr=5.80e-05 gnorm=5.99 61 smp/s
+ep6 step28800/43940 loss=1.1989 acc=0.524 lr=5.77e-05 gnorm=14.07 61 smp/s
+ep6 step28850/43940 loss=1.2856 acc=0.532 lr=5.74e-05 gnorm=2.74 61 smp/s
+ep6 step28900/43940 loss=1.1700 acc=0.527 lr=5.70e-05 gnorm=1.67 61 smp/s
+ep6 step28950/43940 loss=1.2438 acc=0.530 lr=5.67e-05 gnorm=6.02 61 smp/s
+ep6 step29000/43940 loss=1.3685 acc=0.488 lr=5.64e-05 gnorm=10.74 61 smp/s
+ep6 step29050/43940 loss=1.3797 acc=0.495 lr=5.60e-05 gnorm=8.73 61 smp/s
+ep6 step29100/43940 loss=1.1736 acc=0.532 lr=5.57e-05 gnorm=10.39 61 smp/s
+ep6 step29150/43940 loss=1.0914 acc=0.540 lr=5.53e-05 gnorm=1.66 61 smp/s
+ep6 step29200/43940 loss=1.2749 acc=0.508 lr=5.50e-05 gnorm=10.09 61 smp/s
+ep6 step29250/43940 loss=1.0873 acc=0.560 lr=5.47e-05 gnorm=3.64 61 smp/s
+ep6 step29300/43940 loss=1.1907 acc=0.530 lr=5.43e-05 gnorm=7.15 61 smp/s
+ep6 step29350/43940 loss=1.2116 acc=0.535 lr=5.40e-05 gnorm=12.47 61 smp/s
+ep6 step29400/43940 loss=1.2246 acc=0.507 lr=5.37e-05 gnorm=1.90 61 smp/s
+ep6 step29450/43940 loss=1.2113 acc=0.505 lr=5.33e-05 gnorm=2.00 61 smp/s
+ep6 step29500/43940 loss=1.2300 acc=0.513 lr=5.30e-05 gnorm=4.47 61 smp/s
+ep6 step29550/43940 loss=1.1045 acc=0.550 lr=5.27e-05 gnorm=12.64 61 smp/s
+ep6 step29600/43940 loss=1.1891 acc=0.527 lr=5.24e-05 gnorm=5.28 61 smp/s
+ep6 step29650/43940 loss=1.1902 acc=0.536 lr=5.20e-05 gnorm=7.90 61 smp/s
+ep6 step29700/43940 loss=1.2921 acc=0.476 lr=5.17e-05 gnorm=7.57 61 smp/s
+ep6 step29750/43940 loss=1.1011 acc=0.554 lr=5.14e-05 gnorm=2.49 61 smp/s
+ep6 step29800/43940 loss=1.3631 acc=0.491 lr=5.10e-05 gnorm=6.71 61 smp/s
+ep6 step29850/43940 loss=1.1463 acc=0.534 lr=5.07e-05 gnorm=1.94 61 smp/s
+ep6 step29900/43940 loss=1.0786 acc=0.555 lr=5.04e-05 gnorm=1.82 61 smp/s
+ep6 step29950/43940 loss=1.1637 acc=0.531 lr=5.01e-05 gnorm=4.57 61 smp/s
+ep6 step30000/43940 loss=1.3084 acc=0.475 lr=4.97e-05 gnorm=18.29 61 smp/s
+[eval @ 30000] WER=0.742 CER=0.676 SER=0.988 loss=1.174 content_acc=0.395 fill_rate=0.276 entropy=0.908 distinct=30
+   Full: <s> m i s t e r | q u i l t e r | i s | t h e | a p o t l e | o f | t h e | m i d d l e | c l a s s s s s | a n d | w e | a r e g g a a d | 
+   Hyp : mister quilter is the apotle of the middle classsss and we areggaad o wweccoe hh
+   Ref : mister quilter is the apostle of the middle classes and we are glad to welcome h
+   ** new best WER=0.742 -> best.pt
+ep6 step30050/43940 loss=1.0423 acc=0.570 lr=4.94e-05 gnorm=2.58 61 smp/s
+ep6 step30100/43940 loss=1.2660 acc=0.518 lr=4.91e-05 gnorm=9.78 61 smp/s
+ep6 step30150/43940 loss=1.4414 acc=0.469 lr=4.88e-05 gnorm=3.57 61 smp/s
+ep6 step30200/43940 loss=1.2910 acc=0.508 lr=4.85e-05 gnorm=2.60 61 smp/s
+ep6 step30250/43940 loss=1.1461 acc=0.528 lr=4.81e-05 gnorm=4.05 61 smp/s
+ep6 step30300/43940 loss=1.0165 acc=0.596 lr=4.78e-05 gnorm=4.31 61 smp/s
+ep6 step30350/43940 loss=1.3196 acc=0.495 lr=4.75e-05 gnorm=6.16 61 smp/s
+ep7 step30400/43940 loss=1.1690 acc=0.545 lr=4.72e-05 gnorm=3.18 61 smp/s
+ep7 step30450/43940 loss=1.0807 acc=0.552 lr=4.69e-05 gnorm=7.40 61 smp/s
+ep7 step30500/43940 loss=1.1757 acc=0.553 lr=4.65e-05 gnorm=8.48 61 smp/s
+ep7 step30550/43940 loss=1.2226 acc=0.513 lr=4.62e-05 gnorm=8.97 61 smp/s
+ep7 step30600/43940 loss=1.4689 acc=0.466 lr=4.59e-05 gnorm=8.95 61 smp/s
+ep7 step30650/43940 loss=1.1345 acc=0.552 lr=4.56e-05 gnorm=2.55 61 smp/s
+ep7 step30700/43940 loss=1.1584 acc=0.525 lr=4.53e-05 gnorm=2.01 61 smp/s
+ep7 step30750/43940 loss=1.1703 acc=0.532 lr=4.50e-05 gnorm=4.10 61 smp/s
+ep7 step30800/43940 loss=1.0485 acc=0.580 lr=4.47e-05 gnorm=8.41 61 smp/s
+ep7 step30850/43940 loss=1.3067 acc=0.506 lr=4.43e-05 gnorm=1.76 61 smp/s
+ep7 step30900/43940 loss=1.1559 acc=0.529 lr=4.40e-05 gnorm=2.95 61 smp/s
+ep7 step30950/43940 loss=1.2017 acc=0.497 lr=4.37e-05 gnorm=4.55 61 smp/s
+ep7 step31000/43940 loss=1.1540 acc=0.534 lr=4.34e-05 gnorm=2.37 61 smp/s
+ep7 step31050/43940 loss=1.0934 acc=0.552 lr=4.31e-05 gnorm=2.57 61 smp/s
+ep7 step31100/43940 loss=1.1553 acc=0.503 lr=4.28e-05 gnorm=6.64 61 smp/s
+ep7 step31150/43940 loss=1.4247 acc=0.450 lr=4.25e-05 gnorm=4.55 61 smp/s
+ep7 step31200/43940 loss=1.2434 acc=0.502 lr=4.22e-05 gnorm=14.31 61 smp/s
+ep7 step31250/43940 loss=1.1502 acc=0.545 lr=4.19e-05 gnorm=7.72 61 smp/s
+ep7 step31300/43940 loss=1.1284 acc=0.551 lr=4.16e-05 gnorm=1.83 61 smp/s
+ep7 step31350/43940 loss=1.2866 acc=0.503 lr=4.13e-05 gnorm=2.59 61 smp/s
+ep7 step31400/43940 loss=1.0575 acc=0.563 lr=4.10e-05 gnorm=2.66 61 smp/s
+ep7 step31450/43940 loss=1.3100 acc=0.501 lr=4.07e-05 gnorm=11.07 61 smp/s
+ep7 step31500/43940 loss=1.1488 acc=0.555 lr=4.04e-05 gnorm=7.64 61 smp/s
+ep7 step31550/43940 loss=1.3668 acc=0.491 lr=4.01e-05 gnorm=16.62 61 smp/s
+ep7 step31600/43940 loss=1.1811 acc=0.522 lr=3.98e-05 gnorm=5.45 61 smp/s
+ep7 step31650/43940 loss=1.2656 acc=0.479 lr=3.95e-05 gnorm=6.06 61 smp/s
+ep7 step31700/43940 loss=1.4348 acc=0.485 lr=3.92e-05 gnorm=17.08 61 smp/s
+ep7 step31750/43940 loss=1.2542 acc=0.500 lr=3.89e-05 gnorm=5.71 61 smp/s
+ep7 step31800/43940 loss=1.1070 acc=0.551 lr=3.86e-05 gnorm=16.78 61 smp/s
+ep7 step31850/43940 loss=1.2123 acc=0.517 lr=3.83e-05 gnorm=7.60 61 smp/s
+ep7 step31900/43940 loss=1.0751 acc=0.567 lr=3.80e-05 gnorm=9.52 61 smp/s
+ep7 step31950/43940 loss=1.2822 acc=0.509 lr=3.77e-05 gnorm=15.63 61 smp/s
+ep7 step32000/43940 loss=1.0587 acc=0.579 lr=3.74e-05 gnorm=6.91 61 smp/s
+[eval @ 32000] WER=0.713 CER=0.573 SER=0.980 loss=1.433 content_acc=0.326 fill_rate=0.287 entropy=0.889 distinct=30
+   Full: <s> m i s t e r | q u i l t e r | i s | t h e | a o o t l e | o f | t h e | m i d d l e | c l a s s s s s | a n d w e | | r r e g l a d | t 
+   Hyp : mister quilter is the aootle of the middle classsss andwe  rreglad to wwllooe hh
+   Ref : mister quilter is the apostle of the middle classes and we are glad to welcome h
+   ** new best WER=0.713 -> best.pt
+ep7 step32050/43940 loss=1.3416 acc=0.481 lr=3.71e-05 gnorm=1.37 60 smp/s
+ep7 step32100/43940 loss=1.1579 acc=0.540 lr=3.68e-05 gnorm=3.03 60 smp/s
+ep7 step32150/43940 loss=1.1339 acc=0.542 lr=3.65e-05 gnorm=2.70 60 smp/s
+ep7 step32200/43940 loss=1.2019 acc=0.499 lr=3.62e-05 gnorm=1.62 60 smp/s
+ep7 step32250/43940 loss=1.2018 acc=0.510 lr=3.60e-05 gnorm=2.83 60 smp/s
+ep7 step32300/43940 loss=1.2817 acc=0.497 lr=3.57e-05 gnorm=6.73 60 smp/s
+ep7 step32350/43940 loss=1.4088 acc=0.490 lr=3.54e-05 gnorm=11.72 60 smp/s
+ep7 step32400/43940 loss=1.1929 acc=0.513 lr=3.51e-05 gnorm=2.05 60 smp/s
+ep7 step32450/43940 loss=1.4671 acc=0.455 lr=3.48e-05 gnorm=1.53 60 smp/s
+ep7 step32500/43940 loss=1.1217 acc=0.522 lr=3.45e-05 gnorm=6.17 60 smp/s
+ep7 step32550/43940 loss=1.2975 acc=0.502 lr=3.42e-05 gnorm=5.15 60 smp/s
+ep7 step32600/43940 loss=1.3561 acc=0.477 lr=3.40e-05 gnorm=16.06 60 smp/s
+ep7 step32650/43940 loss=1.2231 acc=0.510 lr=3.37e-05 gnorm=2.08 60 smp/s
+ep7 step32700/43940 loss=1.2992 acc=0.505 lr=3.34e-05 gnorm=11.78 60 smp/s
+ep7 step32750/43940 loss=1.0145 acc=0.580 lr=3.31e-05 gnorm=10.12 61 smp/s
+ep7 step32800/43940 loss=1.0615 acc=0.573 lr=3.28e-05 gnorm=4.64 61 smp/s
+ep7 step32850/43940 loss=1.0847 acc=0.569 lr=3.26e-05 gnorm=4.38 61 smp/s
+ep7 step32900/43940 loss=1.0955 acc=0.565 lr=3.23e-05 gnorm=6.86 61 smp/s
+ep7 step32950/43940 loss=1.2269 acc=0.510 lr=3.20e-05 gnorm=2.03 61 smp/s
+ep7 step33000/43940 loss=1.1732 acc=0.542 lr=3.17e-05 gnorm=5.51 61 smp/s
+ep7 step33050/43940 loss=1.2588 acc=0.517 lr=3.15e-05 gnorm=1.59 61 smp/s
+ep7 step33100/43940 loss=1.2265 acc=0.512 lr=3.12e-05 gnorm=1.84 61 smp/s
+ep7 step33150/43940 loss=1.1745 acc=0.522 lr=3.09e-05 gnorm=8.77 61 smp/s
+ep7 step33200/43940 loss=1.2776 acc=0.491 lr=3.07e-05 gnorm=2.43 61 smp/s
+ep7 step33250/43940 loss=1.2685 acc=0.520 lr=3.04e-05 gnorm=4.34 61 smp/s
+ep7 step33300/43940 loss=1.1106 acc=0.556 lr=3.01e-05 gnorm=1.57 61 smp/s
+ep7 step33350/43940 loss=1.0871 acc=0.571 lr=2.98e-05 gnorm=2.51 61 smp/s
+ep7 step33400/43940 loss=1.2018 acc=0.533 lr=2.96e-05 gnorm=8.69 61 smp/s
+ep7 step33450/43940 loss=1.2369 acc=0.517 lr=2.93e-05 gnorm=4.11 61 smp/s
+ep7 step33500/43940 loss=1.2487 acc=0.513 lr=2.91e-05 gnorm=13.26 61 smp/s
+ep7 step33550/43940 loss=1.3309 acc=0.485 lr=2.88e-05 gnorm=8.17 61 smp/s
+ep7 step33600/43940 loss=1.2514 acc=0.506 lr=2.85e-05 gnorm=6.46 61 smp/s
+ep7 step33650/43940 loss=1.1639 acc=0.538 lr=2.83e-05 gnorm=4.08 61 smp/s
+ep7 step33700/43940 loss=1.2170 acc=0.515 lr=2.80e-05 gnorm=5.01 61 smp/s
+ep7 step33750/43940 loss=1.2131 acc=0.513 lr=2.77e-05 gnorm=8.18 61 smp/s
+W0626 17:16:56.917000 2579484 site-packages/torch/distributed/elastic/agent/server/api.py:719] Received Signals.SIGTERM death signal, shutting down workers
+Traceback (most recent call last):
+  File "/speech/tomson/miniconda3/envs/filler_asr/bin/torchrun", line 6, in <module>
+    sys.exit(main())
+  File "/speech/tomson/miniconda3/envs/filler_asr/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/speech/tomson/miniconda3/envs/filler_asr/lib/python3.10/site-packages/torch/distributed/run.py", line 892, in main
+    run(args)
+  File "/speech/tomson/miniconda3/envs/filler_asr/lib/python3.10/site-packages/torch/distributed/run.py", line 883, in run
+    elastic_launch(
+  File "/speech/tomson/miniconda3/envs/filler_asr/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 139, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/speech/tomson/miniconda3/envs/filler_asr/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 261, in launch_agent
+    result = agent.run()
+  File "/speech/tomson/miniconda3/envs/filler_asr/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 138, in wrapper
+    result = f(*args, **kwargs)
+  File "/speech/tomson/miniconda3/envs/filler_asr/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 711, in run
+    result = self._invoke_run(role)
+  File "/speech/tomson/miniconda3/envs/filler_asr/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 870, in _invoke_run
+    time.sleep(monitor_interval)
+  File "/speech/tomson/miniconda3/envs/filler_asr/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/api.py", line 84, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 2579484 got signal: 15

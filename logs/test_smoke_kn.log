@@ -1,0 +1,161 @@
+[run] env=/speech/abhishek/miniconda3/envs/indic-nar-filler_asr GPUs=6,7,8,9 (n=4)  eff_batch=16  out=/speech/abhishek/indic-nar-filler_asr/runs/_test_smoke_kn
+[run] encoder=/speech/abhishek/kannada_data/encoders/SPRING_INX_data2vec_aqc_Kannada.pt
+W0915 14:47:02.935000 135868133901376 torch/distributed/run.py:779] 
+W0915 14:47:02.935000 135868133901376 torch/distributed/run.py:779] *****************************************
+W0915 14:47:02.935000 135868133901376 torch/distributed/run.py:779] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0915 14:47:02.935000 135868133901376 torch/distributed/run.py:779] *****************************************
+[W915 14:47:06.627759465 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+[W915 14:47:07.309584370 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+[W915 14:47:07.352691510 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+[W915 14:47:07.371132841 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+INFO:Data2VecAQCEncoder:[data2vec_aqc] ckpt:             /speech/abhishek/kannada_data/encoders/SPRING_INX_data2vec_aqc_Kannada.pt
+INFO:Data2VecAQCEncoder:[data2vec_aqc] outer _name:      wav2vec_ctc  (CTC fine-tuned)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] inner _name:      data2vec_audio
+INFO:Data2VecAQCEncoder:[data2vec_aqc] layer_norm_first: False
+INFO:Data2VecAQCEncoder:[data2vec_aqc] tgt_layer:        None (None=run all blocks)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped outside w2v_model.*: ['w2v_encoder.proj.bias', 'w2v_encoder.proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped INSIDE body (AQC extras): ['contr_proj.bias', 'contr_proj.weight', 'project_q.bias', 'project_q.weight', 'quantizer.vars', 'quantizer.weight_proj.bias', 'quantizer.weight_proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] missing keys (expect empty/pretraining-only): []
+INFO:Data2VecAQCEncoder:[data2vec_aqc] ckpt:             /speech/abhishek/kannada_data/encoders/SPRING_INX_data2vec_aqc_Kannada.pt
+INFO:Data2VecAQCEncoder:[data2vec_aqc] outer _name:      wav2vec_ctc  (CTC fine-tuned)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] inner _name:      data2vec_audio
+INFO:Data2VecAQCEncoder:[data2vec_aqc] layer_norm_first: False
+INFO:Data2VecAQCEncoder:[data2vec_aqc] tgt_layer:        None (None=run all blocks)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped outside w2v_model.*: ['w2v_encoder.proj.bias', 'w2v_encoder.proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped INSIDE body (AQC extras): ['contr_proj.bias', 'contr_proj.weight', 'project_q.bias', 'project_q.weight', 'quantizer.vars', 'quantizer.weight_proj.bias', 'quantizer.weight_proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] missing keys (expect empty/pretraining-only): []
+INFO:Data2VecAQCEncoder:[data2vec_aqc] ckpt:             /speech/abhishek/kannada_data/encoders/SPRING_INX_data2vec_aqc_Kannada.pt
+INFO:Data2VecAQCEncoder:[data2vec_aqc] outer _name:      wav2vec_ctc  (CTC fine-tuned)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] inner _name:      data2vec_audio
+INFO:Data2VecAQCEncoder:[data2vec_aqc] layer_norm_first: False
+INFO:Data2VecAQCEncoder:[data2vec_aqc] tgt_layer:        None (None=run all blocks)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped outside w2v_model.*: ['w2v_encoder.proj.bias', 'w2v_encoder.proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped INSIDE body (AQC extras): ['contr_proj.bias', 'contr_proj.weight', 'project_q.bias', 'project_q.weight', 'quantizer.vars', 'quantizer.weight_proj.bias', 'quantizer.weight_proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] missing keys (expect empty/pretraining-only): []
+INFO:Data2VecAQCEncoder:[data2vec_aqc] ckpt:             /speech/abhishek/kannada_data/encoders/SPRING_INX_data2vec_aqc_Kannada.pt
+INFO:Data2VecAQCEncoder:[data2vec_aqc] outer _name:      wav2vec_ctc  (CTC fine-tuned)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] inner _name:      data2vec_audio
+INFO:Data2VecAQCEncoder:[data2vec_aqc] layer_norm_first: False
+INFO:Data2VecAQCEncoder:[data2vec_aqc] tgt_layer:        None (None=run all blocks)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped outside w2v_model.*: ['w2v_encoder.proj.bias', 'w2v_encoder.proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped INSIDE body (AQC extras): ['contr_proj.bias', 'contr_proj.weight', 'project_q.bias', 'project_q.weight', 'quantizer.vars', 'quantizer.weight_proj.bias', 'quantizer.weight_proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] missing keys (expect empty/pretraining-only): []
+DEBUG:asyncio:Using selector: EpollSelector
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/speech/abhishek/indic-nar-filler_asr, stdin=None, shell=False, universal_newlines=False)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/speech/abhishek/indic-nar-filler_asr, stdin=None, shell=False, universal_newlines=False)
+DEBUG:git.util:sys.platform='linux', git_executable='git'
+DEBUG:git.util:sys.platform='linux', git_executable='git'
+wandb: Tracking run with wandb version 0.27.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /tmp/claude-1024/-speech-abhishek/3fea8869-339c-4568-ad8c-59819f4ff3b2/scratchpad/wandb_offline/wandb/offline-run-20260915_144724-errxw6gn
+wandb: WARNING URL not available in offline run
+wandb run: None
+[setup] world=4 train=512 dev=32 trainable=100.96M pos_mode=alibi PE=True sa_layers=8 fps=50 sched=exponential mask=0.2-0.3x10 eff_batch=16 steps/epoch=32 total_steps=40
+[log] config=/speech/abhishek/indic-nar-filler_asr/log_config.json disabled=none
+/speech/abhishek/indic-nar-filler_asr/deps/fairseq/examples/data2vec/models/data2vec_audio.py:190: FutureWarning: Positional args are being deprecated, use kwargs instead. Refer to https://pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  state = super().state_dict(destination, prefix, keep_vars)
+[ckpt-audit] checkpoint will save 100 trainable tensors / 100.96M params  (hubert tensors included=0)
+[select] best.pt = argmin eval/iter_WER; other metrics are diagnostics only
+[data-audit] ACMLM transform, 1 train clip: T=656 graded(masked)_slots=268
+   frame:input[->CEtarget], first 24/656  (<mask>=input hole; -> = supervised slot)
+   0:<s> 1:<mask>->ನ 2:ಿ 3:<mask>->ರ 4:<mask>->ು 5:<mask>->ದ 6:್ 7:<mask>->ಯ 8:ೋ 9:<mask>->ಗ 10:<mask>->| 11:ಸ 12:ಮ 13:<mask>->ಸ 14:್ 15:ಸ 16:ೆ 17:<mask>->| 18:<mask>->ಬ 19:ಗ 20:್ 21:<mask>->ಗ 22:ೆ 23:<mask>->|
+[eval @ 0] WER=1.000 CER=4.315 SER=1.000 loss=4.950 content_acc=0.025 fill_rate=0.000 entropy=4.323 distinct=62
+[eval @ 0] iter32  WER=1.000 CER=2.071 SER=1.000 (mask-predict decode, n=8 clips)
+   Full: ನ ಸ ಸ ೊ ೊ u u u u ರ e n n n d x ಾ ೊ ನ ನ ನ ಞ ೊ ನ n ನ ನ ೊ n ಞ ನ ೊ ನ ನ ನ ೊ ನ ಞ ನ ನ ಕ ನ ನ ನ ನ ನ ಋ ನ ನ ನ ದ ದ ನ ನ ನ ನ ನ ನ ನ n ನ ನ ನ r ನ ನ ನ ನ ಲ ನ 
+   Hyp : rನಸಸೊೊuuuuರennndxಾೊನನನಞೊನnನನೊnಞನೊನನನೊನಞನನಕನನನನನಋನನನದದನನನನನನನnನನನrನನನನಲನನನನನನನನನನ
+   Ref : ಸಾಂಸ್ಕೃತಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರೋನಾ ಸೋಂಕು ಹೆಚ್ಚುತ್ತಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಇಂದಿನಿಂದ ಐದ
+/speech/abhishek/indic-nar-filler_asr/deps/fairseq/examples/data2vec/models/data2vec_audio.py:190: FutureWarning: Positional args are being deprecated, use kwargs instead. Refer to https://pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  state = super().state_dict(destination, prefix, keep_vars)
+   ** new best eval/iter_WER=1.0000 -> best.pt
+[frozen-audit] after model.train(): hubert.training=False hubert_trainable_tensors=0  (expect False / 0 -> no layerdrop, no dropout, deterministic tap)
+[grad-audit step1] micro/window=1 tok_local=357 tok_global=1060 grad_scale=world/tok=3.774e-03 loss_sum_local=1689.0 win_loss=4.7335 gnorm_preclip=8.458 lr=2.00e-05
+[grad-audit step2] micro/window=1 tok_local=303 tok_global=1308 grad_scale=world/tok=3.058e-03 loss_sum_local=1453.6 win_loss=4.7958 gnorm_preclip=9.707 lr=4.00e-05
+[grad-audit step3] micro/window=1 tok_local=255 tok_global=977 grad_scale=world/tok=4.093e-03 loss_sum_local=1070.4 win_loss=4.1979 gnorm_preclip=6.663 lr=6.00e-05
+[grad-audit step4] micro/window=1 tok_local=370 tok_global=891 grad_scale=world/tok=4.488e-03 loss_sum_local=1680.6 win_loss=4.5372 gnorm_preclip=15.596 lr=8.00e-05
+[grad-audit step5] micro/window=1 tok_local=71 tok_global=665 grad_scale=world/tok=6.017e-03 loss_sum_local=308.1 win_loss=4.3093 gnorm_preclip=13.976 lr=1.00e-04
+ep1 step5/40 loss=4.3093 acc=0.096 lr=1.00e-04 gnorm=13.98 24 smp/s
+ep1 step10/40 loss=3.8831 acc=0.039 lr=2.00e-04 gnorm=6.99 41 smp/s
+ep1 step15/40 loss=3.6213 acc=0.026 lr=9.28e-05 gnorm=3.46 52 smp/s
+ep1 step20/40 loss=3.4893 acc=0.053 lr=4.31e-05 gnorm=2.28 61 smp/s
+[eval @ 20] WER=1.036 CER=5.040 SER=1.000 loss=3.166 content_acc=0.092 fill_rate=0.000 entropy=3.399 distinct=4
+[eval @ 20] iter32  WER=1.000 CER=3.072 SER=1.000 (mask-predict decode, n=8 clips)
+   Full: ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ 
+   Hyp : ್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್
+   Ref : ಸಾಂಸ್ಕೃತಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರೋನಾ ಸೋಂಕು ಹೆಚ್ಚುತ್ತಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಇಂದಿನಿಂದ ಐದ
+ep1 step25/40 loss=3.8606 acc=0.061 lr=2.00e-05 gnorm=1.90 36 smp/s
+ep1 step30/40 loss=3.3439 acc=0.168 lr=9.28e-06 gnorm=1.57 40 smp/s
+ep2 step35/40 loss=3.4734 acc=0.087 lr=4.31e-06 gnorm=1.80 41 smp/s
+ep2 step40/40 loss=3.4837 acc=0.106 lr=2.00e-06 gnorm=1.87 45 smp/s
+[eval @ 40] WER=1.279 CER=4.118 SER=1.000 loss=2.925 content_acc=0.099 fill_rate=0.008 entropy=3.483 distinct=2
+[eval @ 40] iter32  WER=1.010 CER=2.573 SER=1.000 (mask-predict decode, n=8 clips)
+   Full: ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ 
+   Hyp : ್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್
+   Ref : ಸಾಂಸ್ಕೃತಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರೋನಾ ಸೋಂಕು ಹೆಚ್ಚುತ್ತಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಇಂದಿನಿಂದ ಐದ
+[eval @ 40] WER=1.279 CER=4.118 SER=1.000 loss=2.925 content_acc=0.099 fill_rate=0.008 entropy=3.483 distinct=2
+[eval @ 40] iter32  WER=1.010 CER=2.573 SER=1.000 (mask-predict decode, n=8 clips)
+   Full: ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ 
+   Hyp : ್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್್
+   Ref : ಸಾಂಸ್ಕೃತಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರೋನಾ ಸೋಂಕು ಹೆಚ್ಚುತ್ತಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಇಂದಿನಿಂದ ಐದ
+wandb: 
+wandb: Run history:
+wandb:                        epoch ▁▁▁▁▁▁██
+wandb:                     eval/CER ▂█▁
+wandb:                     eval/SER ▁▁▁
+wandb:                     eval/WER ▁▂█
+wandb:       eval/content_frame_acc ▁▇█
+wandb: eval/distinct_nonfill_tokens █▁▁
+wandb:          eval/fill_frame_acc ▁▁█
+wandb:          eval/fill_pred_rate ▁▁█
+wandb:        eval/graded_frame_acc ▁▆█
+wandb:                eval/iter_CER ▁█▅
+wandb:                          +11 ...
+wandb: 
+wandb: Run summary:
+wandb:                        epoch 2
+wandb:                     eval/CER 4.11753
+wandb:                     eval/SER 1
+wandb:                     eval/WER 1.27907
+wandb:       eval/content_frame_acc 0.09901
+wandb: eval/distinct_nonfill_tokens 2
+wandb:          eval/fill_frame_acc 0.01153
+wandb:          eval/fill_pred_rate 0.00802
+wandb:        eval/graded_frame_acc 0.03818
+wandb:                eval/iter_CER 2.57326
+wandb:                          +11 ...
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /tmp/claude-1024/-speech-abhishek/3fea8869-339c-4568-ad8c-59819f4ff3b2/scratchpad/wandb_offline/wandb/offline-run-20260915_144724-errxw6gn
+wandb: Find logs at: /tmp/claude-1024/-speech-abhishek/3fea8869-339c-4568-ad8c-59819f4ff3b2/scratchpad/wandb_offline/wandb/offline-run-20260915_144724-errxw6gn/logs
+DONE
+DEBUG:filelock:Attempting to acquire lock 135912090241392 on /speech/abhishek/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Lock 135912090241392 acquired on /speech/abhishek/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Attempting to release lock 135912090241392 on /speech/abhishek/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Lock 135912090241392 released on /speech/abhishek/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Attempting to acquire lock 123576692509040 on /speech/abhishek/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Lock 123576692509040 acquired on /speech/abhishek/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Attempting to release lock 123576692509040 on /speech/abhishek/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Lock 123576692509040 released on /speech/abhishek/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Attempting to acquire lock 135912090239280 on /speech/abhishek/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Lock 135912090239280 acquired on /speech/abhishek/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Attempting to release lock 135912090239280 on /speech/abhishek/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Lock 135912090239280 released on /speech/abhishek/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Attempting to acquire lock 123576692506928 on /speech/abhishek/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Lock 123576692506928 acquired on /speech/abhishek/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Attempting to release lock 123576692506928 on /speech/abhishek/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Lock 123576692506928 released on /speech/abhishek/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Attempting to acquire lock 138155413735840 on /speech/abhishek/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Lock 138155413735840 acquired on /speech/abhishek/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Attempting to release lock 138155413735840 on /speech/abhishek/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Lock 138155413735840 released on /speech/abhishek/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Attempting to acquire lock 138155413733584 on /speech/abhishek/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Lock 138155413733584 acquired on /speech/abhishek/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Attempting to release lock 138155413733584 on /speech/abhishek/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Lock 138155413733584 released on /speech/abhishek/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Attempting to acquire lock 125859850373488 on /speech/abhishek/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Lock 125859850373488 acquired on /speech/abhishek/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Attempting to release lock 125859850373488 on /speech/abhishek/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Lock 125859850373488 released on /speech/abhishek/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Attempting to acquire lock 125859850371376 on /speech/abhishek/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Lock 125859850371376 acquired on /speech/abhishek/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Attempting to release lock 125859850371376 on /speech/abhishek/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Lock 125859850371376 released on /speech/abhishek/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock

@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>filler-ASR demo</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 780px; margin: 2rem auto; padding: 0 1rem; }
+  h1 { font-size: 1.3rem; }
+  button { font-size: 1rem; padding: .5rem 1.2rem; margin-right: .5rem; cursor: pointer; }
+  #rec.recording { background: #d33; color: #fff; }
+  .card { border: 1px solid #ccc; border-radius: 8px; padding: 1rem; margin-top: 1rem; }
+  .hyp { font-size: 1.15rem; font-weight: 600; }
+  .meta { color: #555; font-size: .9rem; margin-top: .5rem; }
+  .unc { color: #777; font-size: .9rem; word-break: break-all; margin-top: .5rem; }
+  #status { color: #777; margin-left: .5rem; }
+  #modelinfo { color: #777; font-size: .85rem; }
+</style>
+</head>
+<body>
+<h1>filler-ASR (frozen HuBERT + SA head)</h1>
+<div id="modelinfo">loading model info…</div>
+
+<p>
+  <button id="rec">● Record</button>
+  <input type="file" id="filepick" accept="audio/*">
+  <span id="status"></span>
+</p>
+<div id="out"></div>
+
+<script>
+const $ = id => document.getElementById(id);
+
+fetch('/info').then(r => r.json()).then(i => {
+  $('modelinfo').textContent =
+    `run=${i.run_dir.split('/').pop()}  sa_layers=${i.num_sa_layers}  pe=${i.use_pe}  ` +
+    `fps=${i.frames_per_sec}  best_wer=${i.best_wer?.toFixed?.(4) ?? i.best_wer}  ` +
+    `device=${i.device}  max=${i.max_seconds}s`;
+});
+
+let mediaRecorder = null, chunks = [];
+
+// getUserMedia only exists on secure origins (https or localhost). Over http://<ip> the
+// browser removes the mic API entirely — explain that instead of failing silently.
+if (!navigator.mediaDevices?.getUserMedia) {
+  $('rec').disabled = true;
+  $('status').textContent = 'mic blocked: browsers only allow recording on https or localhost. ' +
+    'Tunnel the port (ssh -L 8677:localhost:8677 <box>) and open http://localhost:8677 — ' +
+    'file upload still works here.';
+}
+
+$('rec').onclick = async () => {
+  if (mediaRecorder && mediaRecorder.state === 'recording') { mediaRecorder.stop(); return; }
+  let stream;
+  try {
+    stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+  } catch (err) {
+    $('status').textContent = 'mic error: ' + err.message + ' (check browser mic permission for this site)';
+    return;
+  }
+  chunks = [];
+  mediaRecorder = new MediaRecorder(stream);
+  mediaRecorder.ondataavailable = e => chunks.push(e.data);
+  mediaRecorder.onstop = () => {
+    stream.getTracks().forEach(t => t.stop());
+    $('rec').classList.remove('recording');
+    $('rec').textContent = '● Record';
+    send(new Blob(chunks, { type: mediaRecorder.mimeType }), 'mic.webm');
+  };
+  mediaRecorder.start();
+  $('rec').classList.add('recording');
+  $('rec').textContent = '■ Stop';
+  $('status').textContent = 'recording…';
+};
+
+$('filepick').onchange = e => {
+  const f = e.target.files[0];
+  if (f) send(f, f.name);
+};
+
+async function send(blob, name) {
+  $('status').textContent = 'transcribing…';
+  const fd = new FormData();
+  fd.append('file', blob, name);
+  try {
+    const r = await fetch('/transcribe', { method: 'POST', body: fd });
+    const j = await r.json();
+    if (!r.ok) throw new Error(j.detail || r.statusText);
+    show(j, name);
+    $('status').textContent = '';
+  } catch (err) {
+    $('status').textContent = 'error: ' + err.message;
+  }
+}
+
+function show(j, name) {
+  const div = document.createElement('div');
+  div.className = 'card';
+  div.innerHTML =
+    `<div class="hyp">${j.hyp || '(empty)'}</div>` +
+    `<div class="meta">${name} — ${j.duration_s}s, ${j.total_frames} frames, ` +
+    `n_keep=${j.n_keep}, eos@${j.eos_frame ?? '—'}, ` +
+    `${j.inference_ms} ms (RTF ${j.rtf})${j.leaked ? ', leaked' : ''}</div>` +
+    (j.leaked ? `<div class="unc">uncapped: ${j.hyp_uncapped}</div>` : '');
+  $('out').prepend(div);
+}
+</script>
+</body>
+</html>

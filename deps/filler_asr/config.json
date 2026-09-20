@@ -1,0 +1,23 @@
+{
+    "exp_name": "filler_asr_960h_triphase_lr_epochs",
+    "wandb_project": "filler_asr",
+    "output_dir": "experiments",
+    "dataset_name": "librispeech_asr",
+    "model_checkpoint": "facebook/hubert-base-ls960",
+    "learning_rate": 3e-4,
+    "per_device_train_batch_size": 16,
+    "per_device_eval_batch_size": 16,
+    "gradient_accumulation_steps": 4,
+    "num_train_epochs": 200,
+    "lr_schedule_type": "triphase",
+    "lr_schedule_ratios": [0.1, 0.4, 0.5],
+    "classifier_only_train_ratio": 0.1,
+    "freeze_feature_extractor": true,
+    "warmup_steps": 0,
+    "weight_decay": 0.005,
+    "logging_steps": 50,
+    "save_steps": 1000,
+    "eval_steps": 500,
+    "num_processes": 4,
+    "max_steps": -1
+}

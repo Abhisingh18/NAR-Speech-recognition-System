@@ -1,0 +1,75 @@
+{
+  "added_tokens_decoder": {
+    "93": {
+      "content": "|",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "94": {
+      "content": "<unk>",
+      "lstrip": true,
+      "normalized": false,
+      "rstrip": true,
+      "single_word": false,
+      "special": false
+    },
+    "95": {
+      "content": "<pad>",
+      "lstrip": true,
+      "normalized": false,
+      "rstrip": true,
+      "single_word": false,
+      "special": false
+    },
+    "96": {
+      "content": "<s>",
+      "lstrip": true,
+      "normalized": false,
+      "rstrip": true,
+      "single_word": false,
+      "special": false
+    },
+    "97": {
+      "content": "</s>",
+      "lstrip": true,
+      "normalized": false,
+      "rstrip": true,
+      "single_word": false,
+      "special": false
+    },
+    "98": {
+      "content": "<fill>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "99": {
+      "content": "<mask>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    }
+  },
+  "backend": "custom",
+  "bos_token": "<s>",
+  "do_lower_case": false,
+  "eos_token": "</s>",
+  "extra_special_tokens": [
+    "<fill>",
+    "<mask>"
+  ],
+  "model_max_length": 1000000000000000019884624838656,
+  "pad_token": "<pad>",
+  "replace_word_delimiter_char": " ",
+  "target_lang": null,
+  "tokenizer_class": "Wav2Vec2CTCTokenizer",
+  "unk_token": "<unk>",
+  "word_delimiter_token": "|"
+}

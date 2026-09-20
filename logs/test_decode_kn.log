@@ -1,0 +1,70 @@
+/speech/abhishek/indic-nar-filler_asr/decode_kn_testsets.py:112: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(ckpt, map_location="cpu")
+[ckpt] /tmp/claude-1024/-speech-abhishek/3fea8869-339c-4568-ad8c-59819f4ff3b2/scratchpad/smoke_best_snapshot.pt step=0 epoch=1
+[enc ] /speech/abhishek/kannada_data/encoders/SPRING_INX_data2vec_aqc_Kannada.pt
+[cfg ] fps=50 steps=8 lang=kn seed=0
+[tok ] vocab_dir=/tmp/claude-1024/-speech-abhishek/3fea8869-339c-4568-ad8c-59819f4ff3b2/scratchpad/prep_test/vocab
+INFO:Data2VecAQCEncoder:[data2vec_aqc] ckpt:             /speech/abhishek/kannada_data/encoders/SPRING_INX_data2vec_aqc_Kannada.pt
+INFO:Data2VecAQCEncoder:[data2vec_aqc] outer _name:      wav2vec_ctc  (CTC fine-tuned)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] inner _name:      data2vec_audio
+INFO:Data2VecAQCEncoder:[data2vec_aqc] layer_norm_first: False
+INFO:Data2VecAQCEncoder:[data2vec_aqc] tgt_layer:        None (None=run all blocks)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped outside w2v_model.*: ['w2v_encoder.proj.bias', 'w2v_encoder.proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped INSIDE body (AQC extras): ['contr_proj.bias', 'contr_proj.weight', 'project_q.bias', 'project_q.weight', 'quantizer.vars', 'quantizer.weight_proj.bias', 'quantizer.weight_proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] missing keys (expect empty/pretraining-only): []
+
+== fleurs (5 utts) ==
+  [fleurs] WER 100.00  CER 517.68  SER 100.0  (sub 14.5 / del 85.5 / ins 0.0)
+
+== indictts (5 utts) ==
+  [indictts] WER 100.00  CER 507.89  SER 100.0  (sub 11.9 / del 88.1 / ins 0.0)
+
+== kathbath (5 utts) ==
+  [kathbath] WER 100.00  CER 459.06  SER 100.0  (sub 8.3 / del 91.7 / ins 0.0)
+
+== kathbath_noisy (5 utts) ==
+  [kathbath_noisy] WER 100.00  CER 378.35  SER 100.0  (sub 8.3 / del 91.7 / ins 0.0)
+
+testset	utts	words	WER	CER	SER	sub	dele	ins
+fleurs	5	76	100.00	517.68	100.00	14.47	85.53	0.00
+indictts	5	42	100.00	507.89	100.00	11.90	88.10	0.00
+kathbath	5	60	100.00	459.06	100.00	8.33	91.67	0.00
+kathbath_noisy	5	60	100.00	378.35	100.00	8.33	91.67	0.00
+[out] /tmp/claude-1024/-speech-abhishek/3fea8869-339c-4568-ad8c-59819f4ff3b2/scratchpad/decode_test
+DEBUG:asyncio:Using selector: EpollSelector
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/speech/abhishek/indic-nar-filler_asr, stdin=None, shell=False, universal_newlines=False)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/speech/abhishek/indic-nar-filler_asr, stdin=None, shell=False, universal_newlines=False)
+DEBUG:git.util:sys.platform='linux', git_executable='git'
+DEBUG:git.util:sys.platform='linux', git_executable='git'
+wandb: WARNING `resume` will be ignored since W&B syncing is set to `offline`. Starting a new run with run id errxw6gn.
+wandb: Tracking run with wandb version 0.27.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /tmp/claude-1024/-speech-abhishek/3fea8869-339c-4568-ad8c-59819f4ff3b2/scratchpad/wandb_offline/wandb/offline-run-20260915_144926-errxw6gn
+[wandb] attached to training run indic_nar_kn_en/errxw6gn
+wandb: WARNING URL not available in offline run
+[wandb] logged 22 test charts/tables under 'test_smoke_best_snapshot_N8/' -> None
+wandb: 
+wandb: Run summary:
+wandb:    test_smoke_best_snapshot_N8/fleurs/CER 517.68061
+wandb:    test_smoke_best_snapshot_N8/fleurs/SER 100
+wandb:    test_smoke_best_snapshot_N8/fleurs/WER 100
+wandb:   test_smoke_best_snapshot_N8/fleurs/dele 85.52632
+wandb:    test_smoke_best_snapshot_N8/fleurs/ins 0
+wandb:    test_smoke_best_snapshot_N8/fleurs/sub 14.47368
+wandb:  test_smoke_best_snapshot_N8/indictts/CER 507.88644
+wandb:  test_smoke_best_snapshot_N8/indictts/SER 100
+wandb:  test_smoke_best_snapshot_N8/indictts/WER 100
+wandb: test_smoke_best_snapshot_N8/indictts/dele 88.09524
+wandb:                                       +14 ...
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /tmp/claude-1024/-speech-abhishek/3fea8869-339c-4568-ad8c-59819f4ff3b2/scratchpad/wandb_offline/wandb/offline-run-20260915_144926-errxw6gn
+wandb: Find logs at: /tmp/claude-1024/-speech-abhishek/3fea8869-339c-4568-ad8c-59819f4ff3b2/scratchpad/wandb_offline/wandb/offline-run-20260915_144926-errxw6gn/logs
+DEBUG:filelock:Attempting to acquire lock 126431253004448 on /speech/abhishek/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Lock 126431253004448 acquired on /speech/abhishek/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Attempting to release lock 126431253004448 on /speech/abhishek/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Lock 126431253004448 released on /speech/abhishek/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Attempting to acquire lock 126431253005072 on /speech/abhishek/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Lock 126431253005072 acquired on /speech/abhishek/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Attempting to release lock 126431253005072 on /speech/abhishek/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Lock 126431253005072 released on /speech/abhishek/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock

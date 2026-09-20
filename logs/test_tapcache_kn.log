@@ -1,0 +1,50 @@
+[run] env=/speech/abhishek/miniconda3/envs/indic-nar-filler_asr GPUs=9 (n=1)  eff_batch=8  out=/speech/abhishek/indic-nar-filler_asr/runs/_test_tapcache_kn
+[run] encoder=/speech/abhishek/kannada_data/encoders/SPRING_INX_data2vec_aqc_Kannada.pt
+INFO:Data2VecAQCEncoder:[data2vec_aqc] ckpt:             /speech/abhishek/kannada_data/encoders/SPRING_INX_data2vec_aqc_Kannada.pt
+INFO:Data2VecAQCEncoder:[data2vec_aqc] outer _name:      wav2vec_ctc  (CTC fine-tuned)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] inner _name:      data2vec_audio
+INFO:Data2VecAQCEncoder:[data2vec_aqc] layer_norm_first: False
+INFO:Data2VecAQCEncoder:[data2vec_aqc] tgt_layer:        None (None=run all blocks)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped outside w2v_model.*: ['w2v_encoder.proj.bias', 'w2v_encoder.proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped INSIDE body (AQC extras): ['contr_proj.bias', 'contr_proj.weight', 'project_q.bias', 'project_q.weight', 'quantizer.vars', 'quantizer.weight_proj.bias', 'quantizer.weight_proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] missing keys (expect empty/pretraining-only): []
+[tap_cache] freed frozen encoder from GPU (forward reads cached taps only)
+[setup] world=1 train=64 dev=16 trainable=100.96M tap_cache=ON pos_mode=alibi PE=True sa_layers=8 fps=50 sched=exponential mask=0.2-0.3x10 eff_batch=8 steps/epoch=8 total_steps=10
+[log] config=/speech/abhishek/indic-nar-filler_asr/log_config.json disabled=none
+[ckpt-audit] checkpoint will save 100 trainable tensors / 100.96M params  (hubert tensors included=0)
+[select] best.pt = argmin eval/iter_WER; other metrics are diagnostics only
+[data-audit] ACMLM transform, 1 train clip: T=656 graded(masked)_slots=519
+   frame:input[->CEtarget], first 24/656  (<mask>=input hole; -> = supervised slot)
+   0:<s> 1:<mask>->ನ 2:<mask>->ಿ 3:ರ 4:<mask>->ು 5:ದ 6:<mask>->್ 7:<mask>->ಯ 8:<mask>->ೋ 9:<mask>->ಗ 10:| 11:<mask>->ಸ 12:<mask>->ಮ 13:<mask>->ಸ 14:್ 15:<mask>->ಸ 16:<mask>->ೆ 17:<mask>->| 18:ಬ 19:<mask>->ಗ 20:್ 21:<mask>->ಗ 22:<mask>->ೆ 23:<mask>->|
+[eval @ 0] WER=1.000 CER=5.710 SER=1.000 loss=4.598 content_acc=0.009 fill_rate=0.001 entropy=4.359 distinct=68
+[eval @ 0] iter32  WER=1.000 CER=2.829 SER=1.000 (mask-predict decode, n=4 clips)
+   Full: ಚ ಚ ಹ ಚ ಞ ೃ ಐ k ೃ | | ಣ ಣ ಣ v ಣ ಣ ಣ <unk> ೃ ೃ ೃ ೆ n <s> c n ಬ ಬ ಡ ೃ ಡ n ಲ ಲ ಲ ಲ ಡ ಣ ಲ ೆ ಲ h ಣ ಣ ಣ ಣ ಲ n ಣ ಲ ಡ ಣ ಲ ಣ ಣ ಣ ಣ ಬ ಬ n n ಣ ಡ ಣ ಣ ಣ 
+   Hyp : ೇಚಚಹಚಞೃಐkೃ  ಣಣಣvಣಣಣೃೃೃೆncnಬಬಡೃಡnಲಲಲಲಡಣಲೆಲhಣಣಣಣಲnಣಲಡಣಲಣಣಣಣಬಬnnಣಡಣಣಣಲೃೆhಣಣಣೆcುhhಣಡ
+   Ref : ಸಾಂಸ್ಕೃತಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರೋನಾ ಸೋಂಕು ಹೆಚ್ಚುತ್ತಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಇಂದಿನಿಂದ ಐದ
+   ** new best eval/iter_WER=1.0000 -> best.pt
+[grad-audit step1] micro/window=1 tok_local=766 tok_global=766 grad_scale=world/tok=1.306e-03 loss_sum_local=3685.5 win_loss=4.8125 gnorm_preclip=10.408 lr=4.00e-05
+[grad-audit step2] micro/window=1 tok_local=140 tok_global=140 grad_scale=world/tok=7.139e-03 loss_sum_local=656.2 win_loss=4.6846 gnorm_preclip=10.783 lr=8.00e-05
+[grad-audit step3] micro/window=1 tok_local=411 tok_global=411 grad_scale=world/tok=2.433e-03 loss_sum_local=1735.8 win_loss=4.2231 gnorm_preclip=9.510 lr=1.20e-04
+[grad-audit step4] micro/window=1 tok_local=649 tok_global=649 grad_scale=world/tok=1.540e-03 loss_sum_local=2741.8 win_loss=4.2229 gnorm_preclip=12.480 lr=1.60e-04
+[grad-audit step5] micro/window=1 tok_local=428 tok_global=428 grad_scale=world/tok=2.339e-03 loss_sum_local=1773.5 win_loss=4.1475 gnorm_preclip=8.226 lr=2.00e-04
+ep1 step5/10 loss=4.1475 acc=0.017 lr=2.00e-04 gnorm=8.23 57 smp/s
+ep2 step10/10 loss=4.4457 acc=0.078 lr=2.00e-06 gnorm=6.79 53 smp/s
+[eval @ 10] WER=1.000 CER=1.000 SER=1.000 loss=2.965 content_acc=0.108 fill_rate=0.000 entropy=3.614 distinct=1
+[eval @ 10] iter32  WER=1.000 CER=1.000 SER=1.000 (mask-predict decode, n=4 clips)
+   Full: | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+   Hyp : 
+   Ref : ಸಾಂಸ್ಕೃತಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರೋನಾ ಸೋಂಕು ಹೆಚ್ಚುತ್ತಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಇಂದಿನಿಂದ ಐದ
+[eval @ 10] WER=1.000 CER=1.000 SER=1.000 loss=2.965 content_acc=0.108 fill_rate=0.000 entropy=3.614 distinct=1
+[eval @ 10] iter32  WER=1.000 CER=1.000 SER=1.000 (mask-predict decode, n=4 clips)
+   Full: | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+   Hyp : 
+   Ref : ಸಾಂಸ್ಕೃತಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರೋನಾ ಸೋಂಕು ಹೆಚ್ಚುತ್ತಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಇಂದಿನಿಂದ ಐದ
+DONE
+DEBUG:filelock:Attempting to acquire lock 124390286821168 on /speech/abhishek/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Lock 124390286821168 acquired on /speech/abhishek/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Attempting to release lock 124390286821168 on /speech/abhishek/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Lock 124390286821168 released on /speech/abhishek/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Attempting to acquire lock 124390286820304 on /speech/abhishek/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Lock 124390286820304 acquired on /speech/abhishek/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Attempting to release lock 124390286820304 on /speech/abhishek/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Lock 124390286820304 released on /speech/abhishek/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock

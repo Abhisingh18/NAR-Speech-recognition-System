@@ -1,0 +1,1751 @@
+[run] env=indic-nar-filler_asr GPUs=6,7,8 (n=3)  eff_batch=192  out=/speech/tomson/indic-nar-filler_asr/runs/hi_d2vaqcCTC_sa8_ACMLM_alibi_fps50_fw003_exp150
+[run] encoder=/speech/akshaya/fairseq_expxx/hindi/24kup_model/checkpoint_best.pt
+W0910 00:15:11.138000 131929592366144 torch/distributed/run.py:779] 
+W0910 00:15:11.138000 131929592366144 torch/distributed/run.py:779] *****************************************
+W0910 00:15:11.138000 131929592366144 torch/distributed/run.py:779] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0910 00:15:11.138000 131929592366144 torch/distributed/run.py:779] *****************************************
+[W910 00:15:15.781069352 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+[W910 00:15:16.268249184 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+[W910 00:15:16.331440351 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+INFO:Data2VecAQCEncoder:[data2vec_aqc] ckpt:             /speech/akshaya/fairseq_expxx/hindi/24kup_model/checkpoint_best.pt
+INFO:Data2VecAQCEncoder:[data2vec_aqc] outer _name:      wav2vec_ctc  (CTC fine-tuned)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] inner _name:      data2vec_audio
+INFO:Data2VecAQCEncoder:[data2vec_aqc] layer_norm_first: False
+INFO:Data2VecAQCEncoder:[data2vec_aqc] tgt_layer:        None (None=run all blocks)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped outside w2v_model.*: ['w2v_encoder.proj.bias', 'w2v_encoder.proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped INSIDE body (AQC extras): ['contr_proj.bias', 'contr_proj.weight', 'project_q.bias', 'project_q.weight', 'quantizer.vars', 'quantizer.weight_proj.bias', 'quantizer.weight_proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] missing keys (expect empty/pretraining-only): []
+INFO:Data2VecAQCEncoder:[data2vec_aqc] ckpt:             /speech/akshaya/fairseq_expxx/hindi/24kup_model/checkpoint_best.pt
+INFO:Data2VecAQCEncoder:[data2vec_aqc] outer _name:      wav2vec_ctc  (CTC fine-tuned)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] inner _name:      data2vec_audio
+INFO:Data2VecAQCEncoder:[data2vec_aqc] layer_norm_first: False
+INFO:Data2VecAQCEncoder:[data2vec_aqc] tgt_layer:        None (None=run all blocks)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped outside w2v_model.*: ['w2v_encoder.proj.bias', 'w2v_encoder.proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped INSIDE body (AQC extras): ['contr_proj.bias', 'contr_proj.weight', 'project_q.bias', 'project_q.weight', 'quantizer.vars', 'quantizer.weight_proj.bias', 'quantizer.weight_proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] missing keys (expect empty/pretraining-only): []
+INFO:Data2VecAQCEncoder:[data2vec_aqc] ckpt:             /speech/akshaya/fairseq_expxx/hindi/24kup_model/checkpoint_best.pt
+INFO:Data2VecAQCEncoder:[data2vec_aqc] outer _name:      wav2vec_ctc  (CTC fine-tuned)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] inner _name:      data2vec_audio
+INFO:Data2VecAQCEncoder:[data2vec_aqc] layer_norm_first: False
+INFO:Data2VecAQCEncoder:[data2vec_aqc] tgt_layer:        None (None=run all blocks)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped outside w2v_model.*: ['w2v_encoder.proj.bias', 'w2v_encoder.proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped INSIDE body (AQC extras): ['contr_proj.bias', 'contr_proj.weight', 'project_q.bias', 'project_q.weight', 'quantizer.vars', 'quantizer.weight_proj.bias', 'quantizer.weight_proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] missing keys (expect empty/pretraining-only): []
+DEBUG:asyncio:Using selector: EpollSelector
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/speech/tomson/indic-nar-filler_asr, stdin=None, shell=False, universal_newlines=False)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/speech/tomson/indic-nar-filler_asr, stdin=None, shell=False, universal_newlines=False)
+DEBUG:git.util:sys.platform='linux', git_executable='git'
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /speech/tomson/.netrc.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.wandb.ai:443
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 375
+wandb: Currently logged in as: tomjrlaishram (tomjrlaishram-iit-madras) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+DEBUG:git.util:sys.platform='linux', git_executable='git'
+wandb: setting up run hc9vdbv2
+wandb: Tracking run with wandb version 0.27.0
+wandb: Run data is saved locally in /speech/tomson/indic-nar-filler_asr/wandb/run-20260910_001532-hc9vdbv2
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run full960_sa8_pe_lmhead_PE_mask0.2-0.3x10_eos3_fw0.03_alibi_checkpoint_best.pt
+wandb: ⭐️ View project at https://wandb.ai/tomjrlaishram-iit-madras/filler_asr
+wandb: 🚀 View run at https://wandb.ai/tomjrlaishram-iit-madras/filler_asr/runs/hc9vdbv2
+wandb run: https://wandb.ai/tomjrlaishram-iit-madras/filler_asr/runs/hc9vdbv2
+[setup] world=3 train=43337 dev=355 trainable=100.91M pos_mode=alibi PE=True sa_layers=8 fps=50 sched=exponential mask=0.2-0.3x10 eff_batch=192 steps/epoch=225 total_steps=33750
+[log] config=/speech/tomson/indic-nar-filler_asr/log_config.json disabled=none
+/speech/tomson/my-slam-workspace-final-pro/fairseq/examples/data2vec/models/data2vec_audio.py:190: FutureWarning: Positional args are being deprecated, use kwargs instead. Refer to https://pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  state = super().state_dict(destination, prefix, keep_vars)
+[ckpt-audit] checkpoint will save 100 trainable tensors / 100.91M params  (hubert tensors included=0)
+[select] best.pt = argmin eval/iter_WER; other metrics are diagnostics only
+[data-audit] ACMLM transform, 1 train clip: T=190 graded(masked)_slots=180
+   frame:input[->CEtarget], first 24/190  (<mask>=input hole; -> = supervised slot)
+   0:<s> 1:<mask>->उ 2:<mask>->ल 3:<mask>->् 4:<mask>->ट 5:<mask>->ा 6:<mask>->| 7:<mask>->च 8:<mask>->श 9:<mask>->् 10:<mask>->म 11:<mask>->ा 12:<mask>->| 13:<mask>->उ 14:<mask>->स 15:<mask>->म 16:े 17:<mask>->ं 18:<mask>->| 19:<mask>->ज 20:<mask>->े 21:<mask>->ठ 22:<mask>->ा 23:<mask>->ल
+[eval @ 0] WER=1.000 CER=9.259 SER=1.000 loss=4.596 content_acc=0.003 fill_rate=0.000 entropy=3.977 distinct=40
+[eval @ 0] iter32  WER=1.000 CER=4.032 SER=1.000 (mask-predict decode, n=200 clips)
+   Full: ौ त त ौ ौ ौ ौ ौ ौ ॅ ॅ ॅ ौ ौ ॅ ौ ॅ ौ ॅ ॅ ौ ौ फ ौ ौ ॅ फ ौ ौ ौ ौ फ ौ ौ ौ ौ ौ ौ ौ ौ ौ फ ष ष ख न न ॅ ौ ौ ौ ौ ॅ ौ ौ ौ ौ ौ ौ ौ ौ ौ ॅ ज ौ ौ ौ ौ ब फ 
+   Hyp : ौौततौौौौौौॅॅॅौौॅौॅौॅॅौौफौौॅफौौौौफौौौौौौौौौफषषखननॅौौौौॅौौौौौौौौौॅजौौौौबफषषफफफौफखख
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.wandb.ai:443
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 49
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.wandb.ai:443
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 742
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 42
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.wandb.ai:443
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 375
+/speech/tomson/my-slam-workspace-final-pro/fairseq/examples/data2vec/models/data2vec_audio.py:190: FutureWarning: Positional args are being deprecated, use kwargs instead. Refer to https://pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  state = super().state_dict(destination, prefix, keep_vars)
+   ** new best eval/iter_WER=1.0000 -> best.pt
+[frozen-audit] after model.train(): hubert.training=False hubert_trainable_tensors=0  (expect False / 0 -> no layerdrop, no dropout, deterministic tap)
+[grad-audit step1] micro/window=4 tok_local=3899 tok_global=11741 grad_scale=world/tok=2.555e-04 loss_sum_local=17647.0 win_loss=4.5260 gnorm_preclip=12.035 lr=4.00e-08
+[grad-audit step2] micro/window=4 tok_local=4509 tok_global=13506 grad_scale=world/tok=2.221e-04 loss_sum_local=20417.4 win_loss=4.5277 gnorm_preclip=12.215 lr=8.00e-08
+[grad-audit step3] micro/window=4 tok_local=3739 tok_global=11265 grad_scale=world/tok=2.663e-04 loss_sum_local=17101.6 win_loss=4.5734 gnorm_preclip=12.515 lr=1.20e-07
+[grad-audit step4] micro/window=4 tok_local=3986 tok_global=11978 grad_scale=world/tok=2.505e-04 loss_sum_local=18087.8 win_loss=4.5373 gnorm_preclip=12.393 lr=1.60e-07
+[grad-audit step5] micro/window=4 tok_local=3489 tok_global=12281 grad_scale=world/tok=2.443e-04 loss_sum_local=15722.8 win_loss=4.5069 gnorm_preclip=11.900 lr=2.00e-07
+ep1 step25/33750 loss=3.9671 acc=0.058 lr=1.00e-06 gnorm=7.48 89 smp/s
+ep1 step50/33750 loss=3.4966 acc=0.072 lr=2.00e-06 gnorm=1.76 94 smp/s
+ep1 step75/33750 loss=3.3748 acc=0.103 lr=3.00e-06 gnorm=0.70 94 smp/s
+ep1 step100/33750 loss=3.3892 acc=0.141 lr=4.00e-06 gnorm=0.59 93 smp/s
+ep1 step125/33750 loss=3.3558 acc=0.199 lr=5.00e-06 gnorm=0.89 93 smp/s
+ep1 step150/33750 loss=3.2609 acc=0.638 lr=6.00e-06 gnorm=2.51 93 smp/s
+ep1 step175/33750 loss=3.1592 acc=0.736 lr=7.00e-06 gnorm=6.00 93 smp/s
+ep1 step200/33750 loss=3.1178 acc=0.654 lr=8.00e-06 gnorm=5.69 94 smp/s
+ep1 step225/33750 loss=3.1182 acc=0.667 lr=9.00e-06 gnorm=3.50 94 smp/s
+ep2 step250/33750 loss=3.1225 acc=0.791 lr=1.00e-05 gnorm=18.38 94 smp/s
+ep2 step275/33750 loss=3.1490 acc=0.782 lr=1.10e-05 gnorm=20.81 94 smp/s
+ep2 step300/33750 loss=3.2175 acc=0.773 lr=1.20e-05 gnorm=18.78 94 smp/s
+ep2 step325/33750 loss=3.0990 acc=0.644 lr=1.30e-05 gnorm=9.97 94 smp/s
+ep2 step350/33750 loss=3.1037 acc=0.651 lr=1.40e-05 gnorm=12.42 94 smp/s
+ep2 step375/33750 loss=3.0555 acc=0.691 lr=1.50e-05 gnorm=6.68 94 smp/s
+ep2 step400/33750 loss=3.1107 acc=0.781 lr=1.60e-05 gnorm=12.90 94 smp/s
+ep2 step425/33750 loss=3.1001 acc=0.766 lr=1.70e-05 gnorm=11.68 94 smp/s
+ep2 step450/33750 loss=3.0585 acc=0.758 lr=1.80e-05 gnorm=5.97 94 smp/s
+ep3 step475/33750 loss=3.0406 acc=0.715 lr=1.90e-05 gnorm=4.86 94 smp/s
+ep3 step500/33750 loss=3.0566 acc=0.720 lr=2.00e-05 gnorm=4.91 94 smp/s
+ep3 step525/33750 loss=3.0437 acc=0.774 lr=2.10e-05 gnorm=2.84 94 smp/s
+ep3 step550/33750 loss=3.0349 acc=0.763 lr=2.20e-05 gnorm=6.68 94 smp/s
+ep3 step575/33750 loss=3.0606 acc=0.706 lr=2.30e-05 gnorm=5.01 94 smp/s
+ep3 step600/33750 loss=3.0161 acc=0.786 lr=2.40e-05 gnorm=5.04 94 smp/s
+ep3 step625/33750 loss=3.0336 acc=0.725 lr=2.50e-05 gnorm=3.00 94 smp/s
+ep3 step650/33750 loss=2.9832 acc=0.761 lr=2.60e-05 gnorm=1.39 94 smp/s
+ep3 step675/33750 loss=2.9672 acc=0.805 lr=2.70e-05 gnorm=1.67 94 smp/s
+ep4 step700/33750 loss=2.9736 acc=0.775 lr=2.80e-05 gnorm=2.26 94 smp/s
+ep4 step725/33750 loss=2.9427 acc=0.762 lr=2.90e-05 gnorm=1.83 94 smp/s
+ep4 step750/33750 loss=2.8835 acc=0.767 lr=3.00e-05 gnorm=1.94 94 smp/s
+ep4 step775/33750 loss=2.9393 acc=0.784 lr=3.10e-05 gnorm=1.76 94 smp/s
+ep4 step800/33750 loss=2.9121 acc=0.763 lr=3.20e-05 gnorm=1.82 94 smp/s
+ep4 step825/33750 loss=2.8574 acc=0.792 lr=3.30e-05 gnorm=0.86 94 smp/s
+ep4 step850/33750 loss=2.8933 acc=0.757 lr=3.40e-05 gnorm=1.76 94 smp/s
+ep4 step875/33750 loss=2.8886 acc=0.776 lr=3.50e-05 gnorm=0.90 94 smp/s
+ep4 step900/33750 loss=2.8447 acc=0.782 lr=3.60e-05 gnorm=0.74 94 smp/s
+ep5 step925/33750 loss=2.8412 acc=0.819 lr=3.70e-05 gnorm=1.26 94 smp/s
+ep5 step950/33750 loss=2.8829 acc=0.762 lr=3.80e-05 gnorm=1.02 94 smp/s
+ep5 step975/33750 loss=2.8728 acc=0.798 lr=3.90e-05 gnorm=0.79 94 smp/s
+ep5 step1000/33750 loss=2.8208 acc=0.790 lr=4.00e-05 gnorm=1.17 94 smp/s
+[eval @ 1000] WER=1.000 CER=0.946 SER=0.997 loss=0.956 content_acc=0.223 fill_rate=0.690 entropy=1.007 distinct=46
+[eval @ 1000] iter32  WER=0.999 CER=0.929 SER=1.000 (mask-predict decode, n=200 clips)
+   Full: फ फ फ फ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+   Hyp : फफफफफ
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+   ** new best eval/iter_WER=0.9990 -> best.pt
+ep5 step1025/33750 loss=2.7824 acc=0.808 lr=4.10e-05 gnorm=1.86 91 smp/s
+ep5 step1050/33750 loss=2.8131 acc=0.790 lr=4.20e-05 gnorm=1.38 92 smp/s
+ep5 step1075/33750 loss=2.7697 acc=0.826 lr=4.30e-05 gnorm=2.09 92 smp/s
+ep5 step1100/33750 loss=2.7143 acc=0.790 lr=4.40e-05 gnorm=1.40 92 smp/s
+ep5 step1125/33750 loss=2.7382 acc=0.811 lr=4.50e-05 gnorm=1.76 92 smp/s
+ep6 step1150/33750 loss=2.7136 acc=0.806 lr=4.60e-05 gnorm=2.09 92 smp/s
+ep6 step1175/33750 loss=2.6823 acc=0.801 lr=4.70e-05 gnorm=2.06 92 smp/s
+ep6 step1200/33750 loss=2.5550 acc=0.814 lr=4.80e-05 gnorm=1.63 92 smp/s
+ep6 step1225/33750 loss=2.6449 acc=0.764 lr=4.90e-05 gnorm=2.83 92 smp/s
+ep6 step1250/33750 loss=2.6120 acc=0.769 lr=5.00e-05 gnorm=1.53 92 smp/s
+ep6 step1275/33750 loss=2.5489 acc=0.792 lr=5.10e-05 gnorm=1.52 92 smp/s
+ep6 step1300/33750 loss=2.5924 acc=0.817 lr=5.20e-05 gnorm=3.38 92 smp/s
+ep6 step1325/33750 loss=2.5796 acc=0.769 lr=5.30e-05 gnorm=3.06 92 smp/s
+ep6 step1350/33750 loss=2.5783 acc=0.779 lr=5.40e-05 gnorm=2.80 92 smp/s
+ep7 step1375/33750 loss=2.5797 acc=0.830 lr=5.50e-05 gnorm=2.02 92 smp/s
+ep7 step1400/33750 loss=2.5614 acc=0.782 lr=5.60e-05 gnorm=2.60 92 smp/s
+ep7 step1425/33750 loss=2.4807 acc=0.788 lr=5.70e-05 gnorm=2.63 92 smp/s
+ep7 step1450/33750 loss=2.5035 acc=0.759 lr=5.80e-05 gnorm=2.63 92 smp/s
+ep7 step1475/33750 loss=2.5058 acc=0.807 lr=5.90e-05 gnorm=4.78 92 smp/s
+ep7 step1500/33750 loss=2.5707 acc=0.748 lr=6.00e-05 gnorm=2.79 92 smp/s
+ep7 step1525/33750 loss=2.4020 acc=0.757 lr=6.10e-05 gnorm=3.22 92 smp/s
+ep7 step1550/33750 loss=2.4239 acc=0.802 lr=6.20e-05 gnorm=5.08 92 smp/s
+ep7 step1575/33750 loss=2.4204 acc=0.834 lr=6.30e-05 gnorm=4.59 92 smp/s
+ep8 step1600/33750 loss=2.4618 acc=0.782 lr=6.40e-05 gnorm=4.54 92 smp/s
+ep8 step1625/33750 loss=2.4648 acc=0.769 lr=6.50e-05 gnorm=5.60 92 smp/s
+ep8 step1650/33750 loss=2.3961 acc=0.843 lr=6.60e-05 gnorm=2.21 92 smp/s
+ep8 step1675/33750 loss=2.4362 acc=0.801 lr=6.70e-05 gnorm=2.53 92 smp/s
+ep8 step1700/33750 loss=2.3648 acc=0.816 lr=6.80e-05 gnorm=4.43 92 smp/s
+ep8 step1725/33750 loss=2.3440 acc=0.825 lr=6.90e-05 gnorm=2.91 92 smp/s
+ep8 step1750/33750 loss=2.4114 acc=0.770 lr=7.00e-05 gnorm=3.11 92 smp/s
+ep8 step1775/33750 loss=2.3616 acc=0.805 lr=7.10e-05 gnorm=2.41 92 smp/s
+ep8 step1800/33750 loss=2.3694 acc=0.798 lr=7.20e-05 gnorm=4.47 92 smp/s
+ep9 step1825/33750 loss=2.2479 acc=0.825 lr=7.30e-05 gnorm=2.73 92 smp/s
+ep9 step1850/33750 loss=2.3345 acc=0.777 lr=7.40e-05 gnorm=4.65 92 smp/s
+ep9 step1875/33750 loss=2.2868 acc=0.820 lr=7.50e-05 gnorm=3.28 92 smp/s
+ep9 step1900/33750 loss=2.3393 acc=0.764 lr=7.60e-05 gnorm=2.74 92 smp/s
+ep9 step1925/33750 loss=2.2619 acc=0.807 lr=7.70e-05 gnorm=3.17 92 smp/s
+ep9 step1950/33750 loss=2.3910 acc=0.774 lr=7.80e-05 gnorm=4.95 92 smp/s
+ep9 step1975/33750 loss=2.2960 acc=0.815 lr=7.90e-05 gnorm=4.58 93 smp/s
+ep9 step2000/33750 loss=2.4288 acc=0.799 lr=8.00e-05 gnorm=6.46 93 smp/s
+[eval @ 2000] WER=0.999 CER=0.767 SER=1.000 loss=0.769 content_acc=0.228 fill_rate=0.711 entropy=0.736 distinct=58
+[eval @ 2000] iter32  WER=1.196 CER=0.652 SER=0.995 (mask-predict decode, n=200 clips)
+   Full: फ र र | उ उ उ क क े ब ब ब द द ध ् ् ् ् ् श श श श श श ो प प | | | | | | | | | | | | | | थ | | | | | | | | | | | | | | | | ि ि ि ि ि ि ि ि ि 
+   Hyp : फफरर उउउककेबबबददध्््््शशशशशशोपप              थ                ििििििििि
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+ep9 step2025/33750 loss=2.2661 acc=0.805 lr=8.10e-05 gnorm=4.52 92 smp/s
+ep10 step2050/33750 loss=2.2840 acc=0.794 lr=8.20e-05 gnorm=4.39 92 smp/s
+ep10 step2075/33750 loss=2.1620 acc=0.809 lr=8.30e-05 gnorm=4.79 92 smp/s
+ep10 step2100/33750 loss=2.2243 acc=0.813 lr=8.40e-05 gnorm=4.29 92 smp/s
+ep10 step2125/33750 loss=2.2630 acc=0.812 lr=8.50e-05 gnorm=6.00 92 smp/s
+ep10 step2150/33750 loss=2.1981 acc=0.805 lr=8.60e-05 gnorm=5.08 92 smp/s
+ep10 step2175/33750 loss=1.9824 acc=0.806 lr=8.70e-05 gnorm=3.34 92 smp/s
+ep10 step2200/33750 loss=2.2155 acc=0.785 lr=8.80e-05 gnorm=3.81 92 smp/s
+ep10 step2225/33750 loss=2.2173 acc=0.823 lr=8.90e-05 gnorm=4.58 92 smp/s
+ep10 step2250/33750 loss=2.2152 acc=0.797 lr=9.00e-05 gnorm=4.45 92 smp/s
+ep11 step2275/33750 loss=2.2601 acc=0.769 lr=9.10e-05 gnorm=5.93 92 smp/s
+ep11 step2300/33750 loss=2.1583 acc=0.835 lr=9.20e-05 gnorm=3.43 92 smp/s
+ep11 step2325/33750 loss=2.0521 acc=0.782 lr=9.30e-05 gnorm=2.73 92 smp/s
+ep11 step2350/33750 loss=2.0915 acc=0.802 lr=9.40e-05 gnorm=5.35 92 smp/s
+ep11 step2375/33750 loss=2.2067 acc=0.817 lr=9.50e-05 gnorm=6.96 92 smp/s
+ep11 step2400/33750 loss=2.2266 acc=0.841 lr=9.60e-05 gnorm=4.88 92 smp/s
+ep11 step2425/33750 loss=2.1167 acc=0.811 lr=9.70e-05 gnorm=4.74 92 smp/s
+ep11 step2450/33750 loss=2.1958 acc=0.828 lr=9.80e-05 gnorm=4.54 92 smp/s
+ep11 step2475/33750 loss=2.0783 acc=0.818 lr=9.90e-05 gnorm=5.35 92 smp/s
+ep12 step2500/33750 loss=2.1746 acc=0.796 lr=1.00e-04 gnorm=4.91 92 smp/s
+ep12 step2525/33750 loss=1.9682 acc=0.833 lr=1.01e-04 gnorm=5.16 92 smp/s
+ep12 step2550/33750 loss=2.1761 acc=0.804 lr=1.02e-04 gnorm=7.08 92 smp/s
+ep12 step2575/33750 loss=2.0401 acc=0.825 lr=1.03e-04 gnorm=2.93 92 smp/s
+ep12 step2600/33750 loss=2.0225 acc=0.821 lr=1.04e-04 gnorm=4.77 92 smp/s
+ep12 step2625/33750 loss=2.0067 acc=0.815 lr=1.05e-04 gnorm=3.80 92 smp/s
+ep12 step2650/33750 loss=2.0239 acc=0.837 lr=1.06e-04 gnorm=6.90 92 smp/s
+ep12 step2675/33750 loss=2.0127 acc=0.828 lr=1.07e-04 gnorm=3.55 92 smp/s
+ep12 step2700/33750 loss=1.9978 acc=0.810 lr=1.08e-04 gnorm=5.49 92 smp/s
+ep13 step2725/33750 loss=2.0002 acc=0.822 lr=1.09e-04 gnorm=7.22 92 smp/s
+ep13 step2750/33750 loss=2.0392 acc=0.840 lr=1.10e-04 gnorm=5.61 92 smp/s
+ep13 step2775/33750 loss=2.1745 acc=0.832 lr=1.11e-04 gnorm=10.11 92 smp/s
+ep13 step2800/33750 loss=1.7810 acc=0.830 lr=1.12e-04 gnorm=4.89 92 smp/s
+ep13 step2825/33750 loss=2.0515 acc=0.825 lr=1.13e-04 gnorm=4.91 92 smp/s
+ep13 step2850/33750 loss=1.9492 acc=0.831 lr=1.14e-04 gnorm=7.01 92 smp/s
+ep13 step2875/33750 loss=1.9761 acc=0.828 lr=1.15e-04 gnorm=6.31 92 smp/s
+ep13 step2900/33750 loss=2.0280 acc=0.805 lr=1.16e-04 gnorm=4.32 92 smp/s
+ep13 step2925/33750 loss=1.9386 acc=0.836 lr=1.17e-04 gnorm=3.45 92 smp/s
+ep14 step2950/33750 loss=1.8718 acc=0.832 lr=1.18e-04 gnorm=3.02 92 smp/s
+ep14 step2975/33750 loss=1.9889 acc=0.832 lr=1.19e-04 gnorm=4.00 92 smp/s
+ep14 step3000/33750 loss=1.9644 acc=0.837 lr=1.20e-04 gnorm=6.76 92 smp/s
+[eval @ 3000] WER=0.998 CER=0.738 SER=1.000 loss=0.760 content_acc=0.255 fill_rate=0.707 entropy=0.684 distinct=59
+[eval @ 3000] iter32  WER=1.028 CER=0.553 SER=0.990 (mask-predict decode, n=200 clips)
+   Full: फ ि र र उ स क क े ब ा ा | | | ध ् ् ् ् र र श श श | | प प ा ा | | | | | | | | | | | | | | | | | | | ज ज ज ज ज | | | | | | | | | क | | | | | 
+   Hyp : फफिररउसककेबाा   ध््््ररशशश  पपाा                   जजजजज         क
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+ep14 step3025/33750 loss=1.8115 acc=0.836 lr=1.21e-04 gnorm=5.96 92 smp/s
+ep14 step3050/33750 loss=1.9677 acc=0.820 lr=1.22e-04 gnorm=2.63 92 smp/s
+ep14 step3075/33750 loss=2.1132 acc=0.828 lr=1.23e-04 gnorm=6.67 92 smp/s
+ep14 step3100/33750 loss=2.1475 acc=0.822 lr=1.24e-04 gnorm=5.29 92 smp/s
+ep14 step3125/33750 loss=2.1369 acc=0.797 lr=1.25e-04 gnorm=5.05 92 smp/s
+ep14 step3150/33750 loss=1.8007 acc=0.832 lr=1.26e-04 gnorm=5.70 92 smp/s
+ep15 step3175/33750 loss=2.0809 acc=0.820 lr=1.27e-04 gnorm=7.81 92 smp/s
+ep15 step3200/33750 loss=1.8144 acc=0.841 lr=1.28e-04 gnorm=4.37 92 smp/s
+ep15 step3225/33750 loss=1.7808 acc=0.856 lr=1.29e-04 gnorm=7.80 92 smp/s
+ep15 step3250/33750 loss=1.9266 acc=0.845 lr=1.30e-04 gnorm=4.13 92 smp/s
+ep15 step3275/33750 loss=1.9623 acc=0.804 lr=1.31e-04 gnorm=5.28 92 smp/s
+ep15 step3300/33750 loss=1.9824 acc=0.824 lr=1.32e-04 gnorm=6.33 92 smp/s
+ep15 step3325/33750 loss=1.8688 acc=0.821 lr=1.33e-04 gnorm=4.69 92 smp/s
+ep15 step3350/33750 loss=2.0404 acc=0.836 lr=1.34e-04 gnorm=5.44 92 smp/s
+ep15 step3375/33750 loss=2.0311 acc=0.834 lr=1.35e-04 gnorm=6.83 92 smp/s
+ep16 step3400/33750 loss=1.6854 acc=0.850 lr=1.36e-04 gnorm=3.42 92 smp/s
+ep16 step3425/33750 loss=1.8184 acc=0.825 lr=1.37e-04 gnorm=2.41 92 smp/s
+ep16 step3450/33750 loss=1.8039 acc=0.813 lr=1.38e-04 gnorm=3.91 92 smp/s
+ep16 step3475/33750 loss=2.1224 acc=0.820 lr=1.39e-04 gnorm=8.80 92 smp/s
+ep16 step3500/33750 loss=1.8537 acc=0.856 lr=1.40e-04 gnorm=3.97 92 smp/s
+ep16 step3525/33750 loss=1.8770 acc=0.854 lr=1.41e-04 gnorm=4.75 92 smp/s
+ep16 step3550/33750 loss=1.8300 acc=0.810 lr=1.42e-04 gnorm=4.52 92 smp/s
+ep16 step3575/33750 loss=1.8568 acc=0.850 lr=1.43e-04 gnorm=3.86 92 smp/s
+ep16 step3600/33750 loss=1.8404 acc=0.842 lr=1.44e-04 gnorm=4.53 92 smp/s
+ep17 step3625/33750 loss=1.8511 acc=0.822 lr=1.45e-04 gnorm=6.58 92 smp/s
+ep17 step3650/33750 loss=1.8400 acc=0.810 lr=1.46e-04 gnorm=6.32 92 smp/s
+ep17 step3675/33750 loss=1.9023 acc=0.831 lr=1.47e-04 gnorm=6.41 92 smp/s
+ep17 step3700/33750 loss=1.8621 acc=0.823 lr=1.48e-04 gnorm=3.63 92 smp/s
+ep17 step3725/33750 loss=1.8395 acc=0.871 lr=1.49e-04 gnorm=7.23 92 smp/s
+ep17 step3750/33750 loss=1.7413 acc=0.855 lr=1.50e-04 gnorm=4.30 92 smp/s
+ep17 step3775/33750 loss=1.6024 acc=0.839 lr=1.51e-04 gnorm=3.62 92 smp/s
+ep17 step3800/33750 loss=1.8763 acc=0.826 lr=1.52e-04 gnorm=2.65 92 smp/s
+ep17 step3825/33750 loss=1.7038 acc=0.830 lr=1.53e-04 gnorm=3.77 92 smp/s
+ep18 step3850/33750 loss=1.8924 acc=0.799 lr=1.54e-04 gnorm=5.90 92 smp/s
+ep18 step3875/33750 loss=1.6937 acc=0.831 lr=1.55e-04 gnorm=4.72 92 smp/s
+ep18 step3900/33750 loss=1.6915 acc=0.849 lr=1.56e-04 gnorm=4.69 92 smp/s
+ep18 step3925/33750 loss=1.6554 acc=0.848 lr=1.57e-04 gnorm=5.98 92 smp/s
+ep18 step3950/33750 loss=1.6357 acc=0.852 lr=1.58e-04 gnorm=3.03 92 smp/s
+ep18 step3975/33750 loss=1.6332 acc=0.890 lr=1.59e-04 gnorm=4.41 92 smp/s
+ep18 step4000/33750 loss=1.7505 acc=0.849 lr=1.60e-04 gnorm=4.79 92 smp/s
+[eval @ 4000] WER=0.990 CER=0.702 SER=1.000 loss=0.627 content_acc=0.287 fill_rate=0.720 entropy=0.622 distinct=60
+[eval @ 4000] iter32  WER=0.922 CER=0.467 SER=0.990 (mask-predict decode, n=200 clips)
+   Full: फ ि र र उ स क े े | ब द द | | ध ् ् ् ् ् द द द द े | ो प प ल ल | | | | स स स स | | | | त त त त त | | ु | | | | | | | | | | | | | | | | | | 
+   Hyp : फफिररउसकेे बदद  ध्््््ददददे ोपपलल    सससस    ततततत  ु                           
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+   ** new best eval/iter_WER=0.9218 -> best.pt
+ep18 step4025/33750 loss=1.5071 acc=0.854 lr=1.61e-04 gnorm=3.66 91 smp/s
+ep18 step4050/33750 loss=1.6201 acc=0.845 lr=1.62e-04 gnorm=5.27 92 smp/s
+ep19 step4075/33750 loss=1.8195 acc=0.851 lr=1.63e-04 gnorm=2.36 92 smp/s
+ep19 step4100/33750 loss=1.7130 acc=0.837 lr=1.64e-04 gnorm=8.33 92 smp/s
+ep19 step4125/33750 loss=1.7052 acc=0.855 lr=1.65e-04 gnorm=2.57 92 smp/s
+ep19 step4150/33750 loss=1.7208 acc=0.854 lr=1.66e-04 gnorm=5.47 92 smp/s
+ep19 step4175/33750 loss=1.7269 acc=0.850 lr=1.67e-04 gnorm=8.25 92 smp/s
+ep19 step4200/33750 loss=1.8076 acc=0.834 lr=1.68e-04 gnorm=3.12 92 smp/s
+ep19 step4225/33750 loss=1.9071 acc=0.863 lr=1.69e-04 gnorm=6.15 92 smp/s
+ep19 step4250/33750 loss=1.4590 acc=0.895 lr=1.70e-04 gnorm=3.98 92 smp/s
+ep19 step4275/33750 loss=1.5768 acc=0.865 lr=1.71e-04 gnorm=2.48 92 smp/s
+ep20 step4300/33750 loss=1.6718 acc=0.898 lr=1.72e-04 gnorm=3.46 92 smp/s
+ep20 step4325/33750 loss=1.8245 acc=0.822 lr=1.73e-04 gnorm=3.15 92 smp/s
+ep20 step4350/33750 loss=1.6831 acc=0.855 lr=1.74e-04 gnorm=4.29 92 smp/s
+ep20 step4375/33750 loss=1.3898 acc=0.832 lr=1.75e-04 gnorm=3.64 92 smp/s
+ep20 step4400/33750 loss=1.9305 acc=0.834 lr=1.76e-04 gnorm=7.03 92 smp/s
+ep20 step4425/33750 loss=1.5966 acc=0.832 lr=1.77e-04 gnorm=3.37 92 smp/s
+ep20 step4450/33750 loss=1.5290 acc=0.832 lr=1.78e-04 gnorm=2.46 92 smp/s
+ep20 step4475/33750 loss=1.5439 acc=0.851 lr=1.79e-04 gnorm=1.97 92 smp/s
+ep20 step4500/33750 loss=1.5239 acc=0.842 lr=1.80e-04 gnorm=4.15 92 smp/s
+ep21 step4525/33750 loss=1.5347 acc=0.886 lr=1.81e-04 gnorm=4.97 92 smp/s
+ep21 step4550/33750 loss=1.2583 acc=0.888 lr=1.82e-04 gnorm=5.04 92 smp/s
+ep21 step4575/33750 loss=1.5603 acc=0.877 lr=1.83e-04 gnorm=5.64 92 smp/s
+ep21 step4600/33750 loss=1.4427 acc=0.888 lr=1.84e-04 gnorm=3.74 92 smp/s
+ep21 step4625/33750 loss=1.5412 acc=0.873 lr=1.85e-04 gnorm=2.42 92 smp/s
+ep21 step4650/33750 loss=1.4910 acc=0.862 lr=1.86e-04 gnorm=3.60 92 smp/s
+ep21 step4675/33750 loss=1.6695 acc=0.887 lr=1.87e-04 gnorm=5.46 92 smp/s
+ep21 step4700/33750 loss=1.5485 acc=0.830 lr=1.88e-04 gnorm=6.83 92 smp/s
+ep21 step4725/33750 loss=1.4438 acc=0.880 lr=1.89e-04 gnorm=4.08 92 smp/s
+ep22 step4750/33750 loss=1.4607 acc=0.845 lr=1.90e-04 gnorm=4.84 92 smp/s
+ep22 step4775/33750 loss=1.7074 acc=0.837 lr=1.91e-04 gnorm=4.72 92 smp/s
+ep22 step4800/33750 loss=1.6468 acc=0.823 lr=1.92e-04 gnorm=2.42 92 smp/s
+ep22 step4825/33750 loss=1.6000 acc=0.880 lr=1.93e-04 gnorm=6.69 92 smp/s
+ep22 step4850/33750 loss=1.4638 acc=0.842 lr=1.94e-04 gnorm=4.33 92 smp/s
+ep22 step4875/33750 loss=1.4645 acc=0.895 lr=1.95e-04 gnorm=5.40 92 smp/s
+ep22 step4900/33750 loss=1.5964 acc=0.848 lr=1.96e-04 gnorm=5.09 92 smp/s
+ep22 step4925/33750 loss=1.6199 acc=0.846 lr=1.97e-04 gnorm=4.80 92 smp/s
+ep22 step4950/33750 loss=1.5506 acc=0.849 lr=1.98e-04 gnorm=3.76 92 smp/s
+ep23 step4975/33750 loss=1.7157 acc=0.845 lr=1.99e-04 gnorm=7.61 92 smp/s
+ep23 step5000/33750 loss=1.2315 acc=0.898 lr=2.00e-04 gnorm=2.63 92 smp/s
+[eval @ 5000] WER=0.984 CER=0.716 SER=1.000 loss=0.596 content_acc=0.287 fill_rate=0.736 entropy=0.584 distinct=61
+[eval @ 5000] iter32  WER=0.769 CER=0.368 SER=0.960 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े | ब ा द | म ध य ् प प र र द श | भ भ प ा ल | | | | स | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+   Hyp : फफिर उसके बाद मधय्पपररदश भभपाल    स
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+   ** new best eval/iter_WER=0.7689 -> best.pt
+ep23 step5025/33750 loss=1.4379 acc=0.878 lr=1.99e-04 gnorm=6.61 91 smp/s
+ep23 step5050/33750 loss=1.3363 acc=0.884 lr=1.98e-04 gnorm=2.23 91 smp/s
+ep23 step5075/33750 loss=1.3349 acc=0.865 lr=1.98e-04 gnorm=4.70 91 smp/s
+ep23 step5100/33750 loss=1.3883 acc=0.908 lr=1.97e-04 gnorm=3.29 91 smp/s
+ep23 step5125/33750 loss=1.2595 acc=0.902 lr=1.96e-04 gnorm=3.67 91 smp/s
+ep23 step5150/33750 loss=1.2561 acc=0.895 lr=1.95e-04 gnorm=4.06 91 smp/s
+ep23 step5175/33750 loss=1.3086 acc=0.885 lr=1.94e-04 gnorm=2.64 91 smp/s
+ep24 step5200/33750 loss=1.3605 acc=0.894 lr=1.94e-04 gnorm=4.03 92 smp/s
+ep24 step5225/33750 loss=1.2635 acc=0.871 lr=1.93e-04 gnorm=4.71 92 smp/s
+ep24 step5250/33750 loss=1.3174 acc=0.851 lr=1.92e-04 gnorm=3.20 92 smp/s
+ep24 step5275/33750 loss=1.3744 acc=0.863 lr=1.91e-04 gnorm=3.96 92 smp/s
+ep24 step5300/33750 loss=1.3241 acc=0.852 lr=1.91e-04 gnorm=2.39 92 smp/s
+ep24 step5325/33750 loss=1.3357 acc=0.888 lr=1.90e-04 gnorm=2.24 92 smp/s
+ep24 step5350/33750 loss=1.3618 acc=0.873 lr=1.89e-04 gnorm=2.67 92 smp/s
+ep24 step5375/33750 loss=1.4718 acc=0.852 lr=1.88e-04 gnorm=2.56 92 smp/s
+ep24 step5400/33750 loss=1.4470 acc=0.858 lr=1.88e-04 gnorm=3.43 92 smp/s
+ep25 step5425/33750 loss=1.2862 acc=0.868 lr=1.87e-04 gnorm=4.40 92 smp/s
+ep25 step5450/33750 loss=1.4579 acc=0.892 lr=1.86e-04 gnorm=2.50 92 smp/s
+ep25 step5475/33750 loss=1.5248 acc=0.846 lr=1.85e-04 gnorm=4.86 92 smp/s
+ep25 step5500/33750 loss=1.6513 acc=0.818 lr=1.85e-04 gnorm=3.85 92 smp/s
+ep25 step5525/33750 loss=1.3465 acc=0.885 lr=1.84e-04 gnorm=5.53 92 smp/s
+ep25 step5550/33750 loss=1.3061 acc=0.866 lr=1.83e-04 gnorm=2.96 92 smp/s
+ep25 step5575/33750 loss=1.3148 acc=0.890 lr=1.82e-04 gnorm=3.02 92 smp/s
+ep25 step5600/33750 loss=1.5682 acc=0.858 lr=1.82e-04 gnorm=5.00 92 smp/s
+ep25 step5625/33750 loss=1.3356 acc=0.841 lr=1.81e-04 gnorm=5.07 92 smp/s
+ep26 step5650/33750 loss=1.4609 acc=0.850 lr=1.80e-04 gnorm=3.87 92 smp/s
+ep26 step5675/33750 loss=1.2639 acc=0.875 lr=1.80e-04 gnorm=4.21 92 smp/s
+ep26 step5700/33750 loss=1.2180 acc=0.893 lr=1.79e-04 gnorm=2.50 92 smp/s
+ep26 step5725/33750 loss=1.3586 acc=0.860 lr=1.78e-04 gnorm=6.05 92 smp/s
+ep26 step5750/33750 loss=1.3163 acc=0.881 lr=1.77e-04 gnorm=2.24 92 smp/s
+ep26 step5775/33750 loss=1.2933 acc=0.874 lr=1.77e-04 gnorm=2.85 92 smp/s
+ep26 step5800/33750 loss=1.3766 acc=0.927 lr=1.76e-04 gnorm=4.20 92 smp/s
+ep26 step5825/33750 loss=1.3335 acc=0.857 lr=1.75e-04 gnorm=3.65 92 smp/s
+ep26 step5850/33750 loss=1.3696 acc=0.893 lr=1.75e-04 gnorm=3.74 92 smp/s
+ep27 step5875/33750 loss=1.4904 acc=0.858 lr=1.74e-04 gnorm=5.42 92 smp/s
+ep27 step5900/33750 loss=1.2990 acc=0.849 lr=1.73e-04 gnorm=3.40 92 smp/s
+ep27 step5925/33750 loss=1.1115 acc=0.877 lr=1.72e-04 gnorm=2.02 92 smp/s
+ep27 step5950/33750 loss=1.2107 acc=0.911 lr=1.72e-04 gnorm=3.76 92 smp/s
+ep27 step5975/33750 loss=1.3290 acc=0.879 lr=1.71e-04 gnorm=2.87 92 smp/s
+ep27 step6000/33750 loss=1.0514 acc=0.892 lr=1.70e-04 gnorm=3.95 92 smp/s
+[eval @ 6000] WER=0.965 CER=0.687 SER=1.000 loss=0.650 content_acc=0.299 fill_rate=0.715 entropy=0.591 distinct=60
+[eval @ 6000] iter32  WER=0.685 CER=0.317 SER=0.925 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े | ब ा द | म ध ् ् ् ् ् र र र श श श भ ो ा ल | | | | | | स | | | | | | स स ि ि त त | | | | | | | | | | | | | | | | | | | | | 
+   Hyp : फफिर उसके बाद मध्््््रररशशशभोाल      स      ससिितत                        फफ    
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+   ** new best eval/iter_WER=0.6848 -> best.pt
+ep27 step6025/33750 loss=1.8638 acc=0.851 lr=1.70e-04 gnorm=7.59 91 smp/s
+ep27 step6050/33750 loss=1.3555 acc=0.916 lr=1.69e-04 gnorm=5.02 91 smp/s
+ep27 step6075/33750 loss=1.4858 acc=0.917 lr=1.68e-04 gnorm=5.87 91 smp/s
+ep28 step6100/33750 loss=1.2051 acc=0.857 lr=1.68e-04 gnorm=4.22 91 smp/s
+ep28 step6125/33750 loss=1.4240 acc=0.879 lr=1.67e-04 gnorm=5.18 91 smp/s
+ep28 step6150/33750 loss=1.1206 acc=0.913 lr=1.66e-04 gnorm=5.19 91 smp/s
+ep28 step6175/33750 loss=1.3107 acc=0.891 lr=1.66e-04 gnorm=2.15 91 smp/s
+ep28 step6200/33750 loss=1.2263 acc=0.877 lr=1.65e-04 gnorm=5.88 91 smp/s
+ep28 step6225/33750 loss=1.3273 acc=0.893 lr=1.64e-04 gnorm=3.23 91 smp/s
+ep28 step6250/33750 loss=1.0948 acc=0.914 lr=1.64e-04 gnorm=2.21 91 smp/s
+ep28 step6275/33750 loss=1.2113 acc=0.878 lr=1.63e-04 gnorm=8.70 91 smp/s
+ep28 step6300/33750 loss=1.1103 acc=0.900 lr=1.62e-04 gnorm=3.86 91 smp/s
+ep29 step6325/33750 loss=0.9461 acc=0.933 lr=1.62e-04 gnorm=6.28 91 smp/s
+ep29 step6350/33750 loss=1.3073 acc=0.904 lr=1.61e-04 gnorm=5.51 91 smp/s
+ep29 step6375/33750 loss=1.0222 acc=0.926 lr=1.60e-04 gnorm=2.70 92 smp/s
+ep29 step6400/33750 loss=1.2188 acc=0.891 lr=1.60e-04 gnorm=2.00 92 smp/s
+ep29 step6425/33750 loss=0.8627 acc=0.933 lr=1.59e-04 gnorm=2.66 92 smp/s
+ep29 step6450/33750 loss=1.3403 acc=0.906 lr=1.59e-04 gnorm=1.61 92 smp/s
+ep29 step6475/33750 loss=1.0831 acc=0.904 lr=1.58e-04 gnorm=4.57 92 smp/s
+ep29 step6500/33750 loss=1.0323 acc=0.885 lr=1.57e-04 gnorm=2.30 92 smp/s
+ep29 step6525/33750 loss=1.5216 acc=0.852 lr=1.57e-04 gnorm=8.90 92 smp/s
+ep30 step6550/33750 loss=1.2008 acc=0.893 lr=1.56e-04 gnorm=3.04 92 smp/s
+ep30 step6575/33750 loss=1.2415 acc=0.874 lr=1.55e-04 gnorm=3.64 92 smp/s
+ep30 step6600/33750 loss=0.9863 acc=0.908 lr=1.55e-04 gnorm=1.85 92 smp/s
+ep30 step6625/33750 loss=1.1105 acc=0.903 lr=1.54e-04 gnorm=1.90 92 smp/s
+ep30 step6650/33750 loss=1.2951 acc=0.924 lr=1.54e-04 gnorm=4.44 92 smp/s
+ep30 step6675/33750 loss=1.3313 acc=0.857 lr=1.53e-04 gnorm=3.35 92 smp/s
+ep30 step6700/33750 loss=1.3491 acc=0.893 lr=1.52e-04 gnorm=2.64 92 smp/s
+ep30 step6725/33750 loss=1.0567 acc=0.900 lr=1.52e-04 gnorm=3.21 92 smp/s
+ep30 step6750/33750 loss=1.0558 acc=0.903 lr=1.51e-04 gnorm=2.47 92 smp/s
+ep31 step6775/33750 loss=0.9825 acc=0.914 lr=1.51e-04 gnorm=2.45 92 smp/s
+ep31 step6800/33750 loss=1.0280 acc=0.894 lr=1.50e-04 gnorm=4.27 92 smp/s
+ep31 step6825/33750 loss=1.2721 acc=0.836 lr=1.49e-04 gnorm=1.59 92 smp/s
+ep31 step6850/33750 loss=1.2510 acc=0.888 lr=1.49e-04 gnorm=2.17 92 smp/s
+ep31 step6875/33750 loss=1.2797 acc=0.857 lr=1.48e-04 gnorm=6.57 92 smp/s
+ep31 step6900/33750 loss=1.0566 acc=0.908 lr=1.48e-04 gnorm=2.27 92 smp/s
+ep31 step6925/33750 loss=1.4479 acc=0.858 lr=1.47e-04 gnorm=3.97 92 smp/s
+ep31 step6950/33750 loss=1.0801 acc=0.895 lr=1.46e-04 gnorm=3.21 92 smp/s
+ep31 step6975/33750 loss=1.2911 acc=0.915 lr=1.46e-04 gnorm=1.57 92 smp/s
+ep32 step7000/33750 loss=1.2771 acc=0.879 lr=1.45e-04 gnorm=5.23 92 smp/s
+[eval @ 7000] WER=0.956 CER=0.632 SER=1.000 loss=0.689 content_acc=0.283 fill_rate=0.718 entropy=0.554 distinct=61
+[eval @ 7000] iter32  WER=0.587 CER=0.255 SER=0.910 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े | ब ा द | | ध ध य य प प ् र द े श | भ ो प ल ल | े े | | स | | े े | | | थ ि त त त त त प प प ु र | | | | | | | ि ि ि ं ं | | 
+   Hyp : फफिर उसके बाद  धधययपप्रदेश भोपलल ेे  स  ेे   थितततततपपपुर       िििंं  फफफफफफ   
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+   ** new best eval/iter_WER=0.5872 -> best.pt
+ep32 step7025/33750 loss=1.3028 acc=0.899 lr=1.45e-04 gnorm=4.27 91 smp/s
+ep32 step7050/33750 loss=1.2272 acc=0.859 lr=1.44e-04 gnorm=6.09 91 smp/s
+ep32 step7075/33750 loss=1.2496 acc=0.883 lr=1.43e-04 gnorm=4.00 91 smp/s
+ep32 step7100/33750 loss=1.0753 acc=0.909 lr=1.43e-04 gnorm=1.82 91 smp/s
+ep32 step7125/33750 loss=1.2387 acc=0.869 lr=1.42e-04 gnorm=3.31 91 smp/s
+ep32 step7150/33750 loss=1.3314 acc=0.867 lr=1.42e-04 gnorm=5.81 91 smp/s
+ep32 step7175/33750 loss=1.5388 acc=0.844 lr=1.41e-04 gnorm=3.10 91 smp/s
+ep32 step7200/33750 loss=1.2358 acc=0.917 lr=1.41e-04 gnorm=4.55 91 smp/s
+ep33 step7225/33750 loss=0.9885 acc=0.915 lr=1.40e-04 gnorm=4.53 91 smp/s
+ep33 step7250/33750 loss=1.2859 acc=0.897 lr=1.39e-04 gnorm=5.60 91 smp/s
+ep33 step7275/33750 loss=0.7892 acc=0.942 lr=1.39e-04 gnorm=4.21 91 smp/s
+ep33 step7300/33750 loss=1.1878 acc=0.881 lr=1.38e-04 gnorm=2.20 91 smp/s
+ep33 step7325/33750 loss=1.0854 acc=0.859 lr=1.38e-04 gnorm=4.73 92 smp/s
+ep33 step7350/33750 loss=1.3593 acc=0.852 lr=1.37e-04 gnorm=2.69 92 smp/s
+ep33 step7375/33750 loss=1.0877 acc=0.833 lr=1.37e-04 gnorm=5.15 92 smp/s
+ep33 step7400/33750 loss=0.8640 acc=0.888 lr=1.36e-04 gnorm=4.36 92 smp/s
+ep33 step7425/33750 loss=0.8593 acc=0.938 lr=1.36e-04 gnorm=3.11 92 smp/s
+ep34 step7450/33750 loss=0.9369 acc=0.931 lr=1.35e-04 gnorm=2.81 92 smp/s
+ep34 step7475/33750 loss=0.7393 acc=0.937 lr=1.35e-04 gnorm=2.85 92 smp/s
+ep34 step7500/33750 loss=0.8902 acc=0.918 lr=1.34e-04 gnorm=5.16 92 smp/s
+ep34 step7525/33750 loss=1.2660 acc=0.925 lr=1.33e-04 gnorm=6.19 92 smp/s
+ep34 step7550/33750 loss=1.1849 acc=0.890 lr=1.33e-04 gnorm=2.14 92 smp/s
+ep34 step7575/33750 loss=1.0789 acc=0.939 lr=1.32e-04 gnorm=3.03 92 smp/s
+ep34 step7600/33750 loss=0.8782 acc=0.912 lr=1.32e-04 gnorm=3.43 92 smp/s
+ep34 step7625/33750 loss=1.1704 acc=0.881 lr=1.31e-04 gnorm=3.19 92 smp/s
+ep34 step7650/33750 loss=1.0625 acc=0.870 lr=1.31e-04 gnorm=2.93 92 smp/s
+ep35 step7675/33750 loss=1.1402 acc=0.837 lr=1.30e-04 gnorm=4.55 92 smp/s
+ep35 step7700/33750 loss=1.0208 acc=0.904 lr=1.30e-04 gnorm=1.81 92 smp/s
+ep35 step7725/33750 loss=0.9075 acc=0.896 lr=1.29e-04 gnorm=2.93 92 smp/s
+ep35 step7750/33750 loss=1.1534 acc=0.890 lr=1.29e-04 gnorm=4.58 92 smp/s
+ep35 step7775/33750 loss=1.1259 acc=0.862 lr=1.28e-04 gnorm=3.39 92 smp/s
+ep35 step7800/33750 loss=1.0816 acc=0.851 lr=1.28e-04 gnorm=1.38 92 smp/s
+ep35 step7825/33750 loss=1.1875 acc=0.881 lr=1.27e-04 gnorm=4.65 92 smp/s
+ep35 step7850/33750 loss=1.2023 acc=0.888 lr=1.27e-04 gnorm=1.92 92 smp/s
+ep35 step7875/33750 loss=1.1686 acc=0.895 lr=1.26e-04 gnorm=2.13 92 smp/s
+ep36 step7900/33750 loss=1.1340 acc=0.891 lr=1.26e-04 gnorm=2.19 92 smp/s
+ep36 step7925/33750 loss=1.1349 acc=0.860 lr=1.25e-04 gnorm=3.37 92 smp/s
+ep36 step7950/33750 loss=1.1245 acc=0.909 lr=1.25e-04 gnorm=3.90 92 smp/s
+ep36 step7975/33750 loss=1.0858 acc=0.910 lr=1.24e-04 gnorm=1.83 92 smp/s
+ep36 step8000/33750 loss=0.9593 acc=0.913 lr=1.24e-04 gnorm=3.75 92 smp/s
+[eval @ 8000] WER=0.934 CER=0.588 SER=1.000 loss=0.594 content_acc=0.328 fill_rate=0.724 entropy=0.516 distinct=60
+[eval @ 8000] iter32  WER=0.527 CER=0.213 SER=0.885 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े | ब ा द | म ध ् य य प प र द े श भ भ ो प ा ल | क े | प ा स म म े ं | स स स ि ि त त ो ो प प प प | | | | | | ि ि ि ि ग ग | | ा 
+   Hyp : फफिर उसके बाद मध्ययपपरदेशभभोपाल के पासममें सससििततोोपपपप      ििििगग  ाफफफफफफेमम
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+   ** new best eval/iter_WER=0.5273 -> best.pt
+ep36 step8025/33750 loss=1.1666 acc=0.855 lr=1.23e-04 gnorm=4.51 91 smp/s
+ep36 step8050/33750 loss=0.8260 acc=0.911 lr=1.23e-04 gnorm=1.63 91 smp/s
+ep36 step8075/33750 loss=1.1755 acc=0.875 lr=1.22e-04 gnorm=3.72 91 smp/s
+ep36 step8100/33750 loss=0.7863 acc=0.921 lr=1.22e-04 gnorm=2.76 91 smp/s
+ep37 step8125/33750 loss=1.0553 acc=0.918 lr=1.21e-04 gnorm=3.77 91 smp/s
+ep37 step8150/33750 loss=0.9504 acc=0.893 lr=1.21e-04 gnorm=1.97 91 smp/s
+ep37 step8175/33750 loss=0.9102 acc=0.914 lr=1.20e-04 gnorm=2.52 91 smp/s
+ep37 step8200/33750 loss=0.9571 acc=0.883 lr=1.20e-04 gnorm=2.28 91 smp/s
+ep37 step8225/33750 loss=1.2472 acc=0.875 lr=1.19e-04 gnorm=2.62 91 smp/s
+ep37 step8250/33750 loss=0.8607 acc=0.953 lr=1.19e-04 gnorm=2.24 91 smp/s
+ep37 step8275/33750 loss=1.0382 acc=0.886 lr=1.18e-04 gnorm=2.41 91 smp/s
+ep37 step8300/33750 loss=0.8671 acc=0.925 lr=1.18e-04 gnorm=2.36 91 smp/s
+ep37 step8325/33750 loss=0.9653 acc=0.901 lr=1.17e-04 gnorm=6.39 91 smp/s
+ep38 step8350/33750 loss=0.9141 acc=0.913 lr=1.17e-04 gnorm=3.99 91 smp/s
+ep38 step8375/33750 loss=1.0939 acc=0.894 lr=1.16e-04 gnorm=2.70 92 smp/s
+ep38 step8400/33750 loss=0.9094 acc=0.909 lr=1.16e-04 gnorm=3.13 92 smp/s
+ep38 step8425/33750 loss=0.8487 acc=0.903 lr=1.16e-04 gnorm=3.21 92 smp/s
+ep38 step8450/33750 loss=1.0144 acc=0.892 lr=1.15e-04 gnorm=3.18 92 smp/s
+ep38 step8475/33750 loss=0.9898 acc=0.924 lr=1.15e-04 gnorm=2.49 92 smp/s
+ep38 step8500/33750 loss=0.9843 acc=0.908 lr=1.14e-04 gnorm=3.95 92 smp/s
+ep38 step8525/33750 loss=0.9723 acc=0.906 lr=1.14e-04 gnorm=1.96 92 smp/s
+ep38 step8550/33750 loss=1.1399 acc=0.936 lr=1.13e-04 gnorm=3.34 92 smp/s
+ep39 step8575/33750 loss=0.8610 acc=0.929 lr=1.13e-04 gnorm=2.39 92 smp/s
+ep39 step8600/33750 loss=1.0744 acc=0.924 lr=1.12e-04 gnorm=6.65 92 smp/s
+ep39 step8625/33750 loss=1.0636 acc=0.871 lr=1.12e-04 gnorm=1.99 92 smp/s
+ep39 step8650/33750 loss=1.1843 acc=0.868 lr=1.11e-04 gnorm=2.74 92 smp/s
+ep39 step8675/33750 loss=1.1597 acc=0.910 lr=1.11e-04 gnorm=2.42 92 smp/s
+ep39 step8700/33750 loss=0.8966 acc=0.939 lr=1.11e-04 gnorm=4.45 92 smp/s
+ep39 step8725/33750 loss=0.9846 acc=0.900 lr=1.10e-04 gnorm=5.70 92 smp/s
+ep39 step8750/33750 loss=0.8995 acc=0.967 lr=1.10e-04 gnorm=3.94 92 smp/s
+ep39 step8775/33750 loss=1.2622 acc=0.880 lr=1.09e-04 gnorm=6.49 92 smp/s
+ep40 step8800/33750 loss=1.2539 acc=0.882 lr=1.09e-04 gnorm=3.24 92 smp/s
+ep40 step8825/33750 loss=0.9505 acc=0.926 lr=1.08e-04 gnorm=4.15 92 smp/s
+ep40 step8850/33750 loss=1.1523 acc=0.857 lr=1.08e-04 gnorm=4.76 92 smp/s
+ep40 step8875/33750 loss=1.2279 acc=0.887 lr=1.08e-04 gnorm=8.06 92 smp/s
+ep40 step8900/33750 loss=1.1217 acc=0.909 lr=1.07e-04 gnorm=3.73 92 smp/s
+ep40 step8925/33750 loss=1.2661 acc=0.887 lr=1.07e-04 gnorm=4.73 92 smp/s
+ep40 step8950/33750 loss=0.9937 acc=0.878 lr=1.06e-04 gnorm=2.74 92 smp/s
+ep40 step8975/33750 loss=0.9582 acc=0.904 lr=1.06e-04 gnorm=3.32 92 smp/s
+ep40 step9000/33750 loss=0.8245 acc=0.915 lr=1.05e-04 gnorm=2.06 92 smp/s
+[eval @ 9000] WER=0.933 CER=0.571 SER=1.000 loss=0.538 content_acc=0.335 fill_rate=0.728 entropy=0.517 distinct=60
+[eval @ 9000] iter32  WER=0.489 CER=0.198 SER=0.905 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े े ब ा द | म म ध ् य प ् र द े े | भ ो ो ा ल | क े | प ा स | म ं | स थ थ ि त त त ो ो ो ु ु र | | | | | ि ि ि ं ग ग ग ा फ फ फ 
+   Hyp : फफिर उसकेेबाद ममध्यप्रदेे भोोाल के पास मं सथथितततोोोुुर     िििंगगगाफफफफफफेसस   
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+   ** new best eval/iter_WER=0.4888 -> best.pt
+ep41 step9025/33750 loss=0.9857 acc=0.915 lr=1.05e-04 gnorm=4.35 91 smp/s
+ep41 step9050/33750 loss=0.9318 acc=0.886 lr=1.05e-04 gnorm=3.88 91 smp/s
+ep41 step9075/33750 loss=1.0391 acc=0.906 lr=1.04e-04 gnorm=5.47 91 smp/s
+ep41 step9100/33750 loss=0.8456 acc=0.894 lr=1.04e-04 gnorm=3.63 91 smp/s
+ep41 step9125/33750 loss=1.0784 acc=0.938 lr=1.03e-04 gnorm=3.73 91 smp/s
+ep41 step9150/33750 loss=0.5878 acc=0.926 lr=1.03e-04 gnorm=2.92 91 smp/s
+ep41 step9175/33750 loss=0.9567 acc=0.920 lr=1.02e-04 gnorm=5.44 91 smp/s
+ep41 step9200/33750 loss=1.0150 acc=0.920 lr=1.02e-04 gnorm=1.87 91 smp/s
+ep41 step9225/33750 loss=0.9031 acc=0.892 lr=1.02e-04 gnorm=2.50 91 smp/s
+ep42 step9250/33750 loss=0.9805 acc=0.906 lr=1.01e-04 gnorm=4.87 91 smp/s
+ep42 step9275/33750 loss=0.9337 acc=0.929 lr=1.01e-04 gnorm=1.46 91 smp/s
+ep42 step9300/33750 loss=0.9262 acc=0.894 lr=1.00e-04 gnorm=3.17 91 smp/s
+ep42 step9325/33750 loss=1.0765 acc=0.878 lr=1.00e-04 gnorm=2.91 91 smp/s
+ep42 step9350/33750 loss=0.9187 acc=0.907 lr=9.96e-05 gnorm=2.31 91 smp/s
+ep42 step9375/33750 loss=0.8769 acc=0.862 lr=9.92e-05 gnorm=3.00 92 smp/s
+ep42 step9400/33750 loss=0.9477 acc=0.870 lr=9.88e-05 gnorm=5.01 92 smp/s
+ep42 step9425/33750 loss=1.0249 acc=0.909 lr=9.84e-05 gnorm=5.93 92 smp/s
+ep42 step9450/33750 loss=1.0259 acc=0.920 lr=9.81e-05 gnorm=3.44 92 smp/s
+ep43 step9475/33750 loss=1.1768 acc=0.899 lr=9.77e-05 gnorm=4.10 92 smp/s
+ep43 step9500/33750 loss=1.0736 acc=0.905 lr=9.73e-05 gnorm=2.65 92 smp/s
+ep43 step9525/33750 loss=0.9411 acc=0.930 lr=9.69e-05 gnorm=4.93 92 smp/s
+ep43 step9550/33750 loss=1.2138 acc=0.885 lr=9.65e-05 gnorm=3.07 92 smp/s
+ep43 step9575/33750 loss=1.0059 acc=0.922 lr=9.61e-05 gnorm=2.47 92 smp/s
+ep43 step9600/33750 loss=0.8795 acc=0.919 lr=9.57e-05 gnorm=2.21 92 smp/s
+ep43 step9625/33750 loss=1.1241 acc=0.865 lr=9.53e-05 gnorm=2.44 92 smp/s
+ep43 step9650/33750 loss=1.0644 acc=0.900 lr=9.50e-05 gnorm=1.74 92 smp/s
+ep43 step9675/33750 loss=0.7985 acc=0.927 lr=9.46e-05 gnorm=2.62 92 smp/s
+ep44 step9700/33750 loss=0.7206 acc=0.918 lr=9.42e-05 gnorm=3.80 92 smp/s
+ep44 step9725/33750 loss=1.0218 acc=0.940 lr=9.38e-05 gnorm=4.70 92 smp/s
+ep44 step9750/33750 loss=1.0014 acc=0.906 lr=9.35e-05 gnorm=2.63 92 smp/s
+ep44 step9775/33750 loss=1.0591 acc=0.908 lr=9.31e-05 gnorm=2.13 92 smp/s
+ep44 step9800/33750 loss=1.0000 acc=0.870 lr=9.27e-05 gnorm=4.58 92 smp/s
+ep44 step9825/33750 loss=1.0062 acc=0.921 lr=9.23e-05 gnorm=5.89 92 smp/s
+ep44 step9850/33750 loss=0.8227 acc=0.881 lr=9.20e-05 gnorm=5.86 92 smp/s
+ep44 step9875/33750 loss=0.9457 acc=0.922 lr=9.16e-05 gnorm=3.51 92 smp/s
+ep44 step9900/33750 loss=0.8079 acc=0.973 lr=9.12e-05 gnorm=1.95 92 smp/s
+ep45 step9925/33750 loss=0.7600 acc=0.948 lr=9.09e-05 gnorm=2.31 92 smp/s
+ep45 step9950/33750 loss=1.0310 acc=0.863 lr=9.05e-05 gnorm=3.66 92 smp/s
+ep45 step9975/33750 loss=0.9306 acc=0.899 lr=9.01e-05 gnorm=2.99 92 smp/s
+ep45 step10000/33750 loss=0.7081 acc=0.943 lr=8.98e-05 gnorm=1.79 92 smp/s
+[eval @ 10000] WER=0.903 CER=0.525 SER=1.000 loss=0.553 content_acc=0.337 fill_rate=0.731 entropy=0.465 distinct=61
+[eval @ 10000] iter32  WER=0.449 CER=0.175 SER=0.925 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े | ा द | | म ध ् य | प ् र द े श | भ ो ो ा ल ल क े े प प स स | े े | | ् थ ि त त त ो ो प ु ु | | | | | ि ि ि ग ग ग | ा ा ा ी 
+   Hyp : फफिर उसके ाद  मध्य प्रदेश भोोाललकेेपपसस ेे  ्थितततोोपुु     िििगगग ाााीफफेेेसस  
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+   ** new best eval/iter_WER=0.4490 -> best.pt
+ep45 step10025/33750 loss=0.7452 acc=0.897 lr=8.94e-05 gnorm=3.65 91 smp/s
+ep45 step10050/33750 loss=0.6684 acc=0.938 lr=8.91e-05 gnorm=2.59 91 smp/s
+ep45 step10075/33750 loss=1.1260 acc=0.899 lr=8.87e-05 gnorm=3.96 91 smp/s
+ep45 step10100/33750 loss=0.8570 acc=0.915 lr=8.84e-05 gnorm=2.36 91 smp/s
+ep45 step10125/33750 loss=0.9881 acc=0.943 lr=8.80e-05 gnorm=3.08 91 smp/s
+ep46 step10150/33750 loss=0.6951 acc=0.954 lr=8.77e-05 gnorm=3.57 91 smp/s
+ep46 step10175/33750 loss=0.7338 acc=0.908 lr=8.73e-05 gnorm=3.33 91 smp/s
+ep46 step10200/33750 loss=1.0858 acc=0.947 lr=8.70e-05 gnorm=2.71 91 smp/s
+ep46 step10225/33750 loss=0.9348 acc=0.928 lr=8.66e-05 gnorm=2.79 91 smp/s
+ep46 step10250/33750 loss=0.9196 acc=0.880 lr=8.63e-05 gnorm=1.36 91 smp/s
+ep46 step10275/33750 loss=0.8921 acc=0.920 lr=8.59e-05 gnorm=2.79 91 smp/s
+ep46 step10300/33750 loss=1.0335 acc=0.875 lr=8.56e-05 gnorm=4.47 91 smp/s
+ep46 step10325/33750 loss=0.9972 acc=0.879 lr=8.52e-05 gnorm=3.41 91 smp/s
+ep46 step10350/33750 loss=0.7747 acc=0.959 lr=8.49e-05 gnorm=1.44 92 smp/s
+ep47 step10375/33750 loss=0.7249 acc=0.941 lr=8.46e-05 gnorm=3.60 92 smp/s
+ep47 step10400/33750 loss=1.0583 acc=0.864 lr=8.42e-05 gnorm=1.99 92 smp/s
+ep47 step10425/33750 loss=0.9310 acc=0.955 lr=8.39e-05 gnorm=3.55 92 smp/s
+ep47 step10450/33750 loss=0.9045 acc=0.952 lr=8.35e-05 gnorm=2.00 92 smp/s
+ep47 step10475/33750 loss=0.8720 acc=0.900 lr=8.32e-05 gnorm=5.08 92 smp/s
+ep47 step10500/33750 loss=0.8562 acc=0.920 lr=8.29e-05 gnorm=2.24 92 smp/s
+ep47 step10525/33750 loss=0.9906 acc=0.908 lr=8.25e-05 gnorm=4.26 92 smp/s
+ep47 step10550/33750 loss=1.0404 acc=0.882 lr=8.22e-05 gnorm=5.01 92 smp/s
+ep47 step10575/33750 loss=0.7368 acc=0.898 lr=8.19e-05 gnorm=3.08 92 smp/s
+ep48 step10600/33750 loss=0.9080 acc=0.911 lr=8.16e-05 gnorm=4.62 92 smp/s
+ep48 step10625/33750 loss=0.8440 acc=0.900 lr=8.12e-05 gnorm=4.57 92 smp/s
+ep48 step10650/33750 loss=0.8466 acc=0.934 lr=8.09e-05 gnorm=4.68 92 smp/s
+ep48 step10675/33750 loss=1.0364 acc=0.916 lr=8.06e-05 gnorm=5.97 92 smp/s
+ep48 step10700/33750 loss=1.0554 acc=0.908 lr=8.03e-05 gnorm=3.21 92 smp/s
+ep48 step10725/33750 loss=0.9611 acc=0.885 lr=7.99e-05 gnorm=2.86 92 smp/s
+ep48 step10750/33750 loss=0.8539 acc=0.926 lr=7.96e-05 gnorm=1.95 92 smp/s
+ep48 step10775/33750 loss=1.1736 acc=0.854 lr=7.93e-05 gnorm=3.75 92 smp/s
+ep48 step10800/33750 loss=0.7497 acc=0.901 lr=7.90e-05 gnorm=2.21 92 smp/s
+ep49 step10825/33750 loss=1.1592 acc=0.893 lr=7.87e-05 gnorm=4.78 92 smp/s
+ep49 step10850/33750 loss=0.7452 acc=0.945 lr=7.84e-05 gnorm=4.39 92 smp/s
+ep49 step10875/33750 loss=1.2138 acc=0.870 lr=7.80e-05 gnorm=8.54 92 smp/s
+ep49 step10900/33750 loss=0.8501 acc=0.906 lr=7.77e-05 gnorm=2.28 92 smp/s
+ep49 step10925/33750 loss=1.0215 acc=0.897 lr=7.74e-05 gnorm=5.98 92 smp/s
+ep49 step10950/33750 loss=0.8476 acc=0.907 lr=7.71e-05 gnorm=2.85 92 smp/s
+ep49 step10975/33750 loss=0.8715 acc=0.879 lr=7.68e-05 gnorm=6.43 92 smp/s
+ep49 step11000/33750 loss=0.8787 acc=0.925 lr=7.65e-05 gnorm=4.09 92 smp/s
+[eval @ 11000] WER=0.898 CER=0.534 SER=1.000 loss=0.531 content_acc=0.331 fill_rate=0.732 entropy=0.468 distinct=61
+[eval @ 11000] iter32  WER=0.417 CER=0.161 SER=0.900 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े | ब ा द | म म ध ् य | प ् र द े श | भ ो ा ा ल | क े | प ा | म े ं | ् ् ि ि त | ो ो ो प ु र | | | | ि ि ि ि ं ग ग | ा फ फ फ 
+   Hyp : फफिर उसके बाद ममध्य प्रदेश भोााल के पा में ््िित ोोोपुर    ििििंगग ाफफफफेेेे    
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+   ** new best eval/iter_WER=0.4172 -> best.pt
+ep49 step11025/33750 loss=0.8984 acc=0.961 lr=7.62e-05 gnorm=3.64 91 smp/s
+ep50 step11050/33750 loss=0.9466 acc=0.879 lr=7.59e-05 gnorm=3.24 91 smp/s
+ep50 step11075/33750 loss=0.7885 acc=0.898 lr=7.56e-05 gnorm=5.17 91 smp/s
+ep50 step11100/33750 loss=0.7629 acc=0.967 lr=7.53e-05 gnorm=1.76 91 smp/s
+ep50 step11125/33750 loss=1.0740 acc=0.875 lr=7.50e-05 gnorm=1.73 91 smp/s
+ep50 step11150/33750 loss=0.7177 acc=0.909 lr=7.47e-05 gnorm=3.40 91 smp/s
+ep50 step11175/33750 loss=0.8048 acc=0.955 lr=7.44e-05 gnorm=1.97 91 smp/s
+ep50 step11200/33750 loss=1.0640 acc=0.914 lr=7.41e-05 gnorm=5.69 91 smp/s
+ep50 step11225/33750 loss=0.8199 acc=0.943 lr=7.38e-05 gnorm=6.21 91 smp/s
+ep50 step11250/33750 loss=0.8965 acc=0.926 lr=7.35e-05 gnorm=6.78 91 smp/s
+ep51 step11275/33750 loss=0.7822 acc=0.937 lr=7.32e-05 gnorm=2.09 91 smp/s
+ep51 step11300/33750 loss=0.8566 acc=0.929 lr=7.29e-05 gnorm=4.84 91 smp/s
+ep51 step11325/33750 loss=0.8768 acc=0.927 lr=7.26e-05 gnorm=3.18 91 smp/s
+ep51 step11350/33750 loss=0.8452 acc=0.907 lr=7.23e-05 gnorm=3.36 91 smp/s
+ep51 step11375/33750 loss=0.7706 acc=0.982 lr=7.20e-05 gnorm=1.56 91 smp/s
+ep51 step11400/33750 loss=0.8630 acc=0.902 lr=7.17e-05 gnorm=4.63 91 smp/s
+ep51 step11425/33750 loss=0.6259 acc=0.956 lr=7.15e-05 gnorm=3.57 92 smp/s
+ep51 step11450/33750 loss=0.7700 acc=0.878 lr=7.12e-05 gnorm=2.08 92 smp/s
+ep51 step11475/33750 loss=0.9216 acc=0.944 lr=7.09e-05 gnorm=3.21 92 smp/s
+ep52 step11500/33750 loss=0.8226 acc=0.907 lr=7.06e-05 gnorm=1.83 92 smp/s
+ep52 step11525/33750 loss=1.0329 acc=0.866 lr=7.03e-05 gnorm=2.82 92 smp/s
+ep52 step11550/33750 loss=0.7160 acc=0.947 lr=7.00e-05 gnorm=2.73 92 smp/s
+ep52 step11575/33750 loss=0.8912 acc=0.926 lr=6.98e-05 gnorm=6.09 92 smp/s
+ep52 step11600/33750 loss=0.9142 acc=0.951 lr=6.95e-05 gnorm=3.64 92 smp/s
+ep52 step11625/33750 loss=1.1378 acc=0.899 lr=6.92e-05 gnorm=6.32 92 smp/s
+ep52 step11650/33750 loss=0.9520 acc=0.879 lr=6.89e-05 gnorm=2.95 92 smp/s
+ep52 step11675/33750 loss=0.8694 acc=0.898 lr=6.87e-05 gnorm=2.00 92 smp/s
+ep52 step11700/33750 loss=0.7396 acc=0.946 lr=6.84e-05 gnorm=3.15 92 smp/s
+ep53 step11725/33750 loss=0.9056 acc=0.894 lr=6.81e-05 gnorm=8.89 92 smp/s
+ep53 step11750/33750 loss=0.8423 acc=0.944 lr=6.78e-05 gnorm=2.33 92 smp/s
+ep53 step11775/33750 loss=0.8361 acc=0.888 lr=6.76e-05 gnorm=2.71 92 smp/s
+ep53 step11800/33750 loss=1.0371 acc=0.954 lr=6.73e-05 gnorm=4.58 92 smp/s
+ep53 step11825/33750 loss=0.6768 acc=0.945 lr=6.70e-05 gnorm=2.15 92 smp/s
+ep53 step11850/33750 loss=1.2389 acc=0.876 lr=6.68e-05 gnorm=6.12 92 smp/s
+ep53 step11875/33750 loss=0.8581 acc=0.931 lr=6.65e-05 gnorm=4.78 92 smp/s
+ep53 step11900/33750 loss=1.0892 acc=0.911 lr=6.62e-05 gnorm=2.10 92 smp/s
+ep53 step11925/33750 loss=0.8516 acc=0.866 lr=6.60e-05 gnorm=4.17 92 smp/s
+ep54 step11950/33750 loss=0.8449 acc=0.908 lr=6.57e-05 gnorm=3.29 92 smp/s
+ep54 step11975/33750 loss=0.5464 acc=0.959 lr=6.54e-05 gnorm=3.72 92 smp/s
+ep54 step12000/33750 loss=0.9603 acc=0.916 lr=6.52e-05 gnorm=2.62 92 smp/s
+[eval @ 12000] WER=0.876 CER=0.479 SER=1.000 loss=0.544 content_acc=0.353 fill_rate=0.728 entropy=0.449 distinct=61
+[eval @ 12000] iter32  WER=0.387 CER=0.149 SER=0.900 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े | ब ा द | म ध ् य | प ् र द े श | भ ो ा ा ल | े े | प ा स म े ं | स ् थ ि | | ो ो ो प प ु र | क | | ि ि व व ल ं ग | ा ा ा फ 
+   Hyp : फफिर उसके बाद मध्य प्रदेश भोााल ेे पासमें स्थि  ोोोपपुर क  ििववलंग ाााफफफीफफमसस 
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+   ** new best eval/iter_WER=0.3869 -> best.pt
+ep54 step12025/33750 loss=0.8567 acc=0.905 lr=6.49e-05 gnorm=3.04 91 smp/s
+ep54 step12050/33750 loss=0.9454 acc=0.907 lr=6.47e-05 gnorm=3.57 91 smp/s
+ep54 step12075/33750 loss=0.7238 acc=0.929 lr=6.44e-05 gnorm=1.62 91 smp/s
+ep54 step12100/33750 loss=0.7527 acc=0.923 lr=6.41e-05 gnorm=2.22 91 smp/s
+ep54 step12125/33750 loss=1.0104 acc=0.877 lr=6.39e-05 gnorm=3.53 91 smp/s
+ep54 step12150/33750 loss=0.7338 acc=0.942 lr=6.36e-05 gnorm=4.12 91 smp/s
+ep55 step12175/33750 loss=0.7762 acc=0.935 lr=6.34e-05 gnorm=3.79 91 smp/s
+ep55 step12200/33750 loss=1.0765 acc=0.876 lr=6.31e-05 gnorm=2.54 91 smp/s
+ep55 step12225/33750 loss=0.8261 acc=0.891 lr=6.29e-05 gnorm=4.35 91 smp/s
+ep55 step12250/33750 loss=0.5957 acc=0.939 lr=6.26e-05 gnorm=2.06 91 smp/s
+ep55 step12275/33750 loss=0.7409 acc=0.957 lr=6.24e-05 gnorm=4.91 91 smp/s
+ep55 step12300/33750 loss=1.2627 acc=0.858 lr=6.21e-05 gnorm=3.42 91 smp/s
+ep55 step12325/33750 loss=0.9941 acc=0.974 lr=6.19e-05 gnorm=4.35 92 smp/s
+ep55 step12350/33750 loss=0.7636 acc=0.887 lr=6.16e-05 gnorm=3.33 92 smp/s
+ep55 step12375/33750 loss=0.7346 acc=0.911 lr=6.14e-05 gnorm=5.04 92 smp/s
+ep56 step12400/33750 loss=1.0119 acc=0.878 lr=6.11e-05 gnorm=3.71 92 smp/s
+ep56 step12425/33750 loss=0.7764 acc=0.927 lr=6.09e-05 gnorm=1.99 92 smp/s
+ep56 step12450/33750 loss=1.0898 acc=0.881 lr=6.06e-05 gnorm=6.77 92 smp/s
+ep56 step12475/33750 loss=0.8522 acc=0.902 lr=6.04e-05 gnorm=4.49 92 smp/s
+ep56 step12500/33750 loss=0.9058 acc=0.960 lr=6.02e-05 gnorm=4.54 92 smp/s
+ep56 step12525/33750 loss=0.8798 acc=0.888 lr=5.99e-05 gnorm=3.48 92 smp/s
+ep56 step12550/33750 loss=0.6732 acc=0.977 lr=5.97e-05 gnorm=2.62 92 smp/s
+ep56 step12575/33750 loss=0.9578 acc=0.907 lr=5.94e-05 gnorm=6.24 92 smp/s
+ep56 step12600/33750 loss=0.7658 acc=0.916 lr=5.92e-05 gnorm=4.26 92 smp/s
+ep57 step12625/33750 loss=0.9708 acc=0.938 lr=5.90e-05 gnorm=1.64 92 smp/s
+ep57 step12650/33750 loss=0.6938 acc=0.948 lr=5.87e-05 gnorm=1.68 92 smp/s
+ep57 step12675/33750 loss=0.9401 acc=0.901 lr=5.85e-05 gnorm=3.97 92 smp/s
+ep57 step12700/33750 loss=0.8222 acc=0.892 lr=5.83e-05 gnorm=1.54 92 smp/s
+ep57 step12725/33750 loss=0.7243 acc=0.922 lr=5.80e-05 gnorm=2.12 92 smp/s
+ep57 step12750/33750 loss=0.8894 acc=0.908 lr=5.78e-05 gnorm=2.79 92 smp/s
+ep57 step12775/33750 loss=0.7134 acc=0.904 lr=5.76e-05 gnorm=5.46 92 smp/s
+ep57 step12800/33750 loss=0.8687 acc=0.930 lr=5.73e-05 gnorm=5.01 92 smp/s
+ep57 step12825/33750 loss=0.7229 acc=0.870 lr=5.71e-05 gnorm=1.43 92 smp/s
+ep58 step12850/33750 loss=0.9559 acc=0.882 lr=5.69e-05 gnorm=2.26 92 smp/s
+ep58 step12875/33750 loss=0.9464 acc=0.934 lr=5.67e-05 gnorm=1.91 92 smp/s
+ep58 step12900/33750 loss=0.8567 acc=0.918 lr=5.64e-05 gnorm=3.33 92 smp/s
+ep58 step12925/33750 loss=0.7853 acc=0.959 lr=5.62e-05 gnorm=2.06 92 smp/s
+ep58 step12950/33750 loss=0.6898 acc=0.947 lr=5.60e-05 gnorm=5.00 92 smp/s
+ep58 step12975/33750 loss=0.7925 acc=0.911 lr=5.58e-05 gnorm=2.61 92 smp/s
+ep58 step13000/33750 loss=0.5570 acc=0.936 lr=5.55e-05 gnorm=3.55 92 smp/s
+[eval @ 13000] WER=0.850 CER=0.474 SER=1.000 loss=0.564 content_acc=0.352 fill_rate=0.726 entropy=0.460 distinct=60
+[eval @ 13000] iter32  WER=0.378 CER=0.144 SER=0.910 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े | ब ा द | म ध ध य य | प ् द े े | भ भ ो ा ा ल क े | प प स स | े े ं | ् ् त त त | ो ो प प ु र | क ी | श ि ि व ि ं ग | ा ा ा 
+   Hyp : फफिर उसके बाद मधधयय प्देे भभोाालके पपसस ेें ््ततत ोोपपुर की शििविंग ाााफ़ीफेेसस 
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+   ** new best eval/iter_WER=0.3777 -> best.pt
+ep58 step13025/33750 loss=0.9568 acc=0.888 lr=5.53e-05 gnorm=1.64 91 smp/s
+ep58 step13050/33750 loss=0.5611 acc=0.970 lr=5.51e-05 gnorm=4.57 91 smp/s
+ep59 step13075/33750 loss=0.8898 acc=0.923 lr=5.49e-05 gnorm=6.61 91 smp/s
+ep59 step13100/33750 loss=1.0173 acc=0.910 lr=5.46e-05 gnorm=5.46 91 smp/s
+ep59 step13125/33750 loss=0.6750 acc=0.919 lr=5.44e-05 gnorm=2.19 91 smp/s
+ep59 step13150/33750 loss=0.7754 acc=0.909 lr=5.42e-05 gnorm=2.84 91 smp/s
+ep59 step13175/33750 loss=0.7712 acc=0.966 lr=5.40e-05 gnorm=3.49 91 smp/s
+ep59 step13200/33750 loss=1.0402 acc=0.866 lr=5.38e-05 gnorm=3.37 91 smp/s
+ep59 step13225/33750 loss=0.5951 acc=0.925 lr=5.36e-05 gnorm=4.83 91 smp/s
+ep59 step13250/33750 loss=0.8092 acc=0.895 lr=5.33e-05 gnorm=2.50 92 smp/s
+ep59 step13275/33750 loss=0.6220 acc=0.944 lr=5.31e-05 gnorm=3.50 92 smp/s
+ep60 step13300/33750 loss=0.8216 acc=0.940 lr=5.29e-05 gnorm=2.82 92 smp/s
+ep60 step13325/33750 loss=0.9448 acc=0.931 lr=5.27e-05 gnorm=3.53 92 smp/s
+ep60 step13350/33750 loss=0.7491 acc=0.943 lr=5.25e-05 gnorm=5.77 92 smp/s
+ep60 step13375/33750 loss=0.8332 acc=0.850 lr=5.23e-05 gnorm=2.96 92 smp/s
+ep60 step13400/33750 loss=0.8915 acc=0.938 lr=5.21e-05 gnorm=9.39 92 smp/s
+ep60 step13425/33750 loss=0.7620 acc=0.930 lr=5.19e-05 gnorm=5.08 92 smp/s
+ep60 step13450/33750 loss=0.6517 acc=0.938 lr=5.17e-05 gnorm=2.95 92 smp/s
+ep60 step13475/33750 loss=0.7290 acc=0.920 lr=5.15e-05 gnorm=3.74 92 smp/s
+ep60 step13500/33750 loss=0.6108 acc=0.909 lr=5.13e-05 gnorm=2.16 92 smp/s
+ep61 step13525/33750 loss=0.7431 acc=0.933 lr=5.10e-05 gnorm=3.64 92 smp/s
+ep61 step13550/33750 loss=0.9640 acc=0.944 lr=5.08e-05 gnorm=5.90 92 smp/s
+ep61 step13575/33750 loss=0.7299 acc=0.931 lr=5.06e-05 gnorm=1.45 92 smp/s
+ep61 step13600/33750 loss=1.1321 acc=0.883 lr=5.04e-05 gnorm=3.89 92 smp/s
+ep61 step13625/33750 loss=0.7680 acc=0.944 lr=5.02e-05 gnorm=2.70 92 smp/s
+ep61 step13650/33750 loss=0.8433 acc=0.953 lr=5.00e-05 gnorm=2.31 92 smp/s
+ep61 step13675/33750 loss=0.9421 acc=0.900 lr=4.98e-05 gnorm=3.28 92 smp/s
+ep61 step13700/33750 loss=0.7952 acc=0.909 lr=4.96e-05 gnorm=2.10 92 smp/s
+ep61 step13725/33750 loss=0.7820 acc=0.931 lr=4.94e-05 gnorm=5.20 92 smp/s
+ep62 step13750/33750 loss=0.8328 acc=0.949 lr=4.92e-05 gnorm=2.91 92 smp/s
+ep62 step13775/33750 loss=0.7249 acc=0.956 lr=4.90e-05 gnorm=2.46 92 smp/s
+ep62 step13800/33750 loss=0.6323 acc=0.924 lr=4.88e-05 gnorm=2.63 92 smp/s
+ep62 step13825/33750 loss=0.9890 acc=0.865 lr=4.87e-05 gnorm=4.15 92 smp/s
+ep62 step13850/33750 loss=0.8604 acc=0.952 lr=4.85e-05 gnorm=6.16 92 smp/s
+ep62 step13875/33750 loss=1.0712 acc=0.853 lr=4.83e-05 gnorm=3.13 92 smp/s
+ep62 step13900/33750 loss=1.0539 acc=0.913 lr=4.81e-05 gnorm=3.53 92 smp/s
+ep62 step13925/33750 loss=0.9433 acc=0.872 lr=4.79e-05 gnorm=3.28 92 smp/s
+ep62 step13950/33750 loss=0.6509 acc=0.945 lr=4.77e-05 gnorm=3.88 92 smp/s
+ep63 step13975/33750 loss=0.9495 acc=0.970 lr=4.75e-05 gnorm=5.54 92 smp/s
+ep63 step14000/33750 loss=0.6832 acc=0.936 lr=4.73e-05 gnorm=3.80 92 smp/s
+[eval @ 14000] WER=0.832 CER=0.447 SER=1.000 loss=0.543 content_acc=0.358 fill_rate=0.732 entropy=0.414 distinct=61
+[eval @ 14000] iter32  WER=0.350 CER=0.122 SER=0.905 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े | ब ा द | म ध ् य | प ् र द े श | | भ ो प ा ल | क े | प ा स स | म े ं स स थ ि त | | ो ो प ु ु | क क | | ि व ि ं ं ग | क ा फ 
+   Hyp : फफिर उसके बाद मध्य प्रदेश  भोपाल के पासस मेंससथित  ोोपुु कक  िविंंग काफफफीफेेसस 
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+   ** new best eval/iter_WER=0.3502 -> best.pt
+ep63 step14025/33750 loss=0.8157 acc=0.910 lr=4.71e-05 gnorm=3.56 91 smp/s
+ep63 step14050/33750 loss=0.9849 acc=0.912 lr=4.69e-05 gnorm=2.59 91 smp/s
+ep63 step14075/33750 loss=0.8366 acc=0.947 lr=4.67e-05 gnorm=9.39 91 smp/s
+ep63 step14100/33750 loss=0.6517 acc=0.911 lr=4.66e-05 gnorm=4.64 91 smp/s
+ep63 step14125/33750 loss=0.7569 acc=0.935 lr=4.64e-05 gnorm=5.87 91 smp/s
+ep63 step14150/33750 loss=0.7648 acc=0.924 lr=4.62e-05 gnorm=2.65 91 smp/s
+ep63 step14175/33750 loss=0.9200 acc=0.960 lr=4.60e-05 gnorm=4.27 92 smp/s
+ep64 step14200/33750 loss=0.9203 acc=0.935 lr=4.58e-05 gnorm=3.62 92 smp/s
+ep64 step14225/33750 loss=0.9310 acc=0.879 lr=4.56e-05 gnorm=3.65 92 smp/s
+ep64 step14250/33750 loss=0.6969 acc=0.918 lr=4.55e-05 gnorm=6.44 92 smp/s
+ep64 step14275/33750 loss=0.8055 acc=0.864 lr=4.53e-05 gnorm=6.47 92 smp/s
+ep64 step14300/33750 loss=0.8604 acc=0.896 lr=4.51e-05 gnorm=2.58 92 smp/s
+ep64 step14325/33750 loss=0.8332 acc=0.941 lr=4.49e-05 gnorm=4.75 92 smp/s
+ep64 step14350/33750 loss=0.7568 acc=0.952 lr=4.47e-05 gnorm=1.98 92 smp/s
+ep64 step14375/33750 loss=0.8230 acc=0.960 lr=4.46e-05 gnorm=2.38 92 smp/s
+ep64 step14400/33750 loss=0.8183 acc=0.904 lr=4.44e-05 gnorm=2.36 92 smp/s
+ep65 step14425/33750 loss=1.0230 acc=0.888 lr=4.42e-05 gnorm=7.83 92 smp/s
+ep65 step14450/33750 loss=0.7254 acc=0.891 lr=4.40e-05 gnorm=2.92 92 smp/s
+ep65 step14475/33750 loss=1.0242 acc=0.891 lr=4.38e-05 gnorm=1.88 92 smp/s
+ep65 step14500/33750 loss=0.6353 acc=0.915 lr=4.37e-05 gnorm=7.18 92 smp/s
+ep65 step14525/33750 loss=0.6803 acc=0.862 lr=4.35e-05 gnorm=5.34 92 smp/s
+ep65 step14550/33750 loss=0.7986 acc=0.951 lr=4.33e-05 gnorm=2.42 92 smp/s
+ep65 step14575/33750 loss=0.8860 acc=0.901 lr=4.31e-05 gnorm=4.15 92 smp/s
+ep65 step14600/33750 loss=0.7653 acc=0.916 lr=4.30e-05 gnorm=2.16 92 smp/s
+ep65 step14625/33750 loss=0.8907 acc=0.933 lr=4.28e-05 gnorm=1.86 92 smp/s
+ep66 step14650/33750 loss=0.7390 acc=0.948 lr=4.26e-05 gnorm=1.76 92 smp/s
+ep66 step14675/33750 loss=1.0238 acc=0.855 lr=4.25e-05 gnorm=3.71 92 smp/s
+ep66 step14700/33750 loss=0.8250 acc=0.913 lr=4.23e-05 gnorm=2.59 92 smp/s
+ep66 step14725/33750 loss=0.7779 acc=0.944 lr=4.21e-05 gnorm=3.66 92 smp/s
+ep66 step14750/33750 loss=0.6852 acc=0.937 lr=4.20e-05 gnorm=2.76 92 smp/s
+ep66 step14775/33750 loss=0.9350 acc=0.921 lr=4.18e-05 gnorm=2.57 92 smp/s
+ep66 step14800/33750 loss=0.8596 acc=0.936 lr=4.16e-05 gnorm=6.16 92 smp/s
+ep66 step14825/33750 loss=0.7390 acc=0.946 lr=4.15e-05 gnorm=3.56 92 smp/s
+ep66 step14850/33750 loss=0.8177 acc=0.897 lr=4.13e-05 gnorm=3.75 92 smp/s
+ep67 step14875/33750 loss=0.7995 acc=0.861 lr=4.11e-05 gnorm=3.71 92 smp/s
+ep67 step14900/33750 loss=0.7989 acc=0.956 lr=4.10e-05 gnorm=2.33 92 smp/s
+ep67 step14925/33750 loss=0.7748 acc=0.933 lr=4.08e-05 gnorm=1.95 92 smp/s
+ep67 step14950/33750 loss=0.6598 acc=0.926 lr=4.06e-05 gnorm=3.57 92 smp/s
+ep67 step14975/33750 loss=0.7873 acc=0.943 lr=4.05e-05 gnorm=2.35 92 smp/s
+ep67 step15000/33750 loss=0.4997 acc=0.952 lr=4.03e-05 gnorm=2.53 92 smp/s
+[eval @ 15000] WER=0.815 CER=0.415 SER=1.000 loss=0.556 content_acc=0.339 fill_rate=0.734 entropy=0.391 distinct=61
+[eval @ 15000] iter32  WER=0.339 CER=0.118 SER=0.895 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े | ब ा द | म ध ् य | | प ् र द े श | भ ो प ा ल | क े | प ा स | म े े | स ् थ ि त त ो ो ो प ु र | क ी | ि ि व ल ं ग | क ा ा ा 
+   Hyp : फफिर उसके बाद मध्य  प्रदेश भोपाल के पास मेे स्थिततोोोपुर की ििवलंग काााफी ेेमस  
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+   ** new best eval/iter_WER=0.3387 -> best.pt
+ep67 step15025/33750 loss=0.6352 acc=0.920 lr=4.01e-05 gnorm=7.77 91 smp/s
+ep67 step15050/33750 loss=0.9400 acc=0.935 lr=4.00e-05 gnorm=5.61 91 smp/s
+ep67 step15075/33750 loss=0.6099 acc=0.930 lr=3.98e-05 gnorm=2.37 91 smp/s
+ep68 step15100/33750 loss=0.6430 acc=0.900 lr=3.97e-05 gnorm=3.42 91 smp/s
+ep68 step15125/33750 loss=0.6162 acc=0.953 lr=3.95e-05 gnorm=3.95 91 smp/s
+ep68 step15150/33750 loss=0.7577 acc=0.918 lr=3.93e-05 gnorm=6.00 91 smp/s
+ep68 step15175/33750 loss=0.9202 acc=0.916 lr=3.92e-05 gnorm=6.60 91 smp/s
+ep68 step15200/33750 loss=0.7907 acc=0.922 lr=3.90e-05 gnorm=4.09 92 smp/s
+ep68 step15225/33750 loss=0.9311 acc=0.893 lr=3.89e-05 gnorm=7.17 92 smp/s
+ep68 step15250/33750 loss=0.7268 acc=0.949 lr=3.87e-05 gnorm=2.39 92 smp/s
+ep68 step15275/33750 loss=0.7412 acc=0.899 lr=3.86e-05 gnorm=2.32 92 smp/s
+ep68 step15300/33750 loss=0.8783 acc=0.931 lr=3.84e-05 gnorm=5.18 92 smp/s
+ep69 step15325/33750 loss=0.6751 acc=0.924 lr=3.83e-05 gnorm=5.60 92 smp/s
+ep69 step15350/33750 loss=0.8804 acc=0.894 lr=3.81e-05 gnorm=2.59 92 smp/s
+ep69 step15375/33750 loss=0.6925 acc=0.913 lr=3.80e-05 gnorm=3.23 92 smp/s
+ep69 step15400/33750 loss=0.6830 acc=0.971 lr=3.78e-05 gnorm=5.43 92 smp/s
+ep69 step15425/33750 loss=0.7657 acc=0.953 lr=3.77e-05 gnorm=2.39 92 smp/s
+ep69 step15450/33750 loss=0.9864 acc=0.936 lr=3.75e-05 gnorm=2.37 92 smp/s
+ep69 step15475/33750 loss=0.8104 acc=0.888 lr=3.74e-05 gnorm=4.27 92 smp/s
+ep69 step15500/33750 loss=0.6910 acc=0.932 lr=3.72e-05 gnorm=3.53 92 smp/s
+ep69 step15525/33750 loss=0.6945 acc=0.909 lr=3.71e-05 gnorm=2.72 92 smp/s
+ep70 step15550/33750 loss=0.7682 acc=0.950 lr=3.69e-05 gnorm=3.38 92 smp/s
+ep70 step15575/33750 loss=0.9814 acc=0.895 lr=3.68e-05 gnorm=6.01 92 smp/s
+ep70 step15600/33750 loss=0.5475 acc=0.959 lr=3.66e-05 gnorm=2.22 92 smp/s
+ep70 step15625/33750 loss=0.7746 acc=0.902 lr=3.65e-05 gnorm=5.55 92 smp/s
+ep70 step15650/33750 loss=0.6640 acc=0.945 lr=3.63e-05 gnorm=2.06 92 smp/s
+ep70 step15675/33750 loss=1.0427 acc=0.927 lr=3.62e-05 gnorm=1.57 92 smp/s
+ep70 step15700/33750 loss=0.8702 acc=0.890 lr=3.60e-05 gnorm=3.54 92 smp/s
+ep70 step15725/33750 loss=0.8624 acc=0.898 lr=3.59e-05 gnorm=8.09 92 smp/s
+ep70 step15750/33750 loss=0.8314 acc=0.906 lr=3.57e-05 gnorm=4.87 92 smp/s
+ep71 step15775/33750 loss=0.7594 acc=0.897 lr=3.56e-05 gnorm=4.63 92 smp/s
+ep71 step15800/33750 loss=0.6837 acc=0.906 lr=3.55e-05 gnorm=2.53 92 smp/s
+ep71 step15825/33750 loss=0.8027 acc=0.918 lr=3.53e-05 gnorm=4.01 92 smp/s
+ep71 step15850/33750 loss=0.6871 acc=0.933 lr=3.52e-05 gnorm=3.97 92 smp/s
+ep71 step15875/33750 loss=0.7498 acc=0.923 lr=3.50e-05 gnorm=6.24 92 smp/s
+ep71 step15900/33750 loss=0.7641 acc=0.911 lr=3.49e-05 gnorm=1.86 92 smp/s
+ep71 step15925/33750 loss=0.7770 acc=0.889 lr=3.48e-05 gnorm=4.00 92 smp/s
+ep71 step15950/33750 loss=0.6371 acc=0.957 lr=3.46e-05 gnorm=4.90 92 smp/s
+ep71 step15975/33750 loss=0.7623 acc=0.912 lr=3.45e-05 gnorm=2.79 92 smp/s
+ep72 step16000/33750 loss=0.7161 acc=0.916 lr=3.43e-05 gnorm=4.12 92 smp/s
+[eval @ 16000] WER=0.809 CER=0.409 SER=1.000 loss=0.600 content_acc=0.321 fill_rate=0.731 entropy=0.396 distinct=60
+[eval @ 16000] iter32  WER=0.326 CER=0.114 SER=0.890 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े | ब ा द | म ध ् य य | प ् र द े श | भ ो ो ा ल | क े | प ा स | म े ं | स ् थ ि त | ो ो ो प ु र | क ी | | ि व ल ं ं ग | ा ा ा 
+   Hyp : फफिर उसके बाद मध्यय प्रदेश भोोाल के पास में स्थित ोोोपुर की  िवलंंग ाााफ़ी ेेेस 
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+   ** new best eval/iter_WER=0.3265 -> best.pt
+ep72 step16025/33750 loss=0.4409 acc=0.937 lr=3.42e-05 gnorm=2.94 91 smp/s
+ep72 step16050/33750 loss=0.8165 acc=0.891 lr=3.41e-05 gnorm=4.40 91 smp/s
+ep72 step16075/33750 loss=0.9489 acc=0.888 lr=3.39e-05 gnorm=6.83 91 smp/s
+ep72 step16100/33750 loss=0.8666 acc=0.894 lr=3.38e-05 gnorm=4.55 91 smp/s
+ep72 step16125/33750 loss=0.5747 acc=0.962 lr=3.37e-05 gnorm=8.82 91 smp/s
+ep72 step16150/33750 loss=0.6705 acc=0.957 lr=3.35e-05 gnorm=1.55 91 smp/s
+ep72 step16175/33750 loss=0.7651 acc=0.950 lr=3.34e-05 gnorm=5.27 92 smp/s
+ep72 step16200/33750 loss=0.6879 acc=0.928 lr=3.33e-05 gnorm=7.48 92 smp/s
+ep73 step16225/33750 loss=0.8346 acc=0.908 lr=3.31e-05 gnorm=1.75 92 smp/s
+ep73 step16250/33750 loss=0.7488 acc=0.906 lr=3.30e-05 gnorm=2.31 92 smp/s
+ep73 step16275/33750 loss=0.6287 acc=0.959 lr=3.29e-05 gnorm=1.92 92 smp/s
+ep73 step16300/33750 loss=0.6472 acc=0.955 lr=3.27e-05 gnorm=2.22 92 smp/s
+ep73 step16325/33750 loss=0.6217 acc=0.907 lr=3.26e-05 gnorm=3.35 92 smp/s
+ep73 step16350/33750 loss=0.8645 acc=0.923 lr=3.25e-05 gnorm=2.92 92 smp/s
+ep73 step16375/33750 loss=0.4912 acc=0.976 lr=3.23e-05 gnorm=1.85 92 smp/s
+ep73 step16400/33750 loss=0.8741 acc=0.897 lr=3.22e-05 gnorm=5.59 92 smp/s
+ep73 step16425/33750 loss=0.8983 acc=0.932 lr=3.21e-05 gnorm=4.66 92 smp/s
+ep74 step16450/33750 loss=0.6543 acc=0.912 lr=3.20e-05 gnorm=2.36 92 smp/s
+ep74 step16475/33750 loss=0.8238 acc=0.957 lr=3.18e-05 gnorm=2.09 92 smp/s
+ep74 step16500/33750 loss=1.0448 acc=0.881 lr=3.17e-05 gnorm=4.90 92 smp/s
+ep74 step16525/33750 loss=0.8904 acc=0.930 lr=3.16e-05 gnorm=2.14 92 smp/s
+ep74 step16550/33750 loss=0.6974 acc=0.896 lr=3.14e-05 gnorm=3.13 92 smp/s
+ep74 step16575/33750 loss=0.5158 acc=0.924 lr=3.13e-05 gnorm=2.25 92 smp/s
+ep74 step16600/33750 loss=0.6771 acc=0.977 lr=3.12e-05 gnorm=2.24 92 smp/s
+ep74 step16625/33750 loss=0.8175 acc=0.920 lr=3.11e-05 gnorm=3.53 92 smp/s
+ep74 step16650/33750 loss=0.5754 acc=0.980 lr=3.09e-05 gnorm=1.60 92 smp/s
+ep75 step16675/33750 loss=0.8071 acc=0.903 lr=3.08e-05 gnorm=3.86 92 smp/s
+ep75 step16700/33750 loss=0.6556 acc=0.955 lr=3.07e-05 gnorm=2.51 92 smp/s
+ep75 step16725/33750 loss=0.6577 acc=0.956 lr=3.06e-05 gnorm=2.08 92 smp/s
+ep75 step16750/33750 loss=0.9690 acc=0.938 lr=3.05e-05 gnorm=4.53 92 smp/s
+ep75 step16775/33750 loss=0.4634 acc=0.954 lr=3.03e-05 gnorm=2.42 92 smp/s
+ep75 step16800/33750 loss=0.7863 acc=0.953 lr=3.02e-05 gnorm=5.43 92 smp/s
+ep75 step16825/33750 loss=0.7542 acc=0.924 lr=3.01e-05 gnorm=3.34 92 smp/s
+ep75 step16850/33750 loss=0.7245 acc=0.920 lr=3.00e-05 gnorm=1.87 92 smp/s
+ep75 step16875/33750 loss=0.6131 acc=0.926 lr=2.98e-05 gnorm=2.56 92 smp/s
+ep76 step16900/33750 loss=0.6933 acc=0.907 lr=2.97e-05 gnorm=5.24 92 smp/s
+ep76 step16925/33750 loss=0.6427 acc=0.893 lr=2.96e-05 gnorm=2.35 92 smp/s
+ep76 step16950/33750 loss=0.8600 acc=0.931 lr=2.95e-05 gnorm=5.48 92 smp/s
+ep76 step16975/33750 loss=0.8325 acc=0.913 lr=2.94e-05 gnorm=2.18 92 smp/s
+ep76 step17000/33750 loss=0.7649 acc=0.930 lr=2.93e-05 gnorm=2.30 92 smp/s
+[eval @ 17000] WER=0.775 CER=0.373 SER=1.000 loss=0.573 content_acc=0.350 fill_rate=0.734 entropy=0.375 distinct=61
+[eval @ 17000] iter32  WER=0.324 CER=0.109 SER=0.900 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े | ब ा द | म ध ् य | प प ् र द े श | भ ो प ा ल | क े | प ा स | म े ं | स ् थ ि त | भ ो ज प ु र | क क | | ि व ल ि ं ग | | ा ा 
+   Hyp : फफिर उसके बाद मध्य पप्रदेश भोपाल के पास में स्थित भोजपुर कक  िवलिंग  ााफीी ेेस  
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+   ** new best eval/iter_WER=0.3242 -> best.pt
+ep76 step17025/33750 loss=0.9338 acc=0.896 lr=2.91e-05 gnorm=7.05 91 smp/s
+ep76 step17050/33750 loss=0.6683 acc=0.989 lr=2.90e-05 gnorm=5.57 91 smp/s
+ep76 step17075/33750 loss=0.8363 acc=0.933 lr=2.89e-05 gnorm=3.51 91 smp/s
+ep76 step17100/33750 loss=0.7342 acc=0.965 lr=2.88e-05 gnorm=4.86 92 smp/s
+ep77 step17125/33750 loss=0.9270 acc=0.926 lr=2.87e-05 gnorm=4.61 92 smp/s
+ep77 step17150/33750 loss=0.5777 acc=0.951 lr=2.86e-05 gnorm=2.14 92 smp/s
+ep77 step17175/33750 loss=0.8150 acc=0.865 lr=2.84e-05 gnorm=10.67 92 smp/s
+ep77 step17200/33750 loss=0.8206 acc=0.877 lr=2.83e-05 gnorm=3.17 92 smp/s
+ep77 step17225/33750 loss=0.8410 acc=0.920 lr=2.82e-05 gnorm=2.56 92 smp/s
+ep77 step17250/33750 loss=0.6755 acc=0.962 lr=2.81e-05 gnorm=2.93 92 smp/s
+ep77 step17275/33750 loss=0.7983 acc=0.864 lr=2.80e-05 gnorm=1.75 92 smp/s
+ep77 step17300/33750 loss=0.7859 acc=0.931 lr=2.79e-05 gnorm=2.30 92 smp/s
+ep77 step17325/33750 loss=0.5864 acc=0.904 lr=2.78e-05 gnorm=4.18 92 smp/s
+ep78 step17350/33750 loss=0.7130 acc=0.903 lr=2.77e-05 gnorm=5.89 92 smp/s
+ep78 step17375/33750 loss=0.6824 acc=0.905 lr=2.76e-05 gnorm=2.93 92 smp/s
+ep78 step17400/33750 loss=0.6678 acc=0.912 lr=2.74e-05 gnorm=3.29 92 smp/s
+ep78 step17425/33750 loss=0.9663 acc=0.896 lr=2.73e-05 gnorm=2.05 92 smp/s
+ep78 step17450/33750 loss=0.7189 acc=0.904 lr=2.72e-05 gnorm=4.95 92 smp/s
+ep78 step17475/33750 loss=0.5071 acc=0.949 lr=2.71e-05 gnorm=3.73 92 smp/s
+ep78 step17500/33750 loss=0.6716 acc=0.976 lr=2.70e-05 gnorm=2.06 92 smp/s
+ep78 step17525/33750 loss=0.7290 acc=0.896 lr=2.69e-05 gnorm=4.14 92 smp/s
+ep78 step17550/33750 loss=0.7501 acc=0.919 lr=2.68e-05 gnorm=3.78 92 smp/s
+ep79 step17575/33750 loss=0.4379 acc=0.970 lr=2.67e-05 gnorm=1.86 92 smp/s
+ep79 step17600/33750 loss=0.7310 acc=0.899 lr=2.66e-05 gnorm=2.99 92 smp/s
+ep79 step17625/33750 loss=0.5716 acc=0.989 lr=2.65e-05 gnorm=4.84 92 smp/s
+ep79 step17650/33750 loss=0.7969 acc=0.897 lr=2.64e-05 gnorm=2.50 92 smp/s
+ep79 step17675/33750 loss=0.7745 acc=0.915 lr=2.63e-05 gnorm=5.45 92 smp/s
+ep79 step17700/33750 loss=0.6472 acc=0.943 lr=2.62e-05 gnorm=2.43 92 smp/s
+ep79 step17725/33750 loss=0.8989 acc=0.945 lr=2.61e-05 gnorm=2.26 92 smp/s
+ep79 step17750/33750 loss=0.8282 acc=0.900 lr=2.59e-05 gnorm=8.24 92 smp/s
+ep79 step17775/33750 loss=0.7355 acc=0.965 lr=2.58e-05 gnorm=2.02 92 smp/s
+ep80 step17800/33750 loss=0.8546 acc=0.941 lr=2.57e-05 gnorm=2.61 92 smp/s
+ep80 step17825/33750 loss=0.6535 acc=0.961 lr=2.56e-05 gnorm=1.99 92 smp/s
+ep80 step17850/33750 loss=0.6850 acc=0.924 lr=2.55e-05 gnorm=4.57 92 smp/s
+ep80 step17875/33750 loss=0.6775 acc=0.967 lr=2.54e-05 gnorm=2.64 92 smp/s
+ep80 step17900/33750 loss=0.6951 acc=0.904 lr=2.53e-05 gnorm=4.04 92 smp/s
+ep80 step17925/33750 loss=0.8641 acc=0.965 lr=2.52e-05 gnorm=2.04 92 smp/s
+ep80 step17950/33750 loss=0.6253 acc=0.969 lr=2.51e-05 gnorm=6.40 92 smp/s
+ep80 step17975/33750 loss=0.7199 acc=0.945 lr=2.50e-05 gnorm=7.28 92 smp/s
+ep80 step18000/33750 loss=0.7267 acc=0.969 lr=2.49e-05 gnorm=4.35 92 smp/s
+[eval @ 18000] WER=0.768 CER=0.370 SER=1.000 loss=0.540 content_acc=0.364 fill_rate=0.734 entropy=0.375 distinct=61
+[eval @ 18000] iter32  WER=0.312 CER=0.108 SER=0.895 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े | ब ा द | म म ध ् य प प ् र द े श | भ ो प ा ल | क े | प ा स | म े ं | स ् थ ि त | भ ो ो प ु र | क क | | ि व ल ल ं ग | क ा ा 
+   Hyp : फफिर उसके बाद ममध्यपप्रदेश भोपाल के पास में स्थित भोोपुर कक  िवललंग कााफ़ी ेेसस 
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+   ** new best eval/iter_WER=0.3124 -> best.pt
+ep81 step18025/33750 loss=0.7028 acc=0.938 lr=2.48e-05 gnorm=3.82 92 smp/s
+ep81 step18050/33750 loss=0.8669 acc=0.939 lr=2.47e-05 gnorm=7.59 92 smp/s
+ep81 step18075/33750 loss=0.6717 acc=0.921 lr=2.46e-05 gnorm=3.79 92 smp/s
+ep81 step18100/33750 loss=0.8783 acc=0.893 lr=2.45e-05 gnorm=1.89 92 smp/s
+ep81 step18125/33750 loss=0.8005 acc=0.948 lr=2.44e-05 gnorm=3.84 92 smp/s
+ep81 step18150/33750 loss=0.8047 acc=0.956 lr=2.43e-05 gnorm=6.91 92 smp/s
+ep81 step18175/33750 loss=0.8019 acc=0.913 lr=2.42e-05 gnorm=6.33 92 smp/s
+ep81 step18200/33750 loss=0.7292 acc=0.917 lr=2.41e-05 gnorm=3.81 92 smp/s
+ep81 step18225/33750 loss=0.6736 acc=0.901 lr=2.40e-05 gnorm=6.29 92 smp/s
+ep82 step18250/33750 loss=0.5842 acc=0.974 lr=2.39e-05 gnorm=2.29 92 smp/s
+ep82 step18275/33750 loss=0.5969 acc=0.938 lr=2.39e-05 gnorm=5.64 92 smp/s
+ep82 step18300/33750 loss=0.6860 acc=0.958 lr=2.38e-05 gnorm=2.68 92 smp/s
+ep82 step18325/33750 loss=0.7035 acc=0.960 lr=2.37e-05 gnorm=2.81 92 smp/s
+ep82 step18350/33750 loss=0.6297 acc=0.912 lr=2.36e-05 gnorm=2.67 92 smp/s
+ep82 step18375/33750 loss=0.7813 acc=0.898 lr=2.35e-05 gnorm=1.88 92 smp/s
+ep82 step18400/33750 loss=0.8040 acc=0.895 lr=2.34e-05 gnorm=3.63 92 smp/s
+ep82 step18425/33750 loss=0.5253 acc=0.915 lr=2.33e-05 gnorm=2.46 92 smp/s
+ep82 step18450/33750 loss=0.6219 acc=0.915 lr=2.32e-05 gnorm=2.25 92 smp/s
+ep83 step18475/33750 loss=0.6466 acc=0.925 lr=2.31e-05 gnorm=7.62 92 smp/s
+ep83 step18500/33750 loss=0.4159 acc=0.959 lr=2.30e-05 gnorm=3.06 92 smp/s
+ep83 step18525/33750 loss=0.6334 acc=0.910 lr=2.29e-05 gnorm=9.78 92 smp/s
+ep83 step18550/33750 loss=0.7690 acc=0.890 lr=2.28e-05 gnorm=2.83 92 smp/s
+ep83 step18575/33750 loss=0.4385 acc=0.958 lr=2.27e-05 gnorm=2.28 92 smp/s
+ep83 step18600/33750 loss=0.7969 acc=0.906 lr=2.26e-05 gnorm=3.77 92 smp/s
+ep83 step18625/33750 loss=0.6112 acc=0.979 lr=2.26e-05 gnorm=4.89 92 smp/s
+ep83 step18650/33750 loss=0.5986 acc=0.938 lr=2.25e-05 gnorm=2.57 92 smp/s
+ep83 step18675/33750 loss=0.7612 acc=0.924 lr=2.24e-05 gnorm=4.55 92 smp/s
+ep84 step18700/33750 loss=0.8137 acc=0.924 lr=2.23e-05 gnorm=2.33 92 smp/s
+ep84 step18725/33750 loss=0.7496 acc=0.882 lr=2.22e-05 gnorm=3.20 92 smp/s
+ep84 step18750/33750 loss=0.5068 acc=0.937 lr=2.21e-05 gnorm=5.06 92 smp/s
+ep84 step18775/33750 loss=0.6908 acc=0.925 lr=2.20e-05 gnorm=1.86 92 smp/s
+ep84 step18800/33750 loss=0.9341 acc=0.909 lr=2.19e-05 gnorm=4.79 92 smp/s
+ep84 step18825/33750 loss=0.7036 acc=0.900 lr=2.18e-05 gnorm=2.66 92 smp/s
+ep84 step18850/33750 loss=0.9037 acc=0.936 lr=2.18e-05 gnorm=9.56 92 smp/s
+ep84 step18875/33750 loss=0.8008 acc=0.937 lr=2.17e-05 gnorm=2.25 92 smp/s
+ep84 step18900/33750 loss=0.8290 acc=0.916 lr=2.16e-05 gnorm=3.39 92 smp/s
+ep85 step18925/33750 loss=0.6367 acc=0.941 lr=2.15e-05 gnorm=5.64 92 smp/s
+ep85 step18950/33750 loss=0.6208 acc=0.941 lr=2.14e-05 gnorm=4.59 92 smp/s
+ep85 step18975/33750 loss=0.8213 acc=0.915 lr=2.13e-05 gnorm=2.30 92 smp/s
+ep85 step19000/33750 loss=0.7613 acc=0.948 lr=2.12e-05 gnorm=3.36 92 smp/s
+[eval @ 19000] WER=0.748 CER=0.351 SER=1.000 loss=0.534 content_acc=0.370 fill_rate=0.734 entropy=0.360 distinct=61
+[eval @ 19000] iter32  WER=0.295 CER=0.103 SER=0.880 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े | ब ा द | म म ध ् य | प ् र द े श | भ ो प ा ल | क े | प ा स | म े ं | स ् थ त त | भ ो ज प ु र | क ी | | ि व ल ि ं ग | क ा फ 
+   Hyp : फफिर उसके बाद ममध्य प्रदेश भोपाल के पास में स्थतत भोजपुर की  िवलिंग काफफी  ेेस  
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+   ** new best eval/iter_WER=0.2954 -> best.pt
+ep85 step19025/33750 loss=0.4954 acc=0.975 lr=2.12e-05 gnorm=2.33 92 smp/s
+ep85 step19050/33750 loss=0.7688 acc=0.904 lr=2.11e-05 gnorm=4.69 92 smp/s
+ep85 step19075/33750 loss=0.6062 acc=0.942 lr=2.10e-05 gnorm=2.69 92 smp/s
+ep85 step19100/33750 loss=0.8030 acc=0.973 lr=2.09e-05 gnorm=3.52 92 smp/s
+ep85 step19125/33750 loss=0.8116 acc=0.873 lr=2.08e-05 gnorm=3.18 92 smp/s
+ep86 step19150/33750 loss=0.7608 acc=0.906 lr=2.07e-05 gnorm=2.26 92 smp/s
+ep86 step19175/33750 loss=0.7610 acc=0.916 lr=2.07e-05 gnorm=3.48 92 smp/s
+ep86 step19200/33750 loss=0.5402 acc=0.944 lr=2.06e-05 gnorm=2.24 92 smp/s
+ep86 step19225/33750 loss=0.7366 acc=0.948 lr=2.05e-05 gnorm=2.34 92 smp/s
+ep86 step19250/33750 loss=0.7743 acc=0.949 lr=2.04e-05 gnorm=5.62 92 smp/s
+ep86 step19275/33750 loss=0.5627 acc=0.933 lr=2.03e-05 gnorm=7.23 92 smp/s
+ep86 step19300/33750 loss=0.9058 acc=0.909 lr=2.02e-05 gnorm=1.71 92 smp/s
+ep86 step19325/33750 loss=0.6937 acc=0.902 lr=2.02e-05 gnorm=4.57 92 smp/s
+ep86 step19350/33750 loss=0.6995 acc=0.929 lr=2.01e-05 gnorm=1.92 92 smp/s
+ep87 step19375/33750 loss=0.7739 acc=0.970 lr=2.00e-05 gnorm=3.12 92 smp/s
+ep87 step19400/33750 loss=0.7139 acc=0.904 lr=1.99e-05 gnorm=2.47 92 smp/s
+ep87 step19425/33750 loss=0.6153 acc=0.976 lr=1.98e-05 gnorm=7.59 92 smp/s
+ep87 step19450/33750 loss=0.7125 acc=0.861 lr=1.98e-05 gnorm=5.51 92 smp/s
+ep87 step19475/33750 loss=0.8073 acc=0.924 lr=1.97e-05 gnorm=5.24 92 smp/s
+ep87 step19500/33750 loss=0.5809 acc=0.922 lr=1.96e-05 gnorm=1.83 92 smp/s
+ep87 step19525/33750 loss=0.5704 acc=0.971 lr=1.95e-05 gnorm=1.73 92 smp/s
+ep87 step19550/33750 loss=0.8780 acc=0.933 lr=1.94e-05 gnorm=7.19 92 smp/s
+ep87 step19575/33750 loss=0.5746 acc=0.924 lr=1.94e-05 gnorm=5.43 92 smp/s
+ep88 step19600/33750 loss=0.5816 acc=0.966 lr=1.93e-05 gnorm=3.79 92 smp/s
+ep88 step19625/33750 loss=0.9160 acc=0.954 lr=1.92e-05 gnorm=2.84 92 smp/s
+ep88 step19650/33750 loss=0.7730 acc=0.926 lr=1.91e-05 gnorm=7.45 92 smp/s
+ep88 step19675/33750 loss=0.7251 acc=0.915 lr=1.91e-05 gnorm=2.87 92 smp/s
+ep88 step19700/33750 loss=0.5529 acc=0.955 lr=1.90e-05 gnorm=2.82 92 smp/s
+ep88 step19725/33750 loss=0.8228 acc=0.910 lr=1.89e-05 gnorm=4.63 92 smp/s
+ep88 step19750/33750 loss=0.6597 acc=0.942 lr=1.88e-05 gnorm=3.69 92 smp/s
+ep88 step19775/33750 loss=0.5185 acc=0.965 lr=1.88e-05 gnorm=2.71 92 smp/s
+ep88 step19800/33750 loss=0.5550 acc=0.946 lr=1.87e-05 gnorm=3.92 92 smp/s
+ep89 step19825/33750 loss=0.7719 acc=0.959 lr=1.86e-05 gnorm=9.15 92 smp/s
+ep89 step19850/33750 loss=0.7366 acc=0.949 lr=1.85e-05 gnorm=2.34 92 smp/s
+ep89 step19875/33750 loss=0.6103 acc=0.945 lr=1.85e-05 gnorm=2.55 92 smp/s
+ep89 step19900/33750 loss=0.8059 acc=0.920 lr=1.84e-05 gnorm=5.96 92 smp/s
+ep89 step19925/33750 loss=0.6617 acc=0.969 lr=1.83e-05 gnorm=4.14 92 smp/s
+ep89 step19950/33750 loss=0.4690 acc=0.978 lr=1.82e-05 gnorm=2.76 92 smp/s
+ep89 step19975/33750 loss=0.5724 acc=0.928 lr=1.82e-05 gnorm=4.69 92 smp/s
+ep89 step20000/33750 loss=0.6668 acc=0.953 lr=1.81e-05 gnorm=2.10 92 smp/s
+[eval @ 20000] WER=0.723 CER=0.327 SER=1.000 loss=0.588 content_acc=0.347 fill_rate=0.736 entropy=0.342 distinct=61
+[eval @ 20000] iter32  WER=0.276 CER=0.095 SER=0.870 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े | ब ा द | म ध ् य य | प ् र द े श | भ ो प ा ल | क े | प ा स | म े ं | स ् थ ि त | | ो ो प ु र | क क | | ि व ल ल ं ग | क ा फ 
+   Hyp : फफिर उसके बाद मध्यय प्रदेश भोपाल के पास में स्थित  ोोपुर कक  िवललंग काफफी  ेेस  
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+   ** new best eval/iter_WER=0.2760 -> best.pt
+ep89 step20025/33750 loss=0.6950 acc=0.941 lr=1.80e-05 gnorm=2.44 92 smp/s
+ep90 step20050/33750 loss=0.6642 acc=0.946 lr=1.80e-05 gnorm=3.87 92 smp/s
+ep90 step20075/33750 loss=0.5020 acc=0.954 lr=1.79e-05 gnorm=2.25 92 smp/s
+ep90 step20100/33750 loss=0.6193 acc=0.934 lr=1.78e-05 gnorm=3.68 92 smp/s
+ep90 step20125/33750 loss=0.7512 acc=0.956 lr=1.77e-05 gnorm=9.39 92 smp/s
+ep90 step20150/33750 loss=0.5759 acc=0.954 lr=1.77e-05 gnorm=2.88 92 smp/s
+ep90 step20175/33750 loss=0.7075 acc=0.945 lr=1.76e-05 gnorm=3.08 92 smp/s
+ep90 step20200/33750 loss=0.8157 acc=0.909 lr=1.75e-05 gnorm=6.34 92 smp/s
+ep90 step20225/33750 loss=0.8726 acc=0.958 lr=1.75e-05 gnorm=5.37 92 smp/s
+ep90 step20250/33750 loss=0.5221 acc=0.942 lr=1.74e-05 gnorm=3.93 92 smp/s
+ep91 step20275/33750 loss=0.5612 acc=0.945 lr=1.73e-05 gnorm=2.08 92 smp/s
+ep91 step20300/33750 loss=0.6527 acc=0.903 lr=1.72e-05 gnorm=4.66 92 smp/s
+ep91 step20325/33750 loss=0.6786 acc=0.914 lr=1.72e-05 gnorm=2.95 92 smp/s
+ep91 step20350/33750 loss=0.7550 acc=0.921 lr=1.71e-05 gnorm=2.39 92 smp/s
+ep91 step20375/33750 loss=0.5457 acc=0.955 lr=1.70e-05 gnorm=4.64 92 smp/s
+ep91 step20400/33750 loss=0.8299 acc=0.914 lr=1.70e-05 gnorm=6.39 92 smp/s
+ep91 step20425/33750 loss=0.5382 acc=0.941 lr=1.69e-05 gnorm=3.25 92 smp/s
+ep91 step20450/33750 loss=0.5216 acc=0.936 lr=1.68e-05 gnorm=4.26 92 smp/s
+ep91 step20475/33750 loss=0.6219 acc=0.902 lr=1.68e-05 gnorm=2.14 92 smp/s
+ep92 step20500/33750 loss=0.8350 acc=0.940 lr=1.67e-05 gnorm=3.37 92 smp/s
+ep92 step20525/33750 loss=0.5417 acc=0.963 lr=1.66e-05 gnorm=5.82 92 smp/s
+ep92 step20550/33750 loss=0.9040 acc=0.873 lr=1.66e-05 gnorm=3.09 92 smp/s
+ep92 step20575/33750 loss=0.5630 acc=0.976 lr=1.65e-05 gnorm=8.08 92 smp/s
+ep92 step20600/33750 loss=0.9000 acc=0.938 lr=1.64e-05 gnorm=3.21 92 smp/s
+ep92 step20625/33750 loss=0.7148 acc=0.904 lr=1.64e-05 gnorm=6.27 92 smp/s
+ep92 step20650/33750 loss=0.5998 acc=0.961 lr=1.63e-05 gnorm=2.57 92 smp/s
+ep92 step20675/33750 loss=0.6722 acc=0.941 lr=1.62e-05 gnorm=2.37 92 smp/s
+ep92 step20700/33750 loss=0.8324 acc=0.927 lr=1.62e-05 gnorm=6.89 92 smp/s
+ep93 step20725/33750 loss=0.8079 acc=0.910 lr=1.61e-05 gnorm=4.37 92 smp/s
+ep93 step20750/33750 loss=0.6498 acc=0.952 lr=1.60e-05 gnorm=2.06 92 smp/s
+ep93 step20775/33750 loss=0.6487 acc=0.983 lr=1.60e-05 gnorm=3.44 92 smp/s
+ep93 step20800/33750 loss=0.9183 acc=0.949 lr=1.59e-05 gnorm=3.02 92 smp/s
+ep93 step20825/33750 loss=0.8102 acc=0.899 lr=1.59e-05 gnorm=6.10 92 smp/s
+ep93 step20850/33750 loss=0.5092 acc=0.940 lr=1.58e-05 gnorm=4.74 92 smp/s
+ep93 step20875/33750 loss=0.8135 acc=0.908 lr=1.57e-05 gnorm=2.00 92 smp/s
+ep93 step20900/33750 loss=0.6671 acc=0.946 lr=1.57e-05 gnorm=2.90 92 smp/s
+ep93 step20925/33750 loss=0.5955 acc=0.922 lr=1.56e-05 gnorm=2.30 92 smp/s
+ep94 step20950/33750 loss=0.5767 acc=0.992 lr=1.55e-05 gnorm=3.40 92 smp/s
+ep94 step20975/33750 loss=0.7299 acc=0.941 lr=1.55e-05 gnorm=3.71 92 smp/s
+ep94 step21000/33750 loss=0.5855 acc=0.904 lr=1.54e-05 gnorm=5.35 92 smp/s
+[eval @ 21000] WER=0.719 CER=0.314 SER=1.000 loss=0.564 content_acc=0.360 fill_rate=0.736 entropy=0.341 distinct=61
+[eval @ 21000] iter32  WER=0.282 CER=0.094 SER=0.885 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े | ब ा द | म ध ् य | प प ् र द े श | भ ो ो ा ल | क े | प ा स | म े ं | स ् थ ि त | भ ो ो प ु र | क क | | ि व ल ल ं ग | | क ा 
+   Hyp : फफिर उसके बाद मध्य पप्रदेश भोोाल के पास में स्थित भोोपुर कक  िवललंग  काफ़ी ेेसस 
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+ep94 step21025/33750 loss=0.7785 acc=0.945 lr=1.54e-05 gnorm=4.83 92 smp/s
+ep94 step21050/33750 loss=0.5712 acc=0.908 lr=1.53e-05 gnorm=4.04 92 smp/s
+ep94 step21075/33750 loss=0.9122 acc=0.888 lr=1.52e-05 gnorm=4.16 92 smp/s
+ep94 step21100/33750 loss=0.4982 acc=0.931 lr=1.52e-05 gnorm=2.93 92 smp/s
+ep94 step21125/33750 loss=0.6820 acc=0.952 lr=1.51e-05 gnorm=3.32 92 smp/s
+ep94 step21150/33750 loss=0.6037 acc=0.949 lr=1.51e-05 gnorm=2.38 92 smp/s
+ep95 step21175/33750 loss=0.8165 acc=0.895 lr=1.50e-05 gnorm=2.25 92 smp/s
+ep95 step21200/33750 loss=0.7362 acc=0.920 lr=1.49e-05 gnorm=3.30 92 smp/s
+ep95 step21225/33750 loss=0.5209 acc=0.952 lr=1.49e-05 gnorm=6.93 92 smp/s
+ep95 step21250/33750 loss=0.7455 acc=0.890 lr=1.48e-05 gnorm=2.31 92 smp/s
+ep95 step21275/33750 loss=0.8166 acc=0.946 lr=1.48e-05 gnorm=3.08 92 smp/s
+ep95 step21300/33750 loss=0.9161 acc=0.897 lr=1.47e-05 gnorm=5.41 92 smp/s
+ep95 step21325/33750 loss=0.8365 acc=0.973 lr=1.46e-05 gnorm=2.51 92 smp/s
+ep95 step21350/33750 loss=0.7210 acc=0.950 lr=1.46e-05 gnorm=4.75 92 smp/s
+ep95 step21375/33750 loss=0.9278 acc=0.935 lr=1.45e-05 gnorm=4.30 92 smp/s
+ep96 step21400/33750 loss=0.4945 acc=0.939 lr=1.45e-05 gnorm=2.65 92 smp/s
+ep96 step21425/33750 loss=0.8076 acc=0.862 lr=1.44e-05 gnorm=2.51 92 smp/s
+ep96 step21450/33750 loss=0.6018 acc=0.924 lr=1.43e-05 gnorm=5.03 92 smp/s
+ep96 step21475/33750 loss=0.8810 acc=0.922 lr=1.43e-05 gnorm=5.15 92 smp/s
+ep96 step21500/33750 loss=0.6827 acc=0.924 lr=1.42e-05 gnorm=4.08 92 smp/s
+ep96 step21525/33750 loss=0.5057 acc=0.991 lr=1.42e-05 gnorm=3.58 92 smp/s
+ep96 step21550/33750 loss=0.5440 acc=0.935 lr=1.41e-05 gnorm=4.29 92 smp/s
+ep96 step21575/33750 loss=0.5210 acc=0.938 lr=1.41e-05 gnorm=2.97 92 smp/s
+ep96 step21600/33750 loss=0.8165 acc=0.913 lr=1.40e-05 gnorm=4.83 92 smp/s
+ep97 step21625/33750 loss=0.6243 acc=0.963 lr=1.39e-05 gnorm=4.37 92 smp/s
+ep97 step21650/33750 loss=0.8029 acc=0.908 lr=1.39e-05 gnorm=2.56 92 smp/s
+ep97 step21675/33750 loss=0.6121 acc=0.948 lr=1.38e-05 gnorm=6.20 92 smp/s
+ep97 step21700/33750 loss=0.8503 acc=0.905 lr=1.38e-05 gnorm=5.20 92 smp/s
+ep97 step21725/33750 loss=0.7489 acc=0.906 lr=1.37e-05 gnorm=3.08 92 smp/s
+ep97 step21750/33750 loss=0.7451 acc=0.938 lr=1.37e-05 gnorm=3.17 92 smp/s
+ep97 step21775/33750 loss=0.4737 acc=0.939 lr=1.36e-05 gnorm=2.51 92 smp/s
+ep97 step21800/33750 loss=0.5275 acc=0.970 lr=1.36e-05 gnorm=3.48 92 smp/s
+ep97 step21825/33750 loss=0.6343 acc=0.937 lr=1.35e-05 gnorm=4.09 92 smp/s
+ep98 step21850/33750 loss=0.6533 acc=0.975 lr=1.35e-05 gnorm=3.70 92 smp/s
+ep98 step21875/33750 loss=0.5756 acc=0.869 lr=1.34e-05 gnorm=6.15 92 smp/s
+ep98 step21900/33750 loss=0.3085 acc=0.972 lr=1.33e-05 gnorm=1.97 92 smp/s
+ep98 step21925/33750 loss=0.4646 acc=0.920 lr=1.33e-05 gnorm=2.65 92 smp/s
+ep98 step21950/33750 loss=0.6570 acc=0.931 lr=1.32e-05 gnorm=5.47 92 smp/s
+ep98 step21975/33750 loss=0.7191 acc=0.903 lr=1.32e-05 gnorm=4.23 92 smp/s
+ep98 step22000/33750 loss=0.5827 acc=0.899 lr=1.31e-05 gnorm=3.69 92 smp/s
+[eval @ 22000] WER=0.705 CER=0.308 SER=1.000 loss=0.578 content_acc=0.364 fill_rate=0.736 entropy=0.330 distinct=61
+[eval @ 22000] iter32  WER=0.283 CER=0.093 SER=0.885 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े | ब ा द | म ध ् य | प ् र द द े श | भ ो प ा ल | क े | प ा स | म े ं | स ् थ ि त | भ ो ज प ु र | क ी | | ि व ल ल ं ग | क क ा 
+   Hyp : फफिर उसके बाद मध्य प्रददेश भोपाल के पास में स्थित भोजपुर की  िवललंग ककाफीी ेेसस 
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+ep98 step22025/33750 loss=0.6957 acc=0.891 lr=1.31e-05 gnorm=4.15 92 smp/s
+ep98 step22050/33750 loss=0.7854 acc=0.943 lr=1.30e-05 gnorm=3.89 92 smp/s
+ep99 step22075/33750 loss=0.5042 acc=0.946 lr=1.30e-05 gnorm=2.51 92 smp/s
+ep99 step22100/33750 loss=0.9047 acc=0.919 lr=1.29e-05 gnorm=2.50 92 smp/s
+ep99 step22125/33750 loss=0.5886 acc=0.939 lr=1.29e-05 gnorm=2.72 92 smp/s
+ep99 step22150/33750 loss=0.5192 acc=0.950 lr=1.28e-05 gnorm=2.28 92 smp/s
+ep99 step22175/33750 loss=0.5523 acc=0.933 lr=1.28e-05 gnorm=2.26 92 smp/s
+ep99 step22200/33750 loss=0.7036 acc=0.904 lr=1.27e-05 gnorm=2.23 92 smp/s
+ep99 step22225/33750 loss=0.5938 acc=0.934 lr=1.27e-05 gnorm=3.49 92 smp/s
+ep99 step22250/33750 loss=0.7454 acc=0.926 lr=1.26e-05 gnorm=7.17 92 smp/s
+ep99 step22275/33750 loss=0.7265 acc=0.939 lr=1.26e-05 gnorm=5.96 92 smp/s
+ep100 step22300/33750 loss=0.6375 acc=0.969 lr=1.25e-05 gnorm=3.05 92 smp/s
+ep100 step22325/33750 loss=0.6809 acc=0.906 lr=1.25e-05 gnorm=3.20 92 smp/s
+ep100 step22350/33750 loss=0.4571 acc=0.940 lr=1.24e-05 gnorm=2.47 92 smp/s
+ep100 step22375/33750 loss=0.6339 acc=0.952 lr=1.24e-05 gnorm=4.34 92 smp/s
+ep100 step22400/33750 loss=0.8538 acc=0.919 lr=1.23e-05 gnorm=9.26 92 smp/s
+ep100 step22425/33750 loss=0.6835 acc=0.941 lr=1.23e-05 gnorm=5.22 92 smp/s
+ep100 step22450/33750 loss=0.6689 acc=0.931 lr=1.22e-05 gnorm=2.60 92 smp/s
+ep100 step22475/33750 loss=0.5519 acc=0.926 lr=1.22e-05 gnorm=2.68 92 smp/s
+ep100 step22500/33750 loss=0.6177 acc=0.935 lr=1.21e-05 gnorm=2.06 92 smp/s
+ep101 step22525/33750 loss=0.5182 acc=0.943 lr=1.21e-05 gnorm=2.02 92 smp/s
+ep101 step22550/33750 loss=0.7499 acc=0.913 lr=1.20e-05 gnorm=3.13 92 smp/s
+ep101 step22575/33750 loss=0.5024 acc=0.935 lr=1.20e-05 gnorm=2.48 92 smp/s
+ep101 step22600/33750 loss=0.7962 acc=0.908 lr=1.19e-05 gnorm=2.17 92 smp/s
+ep101 step22625/33750 loss=0.7099 acc=0.927 lr=1.19e-05 gnorm=3.29 92 smp/s
+ep101 step22650/33750 loss=0.5876 acc=0.963 lr=1.18e-05 gnorm=3.16 92 smp/s
+ep101 step22675/33750 loss=0.8534 acc=0.901 lr=1.18e-05 gnorm=2.71 92 smp/s
+ep101 step22700/33750 loss=0.6560 acc=0.908 lr=1.17e-05 gnorm=2.52 92 smp/s
+ep101 step22725/33750 loss=0.8225 acc=0.944 lr=1.17e-05 gnorm=5.71 92 smp/s
+ep102 step22750/33750 loss=0.6619 acc=0.983 lr=1.16e-05 gnorm=5.40 92 smp/s
+ep102 step22775/33750 loss=0.6730 acc=0.950 lr=1.16e-05 gnorm=2.92 92 smp/s
+ep102 step22800/33750 loss=0.5200 acc=0.941 lr=1.16e-05 gnorm=2.18 92 smp/s
+ep102 step22825/33750 loss=0.6638 acc=0.946 lr=1.15e-05 gnorm=4.38 92 smp/s
+ep102 step22850/33750 loss=0.5903 acc=0.946 lr=1.15e-05 gnorm=4.20 92 smp/s
+ep102 step22875/33750 loss=0.5997 acc=0.963 lr=1.14e-05 gnorm=2.55 92 smp/s
+ep102 step22900/33750 loss=0.7036 acc=0.948 lr=1.14e-05 gnorm=2.57 92 smp/s
+ep102 step22925/33750 loss=0.7906 acc=0.945 lr=1.13e-05 gnorm=3.00 92 smp/s
+ep102 step22950/33750 loss=0.6085 acc=0.942 lr=1.13e-05 gnorm=2.23 92 smp/s
+ep103 step22975/33750 loss=0.6464 acc=0.990 lr=1.12e-05 gnorm=3.70 92 smp/s
+ep103 step23000/33750 loss=0.5732 acc=0.925 lr=1.12e-05 gnorm=2.52 92 smp/s
+[eval @ 23000] WER=0.692 CER=0.297 SER=1.000 loss=0.624 content_acc=0.336 fill_rate=0.736 entropy=0.323 distinct=61
+[eval @ 23000] iter32  WER=0.281 CER=0.092 SER=0.870 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े | ब ा द | म म ध ् य | प ् र द े श | भ ो प ा ल | क े | प ा स | म े ं | स ् थ ि त | भ ो ो प ु र | क ी | | ि व व ल ं ग | | क ा 
+   Hyp : फफिर उसके बाद ममध्य प्रदेश भोपाल के पास में स्थित भोोपुर की  िववलंग  काफ़ी ेेसस 
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+ep103 step23025/33750 loss=0.6941 acc=0.937 lr=1.11e-05 gnorm=4.69 92 smp/s
+ep103 step23050/33750 loss=0.6889 acc=0.922 lr=1.11e-05 gnorm=3.83 92 smp/s
+ep103 step23075/33750 loss=0.5077 acc=0.970 lr=1.11e-05 gnorm=2.25 92 smp/s
+ep103 step23100/33750 loss=0.3939 acc=0.958 lr=1.10e-05 gnorm=3.83 92 smp/s
+ep103 step23125/33750 loss=0.7428 acc=0.915 lr=1.10e-05 gnorm=4.76 92 smp/s
+ep103 step23150/33750 loss=0.5390 acc=0.971 lr=1.09e-05 gnorm=4.30 92 smp/s
+ep103 step23175/33750 loss=0.7166 acc=0.941 lr=1.09e-05 gnorm=2.77 92 smp/s
+ep104 step23200/33750 loss=0.7444 acc=0.900 lr=1.08e-05 gnorm=6.11 92 smp/s
+ep104 step23225/33750 loss=0.6660 acc=0.897 lr=1.08e-05 gnorm=2.88 92 smp/s
+ep104 step23250/33750 loss=0.5517 acc=0.966 lr=1.08e-05 gnorm=3.50 92 smp/s
+ep104 step23275/33750 loss=0.5426 acc=0.955 lr=1.07e-05 gnorm=2.12 92 smp/s
+ep104 step23300/33750 loss=0.8128 acc=0.903 lr=1.07e-05 gnorm=4.77 92 smp/s
+ep104 step23325/33750 loss=0.5753 acc=0.927 lr=1.06e-05 gnorm=3.47 92 smp/s
+ep104 step23350/33750 loss=0.5852 acc=0.944 lr=1.06e-05 gnorm=2.54 92 smp/s
+ep104 step23375/33750 loss=0.5919 acc=0.915 lr=1.05e-05 gnorm=2.59 92 smp/s
+ep104 step23400/33750 loss=0.6387 acc=0.921 lr=1.05e-05 gnorm=2.64 92 smp/s
+ep105 step23425/33750 loss=0.6027 acc=0.929 lr=1.05e-05 gnorm=2.73 92 smp/s
+ep105 step23450/33750 loss=0.5962 acc=0.928 lr=1.04e-05 gnorm=3.29 92 smp/s
+ep105 step23475/33750 loss=0.6825 acc=0.919 lr=1.04e-05 gnorm=2.55 92 smp/s
+ep105 step23500/33750 loss=0.4200 acc=0.951 lr=1.03e-05 gnorm=2.99 92 smp/s
+ep105 step23525/33750 loss=0.7282 acc=0.939 lr=1.03e-05 gnorm=4.28 92 smp/s
+ep105 step23550/33750 loss=0.8392 acc=0.914 lr=1.02e-05 gnorm=4.74 92 smp/s
+ep105 step23575/33750 loss=0.7074 acc=0.961 lr=1.02e-05 gnorm=3.41 92 smp/s
+ep105 step23600/33750 loss=0.5989 acc=0.942 lr=1.02e-05 gnorm=4.08 92 smp/s
+ep105 step23625/33750 loss=0.7168 acc=0.908 lr=1.01e-05 gnorm=8.50 92 smp/s
+ep106 step23650/33750 loss=0.5763 acc=0.942 lr=1.01e-05 gnorm=2.11 92 smp/s
+ep106 step23675/33750 loss=0.6261 acc=0.947 lr=1.00e-05 gnorm=4.44 92 smp/s
+ep106 step23700/33750 loss=0.7809 acc=0.903 lr=1.00e-05 gnorm=2.81 92 smp/s
+ep106 step23725/33750 loss=0.7032 acc=0.897 lr=9.96e-06 gnorm=6.06 92 smp/s
+ep106 step23750/33750 loss=0.6152 acc=0.951 lr=9.92e-06 gnorm=4.99 92 smp/s
+ep106 step23775/33750 loss=0.5721 acc=0.966 lr=9.88e-06 gnorm=2.41 92 smp/s
+ep106 step23800/33750 loss=0.5719 acc=0.931 lr=9.84e-06 gnorm=4.26 92 smp/s
+ep106 step23825/33750 loss=0.6661 acc=0.951 lr=9.81e-06 gnorm=3.09 92 smp/s
+ep106 step23850/33750 loss=0.6047 acc=0.983 lr=9.77e-06 gnorm=2.44 92 smp/s
+ep107 step23875/33750 loss=0.8415 acc=0.901 lr=9.73e-06 gnorm=3.48 92 smp/s
+ep107 step23900/33750 loss=0.4903 acc=0.931 lr=9.69e-06 gnorm=4.00 92 smp/s
+ep107 step23925/33750 loss=0.7186 acc=0.920 lr=9.65e-06 gnorm=6.25 92 smp/s
+ep107 step23950/33750 loss=0.6388 acc=0.927 lr=9.61e-06 gnorm=4.20 92 smp/s
+ep107 step23975/33750 loss=0.8056 acc=0.988 lr=9.57e-06 gnorm=2.57 92 smp/s
+ep107 step24000/33750 loss=0.6560 acc=0.952 lr=9.53e-06 gnorm=3.33 92 smp/s
+[eval @ 24000] WER=0.678 CER=0.282 SER=1.000 loss=0.567 content_acc=0.367 fill_rate=0.738 entropy=0.314 distinct=61
+[eval @ 24000] iter32  WER=0.266 CER=0.088 SER=0.870 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े | ब ा द | म ध ध ् य | प ् र द े श | भ ो प ा ल | क े | प ा स | म े ं | स ् ि त | | ो ो प प ु र | क ी | श ि व ल ि ं ग | क ा फ 
+   Hyp : फफिर उसके बाद मधध्य प्रदेश भोपाल के पास में स्ित  ोोपपुर की शिवलिंग काफ़ी ेेमस ह
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+   ** new best eval/iter_WER=0.2663 -> best.pt
+ep107 step24025/33750 loss=0.5718 acc=0.896 lr=9.50e-06 gnorm=1.96 92 smp/s
+ep107 step24050/33750 loss=0.6235 acc=0.932 lr=9.46e-06 gnorm=2.19 92 smp/s
+ep107 step24075/33750 loss=0.6609 acc=0.921 lr=9.42e-06 gnorm=2.55 92 smp/s
+ep108 step24100/33750 loss=0.5572 acc=0.953 lr=9.38e-06 gnorm=2.55 92 smp/s
+ep108 step24125/33750 loss=0.7512 acc=0.972 lr=9.35e-06 gnorm=2.32 92 smp/s
+ep108 step24150/33750 loss=0.5732 acc=0.931 lr=9.31e-06 gnorm=5.18 92 smp/s
+ep108 step24175/33750 loss=0.6517 acc=0.932 lr=9.27e-06 gnorm=2.63 92 smp/s
+ep108 step24200/33750 loss=0.7263 acc=0.936 lr=9.23e-06 gnorm=3.73 92 smp/s
+ep108 step24225/33750 loss=0.6415 acc=0.914 lr=9.20e-06 gnorm=4.54 92 smp/s
+ep108 step24250/33750 loss=0.5233 acc=0.950 lr=9.16e-06 gnorm=4.00 92 smp/s
+ep108 step24275/33750 loss=0.6659 acc=0.950 lr=9.12e-06 gnorm=1.99 92 smp/s
+ep108 step24300/33750 loss=0.6786 acc=0.927 lr=9.09e-06 gnorm=2.65 92 smp/s
+ep109 step24325/33750 loss=0.6680 acc=0.908 lr=9.05e-06 gnorm=2.45 92 smp/s
+ep109 step24350/33750 loss=0.5554 acc=0.968 lr=9.01e-06 gnorm=2.50 92 smp/s
+ep109 step24375/33750 loss=0.5283 acc=0.896 lr=8.98e-06 gnorm=2.48 92 smp/s
+ep109 step24400/33750 loss=0.5592 acc=0.946 lr=8.94e-06 gnorm=3.38 92 smp/s
+ep109 step24425/33750 loss=0.5041 acc=0.952 lr=8.91e-06 gnorm=3.18 92 smp/s
+ep109 step24450/33750 loss=0.5644 acc=0.954 lr=8.87e-06 gnorm=3.86 92 smp/s
+ep109 step24475/33750 loss=0.4031 acc=0.942 lr=8.84e-06 gnorm=3.74 92 smp/s
+ep109 step24500/33750 loss=0.6105 acc=0.917 lr=8.80e-06 gnorm=3.71 92 smp/s
+ep109 step24525/33750 loss=0.5476 acc=0.945 lr=8.77e-06 gnorm=2.34 92 smp/s
+ep110 step24550/33750 loss=0.5376 acc=0.959 lr=8.73e-06 gnorm=2.66 92 smp/s
+ep110 step24575/33750 loss=0.7433 acc=0.918 lr=8.70e-06 gnorm=4.56 92 smp/s
+ep110 step24600/33750 loss=0.5514 acc=0.925 lr=8.66e-06 gnorm=6.11 92 smp/s
+ep110 step24625/33750 loss=0.5099 acc=0.949 lr=8.63e-06 gnorm=2.29 92 smp/s
+ep110 step24650/33750 loss=0.8202 acc=0.915 lr=8.59e-06 gnorm=4.61 92 smp/s
+ep110 step24675/33750 loss=0.6826 acc=0.934 lr=8.56e-06 gnorm=3.11 92 smp/s
+ep110 step24700/33750 loss=0.5670 acc=0.917 lr=8.52e-06 gnorm=2.95 92 smp/s
+ep110 step24725/33750 loss=0.5260 acc=0.919 lr=8.49e-06 gnorm=2.01 92 smp/s
+ep110 step24750/33750 loss=0.5461 acc=0.953 lr=8.46e-06 gnorm=3.82 92 smp/s
+ep111 step24775/33750 loss=0.8320 acc=0.860 lr=8.42e-06 gnorm=3.62 92 smp/s
+ep111 step24800/33750 loss=0.9589 acc=0.918 lr=8.39e-06 gnorm=4.91 92 smp/s
+ep111 step24825/33750 loss=0.6461 acc=0.905 lr=8.35e-06 gnorm=3.34 92 smp/s
+ep111 step24850/33750 loss=0.6189 acc=0.920 lr=8.32e-06 gnorm=6.05 92 smp/s
+ep111 step24875/33750 loss=0.5387 acc=0.970 lr=8.29e-06 gnorm=3.11 92 smp/s
+ep111 step24900/33750 loss=0.7301 acc=0.907 lr=8.25e-06 gnorm=3.25 92 smp/s
+ep111 step24925/33750 loss=0.5396 acc=0.993 lr=8.22e-06 gnorm=5.59 92 smp/s
+ep111 step24950/33750 loss=0.8013 acc=0.900 lr=8.19e-06 gnorm=7.90 92 smp/s
+ep111 step24975/33750 loss=0.3865 acc=0.984 lr=8.16e-06 gnorm=2.92 92 smp/s
+ep112 step25000/33750 loss=0.6218 acc=0.935 lr=8.12e-06 gnorm=2.16 92 smp/s
+[eval @ 25000] WER=0.663 CER=0.279 SER=1.000 loss=0.685 content_acc=0.324 fill_rate=0.735 entropy=0.315 distinct=61
+[eval @ 25000] iter32  WER=0.275 CER=0.091 SER=0.875 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े | ब ा द | म ध ध ् य | प ् र द े श | भ ो प ा ल | क े | प ा स | म े े | स ् थ ि त | | ो ो प प र | क क | | ि व व ल ं ग | | क ा 
+   Hyp : फफिर उसके बाद मधध्य प्रदेश भोपाल के पास मेे स्थित  ोोपपर कक  िववलंग  काफ़ी ेेसस 
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+ep112 step25025/33750 loss=0.6838 acc=0.919 lr=8.09e-06 gnorm=2.59 92 smp/s
+ep112 step25050/33750 loss=0.5601 acc=0.967 lr=8.06e-06 gnorm=2.97 92 smp/s
+ep112 step25075/33750 loss=0.4888 acc=0.946 lr=8.03e-06 gnorm=3.76 92 smp/s
+ep112 step25100/33750 loss=0.8127 acc=0.927 lr=7.99e-06 gnorm=2.71 92 smp/s
+ep112 step25125/33750 loss=0.5652 acc=0.909 lr=7.96e-06 gnorm=4.50 92 smp/s
+ep112 step25150/33750 loss=0.7148 acc=0.900 lr=7.93e-06 gnorm=5.66 92 smp/s
+ep112 step25175/33750 loss=0.6674 acc=0.909 lr=7.90e-06 gnorm=5.93 92 smp/s
+ep112 step25200/33750 loss=0.4707 acc=0.946 lr=7.87e-06 gnorm=3.28 92 smp/s
+ep113 step25225/33750 loss=0.4935 acc=0.942 lr=7.84e-06 gnorm=2.65 92 smp/s
+ep113 step25250/33750 loss=0.6902 acc=0.938 lr=7.80e-06 gnorm=5.32 92 smp/s
+ep113 step25275/33750 loss=0.5163 acc=0.942 lr=7.77e-06 gnorm=3.03 92 smp/s
+ep113 step25300/33750 loss=0.7162 acc=0.989 lr=7.74e-06 gnorm=3.63 92 smp/s
+ep113 step25325/33750 loss=0.4621 acc=0.965 lr=7.71e-06 gnorm=2.59 92 smp/s
+ep113 step25350/33750 loss=0.4331 acc=0.948 lr=7.68e-06 gnorm=3.55 92 smp/s
+ep113 step25375/33750 loss=0.5654 acc=0.956 lr=7.65e-06 gnorm=4.14 92 smp/s
+ep113 step25400/33750 loss=0.7762 acc=0.934 lr=7.62e-06 gnorm=4.03 92 smp/s
+ep113 step25425/33750 loss=0.7077 acc=0.947 lr=7.59e-06 gnorm=2.70 92 smp/s
+ep114 step25450/33750 loss=0.4322 acc=0.947 lr=7.56e-06 gnorm=2.55 92 smp/s
+ep114 step25475/33750 loss=0.6862 acc=0.951 lr=7.53e-06 gnorm=7.73 92 smp/s
+ep114 step25500/33750 loss=0.7743 acc=0.922 lr=7.50e-06 gnorm=4.36 92 smp/s
+ep114 step25525/33750 loss=0.5071 acc=0.963 lr=7.47e-06 gnorm=3.62 92 smp/s
+ep114 step25550/33750 loss=0.5888 acc=0.953 lr=7.44e-06 gnorm=3.37 92 smp/s
+ep114 step25575/33750 loss=0.6458 acc=0.911 lr=7.41e-06 gnorm=2.15 92 smp/s
+ep114 step25600/33750 loss=0.8100 acc=0.918 lr=7.38e-06 gnorm=5.25 92 smp/s
+ep114 step25625/33750 loss=0.6264 acc=0.931 lr=7.35e-06 gnorm=3.12 92 smp/s
+ep114 step25650/33750 loss=0.6601 acc=0.942 lr=7.32e-06 gnorm=3.42 92 smp/s
+ep115 step25675/33750 loss=0.7826 acc=0.945 lr=7.29e-06 gnorm=2.63 92 smp/s
+ep115 step25700/33750 loss=0.5536 acc=0.926 lr=7.26e-06 gnorm=3.30 92 smp/s
+ep115 step25725/33750 loss=0.5857 acc=0.906 lr=7.23e-06 gnorm=2.85 92 smp/s
+ep115 step25750/33750 loss=0.6412 acc=0.938 lr=7.20e-06 gnorm=2.59 92 smp/s
+ep115 step25775/33750 loss=0.8593 acc=0.915 lr=7.17e-06 gnorm=5.19 92 smp/s
+ep115 step25800/33750 loss=0.6537 acc=0.915 lr=7.15e-06 gnorm=3.03 92 smp/s
+ep115 step25825/33750 loss=0.3866 acc=0.965 lr=7.12e-06 gnorm=3.54 92 smp/s
+ep115 step25850/33750 loss=0.6025 acc=0.922 lr=7.09e-06 gnorm=2.87 92 smp/s
+ep115 step25875/33750 loss=0.5142 acc=0.898 lr=7.06e-06 gnorm=2.82 92 smp/s
+ep116 step25900/33750 loss=0.6212 acc=0.936 lr=7.03e-06 gnorm=3.00 92 smp/s
+ep116 step25925/33750 loss=0.4621 acc=0.939 lr=7.00e-06 gnorm=2.51 92 smp/s
+ep116 step25950/33750 loss=0.5486 acc=0.902 lr=6.98e-06 gnorm=3.12 92 smp/s
+ep116 step25975/33750 loss=0.7214 acc=0.902 lr=6.95e-06 gnorm=2.77 92 smp/s
+ep116 step26000/33750 loss=0.7151 acc=0.911 lr=6.92e-06 gnorm=4.86 92 smp/s
+[eval @ 26000] WER=0.660 CER=0.278 SER=1.000 loss=0.570 content_acc=0.376 fill_rate=0.737 entropy=0.314 distinct=61
+[eval @ 26000] iter32  WER=0.278 CER=0.091 SER=0.865 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े | ब ा द | म ध ् य | प प ् द द े श | भ ो प ा ल | क े | प ा स | म े ं | स ् थ ि त | भ ो ज प ु र | क ी | श ि व ल ल ं ग | | क ा 
+   Hyp : फफिर उसके बाद मध्य पप्ददेश भोपाल के पास में स्थित भोजपुर की शिवललंग  काफ़ी ेेसस 
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+ep116 step26025/33750 loss=0.5335 acc=0.925 lr=6.89e-06 gnorm=2.06 92 smp/s
+ep116 step26050/33750 loss=0.7347 acc=0.894 lr=6.87e-06 gnorm=2.64 92 smp/s
+ep116 step26075/33750 loss=0.7343 acc=0.931 lr=6.84e-06 gnorm=3.47 92 smp/s
+ep116 step26100/33750 loss=0.5142 acc=0.968 lr=6.81e-06 gnorm=2.16 92 smp/s
+ep117 step26125/33750 loss=0.7260 acc=0.903 lr=6.78e-06 gnorm=4.93 92 smp/s
+ep117 step26150/33750 loss=0.5519 acc=0.942 lr=6.76e-06 gnorm=2.11 92 smp/s
+ep117 step26175/33750 loss=0.6747 acc=0.938 lr=6.73e-06 gnorm=3.07 92 smp/s
+ep117 step26200/33750 loss=0.6664 acc=0.955 lr=6.70e-06 gnorm=5.48 92 smp/s
+ep117 step26225/33750 loss=0.7212 acc=0.892 lr=6.68e-06 gnorm=4.66 92 smp/s
+ep117 step26250/33750 loss=0.7978 acc=0.923 lr=6.65e-06 gnorm=8.14 92 smp/s
+ep117 step26275/33750 loss=0.6048 acc=0.939 lr=6.62e-06 gnorm=1.97 92 smp/s
+ep117 step26300/33750 loss=0.7116 acc=0.873 lr=6.60e-06 gnorm=11.06 92 smp/s
+ep117 step26325/33750 loss=0.6751 acc=0.911 lr=6.57e-06 gnorm=2.69 92 smp/s
+ep118 step26350/33750 loss=0.6745 acc=0.924 lr=6.54e-06 gnorm=3.09 92 smp/s
+ep118 step26375/33750 loss=0.5613 acc=0.943 lr=6.52e-06 gnorm=6.16 92 smp/s
+ep118 step26400/33750 loss=0.6305 acc=0.923 lr=6.49e-06 gnorm=3.29 92 smp/s
+ep118 step26425/33750 loss=0.3694 acc=0.973 lr=6.47e-06 gnorm=3.60 92 smp/s
+ep118 step26450/33750 loss=0.6878 acc=0.905 lr=6.44e-06 gnorm=2.98 92 smp/s
+ep118 step26475/33750 loss=0.7181 acc=0.929 lr=6.41e-06 gnorm=2.54 92 smp/s
+ep118 step26500/33750 loss=0.8361 acc=0.955 lr=6.39e-06 gnorm=6.59 92 smp/s
+ep118 step26525/33750 loss=0.7306 acc=0.914 lr=6.36e-06 gnorm=2.55 92 smp/s
+ep118 step26550/33750 loss=0.8131 acc=0.900 lr=6.34e-06 gnorm=5.48 92 smp/s
+ep119 step26575/33750 loss=0.7658 acc=0.882 lr=6.31e-06 gnorm=6.59 92 smp/s
+ep119 step26600/33750 loss=0.6341 acc=0.943 lr=6.29e-06 gnorm=5.34 92 smp/s
+ep119 step26625/33750 loss=0.4925 acc=0.968 lr=6.26e-06 gnorm=3.81 92 smp/s
+ep119 step26650/33750 loss=0.5519 acc=0.984 lr=6.24e-06 gnorm=2.73 92 smp/s
+ep119 step26675/33750 loss=0.5406 acc=0.957 lr=6.21e-06 gnorm=2.47 92 smp/s
+ep119 step26700/33750 loss=0.6896 acc=0.953 lr=6.19e-06 gnorm=2.04 92 smp/s
+ep119 step26725/33750 loss=0.6962 acc=0.937 lr=6.16e-06 gnorm=2.69 92 smp/s
+ep119 step26750/33750 loss=0.7678 acc=0.894 lr=6.14e-06 gnorm=3.56 92 smp/s
+ep119 step26775/33750 loss=0.5481 acc=0.924 lr=6.11e-06 gnorm=3.51 92 smp/s
+ep120 step26800/33750 loss=0.7302 acc=0.912 lr=6.09e-06 gnorm=5.73 92 smp/s
+ep120 step26825/33750 loss=0.5173 acc=0.983 lr=6.06e-06 gnorm=4.50 92 smp/s
+ep120 step26850/33750 loss=0.6028 acc=0.894 lr=6.04e-06 gnorm=3.69 92 smp/s
+ep120 step26875/33750 loss=0.6203 acc=0.980 lr=6.02e-06 gnorm=2.29 92 smp/s
+ep120 step26900/33750 loss=0.5871 acc=0.950 lr=5.99e-06 gnorm=3.25 92 smp/s
+ep120 step26925/33750 loss=0.6648 acc=0.922 lr=5.97e-06 gnorm=3.18 92 smp/s
+ep120 step26950/33750 loss=0.4699 acc=0.983 lr=5.94e-06 gnorm=5.16 92 smp/s
+ep120 step26975/33750 loss=0.5479 acc=0.964 lr=5.92e-06 gnorm=2.29 92 smp/s
+ep120 step27000/33750 loss=0.8961 acc=0.914 lr=5.90e-06 gnorm=2.78 92 smp/s
+[eval @ 27000] WER=0.645 CER=0.266 SER=1.000 loss=0.604 content_acc=0.370 fill_rate=0.737 entropy=0.303 distinct=60
+[eval @ 27000] iter32  WER=0.265 CER=0.087 SER=0.875 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े | ब ा द | म ध ् य | प प ् र द े श | भ ो प ा ल | क े | प ा स | म े ं | स ् थ ि त | भ ो ज प ु र | क ी | श ि व ल ल ं ग | क क ा 
+   Hyp : फफिर उसके बाद मध्य पप्रदेश भोपाल के पास में स्थित भोजपुर की शिवललंग ककाफी  ेेसस 
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+   ** new best eval/iter_WER=0.2648 -> best.pt
+ep121 step27025/33750 loss=0.6075 acc=0.959 lr=5.87e-06 gnorm=2.97 92 smp/s
+ep121 step27050/33750 loss=0.5312 acc=0.945 lr=5.85e-06 gnorm=2.96 92 smp/s
+ep121 step27075/33750 loss=0.6817 acc=0.905 lr=5.83e-06 gnorm=5.59 92 smp/s
+ep121 step27100/33750 loss=0.9025 acc=0.889 lr=5.80e-06 gnorm=5.37 92 smp/s
+ep121 step27125/33750 loss=0.6380 acc=0.971 lr=5.78e-06 gnorm=2.55 92 smp/s
+ep121 step27150/33750 loss=0.7936 acc=0.926 lr=5.76e-06 gnorm=6.93 92 smp/s
+ep121 step27175/33750 loss=0.4781 acc=0.962 lr=5.73e-06 gnorm=3.13 92 smp/s
+ep121 step27200/33750 loss=0.6724 acc=0.901 lr=5.71e-06 gnorm=2.40 92 smp/s
+ep121 step27225/33750 loss=0.5579 acc=0.957 lr=5.69e-06 gnorm=3.17 92 smp/s
+ep122 step27250/33750 loss=0.5930 acc=0.948 lr=5.67e-06 gnorm=2.14 92 smp/s
+ep122 step27275/33750 loss=0.6385 acc=0.908 lr=5.64e-06 gnorm=3.85 92 smp/s
+ep122 step27300/33750 loss=0.7334 acc=0.909 lr=5.62e-06 gnorm=3.36 92 smp/s
+ep122 step27325/33750 loss=0.4628 acc=0.956 lr=5.60e-06 gnorm=5.22 92 smp/s
+ep122 step27350/33750 loss=0.4867 acc=0.937 lr=5.58e-06 gnorm=5.64 92 smp/s
+ep122 step27375/33750 loss=0.8888 acc=0.906 lr=5.55e-06 gnorm=3.92 92 smp/s
+ep122 step27400/33750 loss=0.4650 acc=0.949 lr=5.53e-06 gnorm=3.20 92 smp/s
+ep122 step27425/33750 loss=0.6109 acc=0.943 lr=5.51e-06 gnorm=4.76 92 smp/s
+ep122 step27450/33750 loss=0.4296 acc=0.950 lr=5.49e-06 gnorm=4.19 92 smp/s
+ep123 step27475/33750 loss=0.5782 acc=0.943 lr=5.46e-06 gnorm=4.34 92 smp/s
+ep123 step27500/33750 loss=0.4711 acc=0.936 lr=5.44e-06 gnorm=5.98 92 smp/s
+ep123 step27525/33750 loss=0.4551 acc=0.988 lr=5.42e-06 gnorm=4.70 92 smp/s
+ep123 step27550/33750 loss=0.7306 acc=0.894 lr=5.40e-06 gnorm=3.45 92 smp/s
+ep123 step27575/33750 loss=0.6428 acc=0.962 lr=5.38e-06 gnorm=2.53 92 smp/s
+ep123 step27600/33750 loss=0.5365 acc=0.955 lr=5.36e-06 gnorm=2.66 92 smp/s
+ep123 step27625/33750 loss=0.8089 acc=0.906 lr=5.33e-06 gnorm=2.79 92 smp/s
+ep123 step27650/33750 loss=0.6676 acc=0.941 lr=5.31e-06 gnorm=4.85 92 smp/s
+ep123 step27675/33750 loss=0.6854 acc=0.903 lr=5.29e-06 gnorm=3.82 92 smp/s
+ep124 step27700/33750 loss=0.5110 acc=0.950 lr=5.27e-06 gnorm=3.11 92 smp/s
+ep124 step27725/33750 loss=0.5668 acc=0.968 lr=5.25e-06 gnorm=4.37 92 smp/s
+ep124 step27750/33750 loss=0.3847 acc=0.938 lr=5.23e-06 gnorm=1.96 92 smp/s
+ep124 step27775/33750 loss=0.7320 acc=0.960 lr=5.21e-06 gnorm=4.87 92 smp/s
+ep124 step27800/33750 loss=0.7197 acc=0.899 lr=5.19e-06 gnorm=4.99 92 smp/s
+ep124 step27825/33750 loss=0.5846 acc=0.958 lr=5.17e-06 gnorm=3.06 92 smp/s
+ep124 step27850/33750 loss=0.7290 acc=0.883 lr=5.15e-06 gnorm=6.79 92 smp/s
+ep124 step27875/33750 loss=0.5887 acc=0.941 lr=5.13e-06 gnorm=5.40 92 smp/s
+ep124 step27900/33750 loss=0.6476 acc=0.919 lr=5.10e-06 gnorm=7.45 92 smp/s
+ep125 step27925/33750 loss=0.6815 acc=0.960 lr=5.08e-06 gnorm=3.48 92 smp/s
+ep125 step27950/33750 loss=0.6439 acc=0.891 lr=5.06e-06 gnorm=2.63 92 smp/s
+ep125 step27975/33750 loss=0.6581 acc=0.963 lr=5.04e-06 gnorm=2.50 92 smp/s
+ep125 step28000/33750 loss=0.6658 acc=0.931 lr=5.02e-06 gnorm=2.21 92 smp/s
+[eval @ 28000] WER=0.631 CER=0.256 SER=1.000 loss=0.622 content_acc=0.360 fill_rate=0.736 entropy=0.297 distinct=61
+[eval @ 28000] iter32  WER=0.265 CER=0.088 SER=0.880 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े | ब ा द | म म ध ् य | प ् र द े श | भ ो प ा ल | क े | प ा स | म े ं | स ् थ ि त | भ ो ज प प र | क ी | | ि व व ल ं ग ग | क ा 
+   Hyp : फफिर उसके बाद ममध्य प्रदेश भोपाल के पास में स्थित भोजपपर की  िववलंगग काफ़ी ेेसस 
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+ep125 step28025/33750 loss=0.8096 acc=0.895 lr=5.00e-06 gnorm=6.27 91 smp/s
+ep125 step28050/33750 loss=0.4989 acc=0.972 lr=4.98e-06 gnorm=4.21 91 smp/s
+ep125 step28075/33750 loss=0.6449 acc=0.917 lr=4.96e-06 gnorm=5.91 91 smp/s
+ep125 step28100/33750 loss=0.5972 acc=0.947 lr=4.94e-06 gnorm=2.49 91 smp/s
+ep125 step28125/33750 loss=0.5616 acc=0.941 lr=4.92e-06 gnorm=1.98 91 smp/s
+ep126 step28150/33750 loss=0.5186 acc=0.951 lr=4.90e-06 gnorm=3.44 91 smp/s
+ep126 step28175/33750 loss=0.4607 acc=0.945 lr=4.88e-06 gnorm=4.70 91 smp/s
+ep126 step28200/33750 loss=0.4734 acc=0.978 lr=4.87e-06 gnorm=4.56 91 smp/s
+ep126 step28225/33750 loss=0.8207 acc=0.962 lr=4.85e-06 gnorm=3.38 91 smp/s
+ep126 step28250/33750 loss=0.7546 acc=0.908 lr=4.83e-06 gnorm=7.94 91 smp/s
+ep126 step28275/33750 loss=0.9636 acc=0.930 lr=4.81e-06 gnorm=3.79 91 smp/s
+ep126 step28300/33750 loss=0.4246 acc=0.960 lr=4.79e-06 gnorm=3.81 91 smp/s
+ep126 step28325/33750 loss=0.9199 acc=0.857 lr=4.77e-06 gnorm=2.74 91 smp/s
+ep126 step28350/33750 loss=0.4634 acc=0.949 lr=4.75e-06 gnorm=3.15 91 smp/s
+ep127 step28375/33750 loss=0.6711 acc=0.944 lr=4.73e-06 gnorm=3.37 91 smp/s
+ep127 step28400/33750 loss=0.5655 acc=0.972 lr=4.71e-06 gnorm=2.99 91 smp/s
+ep127 step28425/33750 loss=0.6229 acc=0.931 lr=4.69e-06 gnorm=2.97 91 smp/s
+ep127 step28450/33750 loss=0.5309 acc=0.948 lr=4.67e-06 gnorm=3.91 91 smp/s
+ep127 step28475/33750 loss=0.5412 acc=0.980 lr=4.66e-06 gnorm=3.29 91 smp/s
+ep127 step28500/33750 loss=0.5896 acc=0.924 lr=4.64e-06 gnorm=6.12 91 smp/s
+ep127 step28525/33750 loss=0.7115 acc=0.884 lr=4.62e-06 gnorm=2.97 91 smp/s
+ep127 step28550/33750 loss=0.5782 acc=0.957 lr=4.60e-06 gnorm=3.28 91 smp/s
+ep127 step28575/33750 loss=0.8563 acc=0.881 lr=4.58e-06 gnorm=4.45 91 smp/s
+ep128 step28600/33750 loss=0.5783 acc=0.936 lr=4.56e-06 gnorm=2.40 91 smp/s
+ep128 step28625/33750 loss=0.5416 acc=0.913 lr=4.55e-06 gnorm=2.72 91 smp/s
+ep128 step28650/33750 loss=0.4984 acc=0.931 lr=4.53e-06 gnorm=3.59 91 smp/s
+ep128 step28675/33750 loss=0.4166 acc=0.969 lr=4.51e-06 gnorm=5.44 91 smp/s
+ep128 step28700/33750 loss=0.6496 acc=0.961 lr=4.49e-06 gnorm=5.21 91 smp/s
+ep128 step28725/33750 loss=0.8207 acc=0.926 lr=4.47e-06 gnorm=3.08 91 smp/s
+ep128 step28750/33750 loss=0.6912 acc=0.951 lr=4.46e-06 gnorm=2.94 91 smp/s
+ep128 step28775/33750 loss=0.6055 acc=0.940 lr=4.44e-06 gnorm=3.80 91 smp/s
+ep128 step28800/33750 loss=0.4772 acc=0.950 lr=4.42e-06 gnorm=3.36 91 smp/s
+ep129 step28825/33750 loss=0.5329 acc=0.966 lr=4.40e-06 gnorm=3.90 91 smp/s
+ep129 step28850/33750 loss=0.6795 acc=0.922 lr=4.38e-06 gnorm=5.99 91 smp/s
+ep129 step28875/33750 loss=0.5978 acc=0.928 lr=4.37e-06 gnorm=5.15 91 smp/s
+ep129 step28900/33750 loss=0.7577 acc=0.963 lr=4.35e-06 gnorm=4.63 91 smp/s
+ep129 step28925/33750 loss=0.5850 acc=0.921 lr=4.33e-06 gnorm=5.41 91 smp/s
+ep129 step28950/33750 loss=0.5657 acc=0.965 lr=4.31e-06 gnorm=2.38 91 smp/s
+ep129 step28975/33750 loss=0.6842 acc=0.993 lr=4.30e-06 gnorm=3.41 91 smp/s
+ep129 step29000/33750 loss=0.4492 acc=0.946 lr=4.28e-06 gnorm=2.57 91 smp/s
+[eval @ 29000] WER=0.633 CER=0.258 SER=1.000 loss=0.612 content_acc=0.363 fill_rate=0.737 entropy=0.298 distinct=61
+[eval @ 29000] iter32  WER=0.257 CER=0.085 SER=0.885 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े | ब ा द | म ध ् य | प प ् र द े श | भ ो प ा ल | क े | प ा स | म े ं | स ् थ ि त | भ ो ज प ु र | क ी | | ि व ल ल ं ग | | क ा 
+   Hyp : फफिर उसके बाद मध्य पप्रदेश भोपाल के पास में स्थित भोजपुर की  िवललंग  काफी  ेेस ह
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+   ** new best eval/iter_WER=0.2571 -> best.pt
+ep129 step29025/33750 loss=0.4394 acc=0.978 lr=4.26e-06 gnorm=2.56 91 smp/s
+ep130 step29050/33750 loss=0.4725 acc=0.952 lr=4.25e-06 gnorm=3.27 91 smp/s
+ep130 step29075/33750 loss=0.7069 acc=0.884 lr=4.23e-06 gnorm=6.05 91 smp/s
+ep130 step29100/33750 loss=0.7009 acc=0.902 lr=4.21e-06 gnorm=2.60 91 smp/s
+ep130 step29125/33750 loss=0.5447 acc=0.973 lr=4.20e-06 gnorm=2.80 91 smp/s
+ep130 step29150/33750 loss=0.6375 acc=0.962 lr=4.18e-06 gnorm=4.06 91 smp/s
+ep130 step29175/33750 loss=0.7744 acc=0.940 lr=4.16e-06 gnorm=3.61 91 smp/s
+ep130 step29200/33750 loss=0.6340 acc=0.934 lr=4.15e-06 gnorm=3.06 91 smp/s
+ep130 step29225/33750 loss=0.6976 acc=0.919 lr=4.13e-06 gnorm=2.31 91 smp/s
+ep130 step29250/33750 loss=0.5425 acc=0.950 lr=4.11e-06 gnorm=5.73 91 smp/s
+ep131 step29275/33750 loss=0.5402 acc=0.942 lr=4.10e-06 gnorm=2.68 91 smp/s
+ep131 step29300/33750 loss=0.5410 acc=0.931 lr=4.08e-06 gnorm=4.59 91 smp/s
+ep131 step29325/33750 loss=0.6817 acc=0.874 lr=4.06e-06 gnorm=4.72 91 smp/s
+ep131 step29350/33750 loss=0.3711 acc=0.941 lr=4.05e-06 gnorm=6.03 91 smp/s
+ep131 step29375/33750 loss=0.5512 acc=0.928 lr=4.03e-06 gnorm=2.22 91 smp/s
+ep131 step29400/33750 loss=0.5276 acc=0.942 lr=4.01e-06 gnorm=5.60 91 smp/s
+ep131 step29425/33750 loss=0.5771 acc=0.947 lr=4.00e-06 gnorm=3.41 91 smp/s
+ep131 step29450/33750 loss=0.6949 acc=0.946 lr=3.98e-06 gnorm=5.88 91 smp/s
+ep131 step29475/33750 loss=0.5924 acc=0.920 lr=3.97e-06 gnorm=6.24 91 smp/s
+ep132 step29500/33750 loss=0.5182 acc=0.925 lr=3.95e-06 gnorm=3.54 91 smp/s
+ep132 step29525/33750 loss=0.6351 acc=0.956 lr=3.93e-06 gnorm=3.56 91 smp/s
+ep132 step29550/33750 loss=0.8688 acc=0.926 lr=3.92e-06 gnorm=3.08 91 smp/s
+ep132 step29575/33750 loss=0.7491 acc=0.905 lr=3.90e-06 gnorm=2.90 91 smp/s
+ep132 step29600/33750 loss=0.6131 acc=0.957 lr=3.89e-06 gnorm=2.61 91 smp/s
+ep132 step29625/33750 loss=0.6703 acc=0.919 lr=3.87e-06 gnorm=3.51 91 smp/s
+ep132 step29650/33750 loss=0.6249 acc=0.925 lr=3.86e-06 gnorm=2.79 91 smp/s
+ep132 step29675/33750 loss=0.4067 acc=0.953 lr=3.84e-06 gnorm=2.00 91 smp/s
+ep132 step29700/33750 loss=0.6776 acc=0.912 lr=3.83e-06 gnorm=3.67 91 smp/s
+ep133 step29725/33750 loss=0.4131 acc=0.948 lr=3.81e-06 gnorm=2.59 91 smp/s
+ep133 step29750/33750 loss=0.5776 acc=0.940 lr=3.80e-06 gnorm=2.35 91 smp/s
+ep133 step29775/33750 loss=0.7975 acc=0.912 lr=3.78e-06 gnorm=4.42 91 smp/s
+ep133 step29800/33750 loss=0.3563 acc=0.948 lr=3.77e-06 gnorm=2.36 91 smp/s
+ep133 step29825/33750 loss=0.4999 acc=0.967 lr=3.75e-06 gnorm=5.72 91 smp/s
+ep133 step29850/33750 loss=0.7802 acc=0.905 lr=3.74e-06 gnorm=3.49 91 smp/s
+ep133 step29875/33750 loss=0.6554 acc=0.971 lr=3.72e-06 gnorm=3.46 91 smp/s
+ep133 step29900/33750 loss=0.5715 acc=0.911 lr=3.71e-06 gnorm=3.66 91 smp/s
+ep133 step29925/33750 loss=0.4739 acc=0.975 lr=3.69e-06 gnorm=2.59 91 smp/s
+ep134 step29950/33750 loss=0.5758 acc=0.950 lr=3.68e-06 gnorm=2.26 91 smp/s
+ep134 step29975/33750 loss=0.5375 acc=0.934 lr=3.66e-06 gnorm=4.45 91 smp/s
+ep134 step30000/33750 loss=0.6704 acc=0.934 lr=3.65e-06 gnorm=2.83 91 smp/s
+[eval @ 30000] WER=0.645 CER=0.264 SER=1.000 loss=0.574 content_acc=0.375 fill_rate=0.737 entropy=0.308 distinct=61
+[eval @ 30000] iter32  WER=0.269 CER=0.087 SER=0.870 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े | ब ा द | म ध ् य | प प ् र द े श | भ ो प ा ल | क े | प ा स | म े ं | स ् थ ि त | भ ो प प ु र | क ी | श ि व ल ि ं ग | क ा फ 
+   Hyp : फफिर उसके बाद मध्य पप्रदेश भोपाल के पास में स्थित भोपपुर की शिवलिंग काफ़ी  ेमस ह
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+ep134 step30025/33750 loss=0.5332 acc=0.938 lr=3.63e-06 gnorm=3.03 91 smp/s
+ep134 step30050/33750 loss=0.6174 acc=0.945 lr=3.62e-06 gnorm=2.64 91 smp/s
+ep134 step30075/33750 loss=0.6309 acc=0.959 lr=3.60e-06 gnorm=4.04 91 smp/s
+ep134 step30100/33750 loss=0.6356 acc=0.945 lr=3.59e-06 gnorm=6.05 91 smp/s
+ep134 step30125/33750 loss=0.6106 acc=0.954 lr=3.57e-06 gnorm=3.96 91 smp/s
+ep134 step30150/33750 loss=0.5204 acc=0.960 lr=3.56e-06 gnorm=4.00 91 smp/s
+ep135 step30175/33750 loss=0.3569 acc=0.962 lr=3.55e-06 gnorm=3.10 91 smp/s
+ep135 step30200/33750 loss=0.6967 acc=0.989 lr=3.53e-06 gnorm=4.50 91 smp/s
+ep135 step30225/33750 loss=0.8254 acc=0.937 lr=3.52e-06 gnorm=4.89 91 smp/s
+ep135 step30250/33750 loss=0.4327 acc=0.978 lr=3.50e-06 gnorm=3.41 91 smp/s
+ep135 step30275/33750 loss=0.6433 acc=0.956 lr=3.49e-06 gnorm=3.51 91 smp/s
+ep135 step30300/33750 loss=0.5514 acc=0.954 lr=3.48e-06 gnorm=2.22 91 smp/s
+ep135 step30325/33750 loss=0.6998 acc=0.924 lr=3.46e-06 gnorm=5.33 91 smp/s
+ep135 step30350/33750 loss=0.4592 acc=0.991 lr=3.45e-06 gnorm=2.50 91 smp/s
+ep135 step30375/33750 loss=0.6482 acc=0.927 lr=3.43e-06 gnorm=2.27 91 smp/s
+ep136 step30400/33750 loss=0.3811 acc=0.972 lr=3.42e-06 gnorm=3.16 91 smp/s
+ep136 step30425/33750 loss=0.7431 acc=0.886 lr=3.41e-06 gnorm=5.53 91 smp/s
+ep136 step30450/33750 loss=0.7196 acc=0.944 lr=3.39e-06 gnorm=2.96 91 smp/s
+ep136 step30475/33750 loss=0.5974 acc=0.890 lr=3.38e-06 gnorm=4.09 91 smp/s
+ep136 step30500/33750 loss=0.6228 acc=0.921 lr=3.37e-06 gnorm=2.48 91 smp/s
+ep136 step30525/33750 loss=0.7065 acc=0.934 lr=3.35e-06 gnorm=2.68 91 smp/s
+ep136 step30550/33750 loss=0.5036 acc=0.916 lr=3.34e-06 gnorm=4.47 91 smp/s
+ep136 step30575/33750 loss=0.8201 acc=0.982 lr=3.33e-06 gnorm=5.29 91 smp/s
+ep136 step30600/33750 loss=0.4436 acc=0.978 lr=3.31e-06 gnorm=3.25 91 smp/s
+ep137 step30625/33750 loss=0.7454 acc=0.936 lr=3.30e-06 gnorm=4.29 91 smp/s
+ep137 step30650/33750 loss=0.5988 acc=0.916 lr=3.29e-06 gnorm=2.78 91 smp/s
+ep137 step30675/33750 loss=0.6507 acc=0.911 lr=3.27e-06 gnorm=1.99 91 smp/s
+ep137 step30700/33750 loss=0.4497 acc=0.974 lr=3.26e-06 gnorm=3.38 91 smp/s
+ep137 step30725/33750 loss=0.4505 acc=0.981 lr=3.25e-06 gnorm=2.76 91 smp/s
+ep137 step30750/33750 loss=0.3869 acc=0.913 lr=3.23e-06 gnorm=4.06 91 smp/s
+ep137 step30775/33750 loss=0.6572 acc=0.918 lr=3.22e-06 gnorm=2.41 91 smp/s
+ep137 step30800/33750 loss=0.6054 acc=0.905 lr=3.21e-06 gnorm=3.32 91 smp/s
+ep137 step30825/33750 loss=0.4934 acc=0.949 lr=3.20e-06 gnorm=2.43 91 smp/s
+ep138 step30850/33750 loss=0.5267 acc=0.958 lr=3.18e-06 gnorm=2.53 91 smp/s
+ep138 step30875/33750 loss=0.4209 acc=0.946 lr=3.17e-06 gnorm=3.74 91 smp/s
+ep138 step30900/33750 loss=0.5754 acc=0.951 lr=3.16e-06 gnorm=2.79 91 smp/s
+ep138 step30925/33750 loss=0.6080 acc=0.918 lr=3.14e-06 gnorm=3.95 91 smp/s
+ep138 step30950/33750 loss=0.7808 acc=0.934 lr=3.13e-06 gnorm=3.11 91 smp/s
+ep138 step30975/33750 loss=0.5435 acc=0.954 lr=3.12e-06 gnorm=2.54 91 smp/s
+ep138 step31000/33750 loss=0.5871 acc=0.951 lr=3.11e-06 gnorm=6.24 91 smp/s
+[eval @ 31000] WER=0.632 CER=0.253 SER=1.000 loss=0.581 content_acc=0.376 fill_rate=0.738 entropy=0.294 distinct=61
+[eval @ 31000] iter32  WER=0.250 CER=0.082 SER=0.870 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े | ब ा द | म म ध ् य | प ् र द े श | भ ो प ा ल | क े | प ा स | म े ं | स ् थ ि त | भ ो प प ु र | क ी | श ि व ल ि ं ग | क ा फ 
+   Hyp : फफिर उसके बाद ममध्य प्रदेश भोपाल के पास में स्थित भोपपुर की शिवलिंग काफ़ी ेेमस ह
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+   ** new best eval/iter_WER=0.2503 -> best.pt
+ep138 step31025/33750 loss=0.4490 acc=0.932 lr=3.09e-06 gnorm=4.70 91 smp/s
+ep138 step31050/33750 loss=0.5209 acc=0.942 lr=3.08e-06 gnorm=1.94 91 smp/s
+ep139 step31075/33750 loss=0.6968 acc=0.901 lr=3.07e-06 gnorm=3.24 91 smp/s
+ep139 step31100/33750 loss=0.7673 acc=0.906 lr=3.06e-06 gnorm=3.10 91 smp/s
+ep139 step31125/33750 loss=0.6171 acc=0.941 lr=3.05e-06 gnorm=2.91 91 smp/s
+ep139 step31150/33750 loss=0.7088 acc=0.905 lr=3.03e-06 gnorm=2.41 91 smp/s
+ep139 step31175/33750 loss=0.7189 acc=0.953 lr=3.02e-06 gnorm=2.65 91 smp/s
+ep139 step31200/33750 loss=0.7468 acc=0.891 lr=3.01e-06 gnorm=2.88 91 smp/s
+ep139 step31225/33750 loss=0.6755 acc=0.913 lr=3.00e-06 gnorm=2.51 91 smp/s
+ep139 step31250/33750 loss=0.7690 acc=0.928 lr=2.98e-06 gnorm=3.55 91 smp/s
+ep139 step31275/33750 loss=0.5876 acc=0.926 lr=2.97e-06 gnorm=3.20 91 smp/s
+ep140 step31300/33750 loss=0.6478 acc=0.929 lr=2.96e-06 gnorm=2.56 91 smp/s
+ep140 step31325/33750 loss=0.4080 acc=0.957 lr=2.95e-06 gnorm=2.81 91 smp/s
+ep140 step31350/33750 loss=0.5467 acc=0.946 lr=2.94e-06 gnorm=2.14 91 smp/s
+ep140 step31375/33750 loss=0.5020 acc=0.940 lr=2.93e-06 gnorm=3.34 91 smp/s
+ep140 step31400/33750 loss=0.7199 acc=0.906 lr=2.91e-06 gnorm=2.76 91 smp/s
+ep140 step31425/33750 loss=0.2316 acc=0.975 lr=2.90e-06 gnorm=3.06 91 smp/s
+ep140 step31450/33750 loss=0.4695 acc=0.966 lr=2.89e-06 gnorm=4.52 91 smp/s
+ep140 step31475/33750 loss=0.3841 acc=0.940 lr=2.88e-06 gnorm=2.75 91 smp/s
+ep140 step31500/33750 loss=0.6525 acc=0.938 lr=2.87e-06 gnorm=7.05 91 smp/s
+ep141 step31525/33750 loss=0.3470 acc=0.960 lr=2.86e-06 gnorm=2.94 91 smp/s
+ep141 step31550/33750 loss=0.5251 acc=0.972 lr=2.84e-06 gnorm=4.00 91 smp/s
+ep141 step31575/33750 loss=0.6727 acc=0.956 lr=2.83e-06 gnorm=3.03 91 smp/s
+ep141 step31600/33750 loss=0.8048 acc=0.851 lr=2.82e-06 gnorm=2.66 91 smp/s
+ep141 step31625/33750 loss=0.5908 acc=0.932 lr=2.81e-06 gnorm=6.18 91 smp/s
+ep141 step31650/33750 loss=0.4405 acc=0.944 lr=2.80e-06 gnorm=3.40 91 smp/s
+ep141 step31675/33750 loss=0.5284 acc=0.968 lr=2.79e-06 gnorm=3.32 91 smp/s
+ep141 step31700/33750 loss=0.6204 acc=0.944 lr=2.78e-06 gnorm=4.56 91 smp/s
+ep141 step31725/33750 loss=0.6764 acc=0.947 lr=2.77e-06 gnorm=3.53 91 smp/s
+ep142 step31750/33750 loss=0.5450 acc=0.969 lr=2.76e-06 gnorm=3.51 91 smp/s
+ep142 step31775/33750 loss=0.4861 acc=0.951 lr=2.74e-06 gnorm=2.72 91 smp/s
+ep142 step31800/33750 loss=0.5092 acc=0.961 lr=2.73e-06 gnorm=5.50 91 smp/s
+ep142 step31825/33750 loss=0.6107 acc=0.901 lr=2.72e-06 gnorm=3.02 91 smp/s
+ep142 step31850/33750 loss=0.4883 acc=0.963 lr=2.71e-06 gnorm=2.58 91 smp/s
+ep142 step31875/33750 loss=0.6094 acc=0.896 lr=2.70e-06 gnorm=4.25 91 smp/s
+ep142 step31900/33750 loss=0.3422 acc=0.947 lr=2.69e-06 gnorm=5.29 91 smp/s
+ep142 step31925/33750 loss=0.3937 acc=0.954 lr=2.68e-06 gnorm=2.57 91 smp/s
+ep142 step31950/33750 loss=0.5657 acc=0.946 lr=2.67e-06 gnorm=3.00 91 smp/s
+ep143 step31975/33750 loss=0.6872 acc=0.944 lr=2.66e-06 gnorm=2.58 91 smp/s
+ep143 step32000/33750 loss=0.7842 acc=0.967 lr=2.65e-06 gnorm=3.86 91 smp/s
+[eval @ 32000] WER=0.625 CER=0.252 SER=1.000 loss=0.622 content_acc=0.361 fill_rate=0.737 entropy=0.293 distinct=61
+[eval @ 32000] iter32  WER=0.259 CER=0.085 SER=0.875 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े | ब ा द | म ध ध ् य प प ् र द े श | भ ो प ा ल | क े | प ा स | म े ं | स ् थ ि त | भ ो ज प प र | क क | | ि व व ल ं ग ग | क ा 
+   Hyp : फफिर उसके बाद मधध्यपप्रदेश भोपाल के पास में स्थित भोजपपर कक  िववलंगग काफ़ी ेेस ह
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+ep143 step32025/33750 loss=0.4615 acc=0.939 lr=2.64e-06 gnorm=4.07 91 smp/s
+ep143 step32050/33750 loss=0.6343 acc=0.925 lr=2.63e-06 gnorm=3.84 91 smp/s
+ep143 step32075/33750 loss=0.5357 acc=0.956 lr=2.62e-06 gnorm=1.98 91 smp/s
+ep143 step32100/33750 loss=0.7327 acc=0.942 lr=2.61e-06 gnorm=2.55 91 smp/s
+ep143 step32125/33750 loss=0.5719 acc=0.943 lr=2.59e-06 gnorm=5.84 91 smp/s
+ep143 step32150/33750 loss=0.6188 acc=0.962 lr=2.58e-06 gnorm=2.62 91 smp/s
+ep143 step32175/33750 loss=0.6817 acc=0.921 lr=2.57e-06 gnorm=2.95 91 smp/s
+ep144 step32200/33750 loss=0.7167 acc=0.928 lr=2.56e-06 gnorm=3.64 91 smp/s
+ep144 step32225/33750 loss=0.6159 acc=0.944 lr=2.55e-06 gnorm=3.83 91 smp/s
+ep144 step32250/33750 loss=0.5539 acc=0.950 lr=2.54e-06 gnorm=3.43 91 smp/s
+ep144 step32275/33750 loss=0.6731 acc=0.930 lr=2.53e-06 gnorm=2.58 91 smp/s
+ep144 step32300/33750 loss=0.5878 acc=0.961 lr=2.52e-06 gnorm=2.39 91 smp/s
+ep144 step32325/33750 loss=0.4703 acc=0.933 lr=2.51e-06 gnorm=2.53 91 smp/s
+ep144 step32350/33750 loss=0.7895 acc=0.933 lr=2.50e-06 gnorm=6.13 91 smp/s
+ep144 step32375/33750 loss=0.5830 acc=0.940 lr=2.49e-06 gnorm=5.31 91 smp/s
+ep144 step32400/33750 loss=0.5382 acc=0.919 lr=2.48e-06 gnorm=2.43 91 smp/s
+ep145 step32425/33750 loss=0.4104 acc=0.931 lr=2.47e-06 gnorm=2.32 91 smp/s
+ep145 step32450/33750 loss=0.6600 acc=0.927 lr=2.46e-06 gnorm=2.07 91 smp/s
+ep145 step32475/33750 loss=0.5693 acc=0.953 lr=2.45e-06 gnorm=6.90 91 smp/s
+ep145 step32500/33750 loss=0.6462 acc=0.927 lr=2.44e-06 gnorm=5.67 91 smp/s
+ep145 step32525/33750 loss=0.4323 acc=0.949 lr=2.43e-06 gnorm=4.72 91 smp/s
+ep145 step32550/33750 loss=0.5588 acc=0.927 lr=2.42e-06 gnorm=8.08 91 smp/s
+ep145 step32575/33750 loss=0.5803 acc=0.955 lr=2.41e-06 gnorm=3.26 91 smp/s
+ep145 step32600/33750 loss=0.5070 acc=0.910 lr=2.40e-06 gnorm=2.70 91 smp/s
+ep145 step32625/33750 loss=0.6283 acc=0.920 lr=2.39e-06 gnorm=2.74 91 smp/s
+ep146 step32650/33750 loss=0.5379 acc=0.929 lr=2.39e-06 gnorm=4.45 91 smp/s
+ep146 step32675/33750 loss=0.6632 acc=0.928 lr=2.38e-06 gnorm=3.78 91 smp/s
+ep146 step32700/33750 loss=0.5310 acc=0.955 lr=2.37e-06 gnorm=2.90 91 smp/s
+ep146 step32725/33750 loss=0.6584 acc=0.947 lr=2.36e-06 gnorm=3.44 91 smp/s
+ep146 step32750/33750 loss=0.4687 acc=0.891 lr=2.35e-06 gnorm=4.79 91 smp/s
+ep146 step32775/33750 loss=0.6047 acc=0.954 lr=2.34e-06 gnorm=5.12 91 smp/s
+ep146 step32800/33750 loss=0.8124 acc=0.913 lr=2.33e-06 gnorm=3.88 91 smp/s
+ep146 step32825/33750 loss=0.6623 acc=0.866 lr=2.32e-06 gnorm=3.53 91 smp/s
+ep146 step32850/33750 loss=0.5230 acc=0.929 lr=2.31e-06 gnorm=2.72 91 smp/s
+ep147 step32875/33750 loss=0.5105 acc=0.932 lr=2.30e-06 gnorm=2.31 91 smp/s
+ep147 step32900/33750 loss=0.6232 acc=0.984 lr=2.29e-06 gnorm=2.69 91 smp/s
+ep147 step32925/33750 loss=0.6134 acc=0.907 lr=2.28e-06 gnorm=2.13 91 smp/s
+ep147 step32950/33750 loss=0.6347 acc=0.949 lr=2.27e-06 gnorm=2.94 91 smp/s
+ep147 step32975/33750 loss=0.5588 acc=0.943 lr=2.26e-06 gnorm=4.80 91 smp/s
+ep147 step33000/33750 loss=0.6371 acc=0.940 lr=2.26e-06 gnorm=7.42 91 smp/s
+[eval @ 33000] WER=0.617 CER=0.245 SER=1.000 loss=0.598 content_acc=0.371 fill_rate=0.737 entropy=0.290 distinct=61
+[eval @ 33000] iter32  WER=0.257 CER=0.084 SER=0.880 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े | ब ा द | म ध ध ् य | प ् र द े श | भ ो प ा ल | क े | प ा स | म े ं | स ् थ ि त | भ ो ज प ु र | क ी | श ि व ल ल ं ग | क क फ 
+   Hyp : फफिर उसके बाद मधध्य प्रदेश भोपाल के पास में स्थित भोजपुर की शिवललंग ककफफी  ेेस ह
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+ep147 step33025/33750 loss=0.6151 acc=0.948 lr=2.25e-06 gnorm=2.24 91 smp/s
+ep147 step33050/33750 loss=0.6185 acc=0.939 lr=2.24e-06 gnorm=2.96 91 smp/s
+ep147 step33075/33750 loss=0.3679 acc=0.977 lr=2.23e-06 gnorm=3.53 91 smp/s
+ep148 step33100/33750 loss=0.4494 acc=0.992 lr=2.22e-06 gnorm=3.26 91 smp/s
+ep148 step33125/33750 loss=0.7214 acc=0.939 lr=2.21e-06 gnorm=2.90 91 smp/s
+ep148 step33150/33750 loss=0.5263 acc=0.968 lr=2.20e-06 gnorm=3.12 91 smp/s
+ep148 step33175/33750 loss=0.3969 acc=0.947 lr=2.19e-06 gnorm=3.96 91 smp/s
+ep148 step33200/33750 loss=0.4775 acc=0.952 lr=2.18e-06 gnorm=2.77 91 smp/s
+ep148 step33225/33750 loss=0.5777 acc=0.927 lr=2.18e-06 gnorm=2.53 91 smp/s
+ep148 step33250/33750 loss=0.5670 acc=0.915 lr=2.17e-06 gnorm=2.80 91 smp/s
+ep148 step33275/33750 loss=0.4379 acc=0.958 lr=2.16e-06 gnorm=3.01 91 smp/s
+ep148 step33300/33750 loss=0.6912 acc=0.947 lr=2.15e-06 gnorm=3.78 91 smp/s
+ep149 step33325/33750 loss=0.5965 acc=0.968 lr=2.14e-06 gnorm=2.36 91 smp/s
+ep149 step33350/33750 loss=0.6461 acc=0.921 lr=2.13e-06 gnorm=2.86 91 smp/s
+ep149 step33375/33750 loss=0.7284 acc=0.909 lr=2.12e-06 gnorm=5.57 91 smp/s
+ep149 step33400/33750 loss=0.4130 acc=0.958 lr=2.12e-06 gnorm=3.35 91 smp/s
+ep149 step33425/33750 loss=0.6445 acc=0.940 lr=2.11e-06 gnorm=2.59 91 smp/s
+ep149 step33450/33750 loss=0.5437 acc=0.981 lr=2.10e-06 gnorm=2.07 91 smp/s
+ep149 step33475/33750 loss=0.3755 acc=0.957 lr=2.09e-06 gnorm=4.53 91 smp/s
+ep149 step33500/33750 loss=0.5923 acc=0.978 lr=2.08e-06 gnorm=3.72 91 smp/s
+ep149 step33525/33750 loss=0.8697 acc=0.895 lr=2.07e-06 gnorm=3.84 91 smp/s
+ep150 step33550/33750 loss=0.5798 acc=0.897 lr=2.07e-06 gnorm=7.51 91 smp/s
+ep150 step33575/33750 loss=0.4730 acc=0.938 lr=2.06e-06 gnorm=1.94 91 smp/s
+ep150 step33600/33750 loss=0.6496 acc=0.906 lr=2.05e-06 gnorm=1.95 91 smp/s
+ep150 step33625/33750 loss=0.6925 acc=0.889 lr=2.04e-06 gnorm=3.75 91 smp/s
+ep150 step33650/33750 loss=0.5810 acc=0.927 lr=2.03e-06 gnorm=5.76 91 smp/s
+ep150 step33675/33750 loss=0.5345 acc=0.908 lr=2.02e-06 gnorm=2.86 91 smp/s
+ep150 step33700/33750 loss=0.4984 acc=0.933 lr=2.02e-06 gnorm=3.75 91 smp/s
+ep150 step33725/33750 loss=0.6059 acc=0.943 lr=2.01e-06 gnorm=3.93 91 smp/s
+ep150 step33750/33750 loss=0.4966 acc=0.974 lr=2.00e-06 gnorm=3.26 91 smp/s
+[eval @ 33750] WER=0.616 CER=0.243 SER=1.000 loss=0.623 content_acc=0.360 fill_rate=0.737 entropy=0.291 distinct=61
+[eval @ 33750] iter32  WER=0.254 CER=0.085 SER=0.875 (mask-predict decode, n=200 clips)
+   Full: फ ि र | उ स क े | ब ा द | म ध ध ् य प प ् र द े श | भ ो प ा ल | क े | प ा स | म े ं | स ् थ ि त | भ ो ज प ु र | क ी | श ि व ल ल ं ग | क ा फ 
+   Hyp : फफिर उसके बाद मधध्यपप्रदेश भोपाल के पास में स्थित भोजपुर की शिवललंग काफफी  ेमस ह
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+wandb: updating run metadata
+wandb: uploading media/table/samples_33750_f0a5deddd791127ee443.table.json; uploading output.log; uploading wandb-summary.json; uploading config.yaml
+wandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml
+wandb: uploading output.log
+wandb: uploading history steps 1350-1350, summary, console lines 1640-1640
+wandb: 
+wandb: Run history:
+wandb:                        epoch ▁▁▁▂▂▂▂▃▃▃▃▃▃▄▄▄▅▅▅▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇▇▇████
+wandb:                     eval/CER █▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                     eval/SER █▁█████████████████████████████████
+wandb:                     eval/WER ██████▇▇▇▇▆▆▆▅▅▅▅▄▄▃▃▃▃▂▂▂▂▂▁▁▂▁▁▁▁
+wandb:       eval/content_frame_acc ▁▅▅▆▆▆▇▆▇▇▇▇███▇▇███▇██▇█▇█████████
+wandb: eval/distinct_nonfill_tokens ▁▃▇▇███████████████████████████████
+wandb:          eval/fill_frame_acc ▁██████████████████████████████████
+wandb:          eval/fill_pred_rate ▁██████████████████████████████████
+wandb:        eval/graded_frame_acc ▁▇▇▇███████████████████████████████
+wandb:                eval/iter_CER █▃▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                          +11 ...
+wandb: 
+wandb: Run summary:
+wandb:                        epoch 150
+wandb:                     eval/CER 0.24286
+wandb:                     eval/SER 1
+wandb:                     eval/WER 0.61551
+wandb:       eval/content_frame_acc 0.36017
+wandb: eval/distinct_nonfill_tokens 61
+wandb:          eval/fill_frame_acc 0.98648
+wandb:          eval/fill_pred_rate 0.73676
+wandb:        eval/graded_frame_acc 0.82759
+wandb:                eval/iter_CER 0.08527
+wandb:                          +11 ...
+wandb: 
+wandb: 🚀 View run full960_sa8_pe_lmhead_PE_mask0.2-0.3x10_eos3_fw0.03_alibi_checkpoint_best.pt at: https://wandb.ai/tomjrlaishram-iit-madras/filler_asr/runs/hc9vdbv2
+wandb: ⭐️ View project at: https://wandb.ai/tomjrlaishram-iit-madras/filler_asr
+wandb: Synced 5 W&B file(s), 35 media file(s), 70 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20260910_001532-hc9vdbv2/logs
+DONE
+DEBUG:filelock:Attempting to acquire lock 126515011147744 on /speech/tomson/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Lock 126515011147744 acquired on /speech/tomson/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Attempting to release lock 126515011147744 on /speech/tomson/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Lock 126515011147744 released on /speech/tomson/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Attempting to acquire lock 126515011147696 on /speech/tomson/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Lock 126515011147696 acquired on /speech/tomson/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Attempting to release lock 126515011147696 on /speech/tomson/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Lock 126515011147696 released on /speech/tomson/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Attempting to acquire lock 125868747376528 on /speech/tomson/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Lock 125868747376528 acquired on /speech/tomson/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Attempting to release lock 125868747376528 on /speech/tomson/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Lock 125868747376528 released on /speech/tomson/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Attempting to acquire lock 125868747374992 on /speech/tomson/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Lock 125868747374992 acquired on /speech/tomson/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Attempting to release lock 125868747374992 on /speech/tomson/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Lock 125868747374992 released on /speech/tomson/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Attempting to acquire lock 137067495163792 on /speech/tomson/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Lock 137067495163792 acquired on /speech/tomson/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Attempting to release lock 137067495163792 on /speech/tomson/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Lock 137067495163792 released on /speech/tomson/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Attempting to acquire lock 137067495162256 on /speech/tomson/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Lock 137067495162256 acquired on /speech/tomson/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Attempting to release lock 137067495162256 on /speech/tomson/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Lock 137067495162256 released on /speech/tomson/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock

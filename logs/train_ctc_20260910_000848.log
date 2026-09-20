@@ -1,0 +1,166 @@
+[run] env=indic-nar-filler_asr GPUs=6,7,8 (n=3)  eff_batch=192  out=/speech/tomson/indic-nar-filler_asr/runs/hi_d2vaqcCTC_sa8_ACMLM_alibi_fps50_fw003_exp150
+[run] encoder=/speech/akshaya/fairseq_expxx/hindi/24kup_model/checkpoint_best.pt
+W0910 00:08:51.233000 132283546829888 torch/distributed/run.py:779] 
+W0910 00:08:51.233000 132283546829888 torch/distributed/run.py:779] *****************************************
+W0910 00:08:51.233000 132283546829888 torch/distributed/run.py:779] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0910 00:08:51.233000 132283546829888 torch/distributed/run.py:779] *****************************************
+INFO:Data2VecAQCEncoder:[data2vec_aqc] ckpt:             /speech/akshaya/fairseq_expxx/hindi/24kup_model/checkpoint_best.pt
+INFO:Data2VecAQCEncoder:[data2vec_aqc] outer _name:      wav2vec_ctc  (CTC fine-tuned)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] inner _name:      data2vec_audio
+INFO:Data2VecAQCEncoder:[data2vec_aqc] layer_norm_first: False
+INFO:Data2VecAQCEncoder:[data2vec_aqc] tgt_layer:        None (None=run all blocks)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped outside w2v_model.*: ['w2v_encoder.proj.bias', 'w2v_encoder.proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped INSIDE body (AQC extras): ['contr_proj.bias', 'contr_proj.weight', 'project_q.bias', 'project_q.weight', 'quantizer.vars', 'quantizer.weight_proj.bias', 'quantizer.weight_proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] missing keys (expect empty/pretraining-only): []
+INFO:Data2VecAQCEncoder:[data2vec_aqc] ckpt:             /speech/akshaya/fairseq_expxx/hindi/24kup_model/checkpoint_best.pt
+INFO:Data2VecAQCEncoder:[data2vec_aqc] outer _name:      wav2vec_ctc  (CTC fine-tuned)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] inner _name:      data2vec_audio
+INFO:Data2VecAQCEncoder:[data2vec_aqc] layer_norm_first: False
+INFO:Data2VecAQCEncoder:[data2vec_aqc] tgt_layer:        None (None=run all blocks)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped outside w2v_model.*: ['w2v_encoder.proj.bias', 'w2v_encoder.proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped INSIDE body (AQC extras): ['contr_proj.bias', 'contr_proj.weight', 'project_q.bias', 'project_q.weight', 'quantizer.vars', 'quantizer.weight_proj.bias', 'quantizer.weight_proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] missing keys (expect empty/pretraining-only): []
+INFO:Data2VecAQCEncoder:[data2vec_aqc] ckpt:             /speech/akshaya/fairseq_expxx/hindi/24kup_model/checkpoint_best.pt
+INFO:Data2VecAQCEncoder:[data2vec_aqc] outer _name:      wav2vec_ctc  (CTC fine-tuned)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] inner _name:      data2vec_audio
+INFO:Data2VecAQCEncoder:[data2vec_aqc] layer_norm_first: False
+INFO:Data2VecAQCEncoder:[data2vec_aqc] tgt_layer:        None (None=run all blocks)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped outside w2v_model.*: ['w2v_encoder.proj.bias', 'w2v_encoder.proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped INSIDE body (AQC extras): ['contr_proj.bias', 'contr_proj.weight', 'project_q.bias', 'project_q.weight', 'quantizer.vars', 'quantizer.weight_proj.bias', 'quantizer.weight_proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] missing keys (expect empty/pretraining-only): []
+DEBUG:asyncio:Using selector: EpollSelector
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/speech/tomson/indic-nar-filler_asr, stdin=None, shell=False, universal_newlines=False)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/speech/tomson/indic-nar-filler_asr, stdin=None, shell=False, universal_newlines=False)
+DEBUG:git.util:sys.platform='linux', git_executable='git'
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /speech/tomson/.netrc.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.wandb.ai:443
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 375
+wandb: Currently logged in as: tomjrlaishram (tomjrlaishram-iit-madras) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+DEBUG:git.util:sys.platform='linux', git_executable='git'
+wandb: setting up run y3b6vnjn
+wandb: Tracking run with wandb version 0.27.0
+wandb: Run data is saved locally in /speech/tomson/indic-nar-filler_asr/wandb/run-20260910_000913-y3b6vnjn
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run full960_sa8_pe_lmhead_PE_mask0.2-0.3x10_eos3_fw0.03_alibi_checkpoint_best.pt
+wandb: ⭐️ View project at https://wandb.ai/tomjrlaishram-iit-madras/filler_asr
+wandb: 🚀 View run at https://wandb.ai/tomjrlaishram-iit-madras/filler_asr/runs/y3b6vnjn
+wandb run: https://wandb.ai/tomjrlaishram-iit-madras/filler_asr/runs/y3b6vnjn
+[setup] world=3 train=43337 dev=355 trainable=100.91M pos_mode=alibi PE=True sa_layers=8 fps=50 sched=exponential mask=0.2-0.3x10 eff_batch=192 steps/epoch=225 total_steps=33750
+[log] config=/speech/tomson/indic-nar-filler_asr/log_config.json disabled=none
+/speech/tomson/my-slam-workspace-final-pro/fairseq/examples/data2vec/models/data2vec_audio.py:190: FutureWarning: Positional args are being deprecated, use kwargs instead. Refer to https://pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  state = super().state_dict(destination, prefix, keep_vars)
+[ckpt-audit] checkpoint will save 100 trainable tensors / 100.91M params  (hubert tensors included=0)
+[select] best.pt = argmin eval/iter_WER; other metrics are diagnostics only
+[data-audit] ACMLM transform, 1 train clip: T=190 graded(masked)_slots=105
+   frame:input[->CEtarget], first 24/190  (<mask>=input hole; -> = supervised slot)
+   0:<s> 1:उ 2:ल 3:् 4:<mask>->ट 5:ा 6:<mask>->| 7:च 8:श 9:<mask>->् 10:<mask>->म 11:<mask>->ा 12:| 13:उ 14:स 15:म 16:े 17:ं 18:<mask>->| 19:<mask>->ज 20:े 21:ठ 22:<mask>->ा 23:ल
+[eval @ 0] WER=1.019 CER=9.940 SER=1.000 loss=5.276 content_acc=0.003 fill_rate=0.000 entropy=3.977 distinct=43
+[eval @ 0] iter32  WER=1.001 CER=3.941 SER=1.000 (mask-predict decode, n=200 clips)
+   Full: ऊ ऊ द न ौ द ऍ ऊ ऊ ऊ द ऊ ऊ ऊ न ौ अ ौ ौ ौ ऊ ऊ ऊ <pad> ि द ऍ ऍ ग ग ऊ ऍ ऍ ग ऍ ऍ ऍ ऍ ऍ ॅ | | ऊ ऊ ऊ ृ ऊ ऊ ऊ ऊ ऊ ऊ ऋ द ऊ ऊ ऊ ऍ द द द द द ऊ ऍ औ ऍ ौ 
+   Hyp : ऋऊऊदनौदऍऊऊऊदऊऊऊनौअौौौऊऊऊिदऍऍगगऊऍऍगऍऍऍऍऍॅ  ऊऊऊृऊऊऊऊऊऊऋदऊऊऊऍदददददऊऍऔऍौदऊऍगौििॅिऊऊऊ
+   Ref : फिर उसके बाद मध्य प्रदेश भोपाल के पास में स्थित भोजपुर का शिवलिंग काफ़ी फेमस है 
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.wandb.ai:443
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 49
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.wandb.ai:443
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 742
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 42
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.wandb.ai:443
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 375
+/speech/tomson/my-slam-workspace-final-pro/fairseq/examples/data2vec/models/data2vec_audio.py:190: FutureWarning: Positional args are being deprecated, use kwargs instead. Refer to https://pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  state = super().state_dict(destination, prefix, keep_vars)
+   ** new best eval/iter_WER=1.0008 -> best.pt
+[frozen-audit] after model.train(): hubert.training=False hubert_trainable_tensors=0  (expect False / 0 -> no layerdrop, no dropout, deterministic tap)
+[grad-audit step1] micro/window=2 tok_local=3893 tok_global=10706 grad_scale=world/tok=2.802e-04 loss_sum_local=17482.4 win_loss=4.4905 gnorm_preclip=11.838 lr=4.00e-08
+[grad-audit step2] micro/window=2 tok_local=5122 tok_global=13209 grad_scale=world/tok=2.271e-04 loss_sum_local=23012.2 win_loss=4.4926 gnorm_preclip=12.142 lr=8.00e-08
+[grad-audit step3] micro/window=2 tok_local=3829 tok_global=12431 grad_scale=world/tok=2.413e-04 loss_sum_local=17278.4 win_loss=4.5129 gnorm_preclip=12.008 lr=1.20e-07
+[grad-audit step4] micro/window=2 tok_local=2969 tok_global=11559 grad_scale=world/tok=2.595e-04 loss_sum_local=13381.5 win_loss=4.5072 gnorm_preclip=12.111 lr=1.60e-07
+[grad-audit step5] micro/window=2 tok_local=4505 tok_global=13250 grad_scale=world/tok=2.264e-04 loss_sum_local=20114.6 win_loss=4.4653 gnorm_preclip=11.951 lr=2.00e-07
+ep1 step25/33750 loss=3.9893 acc=0.045 lr=1.00e-06 gnorm=7.16 72 smp/s
+ep1 step50/33750 loss=3.4886 acc=0.072 lr=2.00e-06 gnorm=1.64 77 smp/s
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/speech/tomson/indic-nar-filler_asr/train.py", line 658, in <module>
+[rank1]:     main()
+[rank1]:   File "/speech/tomson/indic-nar-filler_asr/train.py", line 582, in main
+[rank1]:     lg = model(**inp).logits.float()
+[rank1]:   File "/speech/tomson/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:   File "/speech/tomson/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:   File "/speech/tomson/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1636, in forward
+[rank1]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank1]:   File "/speech/tomson/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1454, in _run_ddp_forward
+[rank1]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank1]:   File "/speech/tomson/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:   File "/speech/tomson/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:   File "/speech/tomson/filler_asr/filler_sa_reference.py", line 825, in forward
+[rank1]:     return self.decode_from_tap(tap_pe, text_input_ids, skpm)
+[rank1]:   File "/speech/tomson/filler_asr/filler_sa_reference.py", line 811, in decode_from_tap
+[rank1]:     h = self._run_sa(h, src_key_padding_mask)                     # ALiBi bias (opt-in) or unchanged
+[rank1]:   File "/speech/tomson/filler_asr/filler_sa_reference.py", line 502, in _run_sa
+[rank1]:     return self.sa(hidden_states, mask=attn_mask, src_key_padding_mask=src_key_padding_mask)
+[rank1]:   File "/speech/tomson/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:   File "/speech/tomson/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:   File "/speech/tomson/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/torch/nn/modules/transformer.py", line 416, in forward
+[rank1]:     output = mod(output, src_mask=mask, is_causal=is_causal, src_key_padding_mask=src_key_padding_mask_for_layers)
+[rank1]:   File "/speech/tomson/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:   File "/speech/tomson/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:   File "/speech/tomson/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/torch/nn/modules/transformer.py", line 749, in forward
+[rank1]:     x = self.norm1(x + self._sa_block(x, src_mask, src_key_padding_mask, is_causal=is_causal))
+[rank1]:   File "/speech/tomson/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/torch/nn/modules/transformer.py", line 757, in _sa_block
+[rank1]:     x = self.self_attn(x, x, x,
+[rank1]:   File "/speech/tomson/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:   File "/speech/tomson/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:   File "/speech/tomson/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/torch/nn/modules/activation.py", line 1275, in forward
+[rank1]:     attn_output, attn_output_weights = F.multi_head_attention_forward(
+[rank1]:   File "/speech/tomson/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/torch/nn/functional.py", line 5560, in multi_head_attention_forward
+[rank1]:     attn_output = scaled_dot_product_attention(q, k, v, attn_mask, dropout_p, is_causal)
+[rank1]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.91 GiB. GPU 1 has a total capacity of 47.40 GiB of which 928.44 MiB is free. Including non-PyTorch memory, this process has 46.48 GiB memory in use. Of the allocated memory 40.44 GiB is allocated by PyTorch, and 5.27 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+DEBUG:filelock:Attempting to acquire lock 130293608219504 on /speech/tomson/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Lock 130293608219504 acquired on /speech/tomson/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Attempting to release lock 130293608219504 on /speech/tomson/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Lock 130293608219504 released on /speech/tomson/.triton/autotune/Fp16Matmul_2d_kernel.pickle.lock
+DEBUG:filelock:Attempting to acquire lock 130293608218976 on /speech/tomson/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Lock 130293608218976 acquired on /speech/tomson/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Attempting to release lock 130293608218976 on /speech/tomson/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+DEBUG:filelock:Lock 130293608218976 released on /speech/tomson/.triton/autotune/Fp16Matmul_4d_kernel.pickle.lock
+W0910 00:12:26.510000 132283546829888 torch/distributed/elastic/multiprocessing/api.py:858] Sending process 3339493 closing signal SIGTERM
+W0910 00:12:26.516000 132283546829888 torch/distributed/elastic/multiprocessing/api.py:858] Sending process 3339495 closing signal SIGTERM
+E0910 00:12:26.526000 132283546829888 torch/distributed/elastic/multiprocessing/api.py:833] failed (exitcode: 1) local_rank: 1 (pid: 3339494) of binary: /speech/tomson/miniconda3/envs/indic-nar-filler_asr/bin/python3.10
+Traceback (most recent call last):
+  File "/speech/tomson/miniconda3/envs/indic-nar-filler_asr/bin/torchrun", line 6, in <module>
+    sys.exit(main())
+  File "/speech/tomson/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 348, in wrapper
+    return f(*args, **kwargs)
+  File "/speech/tomson/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/torch/distributed/run.py", line 901, in main
+    run(args)
+  File "/speech/tomson/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/torch/distributed/run.py", line 892, in run
+    elastic_launch(
+  File "/speech/tomson/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 133, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/speech/tomson/miniconda3/envs/indic-nar-filler_asr/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-09-10_00:12:26
+  host      : gpu17
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 3339494)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+ERROR conda.cli.main_run:execute(142): `conda run torchrun --nproc_per_node=3 --master_port=29594 train.py --acmlm --pe --model_checkpoint /speech/akshaya/fairseq_expxx/hindi/24kup_model/checkpoint_best.pt --vocab_dir /speech/tomson/indic-nar-filler_asr/vocab_hi --train_manifest /speech/tomson/exps/speech-recog/data/smear-more-hi-ta-te-ma/train_hi.jsonl --dev_manifest /speech/tomson/exps/speech-recog/data/smear-more-hi-ta-te-ma/val_hi.jsonl --out_dir /speech/tomson/indic-nar-filler_asr/runs/hi_d2vaqcCTC_sa8_ACMLM_alibi_fps50_fw003_exp150 --epochs 150 --batch_size 32 --grad_accum 2 --lr 2e-4 --warmup 5000 --clip 1.0 --lr_schedule exponential --num_sa_layers 8 --frames_per_sec 50 --eos_repeat 3 --num_workers 8 --dev_n 355 --eval_steps 1000 --save_steps 1000 --log_steps 25 --dump_k 6 --sample_max_sec 10 --fill_weight 0.03 --mask_prob 0.20 --mask_prob_max 0.30 --mask_length 10 --lr_exp_final_ratio 0.01 --pos_mode alibi --eval_decode_steps 32 --eval_decode_n 200 --select_metric iter_wer --wandb` failed. (See above for error)

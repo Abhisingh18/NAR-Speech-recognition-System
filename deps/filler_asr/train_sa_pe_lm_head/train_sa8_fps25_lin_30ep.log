@@ -1,0 +1,841 @@
+W0627 22:26:16.260000 4082345 site-packages/torch/distributed/run.py:766] 
+W0627 22:26:16.260000 4082345 site-packages/torch/distributed/run.py:766] *****************************************
+W0627 22:26:16.260000 4082345 site-packages/torch/distributed/run.py:766] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0627 22:26:16.260000 4082345 site-packages/torch/distributed/run.py:766] *****************************************
+[rank1]:[W627 22:26:20.380729377 ProcessGroupNCCL.cpp:4715] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+[rank0]:[W627 22:26:20.391549356 ProcessGroupNCCL.cpp:4715] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can pecify device_id in init_process_group() to force use of a particular device.
+Loading weights:   0%|          | 0/808 [00:00<?, ?it/s]Loading weights:   0%|          | 0/808 [00:00<?, ?it/s]Loading weights:  89%|████████▉ | 722/808 [00:00<00:00, 7182.39it/s]Loading weights: 100%|██████████| 808/808 [00:00<00:00, 7280.85it/s]
+Loading weights:  86%|████████▌ | 695/808 [00:00<00:00, 6948.37it/s]Loading weights: 100%|██████████| 808/808 [00:00<00:00, 6938.87it/s]
+[transformers] [1mFillerHubertSAModel LOAD REPORT[0m from: /speech/tomson/filler_asr/models/hubert-xlarge-ls960-ft
+Key                                                          | Status   |                                                                                           
+-------------------------------------------------------------+----------+-------------------------------------------------------------------------------------------
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.norm1.bias                | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.linear1.weight            | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.self_attn.out_proj.bias   | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.self_attn.in_proj_bias    | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.self_attn.in_proj_weight  | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.linear2.bias              | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.norm2.weight              | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.self_attn.out_proj.weight | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.linear1.bias              | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.norm2.bias                | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.linear2.weight            | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.norm1.weight              | MISSING  |                                                                                           
+lm_head.weight                                               | MISMATCH | Reinit due to size mismatch - ckpt: torch.Size([32, 1280]) vs model:torch.Size([33, 1280])
+lm_head.bias                                                 | MISMATCH | Reinit due to size mismatch - ckpt: torch.Size([32]) vs model:torch.Size([33])            
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+- MISMATCH:	ckpt weights were loaded, but they did not match the original empty weight shapes.
+[transformers] [1mFillerHubertSAModel LOAD REPORT[0m from: /speech/tomson/filler_asr/models/hubert-xlarge-ls960-ft
+Key                                                          | Status   |                                                                                           
+-------------------------------------------------------------+----------+-------------------------------------------------------------------------------------------
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.self_attn.out_proj.weight | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.self_attn.in_proj_weight  | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.linear1.weight            | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.self_attn.out_proj.bias   | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.norm1.weight              | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.norm1.bias                | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.self_attn.in_proj_bias    | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.linear1.bias              | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.linear2.weight            | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.linear2.bias              | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.norm2.weight              | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.norm2.bias                | MISSING  |                                                                                           
+lm_head.bias                                                 | MISMATCH | Reinit due to size mismatch - ckpt: torch.Size([32]) vs model:torch.Size([33])            
+lm_head.weight                                               | MISMATCH | Reinit due to size mismatch - ckpt: torch.Size([32, 1280]) vs model:torch.Size([33, 1280])
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+- MISMATCH:	ckpt weights were loaded, but they did not match the original empty weight shapes.
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /speech/tomson/.netrc.
+wandb: Currently logged in as: tomjrlaishram (tomjrlaishram-iit-madras) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.26.1
+wandb: Run data is saved locally in /speech/tomson/filler_asr/train_sa_pe_lm_head/wandb/run-20260627_222630-l9iwt7l2
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run full960_sa8_pe_lmhead_PE_hubert-xlarge-ls960-ft
+wandb: ⭐️ View project at https://wandb.ai/tomjrlaishram-iit-madras/filler_asr
+wandb: 🚀 View run at https://wandb.ai/tomjrlaishram-iit-madras/filler_asr/runs/l9iwt7l2
+wandb run: https://wandb.ai/tomjrlaishram-iit-madras/filler_asr/runs/l9iwt7l2
+[setup] world=2 train=281241 dev=500 trainable=157.46M PE=True sa_layers=8 fps=25 sched=linear eff_batch=256 steps/epoch=1098 total_steps=32940
+[log] config=/speech/tomson/filler_asr/train_sa_pe_lm_head/log_config.json disabled=none
+[transformers] `use_return_dict` is deprecated! Use `return_dict` instead!
+[eval @ 0] WER=1.000 CER=9.359 SER=1.000 loss=3.958 content_acc=0.017 fill_rate=0.000 entropy=3.198 distinct=13
+   Full: g g x g g x x x g g g t t x x x x x </s> </s> y g g x x x x x g g g g g g g g g g w w g g g g g t t t t g g g g g g g g g g t g g g g g g g 
+   Hyp : ggxggxxxgggttxxxxxyggxxxxxggggggggggwwgggggttttggggggggggtgggggggggggxggggggggyy
+   Ref : mister quilter is the apostle of the middle classes and we are glad to welcome h
+   ** new best WER=1.000 -> best.pt
+[transformers] `use_return_dict` is deprecated! Use `return_dict` instead!
+ep1 step50/32940 loss=1.9117 acc=0.480 lr=5.00e-06 gnorm=0.98 47 smp/s
+ep1 step100/32940 loss=1.7175 acc=0.530 lr=1.00e-05 gnorm=3.75 46 smp/s
+ep1 step150/32940 loss=1.7880 acc=0.502 lr=1.50e-05 gnorm=7.02 46 smp/s
+ep1 step200/32940 loss=1.6811 acc=0.531 lr=2.00e-05 gnorm=4.56 46 smp/s
+ep1 step250/32940 loss=1.7601 acc=0.512 lr=2.50e-05 gnorm=4.62 46 smp/s
+ep1 step300/32940 loss=1.7417 acc=0.528 lr=3.00e-05 gnorm=8.69 46 smp/s
+ep1 step350/32940 loss=1.7595 acc=0.510 lr=3.50e-05 gnorm=5.24 46 smp/s
+ep1 step400/32940 loss=1.7529 acc=0.509 lr=4.00e-05 gnorm=3.35 46 smp/s
+ep1 step450/32940 loss=1.6802 acc=0.530 lr=4.50e-05 gnorm=5.29 46 smp/s
+ep1 step500/32940 loss=1.7061 acc=0.529 lr=5.00e-05 gnorm=3.82 46 smp/s
+ep1 step550/32940 loss=1.7340 acc=0.517 lr=5.50e-05 gnorm=6.38 46 smp/s
+ep1 step600/32940 loss=1.6791 acc=0.530 lr=6.00e-05 gnorm=3.22 46 smp/s
+ep1 step650/32940 loss=1.6882 acc=0.524 lr=6.50e-05 gnorm=1.41 46 smp/s
+ep1 step700/32940 loss=1.6948 acc=0.524 lr=7.00e-05 gnorm=2.55 46 smp/s
+ep1 step750/32940 loss=1.6100 acc=0.548 lr=7.50e-05 gnorm=1.18 46 smp/s
+ep1 step800/32940 loss=1.6778 acc=0.526 lr=8.00e-05 gnorm=3.07 46 smp/s
+ep1 step850/32940 loss=1.7060 acc=0.518 lr=8.50e-05 gnorm=1.70 46 smp/s
+ep1 step900/32940 loss=1.6809 acc=0.527 lr=9.00e-05 gnorm=1.60 46 smp/s
+ep1 step950/32940 loss=1.6980 acc=0.520 lr=9.50e-05 gnorm=1.76 46 smp/s
+ep1 step1000/32940 loss=1.7659 acc=0.502 lr=1.00e-04 gnorm=5.39 46 smp/s
+ep1 step1050/32940 loss=1.7347 acc=0.508 lr=1.05e-04 gnorm=3.57 46 smp/s
+ep2 step1100/32940 loss=1.6767 acc=0.528 lr=1.10e-04 gnorm=2.80 46 smp/s
+ep2 step1150/32940 loss=1.8069 acc=0.511 lr=1.15e-04 gnorm=8.38 46 smp/s
+ep2 step1200/32940 loss=1.6989 acc=0.516 lr=1.20e-04 gnorm=1.04 46 smp/s
+ep2 step1250/32940 loss=1.7115 acc=0.511 lr=1.25e-04 gnorm=2.49 46 smp/s
+ep2 step1300/32940 loss=1.6394 acc=0.536 lr=1.30e-04 gnorm=1.30 46 smp/s
+ep2 step1350/32940 loss=1.6761 acc=0.528 lr=1.35e-04 gnorm=3.21 46 smp/s
+ep2 step1400/32940 loss=1.5091 acc=0.549 lr=1.40e-04 gnorm=2.70 46 smp/s
+ep2 step1450/32940 loss=1.4423 acc=0.571 lr=1.45e-04 gnorm=4.41 46 smp/s
+ep2 step1500/32940 loss=1.4129 acc=0.553 lr=1.50e-04 gnorm=6.38 46 smp/s
+ep2 step1550/32940 loss=1.3809 acc=0.553 lr=1.55e-04 gnorm=4.53 46 smp/s
+ep2 step1600/32940 loss=1.3308 acc=0.564 lr=1.60e-04 gnorm=4.56 46 smp/s
+ep2 step1650/32940 loss=1.3507 acc=0.541 lr=1.65e-04 gnorm=7.51 46 smp/s
+ep2 step1700/32940 loss=1.3196 acc=0.546 lr=1.70e-04 gnorm=8.40 46 smp/s
+ep2 step1750/32940 loss=1.3611 acc=0.549 lr=1.75e-04 gnorm=10.53 46 smp/s
+ep2 step1800/32940 loss=1.3772 acc=0.517 lr=1.80e-04 gnorm=10.61 46 smp/s
+ep2 step1850/32940 loss=1.3463 acc=0.546 lr=1.85e-04 gnorm=8.66 46 smp/s
+ep2 step1900/32940 loss=1.4673 acc=0.524 lr=1.90e-04 gnorm=9.32 46 smp/s
+ep2 step1950/32940 loss=1.2543 acc=0.579 lr=1.95e-04 gnorm=8.44 46 smp/s
+ep2 step2000/32940 loss=1.2340 acc=0.560 lr=2.00e-04 gnorm=6.77 46 smp/s
+[eval @ 2000] WER=0.947 CER=0.678 SER=1.000 loss=1.165 content_acc=0.287 fill_rate=0.440 entropy=1.118 distinct=30
+   Full: <s> m i s t e r q u i l t e r | i i | | h e e p p o o l l l | o f f | | | | d d d d l l l l l s s s s s s s | | | | | | | e e e e a a | | | 
+   Hyp : misterquilter ii  heeppoolll off    ddddlllllsssssss       eeeeaa   ooooooeeee  
+   Ref : mister quilter is the apostle of the middle classes and we are glad to welcome h
+   ** new best WER=0.947 -> best.pt
+ep2 step2050/32940 loss=1.2396 acc=0.564 lr=2.00e-04 gnorm=8.84 46 smp/s
+ep2 step2100/32940 loss=1.2451 acc=0.556 lr=1.99e-04 gnorm=10.42 46 smp/s
+ep2 step2150/32940 loss=1.2964 acc=0.562 lr=1.99e-04 gnorm=12.15 46 smp/s
+ep3 step2200/32940 loss=1.1633 acc=0.585 lr=1.99e-04 gnorm=8.15 46 smp/s
+ep3 step2250/32940 loss=1.3198 acc=0.554 lr=1.98e-04 gnorm=16.57 46 smp/s
+ep3 step2300/32940 loss=1.1744 acc=0.583 lr=1.98e-04 gnorm=5.90 46 smp/s
+ep3 step2350/32940 loss=1.3053 acc=0.557 lr=1.98e-04 gnorm=13.99 46 smp/s
+ep3 step2400/32940 loss=1.1902 acc=0.567 lr=1.97e-04 gnorm=9.81 46 smp/s
+ep3 step2450/32940 loss=1.4909 acc=0.528 lr=1.97e-04 gnorm=7.41 46 smp/s
+ep3 step2500/32940 loss=1.2016 acc=0.574 lr=1.97e-04 gnorm=9.73 46 smp/s
+ep3 step2550/32940 loss=1.2185 acc=0.573 lr=1.96e-04 gnorm=6.12 46 smp/s
+ep3 step2600/32940 loss=1.4581 acc=0.510 lr=1.96e-04 gnorm=7.39 46 smp/s
+ep3 step2650/32940 loss=1.1900 acc=0.563 lr=1.96e-04 gnorm=3.95 46 smp/s
+ep3 step2700/32940 loss=1.2503 acc=0.549 lr=1.95e-04 gnorm=5.76 46 smp/s
+ep3 step2750/32940 loss=1.1914 acc=0.575 lr=1.95e-04 gnorm=9.59 46 smp/s
+ep3 step2800/32940 loss=1.2169 acc=0.575 lr=1.95e-04 gnorm=16.37 46 smp/s
+ep3 step2850/32940 loss=1.1875 acc=0.574 lr=1.95e-04 gnorm=8.80 46 smp/s
+ep3 step2900/32940 loss=1.1314 acc=0.580 lr=1.94e-04 gnorm=8.55 46 smp/s
+ep3 step2950/32940 loss=1.1263 acc=0.578 lr=1.94e-04 gnorm=11.29 46 smp/s
+ep3 step3000/32940 loss=1.1510 acc=0.569 lr=1.94e-04 gnorm=10.32 46 smp/s
+ep3 step3050/32940 loss=1.1360 acc=0.579 lr=1.93e-04 gnorm=7.57 46 smp/s
+ep3 step3100/32940 loss=1.1539 acc=0.573 lr=1.93e-04 gnorm=6.08 46 smp/s
+ep3 step3150/32940 loss=1.2139 acc=0.565 lr=1.93e-04 gnorm=8.03 46 smp/s
+ep3 step3200/32940 loss=1.0335 acc=0.597 lr=1.92e-04 gnorm=9.55 46 smp/s
+ep3 step3250/32940 loss=1.1672 acc=0.568 lr=1.92e-04 gnorm=10.99 46 smp/s
+ep4 step3300/32940 loss=1.3795 acc=0.540 lr=1.92e-04 gnorm=9.93 46 smp/s
+ep4 step3350/32940 loss=1.1668 acc=0.579 lr=1.91e-04 gnorm=5.08 46 smp/s
+ep4 step3400/32940 loss=1.3256 acc=0.539 lr=1.91e-04 gnorm=13.06 46 smp/s
+ep4 step3450/32940 loss=1.2128 acc=0.557 lr=1.91e-04 gnorm=5.93 46 smp/s
+ep4 step3500/32940 loss=1.1649 acc=0.582 lr=1.90e-04 gnorm=9.28 46 smp/s
+ep4 step3550/32940 loss=1.1464 acc=0.581 lr=1.90e-04 gnorm=6.19 46 smp/s
+ep4 step3600/32940 loss=1.2226 acc=0.562 lr=1.90e-04 gnorm=11.72 46 smp/s
+ep4 step3650/32940 loss=1.2018 acc=0.561 lr=1.89e-04 gnorm=13.47 46 smp/s
+ep4 step3700/32940 loss=1.1327 acc=0.584 lr=1.89e-04 gnorm=8.48 46 smp/s
+ep4 step3750/32940 loss=1.0913 acc=0.595 lr=1.89e-04 gnorm=9.25 46 smp/s
+ep4 step3800/32940 loss=1.0611 acc=0.602 lr=1.88e-04 gnorm=7.61 46 smp/s
+ep4 step3850/32940 loss=1.0756 acc=0.600 lr=1.88e-04 gnorm=10.72 46 smp/s
+ep4 step3900/32940 loss=1.1206 acc=0.586 lr=1.88e-04 gnorm=10.34 46 smp/s
+ep4 step3950/32940 loss=1.1765 acc=0.560 lr=1.87e-04 gnorm=6.22 46 smp/s
+ep4 step4000/32940 loss=1.0849 acc=0.592 lr=1.87e-04 gnorm=7.04 46 smp/s
+[eval @ 4000] WER=0.854 CER=0.510 SER=0.994 loss=1.261 content_acc=0.280 fill_rate=0.444 entropy=0.905 distinct=31
+   Full: <s> m i s t e r | q u i t e r | i s | t h e | p p s s l e | o f | t h e | m i d d d | c c a a s s s s s | n d | | | | a r | g g g d | | | w 
+   Hyp : mister quiter is the ppssle of the middd ccaasssss nd    ar gggd   wwelleee    s
+   Ref : mister quilter is the apostle of the middle classes and we are glad to welcome h
+   ** new best WER=0.854 -> best.pt
+ep4 step4050/32940 loss=1.0937 acc=0.601 lr=1.87e-04 gnorm=16.25 46 smp/s
+ep4 step4100/32940 loss=1.0065 acc=0.613 lr=1.86e-04 gnorm=6.21 46 smp/s
+ep4 step4150/32940 loss=1.2190 acc=0.566 lr=1.86e-04 gnorm=11.39 46 smp/s
+ep4 step4200/32940 loss=1.0921 acc=0.586 lr=1.86e-04 gnorm=10.74 46 smp/s
+ep4 step4250/32940 loss=1.0565 acc=0.584 lr=1.85e-04 gnorm=6.53 46 smp/s
+ep4 step4300/32940 loss=1.0837 acc=0.595 lr=1.85e-04 gnorm=9.43 46 smp/s
+ep4 step4350/32940 loss=1.0840 acc=0.582 lr=1.85e-04 gnorm=10.00 46 smp/s
+ep5 step4400/32940 loss=1.0256 acc=0.597 lr=1.84e-04 gnorm=7.93 46 smp/s
+ep5 step4450/32940 loss=1.0436 acc=0.597 lr=1.84e-04 gnorm=8.72 46 smp/s
+ep5 step4500/32940 loss=1.1181 acc=0.592 lr=1.84e-04 gnorm=12.96 46 smp/s
+ep5 step4550/32940 loss=0.9692 acc=0.618 lr=1.84e-04 gnorm=9.15 46 smp/s
+ep5 step4600/32940 loss=1.1363 acc=0.570 lr=1.83e-04 gnorm=11.30 46 smp/s
+ep5 step4650/32940 loss=1.0576 acc=0.613 lr=1.83e-04 gnorm=9.76 46 smp/s
+ep5 step4700/32940 loss=1.2898 acc=0.544 lr=1.83e-04 gnorm=6.66 46 smp/s
+ep5 step4750/32940 loss=1.0315 acc=0.601 lr=1.82e-04 gnorm=4.68 46 smp/s
+ep5 step4800/32940 loss=1.2935 acc=0.559 lr=1.82e-04 gnorm=10.58 46 smp/s
+ep5 step4850/32940 loss=1.2086 acc=0.567 lr=1.82e-04 gnorm=9.22 46 smp/s
+ep5 step4900/32940 loss=1.1447 acc=0.575 lr=1.81e-04 gnorm=6.83 46 smp/s
+ep5 step4950/32940 loss=1.4252 acc=0.532 lr=1.81e-04 gnorm=16.18 46 smp/s
+ep5 step5000/32940 loss=1.0472 acc=0.590 lr=1.81e-04 gnorm=4.91 46 smp/s
+ep5 step5050/32940 loss=1.2325 acc=0.557 lr=1.80e-04 gnorm=12.03 46 smp/s
+ep5 step5100/32940 loss=1.1829 acc=0.585 lr=1.80e-04 gnorm=7.74 46 smp/s
+ep5 step5150/32940 loss=1.1295 acc=0.572 lr=1.80e-04 gnorm=5.32 46 smp/s
+ep5 step5200/32940 loss=1.1234 acc=0.590 lr=1.79e-04 gnorm=9.26 46 smp/s
+ep5 step5250/32940 loss=1.0634 acc=0.588 lr=1.79e-04 gnorm=0.94 46 smp/s
+ep5 step5300/32940 loss=1.3502 acc=0.551 lr=1.79e-04 gnorm=10.72 46 smp/s
+ep5 step5350/32940 loss=1.1596 acc=0.578 lr=1.78e-04 gnorm=8.51 46 smp/s
+ep5 step5400/32940 loss=1.2150 acc=0.577 lr=1.78e-04 gnorm=10.62 46 smp/s
+ep5 step5450/32940 loss=1.1741 acc=0.567 lr=1.78e-04 gnorm=9.90 46 smp/s
+ep6 step5500/32940 loss=1.0397 acc=0.610 lr=1.77e-04 gnorm=6.04 46 smp/s
+ep6 step5550/32940 loss=1.1181 acc=0.576 lr=1.77e-04 gnorm=6.89 46 smp/s
+ep6 step5600/32940 loss=1.0836 acc=0.591 lr=1.77e-04 gnorm=3.52 46 smp/s
+ep6 step5650/32940 loss=1.1769 acc=0.576 lr=1.76e-04 gnorm=9.59 46 smp/s
+ep6 step5700/32940 loss=1.0405 acc=0.612 lr=1.76e-04 gnorm=3.23 46 smp/s
+ep6 step5750/32940 loss=1.2747 acc=0.558 lr=1.76e-04 gnorm=9.54 46 smp/s
+ep6 step5800/32940 loss=1.0903 acc=0.581 lr=1.75e-04 gnorm=9.35 46 smp/s
+ep6 step5850/32940 loss=1.1249 acc=0.578 lr=1.75e-04 gnorm=7.79 46 smp/s
+ep6 step5900/32940 loss=1.1569 acc=0.583 lr=1.75e-04 gnorm=7.51 46 smp/s
+ep6 step5950/32940 loss=1.0991 acc=0.604 lr=1.74e-04 gnorm=9.82 46 smp/s
+ep6 step6000/32940 loss=1.0224 acc=0.613 lr=1.74e-04 gnorm=6.56 46 smp/s
+[eval @ 6000] WER=0.764 CER=0.500 SER=0.982 loss=0.856 content_acc=0.457 fill_rate=0.424 entropy=0.876 distinct=30
+   Full: <s> m i s t e r | q u i l t e r | i s | t h e | a p o s t l e | o f | t h e | m m d d e e c c a s s s s s s a a d | | | | | e e e g l a d | 
+   Hyp : mister quilter is the apostle of the mmddeeccassssssaad     eeeglad    eeelccmm 
+   Ref : mister quilter is the apostle of the middle classes and we are glad to welcome h
+   ** new best WER=0.764 -> best.pt
+ep6 step6050/32940 loss=1.0597 acc=0.591 lr=1.74e-04 gnorm=5.60 46 smp/s
+ep6 step6100/32940 loss=1.0391 acc=0.601 lr=1.73e-04 gnorm=10.09 46 smp/s
+ep6 step6150/32940 loss=1.1446 acc=0.584 lr=1.73e-04 gnorm=9.03 46 smp/s
+ep6 step6200/32940 loss=1.0736 acc=0.601 lr=1.73e-04 gnorm=1.20 46 smp/s
+ep6 step6250/32940 loss=1.2763 acc=0.551 lr=1.73e-04 gnorm=1.71 46 smp/s
+ep6 step6300/32940 loss=0.9899 acc=0.614 lr=1.72e-04 gnorm=9.22 46 smp/s
+ep6 step6350/32940 loss=1.1397 acc=0.582 lr=1.72e-04 gnorm=7.25 46 smp/s
+ep6 step6400/32940 loss=0.9827 acc=0.613 lr=1.72e-04 gnorm=4.84 46 smp/s
+ep6 step6450/32940 loss=1.1514 acc=0.569 lr=1.71e-04 gnorm=10.41 46 smp/s
+ep6 step6500/32940 loss=1.1096 acc=0.574 lr=1.71e-04 gnorm=6.78 46 smp/s
+ep6 step6550/32940 loss=1.0274 acc=0.603 lr=1.71e-04 gnorm=3.07 46 smp/s
+ep7 step6600/32940 loss=1.0485 acc=0.623 lr=1.70e-04 gnorm=8.46 46 smp/s
+ep7 step6650/32940 loss=1.0886 acc=0.595 lr=1.70e-04 gnorm=5.37 46 smp/s
+ep7 step6700/32940 loss=1.1295 acc=0.590 lr=1.70e-04 gnorm=4.85 46 smp/s
+ep7 step6750/32940 loss=1.1612 acc=0.578 lr=1.69e-04 gnorm=4.77 46 smp/s
+ep7 step6800/32940 loss=1.0937 acc=0.594 lr=1.69e-04 gnorm=5.55 46 smp/s
+ep7 step6850/32940 loss=1.0210 acc=0.615 lr=1.69e-04 gnorm=9.68 46 smp/s
+ep7 step6900/32940 loss=1.0820 acc=0.588 lr=1.68e-04 gnorm=7.24 46 smp/s
+ep7 step6950/32940 loss=1.0072 acc=0.623 lr=1.68e-04 gnorm=5.29 46 smp/s
+ep7 step7000/32940 loss=1.1292 acc=0.586 lr=1.68e-04 gnorm=8.51 46 smp/s
+ep7 step7050/32940 loss=1.0430 acc=0.594 lr=1.67e-04 gnorm=6.15 46 smp/s
+ep7 step7100/32940 loss=1.1948 acc=0.573 lr=1.67e-04 gnorm=4.17 46 smp/s
+ep7 step7150/32940 loss=0.9854 acc=0.620 lr=1.67e-04 gnorm=5.50 46 smp/s
+ep7 step7200/32940 loss=1.0716 acc=0.592 lr=1.66e-04 gnorm=5.06 46 smp/s
+ep7 step7250/32940 loss=1.1563 acc=0.596 lr=1.66e-04 gnorm=10.44 46 smp/s
+ep7 step7300/32940 loss=1.0107 acc=0.617 lr=1.66e-04 gnorm=5.36 46 smp/s
+ep7 step7350/32940 loss=0.9820 acc=0.621 lr=1.65e-04 gnorm=5.77 46 smp/s
+ep7 step7400/32940 loss=0.9713 acc=0.620 lr=1.65e-04 gnorm=5.11 46 smp/s
+ep7 step7450/32940 loss=1.0981 acc=0.594 lr=1.65e-04 gnorm=7.58 46 smp/s
+ep7 step7500/32940 loss=0.9696 acc=0.616 lr=1.64e-04 gnorm=4.63 46 smp/s
+ep7 step7550/32940 loss=0.9825 acc=0.622 lr=1.64e-04 gnorm=6.63 46 smp/s
+ep7 step7600/32940 loss=1.0626 acc=0.598 lr=1.64e-04 gnorm=6.79 46 smp/s
+ep7 step7650/32940 loss=1.0795 acc=0.593 lr=1.63e-04 gnorm=1.25 46 smp/s
+ep8 step7700/32940 loss=1.0533 acc=0.596 lr=1.63e-04 gnorm=3.49 46 smp/s
+ep8 step7750/32940 loss=0.8677 acc=0.649 lr=1.63e-04 gnorm=1.35 46 smp/s
+ep8 step7800/32940 loss=1.0036 acc=0.622 lr=1.63e-04 gnorm=10.18 46 smp/s
+ep8 step7850/32940 loss=0.9661 acc=0.618 lr=1.62e-04 gnorm=4.80 46 smp/s
+ep8 step7900/32940 loss=1.0005 acc=0.624 lr=1.62e-04 gnorm=4.16 46 smp/s
+ep8 step7950/32940 loss=1.1036 acc=0.596 lr=1.62e-04 gnorm=11.57 46 smp/s
+ep8 step8000/32940 loss=1.0832 acc=0.599 lr=1.61e-04 gnorm=9.15 46 smp/s
+[eval @ 8000] WER=0.741 CER=0.547 SER=0.984 loss=0.824 content_acc=0.450 fill_rate=0.419 entropy=0.762 distinct=30
+   Full: <s> m i s t e r | q u i l t e r | i s | t h e | a p o s t l e | o f | t h e | m i d l l e | c l a s s s s | a n d d | w | | a r e g g l a d 
+   Hyp : mister quilter is the apostle of the midlle classss andd w  areggladtt weelcomme
+   Ref : mister quilter is the apostle of the middle classes and we are glad to welcome h
+   ** new best WER=0.741 -> best.pt
+ep8 step8050/32940 loss=1.0243 acc=0.604 lr=1.61e-04 gnorm=7.06 46 smp/s
+ep8 step8100/32940 loss=1.0718 acc=0.597 lr=1.61e-04 gnorm=4.12 46 smp/s
+ep8 step8150/32940 loss=0.9930 acc=0.625 lr=1.60e-04 gnorm=8.28 46 smp/s
+ep8 step8200/32940 loss=1.1502 acc=0.577 lr=1.60e-04 gnorm=8.00 46 smp/s
+ep8 step8250/32940 loss=1.0224 acc=0.621 lr=1.60e-04 gnorm=5.68 46 smp/s
+ep8 step8300/32940 loss=1.0530 acc=0.613 lr=1.59e-04 gnorm=7.14 46 smp/s
+ep8 step8350/32940 loss=1.0686 acc=0.612 lr=1.59e-04 gnorm=7.05 46 smp/s
+ep8 step8400/32940 loss=1.0116 acc=0.623 lr=1.59e-04 gnorm=4.98 46 smp/s
+ep8 step8450/32940 loss=1.0605 acc=0.609 lr=1.58e-04 gnorm=11.20 46 smp/s
+ep8 step8500/32940 loss=1.0404 acc=0.602 lr=1.58e-04 gnorm=8.61 46 smp/s
+ep8 step8550/32940 loss=1.2405 acc=0.561 lr=1.58e-04 gnorm=14.46 46 smp/s
+ep8 step8600/32940 loss=0.9083 acc=0.642 lr=1.57e-04 gnorm=1.81 46 smp/s
+ep8 step8650/32940 loss=0.9914 acc=0.613 lr=1.57e-04 gnorm=2.44 46 smp/s
+ep8 step8700/32940 loss=0.9654 acc=0.620 lr=1.57e-04 gnorm=6.58 46 smp/s
+ep8 step8750/32940 loss=0.9762 acc=0.611 lr=1.56e-04 gnorm=0.83 46 smp/s
+ep9 step8800/32940 loss=1.0741 acc=0.599 lr=1.56e-04 gnorm=7.76 46 smp/s
+ep9 step8850/32940 loss=1.0435 acc=0.607 lr=1.56e-04 gnorm=7.69 46 smp/s
+ep9 step8900/32940 loss=0.9430 acc=0.629 lr=1.55e-04 gnorm=3.37 46 smp/s
+ep9 step8950/32940 loss=1.0693 acc=0.603 lr=1.55e-04 gnorm=6.89 46 smp/s
+ep9 step9000/32940 loss=1.0263 acc=0.617 lr=1.55e-04 gnorm=6.86 46 smp/s
+ep9 step9050/32940 loss=1.0144 acc=0.606 lr=1.54e-04 gnorm=3.15 46 smp/s
+ep9 step9100/32940 loss=0.8356 acc=0.657 lr=1.54e-04 gnorm=1.61 46 smp/s
+ep9 step9150/32940 loss=0.9672 acc=0.631 lr=1.54e-04 gnorm=8.08 46 smp/s
+ep9 step9200/32940 loss=1.0814 acc=0.591 lr=1.53e-04 gnorm=7.43 46 smp/s
+ep9 step9250/32940 loss=0.8503 acc=0.659 lr=1.53e-04 gnorm=1.71 46 smp/s
+ep9 step9300/32940 loss=0.9620 acc=0.627 lr=1.53e-04 gnorm=5.44 46 smp/s
+ep9 step9350/32940 loss=0.8690 acc=0.652 lr=1.52e-04 gnorm=2.88 46 smp/s
+ep9 step9400/32940 loss=0.9802 acc=0.628 lr=1.52e-04 gnorm=3.83 46 smp/s
+ep9 step9450/32940 loss=1.1528 acc=0.598 lr=1.52e-04 gnorm=6.81 46 smp/s
+ep9 step9500/32940 loss=1.0996 acc=0.597 lr=1.52e-04 gnorm=4.81 46 smp/s
+ep9 step9550/32940 loss=0.9936 acc=0.626 lr=1.51e-04 gnorm=3.29 46 smp/s
+ep9 step9600/32940 loss=0.9349 acc=0.643 lr=1.51e-04 gnorm=7.83 46 smp/s
+ep9 step9650/32940 loss=1.0328 acc=0.615 lr=1.51e-04 gnorm=9.78 46 smp/s
+ep9 step9700/32940 loss=0.9051 acc=0.641 lr=1.50e-04 gnorm=2.90 46 smp/s
+ep9 step9750/32940 loss=0.9655 acc=0.628 lr=1.50e-04 gnorm=4.71 46 smp/s
+ep9 step9800/32940 loss=1.1090 acc=0.582 lr=1.50e-04 gnorm=8.70 46 smp/s
+ep9 step9850/32940 loss=0.8779 acc=0.640 lr=1.49e-04 gnorm=2.09 46 smp/s
+ep10 step9900/32940 loss=0.9684 acc=0.633 lr=1.49e-04 gnorm=8.69 46 smp/s
+ep10 step9950/32940 loss=1.1541 acc=0.579 lr=1.49e-04 gnorm=9.81 46 smp/s
+ep10 step10000/32940 loss=1.0028 acc=0.612 lr=1.48e-04 gnorm=2.72 46 smp/s
+[eval @ 10000] WER=0.811 CER=0.650 SER=0.948 loss=0.926 content_acc=0.429 fill_rate=0.430 entropy=0.717 distinct=30
+   Full: <s> m i s t e r | q u i l t e r | i s | t h e | a p o s t l e | f f | t h e | m i d d l e | l l a s s s s | n d | w e | a a r e | l l a d t 
+   Hyp : mister quilter is the apostle ff the middle llassss nd we aare lladto weelome hh
+   Ref : mister quilter is the apostle of the middle classes and we are glad to welcome h
+ep10 step10050/32940 loss=0.9424 acc=0.626 lr=1.48e-04 gnorm=4.28 46 smp/s
+ep10 step10100/32940 loss=0.9748 acc=0.628 lr=1.48e-04 gnorm=7.05 46 smp/s
+ep10 step10150/32940 loss=0.9908 acc=0.621 lr=1.47e-04 gnorm=7.23 46 smp/s
+ep10 step10200/32940 loss=0.8574 acc=0.655 lr=1.47e-04 gnorm=3.35 46 smp/s
+ep10 step10250/32940 loss=0.9628 acc=0.626 lr=1.47e-04 gnorm=7.71 46 smp/s
+ep10 step10300/32940 loss=0.9345 acc=0.636 lr=1.46e-04 gnorm=4.96 46 smp/s
+ep10 step10350/32940 loss=0.8860 acc=0.644 lr=1.46e-04 gnorm=1.04 46 smp/s
+ep10 step10400/32940 loss=0.9408 acc=0.631 lr=1.46e-04 gnorm=3.07 46 smp/s
+ep10 step10450/32940 loss=1.0780 acc=0.591 lr=1.45e-04 gnorm=3.44 46 smp/s
+ep10 step10500/32940 loss=0.8777 acc=0.655 lr=1.45e-04 gnorm=4.76 46 smp/s
+ep10 step10550/32940 loss=0.8704 acc=0.674 lr=1.45e-04 gnorm=1.84 46 smp/s
+ep10 step10600/32940 loss=0.9642 acc=0.630 lr=1.44e-04 gnorm=6.31 46 smp/s
+ep10 step10650/32940 loss=0.9149 acc=0.646 lr=1.44e-04 gnorm=2.43 46 smp/s
+ep10 step10700/32940 loss=1.0559 acc=0.604 lr=1.44e-04 gnorm=7.36 46 smp/s
+ep10 step10750/32940 loss=0.8925 acc=0.665 lr=1.43e-04 gnorm=4.78 46 smp/s
+ep10 step10800/32940 loss=0.9025 acc=0.638 lr=1.43e-04 gnorm=8.67 46 smp/s
+ep10 step10850/32940 loss=1.0740 acc=0.608 lr=1.43e-04 gnorm=10.93 46 smp/s
+ep10 step10900/32940 loss=0.9177 acc=0.639 lr=1.42e-04 gnorm=3.88 46 smp/s
+ep10 step10950/32940 loss=1.0185 acc=0.602 lr=1.42e-04 gnorm=1.34 46 smp/s
+ep11 step11000/32940 loss=1.0101 acc=0.630 lr=1.42e-04 gnorm=5.87 46 smp/s
+ep11 step11050/32940 loss=0.8739 acc=0.660 lr=1.41e-04 gnorm=3.03 46 smp/s
+ep11 step11100/32940 loss=0.9259 acc=0.646 lr=1.41e-04 gnorm=2.16 46 smp/s
+ep11 step11150/32940 loss=0.9600 acc=0.655 lr=1.41e-04 gnorm=1.55 46 smp/s
+ep11 step11200/32940 loss=0.8280 acc=0.673 lr=1.41e-04 gnorm=3.29 46 smp/s
+ep11 step11250/32940 loss=0.8793 acc=0.659 lr=1.40e-04 gnorm=3.78 46 smp/s
+ep11 step11300/32940 loss=0.9281 acc=0.637 lr=1.40e-04 gnorm=5.95 46 smp/s
+ep11 step11350/32940 loss=1.0058 acc=0.629 lr=1.40e-04 gnorm=9.08 46 smp/s
+ep11 step11400/32940 loss=0.8474 acc=0.665 lr=1.39e-04 gnorm=1.25 46 smp/s
+ep11 step11450/32940 loss=0.9921 acc=0.620 lr=1.39e-04 gnorm=5.32 46 smp/s
+ep11 step11500/32940 loss=0.9110 acc=0.644 lr=1.39e-04 gnorm=3.30 46 smp/s
+ep11 step11550/32940 loss=0.9743 acc=0.642 lr=1.38e-04 gnorm=7.84 46 smp/s
+ep11 step11600/32940 loss=0.8456 acc=0.659 lr=1.38e-04 gnorm=1.36 46 smp/s
+ep11 step11650/32940 loss=1.0284 acc=0.663 lr=1.38e-04 gnorm=11.56 46 smp/s
+ep11 step11700/32940 loss=0.8845 acc=0.655 lr=1.37e-04 gnorm=2.08 46 smp/s
+ep11 step11750/32940 loss=0.9103 acc=0.654 lr=1.37e-04 gnorm=3.10 46 smp/s
+ep11 step11800/32940 loss=0.8901 acc=0.653 lr=1.37e-04 gnorm=3.16 46 smp/s
+ep11 step11850/32940 loss=1.0794 acc=0.614 lr=1.36e-04 gnorm=11.70 46 smp/s
+ep11 step11900/32940 loss=0.7702 acc=0.693 lr=1.36e-04 gnorm=1.56 46 smp/s
+ep11 step11950/32940 loss=0.8780 acc=0.660 lr=1.36e-04 gnorm=0.97 46 smp/s
+ep11 step12000/32940 loss=0.7624 acc=0.703 lr=1.35e-04 gnorm=1.99 46 smp/s
+[eval @ 12000] WER=0.776 CER=0.780 SER=0.858 loss=0.673 content_acc=0.589 fill_rate=0.422 entropy=0.505 distinct=30
+   Full: <s> m i s t e r | q u i l t e r | i s | t h e | a p o s t l e | o f | t h e | m i d d l e | c l a s s e s | a n d | w e | a r e | g l a d | 
+   Hyp : mister quilter is the apostle of the middle classes and we are glad to welcome h
+   Ref : mister quilter is the apostle of the middle classes and we are glad to welcome h
+ep11 step12050/32940 loss=0.8124 acc=0.681 lr=1.35e-04 gnorm=5.76 46 smp/s
+ep12 step12100/32940 loss=0.7471 acc=0.701 lr=1.35e-04 gnorm=3.61 46 smp/s
+ep12 step12150/32940 loss=0.7646 acc=0.706 lr=1.34e-04 gnorm=4.59 46 smp/s
+ep12 step12200/32940 loss=0.7905 acc=0.675 lr=1.34e-04 gnorm=4.61 46 smp/s
+ep12 step12250/32940 loss=1.0134 acc=0.613 lr=1.34e-04 gnorm=3.68 46 smp/s
+ep12 step12300/32940 loss=0.8746 acc=0.666 lr=1.33e-04 gnorm=1.69 46 smp/s
+ep12 step12350/32940 loss=0.8059 acc=0.693 lr=1.33e-04 gnorm=2.88 46 smp/s
+ep12 step12400/32940 loss=0.8689 acc=0.668 lr=1.33e-04 gnorm=1.97 46 smp/s
+ep12 step12450/32940 loss=0.8249 acc=0.674 lr=1.32e-04 gnorm=3.07 46 smp/s
+ep12 step12500/32940 loss=0.7912 acc=0.696 lr=1.32e-04 gnorm=1.08 46 smp/s
+ep12 step12550/32940 loss=0.7584 acc=0.689 lr=1.32e-04 gnorm=2.48 46 smp/s
+ep12 step12600/32940 loss=0.9092 acc=0.654 lr=1.31e-04 gnorm=8.05 46 smp/s
+ep12 step12650/32940 loss=0.7313 acc=0.705 lr=1.31e-04 gnorm=3.17 46 smp/s
+ep12 step12700/32940 loss=0.7835 acc=0.686 lr=1.31e-04 gnorm=1.39 46 smp/s
+ep12 step12750/32940 loss=0.8491 acc=0.674 lr=1.31e-04 gnorm=1.50 46 smp/s
+ep12 step12800/32940 loss=0.7675 acc=0.696 lr=1.30e-04 gnorm=4.84 46 smp/s
+ep12 step12850/32940 loss=0.7632 acc=0.701 lr=1.30e-04 gnorm=1.57 46 smp/s
+ep12 step12900/32940 loss=0.7376 acc=0.720 lr=1.30e-04 gnorm=3.95 46 smp/s
+ep12 step12950/32940 loss=0.8272 acc=0.681 lr=1.29e-04 gnorm=2.79 46 smp/s
+ep12 step13000/32940 loss=0.8334 acc=0.674 lr=1.29e-04 gnorm=1.80 46 smp/s
+ep12 step13050/32940 loss=0.6713 acc=0.730 lr=1.29e-04 gnorm=4.79 46 smp/s
+ep12 step13100/32940 loss=0.8043 acc=0.693 lr=1.28e-04 gnorm=6.57 46 smp/s
+ep12 step13150/32940 loss=0.8809 acc=0.667 lr=1.28e-04 gnorm=2.24 46 smp/s
+ep13 step13200/32940 loss=0.6819 acc=0.720 lr=1.28e-04 gnorm=1.54 46 smp/s
+ep13 step13250/32940 loss=0.7087 acc=0.709 lr=1.27e-04 gnorm=5.07 46 smp/s
+ep13 step13300/32940 loss=0.7324 acc=0.730 lr=1.27e-04 gnorm=1.52 46 smp/s
+ep13 step13350/32940 loss=0.8242 acc=0.686 lr=1.27e-04 gnorm=4.41 46 smp/s
+ep13 step13400/32940 loss=0.6725 acc=0.727 lr=1.26e-04 gnorm=2.50 46 smp/s
+ep13 step13450/32940 loss=0.7078 acc=0.708 lr=1.26e-04 gnorm=1.47 46 smp/s
+ep13 step13500/32940 loss=0.9626 acc=0.649 lr=1.26e-04 gnorm=3.55 46 smp/s
+ep13 step13550/32940 loss=0.7393 acc=0.716 lr=1.25e-04 gnorm=1.98 46 smp/s
+ep13 step13600/32940 loss=0.7340 acc=0.709 lr=1.25e-04 gnorm=6.03 46 smp/s
+ep13 step13650/32940 loss=0.6427 acc=0.751 lr=1.25e-04 gnorm=1.72 46 smp/s
+ep13 step13700/32940 loss=0.6647 acc=0.737 lr=1.24e-04 gnorm=6.97 46 smp/s
+ep13 step13750/32940 loss=0.6173 acc=0.752 lr=1.24e-04 gnorm=3.21 46 smp/s
+ep13 step13800/32940 loss=0.7894 acc=0.706 lr=1.24e-04 gnorm=3.92 46 smp/s
+ep13 step13850/32940 loss=0.8060 acc=0.691 lr=1.23e-04 gnorm=4.39 46 smp/s
+ep13 step13900/32940 loss=0.6905 acc=0.744 lr=1.23e-04 gnorm=2.84 46 smp/s
+ep13 step13950/32940 loss=0.7255 acc=0.707 lr=1.23e-04 gnorm=1.34 46 smp/s
+ep13 step14000/32940 loss=0.7451 acc=0.706 lr=1.22e-04 gnorm=4.84 46 smp/s
+[eval @ 14000] WER=0.612 CER=0.619 SER=0.720 loss=0.629 content_acc=0.645 fill_rate=0.420 entropy=0.359 distinct=30
+   Full: <s> m i s t e r | q u i l t e r | i s | t h e | a p o s t l e | o f | t h e | m i d d l e | c l a s s e s | a n d | w e | a r e | g l a d | 
+   Hyp : mister quilter is the apostle of the middle classes and we are glad to welcome h
+   Ref : mister quilter is the apostle of the middle classes and we are glad to welcome h
+   ** new best WER=0.612 -> best.pt
+ep13 step14050/32940 loss=0.6985 acc=0.717 lr=1.22e-04 gnorm=2.07 46 smp/s
+ep13 step14100/32940 loss=0.7731 acc=0.697 lr=1.22e-04 gnorm=6.49 46 smp/s
+ep13 step14150/32940 loss=0.6502 acc=0.746 lr=1.21e-04 gnorm=5.28 46 smp/s
+ep13 step14200/32940 loss=0.8205 acc=0.704 lr=1.21e-04 gnorm=4.16 46 smp/s
+ep13 step14250/32940 loss=0.7932 acc=0.683 lr=1.21e-04 gnorm=4.45 46 smp/s
+ep14 step14300/32940 loss=0.6589 acc=0.730 lr=1.20e-04 gnorm=3.60 46 smp/s
+ep14 step14350/32940 loss=0.7142 acc=0.719 lr=1.20e-04 gnorm=2.85 46 smp/s
+ep14 step14400/32940 loss=0.6363 acc=0.759 lr=1.20e-04 gnorm=1.66 46 smp/s
+ep14 step14450/32940 loss=0.7194 acc=0.743 lr=1.20e-04 gnorm=1.68 46 smp/s
+ep14 step14500/32940 loss=0.6616 acc=0.745 lr=1.19e-04 gnorm=3.87 46 smp/s
+ep14 step14550/32940 loss=0.7032 acc=0.726 lr=1.19e-04 gnorm=1.46 46 smp/s
+ep14 step14600/32940 loss=0.6392 acc=0.743 lr=1.19e-04 gnorm=1.38 46 smp/s
+ep14 step14650/32940 loss=0.6006 acc=0.756 lr=1.18e-04 gnorm=4.19 46 smp/s
+ep14 step14700/32940 loss=0.6965 acc=0.723 lr=1.18e-04 gnorm=1.68 46 smp/s
+ep14 step14750/32940 loss=0.7120 acc=0.709 lr=1.18e-04 gnorm=2.39 46 smp/s
+ep14 step14800/32940 loss=0.6338 acc=0.755 lr=1.17e-04 gnorm=2.14 46 smp/s
+ep14 step14850/32940 loss=0.7459 acc=0.710 lr=1.17e-04 gnorm=4.50 46 smp/s
+ep14 step14900/32940 loss=0.7467 acc=0.704 lr=1.17e-04 gnorm=5.88 46 smp/s
+ep14 step14950/32940 loss=0.7574 acc=0.728 lr=1.16e-04 gnorm=2.43 46 smp/s
+ep14 step15000/32940 loss=0.7665 acc=0.709 lr=1.16e-04 gnorm=3.12 46 smp/s
+ep14 step15050/32940 loss=0.6716 acc=0.728 lr=1.16e-04 gnorm=2.67 46 smp/s
+ep14 step15100/32940 loss=0.7772 acc=0.721 lr=1.15e-04 gnorm=3.72 46 smp/s
+ep14 step15150/32940 loss=0.7647 acc=0.724 lr=1.15e-04 gnorm=10.41 46 smp/s
+ep14 step15200/32940 loss=0.6282 acc=0.758 lr=1.15e-04 gnorm=2.78 46 smp/s
+ep14 step15250/32940 loss=0.7189 acc=0.724 lr=1.14e-04 gnorm=1.94 46 smp/s
+ep14 step15300/32940 loss=0.6304 acc=0.753 lr=1.14e-04 gnorm=1.82 46 smp/s
+ep14 step15350/32940 loss=0.5532 acc=0.787 lr=1.14e-04 gnorm=1.60 46 smp/s
+ep15 step15400/32940 loss=0.7595 acc=0.700 lr=1.13e-04 gnorm=2.38 46 smp/s
+ep15 step15450/32940 loss=0.5827 acc=0.782 lr=1.13e-04 gnorm=5.77 46 smp/s
+ep15 step15500/32940 loss=0.6266 acc=0.750 lr=1.13e-04 gnorm=2.72 46 smp/s
+ep15 step15550/32940 loss=0.6466 acc=0.750 lr=1.12e-04 gnorm=3.15 46 smp/s
+ep15 step15600/32940 loss=0.7424 acc=0.698 lr=1.12e-04 gnorm=1.86 46 smp/s
+ep15 step15650/32940 loss=0.6092 acc=0.759 lr=1.12e-04 gnorm=2.09 46 smp/s
+ep15 step15700/32940 loss=0.8257 acc=0.712 lr=1.11e-04 gnorm=7.38 46 smp/s
+ep15 step15750/32940 loss=0.6973 acc=0.728 lr=1.11e-04 gnorm=2.58 46 smp/s
+ep15 step15800/32940 loss=0.6890 acc=0.745 lr=1.11e-04 gnorm=2.58 46 smp/s
+ep15 step15850/32940 loss=0.6302 acc=0.747 lr=1.10e-04 gnorm=2.68 46 smp/s
+ep15 step15900/32940 loss=0.6567 acc=0.730 lr=1.10e-04 gnorm=3.98 46 smp/s
+ep15 step15950/32940 loss=0.7347 acc=0.711 lr=1.10e-04 gnorm=1.68 46 smp/s
+ep15 step16000/32940 loss=0.7143 acc=0.726 lr=1.10e-04 gnorm=6.57 46 smp/s
+[eval @ 16000] WER=0.574 CER=0.531 SER=0.682 loss=0.556 content_acc=0.710 fill_rate=0.419 entropy=0.312 distinct=30
+   Full: <s> m i s t e r | q u i l t e r | i s | t h e | a p o s t l e | o f | t h e | m i d d l e | c l a s s e s | a n d | w e | a r e | g l a d | 
+   Hyp : mister quilter is the apostle of the middle classes and we are glad to welcome h
+   Ref : mister quilter is the apostle of the middle classes and we are glad to welcome h
+   ** new best WER=0.574 -> best.pt
+ep15 step16050/32940 loss=0.7617 acc=0.726 lr=1.09e-04 gnorm=2.60 46 smp/s
+ep15 step16100/32940 loss=0.6523 acc=0.749 lr=1.09e-04 gnorm=1.56 46 smp/s
+ep15 step16150/32940 loss=0.6592 acc=0.751 lr=1.09e-04 gnorm=1.75 46 smp/s
+ep15 step16200/32940 loss=0.5147 acc=0.785 lr=1.08e-04 gnorm=5.25 46 smp/s
+ep15 step16250/32940 loss=0.6575 acc=0.750 lr=1.08e-04 gnorm=5.38 46 smp/s
+ep15 step16300/32940 loss=0.6848 acc=0.741 lr=1.08e-04 gnorm=3.16 46 smp/s
+ep15 step16350/32940 loss=0.5832 acc=0.765 lr=1.07e-04 gnorm=4.12 46 smp/s
+ep15 step16400/32940 loss=0.7252 acc=0.704 lr=1.07e-04 gnorm=3.15 46 smp/s
+ep15 step16450/32940 loss=0.6331 acc=0.735 lr=1.07e-04 gnorm=1.48 46 smp/s
+ep16 step16500/32940 loss=0.5956 acc=0.770 lr=1.06e-04 gnorm=2.03 46 smp/s
+ep16 step16550/32940 loss=0.6440 acc=0.764 lr=1.06e-04 gnorm=1.60 46 smp/s
+ep16 step16600/32940 loss=0.6256 acc=0.755 lr=1.06e-04 gnorm=7.62 46 smp/s
+ep16 step16650/32940 loss=0.5870 acc=0.773 lr=1.05e-04 gnorm=3.26 46 smp/s
+ep16 step16700/32940 loss=0.6984 acc=0.734 lr=1.05e-04 gnorm=2.42 46 smp/s
+ep16 step16750/32940 loss=0.7205 acc=0.731 lr=1.05e-04 gnorm=4.58 46 smp/s
+ep16 step16800/32940 loss=0.5720 acc=0.764 lr=1.04e-04 gnorm=2.72 46 smp/s
+ep16 step16850/32940 loss=0.6811 acc=0.738 lr=1.04e-04 gnorm=3.42 46 smp/s
+ep16 step16900/32940 loss=0.4649 acc=0.825 lr=1.04e-04 gnorm=2.48 46 smp/s
+ep16 step16950/32940 loss=0.6697 acc=0.775 lr=1.03e-04 gnorm=3.64 46 smp/s
+ep16 step17000/32940 loss=0.7086 acc=0.735 lr=1.03e-04 gnorm=2.65 46 smp/s
+ep16 step17050/32940 loss=0.6285 acc=0.775 lr=1.03e-04 gnorm=2.95 46 smp/s
+ep16 step17100/32940 loss=0.6815 acc=0.734 lr=1.02e-04 gnorm=2.68 46 smp/s
+ep16 step17150/32940 loss=0.5651 acc=0.775 lr=1.02e-04 gnorm=3.11 46 smp/s
+ep16 step17200/32940 loss=0.5433 acc=0.788 lr=1.02e-04 gnorm=2.44 46 smp/s
+ep16 step17250/32940 loss=0.5391 acc=0.805 lr=1.01e-04 gnorm=2.59 46 smp/s
+ep16 step17300/32940 loss=0.5864 acc=0.776 lr=1.01e-04 gnorm=5.98 46 smp/s
+ep16 step17350/32940 loss=0.5588 acc=0.785 lr=1.01e-04 gnorm=2.34 46 smp/s
+ep16 step17400/32940 loss=0.5399 acc=0.798 lr=1.00e-04 gnorm=2.17 46 smp/s
+ep16 step17450/32940 loss=0.5149 acc=0.807 lr=1.00e-04 gnorm=3.70 46 smp/s
+ep16 step17500/32940 loss=0.5753 acc=0.797 lr=9.98e-05 gnorm=3.15 46 smp/s
+ep16 step17550/32940 loss=0.6168 acc=0.767 lr=9.95e-05 gnorm=4.98 46 smp/s
+ep17 step17600/32940 loss=0.4916 acc=0.803 lr=9.92e-05 gnorm=2.62 46 smp/s
+ep17 step17650/32940 loss=0.6957 acc=0.755 lr=9.88e-05 gnorm=2.22 46 smp/s
+ep17 step17700/32940 loss=0.5772 acc=0.778 lr=9.85e-05 gnorm=4.64 46 smp/s
+ep17 step17750/32940 loss=0.5043 acc=0.815 lr=9.82e-05 gnorm=1.82 46 smp/s
+ep17 step17800/32940 loss=0.7607 acc=0.720 lr=9.79e-05 gnorm=1.91 46 smp/s
+ep17 step17850/32940 loss=0.5642 acc=0.781 lr=9.75e-05 gnorm=2.00 46 smp/s
+ep17 step17900/32940 loss=0.6892 acc=0.745 lr=9.72e-05 gnorm=2.63 46 smp/s
+ep17 step17950/32940 loss=0.6317 acc=0.753 lr=9.69e-05 gnorm=4.22 46 smp/s
+ep17 step18000/32940 loss=0.5929 acc=0.759 lr=9.66e-05 gnorm=5.13 46 smp/s
+[eval @ 18000] WER=0.571 CER=0.505 SER=0.702 loss=0.548 content_acc=0.710 fill_rate=0.418 entropy=0.255 distinct=30
+   Full: <s> m i s t e r | q u i l t e r | i s | t h e | a p o s t l e | o f | t h e | m i d d l e | c l a s s e s | a n d | w e | a r e | g l a d | 
+   Hyp : mister quilter is the apostle of the middle classes and we are glad to welcome h
+   Ref : mister quilter is the apostle of the middle classes and we are glad to welcome h
+   ** new best WER=0.571 -> best.pt
+ep17 step18050/32940 loss=0.5722 acc=0.786 lr=9.63e-05 gnorm=5.01 46 smp/s
+ep17 step18100/32940 loss=0.7113 acc=0.739 lr=9.59e-05 gnorm=3.84 46 smp/s
+ep17 step18150/32940 loss=0.4892 acc=0.801 lr=9.56e-05 gnorm=4.24 46 smp/s
+ep17 step18200/32940 loss=0.4623 acc=0.823 lr=9.53e-05 gnorm=2.03 46 smp/s
+ep17 step18250/32940 loss=0.4677 acc=0.831 lr=9.50e-05 gnorm=2.06 46 smp/s
+ep17 step18300/32940 loss=0.6977 acc=0.764 lr=9.46e-05 gnorm=2.93 46 smp/s
+ep17 step18350/32940 loss=0.6104 acc=0.788 lr=9.43e-05 gnorm=2.74 46 smp/s
+ep17 step18400/32940 loss=0.5268 acc=0.803 lr=9.40e-05 gnorm=2.87 46 smp/s
+ep17 step18450/32940 loss=0.5026 acc=0.808 lr=9.37e-05 gnorm=2.99 46 smp/s
+ep17 step18500/32940 loss=0.6013 acc=0.787 lr=9.33e-05 gnorm=2.15 46 smp/s
+ep17 step18550/32940 loss=0.5231 acc=0.809 lr=9.30e-05 gnorm=1.54 46 smp/s
+ep17 step18600/32940 loss=0.5396 acc=0.786 lr=9.27e-05 gnorm=3.12 46 smp/s
+ep17 step18650/32940 loss=0.5295 acc=0.809 lr=9.24e-05 gnorm=2.05 46 smp/s
+ep18 step18700/32940 loss=0.4968 acc=0.810 lr=9.20e-05 gnorm=1.55 46 smp/s
+ep18 step18750/32940 loss=0.6070 acc=0.788 lr=9.17e-05 gnorm=2.31 46 smp/s
+ep18 step18800/32940 loss=0.6501 acc=0.773 lr=9.14e-05 gnorm=2.87 46 smp/s
+ep18 step18850/32940 loss=0.5238 acc=0.789 lr=9.11e-05 gnorm=3.97 46 smp/s
+ep18 step18900/32940 loss=0.5092 acc=0.808 lr=9.08e-05 gnorm=4.67 46 smp/s
+ep18 step18950/32940 loss=0.6699 acc=0.761 lr=9.04e-05 gnorm=5.16 46 smp/s
+ep18 step19000/32940 loss=0.4681 acc=0.833 lr=9.01e-05 gnorm=2.17 46 smp/s
+ep18 step19050/32940 loss=0.6070 acc=0.767 lr=8.98e-05 gnorm=3.46 46 smp/s
+ep18 step19100/32940 loss=0.5008 acc=0.806 lr=8.95e-05 gnorm=2.29 46 smp/s
+ep18 step19150/32940 loss=0.8412 acc=0.700 lr=8.91e-05 gnorm=3.34 46 smp/s
+ep18 step19200/32940 loss=0.4630 acc=0.824 lr=8.88e-05 gnorm=4.60 46 smp/s
+ep18 step19250/32940 loss=0.6566 acc=0.773 lr=8.85e-05 gnorm=2.20 46 smp/s
+ep18 step19300/32940 loss=0.4390 acc=0.833 lr=8.82e-05 gnorm=3.27 46 smp/s
+ep18 step19350/32940 loss=0.4402 acc=0.827 lr=8.78e-05 gnorm=2.46 46 smp/s
+ep18 step19400/32940 loss=0.5651 acc=0.795 lr=8.75e-05 gnorm=3.28 46 smp/s
+ep18 step19450/32940 loss=0.5859 acc=0.801 lr=8.72e-05 gnorm=3.60 46 smp/s
+ep18 step19500/32940 loss=0.6594 acc=0.754 lr=8.69e-05 gnorm=2.27 46 smp/s
+ep18 step19550/32940 loss=0.4711 acc=0.826 lr=8.66e-05 gnorm=2.58 46 smp/s
+ep18 step19600/32940 loss=0.3831 acc=0.871 lr=8.62e-05 gnorm=2.43 46 smp/s
+ep18 step19650/32940 loss=0.5332 acc=0.806 lr=8.59e-05 gnorm=5.04 46 smp/s
+ep18 step19700/32940 loss=0.5275 acc=0.795 lr=8.56e-05 gnorm=2.43 46 smp/s
+ep18 step19750/32940 loss=0.5163 acc=0.805 lr=8.53e-05 gnorm=3.85 46 smp/s
+ep19 step19800/32940 loss=0.3531 acc=0.869 lr=8.49e-05 gnorm=2.94 46 smp/s
+ep19 step19850/32940 loss=0.6950 acc=0.747 lr=8.46e-05 gnorm=3.59 46 smp/s
+ep19 step19900/32940 loss=0.4172 acc=0.838 lr=8.43e-05 gnorm=2.93 46 smp/s
+ep19 step19950/32940 loss=0.6566 acc=0.761 lr=8.40e-05 gnorm=1.96 46 smp/s
+ep19 step20000/32940 loss=0.6082 acc=0.788 lr=8.36e-05 gnorm=3.03 46 smp/s
+[eval @ 20000] WER=0.354 CER=0.317 SER=0.568 loss=0.404 content_acc=0.813 fill_rate=0.415 entropy=0.194 distinct=30
+   Full: <s> m i s t e r | q u i l t e r | i s | t h e | a p o s t l e | o f | t h e | m i d d l e | c l a s s e s | a n d | w e | a r e | g l a d | 
+   Hyp : mister quilter is the apostle of the middle classes and we are glad to welcome h
+   Ref : mister quilter is the apostle of the middle classes and we are glad to welcome h
+   ** new best WER=0.354 -> best.pt
+ep19 step20050/32940 loss=0.4504 acc=0.825 lr=8.33e-05 gnorm=2.09 46 smp/s
+ep19 step20100/32940 loss=0.6668 acc=0.756 lr=8.30e-05 gnorm=3.47 46 smp/s
+ep19 step20150/32940 loss=0.5272 acc=0.816 lr=8.27e-05 gnorm=1.44 46 smp/s
+ep19 step20200/32940 loss=0.5276 acc=0.818 lr=8.24e-05 gnorm=2.68 46 smp/s
+ep19 step20250/32940 loss=0.3927 acc=0.863 lr=8.20e-05 gnorm=1.66 46 smp/s
+ep19 step20300/32940 loss=0.4042 acc=0.874 lr=8.17e-05 gnorm=4.29 46 smp/s
+ep19 step20350/32940 loss=0.5163 acc=0.797 lr=8.14e-05 gnorm=1.85 46 smp/s
+ep19 step20400/32940 loss=0.4487 acc=0.834 lr=8.11e-05 gnorm=2.28 46 smp/s
+ep19 step20450/32940 loss=0.6174 acc=0.765 lr=8.07e-05 gnorm=2.53 46 smp/s
+ep19 step20500/32940 loss=0.4475 acc=0.809 lr=8.04e-05 gnorm=3.08 46 smp/s
+ep19 step20550/32940 loss=0.4989 acc=0.809 lr=8.01e-05 gnorm=1.36 46 smp/s
+ep19 step20600/32940 loss=0.5868 acc=0.780 lr=7.98e-05 gnorm=3.05 46 smp/s
+ep19 step20650/32940 loss=0.6124 acc=0.815 lr=7.94e-05 gnorm=2.16 46 smp/s
+ep19 step20700/32940 loss=0.4518 acc=0.834 lr=7.91e-05 gnorm=2.38 46 smp/s
+ep19 step20750/32940 loss=0.5073 acc=0.848 lr=7.88e-05 gnorm=3.34 46 smp/s
+ep19 step20800/32940 loss=0.4606 acc=0.827 lr=7.85e-05 gnorm=4.92 46 smp/s
+ep19 step20850/32940 loss=0.3879 acc=0.848 lr=7.82e-05 gnorm=2.63 46 smp/s
+ep20 step20900/32940 loss=0.4496 acc=0.836 lr=7.78e-05 gnorm=2.26 46 smp/s
+ep20 step20950/32940 loss=0.3795 acc=0.863 lr=7.75e-05 gnorm=2.43 46 smp/s
+ep20 step21000/32940 loss=0.4547 acc=0.829 lr=7.72e-05 gnorm=2.08 46 smp/s
+ep20 step21050/32940 loss=0.5621 acc=0.799 lr=7.69e-05 gnorm=2.25 46 smp/s
+ep20 step21100/32940 loss=0.7307 acc=0.732 lr=7.65e-05 gnorm=1.71 46 smp/s
+ep20 step21150/32940 loss=0.3937 acc=0.887 lr=7.62e-05 gnorm=1.64 46 smp/s
+ep20 step21200/32940 loss=0.4377 acc=0.857 lr=7.59e-05 gnorm=4.74 46 smp/s
+ep20 step21250/32940 loss=0.4554 acc=0.829 lr=7.56e-05 gnorm=2.22 46 smp/s
+ep20 step21300/32940 loss=0.4422 acc=0.831 lr=7.52e-05 gnorm=2.73 46 smp/s
+ep20 step21350/32940 loss=0.5369 acc=0.806 lr=7.49e-05 gnorm=2.05 46 smp/s
+ep20 step21400/32940 loss=0.3944 acc=0.845 lr=7.46e-05 gnorm=4.65 46 smp/s
+ep20 step21450/32940 loss=0.4646 acc=0.834 lr=7.43e-05 gnorm=3.21 46 smp/s
+ep20 step21500/32940 loss=0.4693 acc=0.824 lr=7.39e-05 gnorm=3.24 46 smp/s
+ep20 step21550/32940 loss=0.5088 acc=0.829 lr=7.36e-05 gnorm=1.92 46 smp/s
+ep20 step21600/32940 loss=0.3567 acc=0.863 lr=7.33e-05 gnorm=3.70 46 smp/s
+ep20 step21650/32940 loss=0.4824 acc=0.814 lr=7.30e-05 gnorm=4.49 46 smp/s
+ep20 step21700/32940 loss=0.4368 acc=0.850 lr=7.27e-05 gnorm=2.13 46 smp/s
+ep20 step21750/32940 loss=0.5696 acc=0.804 lr=7.23e-05 gnorm=4.22 46 smp/s
+ep20 step21800/32940 loss=0.4987 acc=0.800 lr=7.20e-05 gnorm=2.65 46 smp/s
+ep20 step21850/32940 loss=0.5884 acc=0.818 lr=7.17e-05 gnorm=2.04 46 smp/s
+ep20 step21900/32940 loss=0.5721 acc=0.791 lr=7.14e-05 gnorm=4.81 47 smp/s
+ep20 step21950/32940 loss=0.5295 acc=0.848 lr=7.10e-05 gnorm=4.14 47 smp/s
+ep21 step22000/32940 loss=0.4739 acc=0.823 lr=7.07e-05 gnorm=1.57 47 smp/s
+[eval @ 22000] WER=0.254 CER=0.205 SER=0.510 loss=0.360 content_acc=0.820 fill_rate=0.414 entropy=0.191 distinct=30
+   Full: <s> m i s t e r | q u i l t e r | i s | t h e | a p o s t l e | o f | t h e | m i d d l e | c l a s s e s | a n d | w e | a r e | g l a d | 
+   Hyp : mister quilter is the apostle of the middle classes and we are glad to welcome h
+   Ref : mister quilter is the apostle of the middle classes and we are glad to welcome h
+   ** new best WER=0.254 -> best.pt
+ep21 step22050/32940 loss=0.6031 acc=0.776 lr=7.04e-05 gnorm=1.74 46 smp/s
+ep21 step22100/32940 loss=0.4546 acc=0.850 lr=7.01e-05 gnorm=2.97 46 smp/s
+ep21 step22150/32940 loss=0.6316 acc=0.776 lr=6.97e-05 gnorm=2.42 46 smp/s
+ep21 step22200/32940 loss=0.2180 acc=0.921 lr=6.94e-05 gnorm=1.77 46 smp/s
+ep21 step22250/32940 loss=0.3910 acc=0.869 lr=6.91e-05 gnorm=1.70 46 smp/s
+ep21 step22300/32940 loss=0.4396 acc=0.836 lr=6.88e-05 gnorm=3.03 46 smp/s
+ep21 step22350/32940 loss=0.3542 acc=0.877 lr=6.85e-05 gnorm=1.70 46 smp/s
+ep21 step22400/32940 loss=0.3548 acc=0.874 lr=6.81e-05 gnorm=2.74 46 smp/s
+ep21 step22450/32940 loss=0.4340 acc=0.831 lr=6.78e-05 gnorm=2.98 46 smp/s
+ep21 step22500/32940 loss=0.6185 acc=0.783 lr=6.75e-05 gnorm=2.13 46 smp/s
+ep21 step22550/32940 loss=0.3915 acc=0.856 lr=6.72e-05 gnorm=3.18 46 smp/s
+ep21 step22600/32940 loss=0.5439 acc=0.816 lr=6.68e-05 gnorm=3.10 46 smp/s
+ep21 step22650/32940 loss=0.4112 acc=0.845 lr=6.65e-05 gnorm=1.80 46 smp/s
+ep21 step22700/32940 loss=0.6204 acc=0.764 lr=6.62e-05 gnorm=2.43 46 smp/s
+ep21 step22750/32940 loss=0.4080 acc=0.839 lr=6.59e-05 gnorm=2.95 46 smp/s
+ep21 step22800/32940 loss=0.4641 acc=0.828 lr=6.55e-05 gnorm=3.10 46 smp/s
+ep21 step22850/32940 loss=0.4520 acc=0.839 lr=6.52e-05 gnorm=1.71 46 smp/s
+ep21 step22900/32940 loss=0.4653 acc=0.825 lr=6.49e-05 gnorm=1.78 46 smp/s
+ep21 step22950/32940 loss=0.4186 acc=0.836 lr=6.46e-05 gnorm=2.19 46 smp/s
+ep21 step23000/32940 loss=0.4793 acc=0.820 lr=6.43e-05 gnorm=1.83 46 smp/s
+ep21 step23050/32940 loss=0.4039 acc=0.837 lr=6.39e-05 gnorm=3.42 46 smp/s
+ep22 step23100/32940 loss=0.3872 acc=0.851 lr=6.36e-05 gnorm=2.14 46 smp/s
+ep22 step23150/32940 loss=0.6389 acc=0.790 lr=6.33e-05 gnorm=2.31 46 smp/s
+ep22 step23200/32940 loss=0.3618 acc=0.872 lr=6.30e-05 gnorm=1.91 46 smp/s
+ep22 step23250/32940 loss=0.5033 acc=0.840 lr=6.26e-05 gnorm=2.01 46 smp/s
+ep22 step23300/32940 loss=0.3975 acc=0.858 lr=6.23e-05 gnorm=3.48 46 smp/s
+ep22 step23350/32940 loss=0.4909 acc=0.812 lr=6.20e-05 gnorm=1.98 47 smp/s
+ep22 step23400/32940 loss=0.3865 acc=0.876 lr=6.17e-05 gnorm=1.90 47 smp/s
+ep22 step23450/32940 loss=0.3980 acc=0.871 lr=6.13e-05 gnorm=2.80 47 smp/s
+ep22 step23500/32940 loss=0.6368 acc=0.801 lr=6.10e-05 gnorm=3.86 47 smp/s
+ep22 step23550/32940 loss=0.4333 acc=0.829 lr=6.07e-05 gnorm=3.52 47 smp/s
+ep22 step23600/32940 loss=0.4095 acc=0.856 lr=6.04e-05 gnorm=2.92 47 smp/s
+ep22 step23650/32940 loss=0.4480 acc=0.835 lr=6.01e-05 gnorm=1.87 47 smp/s
+ep22 step23700/32940 loss=0.4311 acc=0.846 lr=5.97e-05 gnorm=2.20 47 smp/s
+ep22 step23750/32940 loss=0.4272 acc=0.878 lr=5.94e-05 gnorm=1.86 47 smp/s
+ep22 step23800/32940 loss=0.3075 acc=0.911 lr=5.91e-05 gnorm=3.36 47 smp/s
+ep22 step23850/32940 loss=0.6817 acc=0.752 lr=5.88e-05 gnorm=1.89 47 smp/s
+ep22 step23900/32940 loss=0.4529 acc=0.836 lr=5.84e-05 gnorm=2.92 47 smp/s
+ep22 step23950/32940 loss=0.5943 acc=0.788 lr=5.81e-05 gnorm=3.49 47 smp/s
+ep22 step24000/32940 loss=0.3449 acc=0.882 lr=5.78e-05 gnorm=2.10 47 smp/s
+[eval @ 24000] WER=0.300 CER=0.295 SER=0.542 loss=0.362 content_acc=0.831 fill_rate=0.414 entropy=0.150 distinct=30
+   Full: <s> m i s t e r | q u i l t e r | i s | t h e | a p o s t l e | o f | t h e | m i d d l e | c l a s s e s | a n d | w e | a r e | g l a d | 
+   Hyp : mister quilter is the apostle of the middle classes and we are glad to welcome h
+   Ref : mister quilter is the apostle of the middle classes and we are glad to welcome h
+ep22 step24050/32940 loss=0.4014 acc=0.857 lr=5.75e-05 gnorm=3.16 46 smp/s
+ep22 step24100/32940 loss=0.5305 acc=0.796 lr=5.71e-05 gnorm=2.25 46 smp/s
+ep22 step24150/32940 loss=0.5502 acc=0.811 lr=5.68e-05 gnorm=1.49 46 smp/s
+ep23 step24200/32940 loss=0.3513 acc=0.884 lr=5.65e-05 gnorm=2.98 46 smp/s
+ep23 step24250/32940 loss=0.4654 acc=0.822 lr=5.62e-05 gnorm=4.57 46 smp/s
+ep23 step24300/32940 loss=0.3299 acc=0.881 lr=5.59e-05 gnorm=1.94 46 smp/s
+ep23 step24350/32940 loss=0.4040 acc=0.847 lr=5.55e-05 gnorm=4.80 47 smp/s
+ep23 step24400/32940 loss=0.3575 acc=0.880 lr=5.52e-05 gnorm=1.91 47 smp/s
+ep23 step24450/32940 loss=0.2291 acc=0.928 lr=5.49e-05 gnorm=2.12 47 smp/s
+ep23 step24500/32940 loss=0.2976 acc=0.893 lr=5.46e-05 gnorm=2.97 47 smp/s
+ep23 step24550/32940 loss=0.3561 acc=0.874 lr=5.42e-05 gnorm=2.67 47 smp/s
+ep23 step24600/32940 loss=0.5507 acc=0.810 lr=5.39e-05 gnorm=2.75 47 smp/s
+ep23 step24650/32940 loss=0.4505 acc=0.837 lr=5.36e-05 gnorm=1.86 47 smp/s
+ep23 step24700/32940 loss=0.3673 acc=0.847 lr=5.33e-05 gnorm=3.87 47 smp/s
+ep23 step24750/32940 loss=0.5502 acc=0.792 lr=5.29e-05 gnorm=1.97 47 smp/s
+ep23 step24800/32940 loss=0.5392 acc=0.796 lr=5.26e-05 gnorm=2.23 47 smp/s
+ep23 step24850/32940 loss=0.4106 acc=0.900 lr=5.23e-05 gnorm=2.08 47 smp/s
+ep23 step24900/32940 loss=0.7028 acc=0.777 lr=5.20e-05 gnorm=1.46 47 smp/s
+ep23 step24950/32940 loss=0.4442 acc=0.855 lr=5.16e-05 gnorm=4.28 47 smp/s
+ep23 step25000/32940 loss=0.4607 acc=0.852 lr=5.13e-05 gnorm=2.20 47 smp/s
+ep23 step25050/32940 loss=0.5192 acc=0.820 lr=5.10e-05 gnorm=1.63 47 smp/s
+ep23 step25100/32940 loss=0.4095 acc=0.869 lr=5.07e-05 gnorm=4.42 47 smp/s
+ep23 step25150/32940 loss=0.4413 acc=0.848 lr=5.04e-05 gnorm=2.91 47 smp/s
+ep23 step25200/32940 loss=0.3168 acc=0.904 lr=5.00e-05 gnorm=1.63 47 smp/s
+ep23 step25250/32940 loss=0.2677 acc=0.906 lr=4.97e-05 gnorm=1.89 47 smp/s
+ep24 step25300/32940 loss=0.4891 acc=0.833 lr=4.94e-05 gnorm=2.88 47 smp/s
+ep24 step25350/32940 loss=0.4646 acc=0.817 lr=4.91e-05 gnorm=1.68 47 smp/s
+ep24 step25400/32940 loss=0.4773 acc=0.807 lr=4.87e-05 gnorm=3.23 47 smp/s
+ep24 step25450/32940 loss=0.3569 acc=0.862 lr=4.84e-05 gnorm=2.59 47 smp/s
+ep24 step25500/32940 loss=0.4758 acc=0.834 lr=4.81e-05 gnorm=2.33 47 smp/s
+ep24 step25550/32940 loss=0.4282 acc=0.878 lr=4.78e-05 gnorm=3.06 47 smp/s
+ep24 step25600/32940 loss=0.3331 acc=0.871 lr=4.74e-05 gnorm=1.59 47 smp/s
+ep24 step25650/32940 loss=0.3158 acc=0.894 lr=4.71e-05 gnorm=2.64 47 smp/s
+ep24 step25700/32940 loss=0.3912 acc=0.861 lr=4.68e-05 gnorm=2.91 47 smp/s
+ep24 step25750/32940 loss=0.5098 acc=0.818 lr=4.65e-05 gnorm=2.92 47 smp/s
+ep24 step25800/32940 loss=0.3457 acc=0.895 lr=4.62e-05 gnorm=2.44 47 smp/s
+ep24 step25850/32940 loss=0.3455 acc=0.895 lr=4.58e-05 gnorm=3.24 47 smp/s
+ep24 step25900/32940 loss=0.5388 acc=0.792 lr=4.55e-05 gnorm=1.95 47 smp/s
+ep24 step25950/32940 loss=0.3502 acc=0.861 lr=4.52e-05 gnorm=2.92 47 smp/s
+ep24 step26000/32940 loss=0.4164 acc=0.843 lr=4.49e-05 gnorm=2.26 47 smp/s
+[eval @ 26000] WER=0.214 CER=0.165 SER=0.476 loss=0.349 content_acc=0.836 fill_rate=0.415 entropy=0.168 distinct=30
+   Full: <s> m i s t e r | q u i l t e r | i s | t h e | a p o s t l e | o f | t h e | m i d d l e | c l a s s e s | a n d | w e | a r e | g l a d | 
+   Hyp : mister quilter is the apostle of the middle classes and we are glad to welcome h
+   Ref : mister quilter is the apostle of the middle classes and we are glad to welcome h
+   ** new best WER=0.214 -> best.pt
+ep24 step26050/32940 loss=0.3866 acc=0.869 lr=4.45e-05 gnorm=1.33 47 smp/s
+ep24 step26100/32940 loss=0.3285 acc=0.885 lr=4.42e-05 gnorm=2.32 47 smp/s
+ep24 step26150/32940 loss=0.4816 acc=0.853 lr=4.39e-05 gnorm=1.45 47 smp/s
+ep24 step26200/32940 loss=0.4699 acc=0.843 lr=4.36e-05 gnorm=2.25 47 smp/s
+ep24 step26250/32940 loss=0.2823 acc=0.891 lr=4.32e-05 gnorm=4.39 47 smp/s
+ep24 step26300/32940 loss=0.3766 acc=0.876 lr=4.29e-05 gnorm=2.31 47 smp/s
+ep24 step26350/32940 loss=0.3746 acc=0.887 lr=4.26e-05 gnorm=1.34 47 smp/s
+ep25 step26400/32940 loss=0.3000 acc=0.895 lr=4.23e-05 gnorm=3.07 47 smp/s
+ep25 step26450/32940 loss=0.4153 acc=0.856 lr=4.20e-05 gnorm=1.57 47 smp/s
+ep25 step26500/32940 loss=0.5597 acc=0.821 lr=4.16e-05 gnorm=2.83 47 smp/s
+ep25 step26550/32940 loss=0.2784 acc=0.907 lr=4.13e-05 gnorm=2.09 47 smp/s
+ep25 step26600/32940 loss=0.4396 acc=0.845 lr=4.10e-05 gnorm=1.84 47 smp/s
+ep25 step26650/32940 loss=0.4344 acc=0.850 lr=4.07e-05 gnorm=1.40 47 smp/s
+ep25 step26700/32940 loss=0.2788 acc=0.907 lr=4.03e-05 gnorm=2.49 47 smp/s
+ep25 step26750/32940 loss=0.5448 acc=0.840 lr=4.00e-05 gnorm=1.81 47 smp/s
+ep25 step26800/32940 loss=0.5112 acc=0.827 lr=3.97e-05 gnorm=2.37 47 smp/s
+ep25 step26850/32940 loss=0.2796 acc=0.917 lr=3.94e-05 gnorm=2.41 47 smp/s
+ep25 step26900/32940 loss=0.3031 acc=0.891 lr=3.90e-05 gnorm=1.50 47 smp/s
+ep25 step26950/32940 loss=0.4761 acc=0.827 lr=3.87e-05 gnorm=1.21 47 smp/s
+ep25 step27000/32940 loss=0.4234 acc=0.853 lr=3.84e-05 gnorm=3.05 47 smp/s
+ep25 step27050/32940 loss=0.3705 acc=0.879 lr=3.81e-05 gnorm=2.09 47 smp/s
+ep25 step27100/32940 loss=0.3443 acc=0.886 lr=3.78e-05 gnorm=2.33 47 smp/s
+ep25 step27150/32940 loss=0.2980 acc=0.890 lr=3.74e-05 gnorm=1.72 47 smp/s
+ep25 step27200/32940 loss=0.4613 acc=0.852 lr=3.71e-05 gnorm=1.80 47 smp/s
+ep25 step27250/32940 loss=0.3878 acc=0.874 lr=3.68e-05 gnorm=1.20 47 smp/s
+ep25 step27300/32940 loss=0.3173 acc=0.897 lr=3.65e-05 gnorm=2.45 47 smp/s
+ep25 step27350/32940 loss=0.2657 acc=0.897 lr=3.61e-05 gnorm=2.63 47 smp/s
+ep25 step27400/32940 loss=0.3797 acc=0.878 lr=3.58e-05 gnorm=1.78 47 smp/s
+ep25 step27450/32940 loss=0.4387 acc=0.831 lr=3.55e-05 gnorm=1.63 47 smp/s
+ep26 step27500/32940 loss=0.4437 acc=0.835 lr=3.52e-05 gnorm=2.68 47 smp/s
+ep26 step27550/32940 loss=0.3154 acc=0.884 lr=3.48e-05 gnorm=7.21 47 smp/s
+ep26 step27600/32940 loss=0.4330 acc=0.847 lr=3.45e-05 gnorm=1.55 47 smp/s
+ep26 step27650/32940 loss=0.5059 acc=0.822 lr=3.42e-05 gnorm=2.38 47 smp/s
+ep26 step27700/32940 loss=0.3695 acc=0.889 lr=3.39e-05 gnorm=2.07 47 smp/s
+ep26 step27750/32940 loss=0.1547 acc=0.948 lr=3.35e-05 gnorm=2.33 47 smp/s
+ep26 step27800/32940 loss=0.5826 acc=0.811 lr=3.32e-05 gnorm=2.89 47 smp/s
+ep26 step27850/32940 loss=0.5200 acc=0.834 lr=3.29e-05 gnorm=1.73 47 smp/s
+ep26 step27900/32940 loss=0.2625 acc=0.897 lr=3.26e-05 gnorm=1.73 47 smp/s
+ep26 step27950/32940 loss=0.4291 acc=0.832 lr=3.23e-05 gnorm=2.55 47 smp/s
+ep26 step28000/32940 loss=0.3815 acc=0.848 lr=3.19e-05 gnorm=1.36 47 smp/s
+[eval @ 28000] WER=0.205 CER=0.183 SER=0.512 loss=0.341 content_acc=0.838 fill_rate=0.414 entropy=0.143 distinct=30
+   Full: <s> m i s t e r | q u i l t e r | i s | t h e | a p o s t l e | o f | t h e | m i d d l e | c l a s s e s | a n d | w e | a r e | g l a d | 
+   Hyp : mister quilter is the apostle of the middle classes and we are glad to welcome h
+   Ref : mister quilter is the apostle of the middle classes and we are glad to welcome h
+   ** new best WER=0.205 -> best.pt
+ep26 step28050/32940 loss=0.2658 acc=0.894 lr=3.16e-05 gnorm=1.93 47 smp/s
+ep26 step28100/32940 loss=0.3185 acc=0.880 lr=3.13e-05 gnorm=1.81 47 smp/s
+ep26 step28150/32940 loss=0.2483 acc=0.905 lr=3.10e-05 gnorm=2.56 47 smp/s
+ep26 step28200/32940 loss=0.4426 acc=0.853 lr=3.06e-05 gnorm=2.23 47 smp/s
+ep26 step28250/32940 loss=0.2583 acc=0.896 lr=3.03e-05 gnorm=1.85 47 smp/s
+ep26 step28300/32940 loss=0.1995 acc=0.956 lr=3.00e-05 gnorm=1.64 47 smp/s
+ep26 step28350/32940 loss=0.3375 acc=0.914 lr=2.97e-05 gnorm=1.44 47 smp/s
+ep26 step28400/32940 loss=0.2309 acc=0.920 lr=2.93e-05 gnorm=1.82 47 smp/s
+ep26 step28450/32940 loss=0.3630 acc=0.872 lr=2.90e-05 gnorm=1.46 47 smp/s
+ep26 step28500/32940 loss=0.2663 acc=0.895 lr=2.87e-05 gnorm=1.92 47 smp/s
+ep27 step28550/32940 loss=0.3386 acc=0.901 lr=2.84e-05 gnorm=1.32 47 smp/s
+ep27 step28600/32940 loss=0.3047 acc=0.864 lr=2.81e-05 gnorm=1.92 47 smp/s
+ep27 step28650/32940 loss=0.6060 acc=0.794 lr=2.77e-05 gnorm=2.62 47 smp/s
+ep27 step28700/32940 loss=0.2589 acc=0.915 lr=2.74e-05 gnorm=1.69 47 smp/s
+ep27 step28750/32940 loss=0.4319 acc=0.853 lr=2.71e-05 gnorm=2.08 47 smp/s
+ep27 step28800/32940 loss=0.3332 acc=0.884 lr=2.68e-05 gnorm=1.84 47 smp/s
+ep27 step28850/32940 loss=0.2942 acc=0.895 lr=2.64e-05 gnorm=1.76 47 smp/s
+ep27 step28900/32940 loss=0.4003 acc=0.844 lr=2.61e-05 gnorm=1.54 47 smp/s
+ep27 step28950/32940 loss=0.5122 acc=0.822 lr=2.58e-05 gnorm=1.76 47 smp/s
+ep27 step29000/32940 loss=0.4407 acc=0.838 lr=2.55e-05 gnorm=1.56 47 smp/s
+ep27 step29050/32940 loss=0.4425 acc=0.862 lr=2.51e-05 gnorm=2.38 47 smp/s
+ep27 step29100/32940 loss=0.4357 acc=0.871 lr=2.48e-05 gnorm=1.45 47 smp/s
+ep27 step29150/32940 loss=0.3617 acc=0.877 lr=2.45e-05 gnorm=1.56 47 smp/s
+ep27 step29200/32940 loss=0.4952 acc=0.868 lr=2.42e-05 gnorm=1.95 47 smp/s
+ep27 step29250/32940 loss=0.3292 acc=0.904 lr=2.39e-05 gnorm=1.48 47 smp/s
+ep27 step29300/32940 loss=0.3254 acc=0.889 lr=2.35e-05 gnorm=1.63 47 smp/s
+ep27 step29350/32940 loss=0.4324 acc=0.842 lr=2.32e-05 gnorm=1.53 47 smp/s
+ep27 step29400/32940 loss=0.3308 acc=0.886 lr=2.29e-05 gnorm=2.36 47 smp/s
+ep27 step29450/32940 loss=0.3285 acc=0.898 lr=2.26e-05 gnorm=1.84 47 smp/s
+ep27 step29500/32940 loss=0.5827 acc=0.821 lr=2.22e-05 gnorm=2.27 47 smp/s
+ep27 step29550/32940 loss=0.2909 acc=0.911 lr=2.19e-05 gnorm=1.35 47 smp/s
+ep27 step29600/32940 loss=0.3261 acc=0.868 lr=2.16e-05 gnorm=2.18 47 smp/s
+ep28 step29650/32940 loss=0.2915 acc=0.893 lr=2.13e-05 gnorm=1.50 47 smp/s
+ep28 step29700/32940 loss=0.2550 acc=0.910 lr=2.09e-05 gnorm=2.28 47 smp/s
+ep28 step29750/32940 loss=0.3229 acc=0.896 lr=2.06e-05 gnorm=1.51 47 smp/s
+ep28 step29800/32940 loss=0.4964 acc=0.827 lr=2.03e-05 gnorm=1.58 47 smp/s
+ep28 step29850/32940 loss=0.3818 acc=0.853 lr=2.00e-05 gnorm=1.42 47 smp/s
+ep28 step29900/32940 loss=0.4327 acc=0.842 lr=1.97e-05 gnorm=1.96 47 smp/s
+ep28 step29950/32940 loss=0.2395 acc=0.898 lr=1.93e-05 gnorm=1.42 47 smp/s
+ep28 step30000/32940 loss=0.2340 acc=0.920 lr=1.90e-05 gnorm=2.11 47 smp/s
+[eval @ 30000] WER=0.233 CER=0.219 SER=0.544 loss=0.333 content_acc=0.846 fill_rate=0.413 entropy=0.135 distinct=30
+   Full: <s> m i s t e r | q u i l t e r | i s | t h e | a p o s t l e | o f | t h e | m i d d l e | c l a s s e s | a n d | w e | a r e | g l a d | 
+   Hyp : mister quilter is the apostle of the middle classes and we are glad to welcome h
+   Ref : mister quilter is the apostle of the middle classes and we are glad to welcome h
+ep28 step30050/32940 loss=0.2185 acc=0.922 lr=1.87e-05 gnorm=1.24 47 smp/s
+ep28 step30100/32940 loss=0.5489 acc=0.826 lr=1.84e-05 gnorm=1.37 47 smp/s
+ep28 step30150/32940 loss=0.3120 acc=0.888 lr=1.80e-05 gnorm=1.38 47 smp/s
+ep28 step30200/32940 loss=0.3304 acc=0.875 lr=1.77e-05 gnorm=1.63 47 smp/s
+ep28 step30250/32940 loss=0.2199 acc=0.924 lr=1.74e-05 gnorm=1.32 47 smp/s
+ep28 step30300/32940 loss=0.2857 acc=0.891 lr=1.71e-05 gnorm=2.72 47 smp/s
+ep28 step30350/32940 loss=0.3411 acc=0.886 lr=1.67e-05 gnorm=1.37 47 smp/s
+ep28 step30400/32940 loss=0.5002 acc=0.845 lr=1.64e-05 gnorm=1.40 47 smp/s
+ep28 step30450/32940 loss=0.2012 acc=0.927 lr=1.61e-05 gnorm=3.12 47 smp/s
+ep28 step30500/32940 loss=0.2035 acc=0.916 lr=1.58e-05 gnorm=2.27 47 smp/s
+ep28 step30550/32940 loss=0.3349 acc=0.890 lr=1.54e-05 gnorm=1.63 47 smp/s
+ep28 step30600/32940 loss=0.1852 acc=0.956 lr=1.51e-05 gnorm=1.03 47 smp/s
+ep28 step30650/32940 loss=0.4482 acc=0.838 lr=1.48e-05 gnorm=2.87 47 smp/s
+ep28 step30700/32940 loss=0.3970 acc=0.861 lr=1.45e-05 gnorm=1.57 47 smp/s
+ep29 step30750/32940 loss=0.3344 acc=0.892 lr=1.42e-05 gnorm=2.76 47 smp/s
+ep29 step30800/32940 loss=0.2626 acc=0.899 lr=1.38e-05 gnorm=1.29 47 smp/s
+ep29 step30850/32940 loss=0.4460 acc=0.865 lr=1.35e-05 gnorm=1.56 47 smp/s
+ep29 step30900/32940 loss=0.3199 acc=0.901 lr=1.32e-05 gnorm=1.19 47 smp/s
+ep29 step30950/32940 loss=0.2611 acc=0.918 lr=1.29e-05 gnorm=1.66 47 smp/s
+ep29 step31000/32940 loss=0.2848 acc=0.896 lr=1.25e-05 gnorm=1.24 47 smp/s
+ep29 step31050/32940 loss=0.1950 acc=0.932 lr=1.22e-05 gnorm=1.07 47 smp/s
+ep29 step31100/32940 loss=0.3223 acc=0.902 lr=1.19e-05 gnorm=2.01 47 smp/s
+ep29 step31150/32940 loss=0.2468 acc=0.893 lr=1.16e-05 gnorm=1.47 47 smp/s
+ep29 step31200/32940 loss=0.1932 acc=0.937 lr=1.12e-05 gnorm=1.49 47 smp/s
+ep29 step31250/32940 loss=0.4551 acc=0.857 lr=1.09e-05 gnorm=1.51 47 smp/s
+ep29 step31300/32940 loss=0.3922 acc=0.886 lr=1.06e-05 gnorm=1.89 47 smp/s
+ep29 step31350/32940 loss=0.4017 acc=0.873 lr=1.03e-05 gnorm=1.38 47 smp/s
+ep29 step31400/32940 loss=0.4751 acc=0.815 lr=9.95e-06 gnorm=2.11 47 smp/s
+ep29 step31450/32940 loss=0.4054 acc=0.876 lr=9.63e-06 gnorm=2.94 47 smp/s
+ep29 step31500/32940 loss=0.2073 acc=0.924 lr=9.31e-06 gnorm=1.25 47 smp/s
+ep29 step31550/32940 loss=0.2345 acc=0.922 lr=8.99e-06 gnorm=1.13 47 smp/s
+ep29 step31600/32940 loss=0.2202 acc=0.915 lr=8.66e-06 gnorm=1.37 47 smp/s
+ep29 step31650/32940 loss=0.2913 acc=0.910 lr=8.34e-06 gnorm=1.15 47 smp/s
+ep29 step31700/32940 loss=0.3232 acc=0.880 lr=8.02e-06 gnorm=1.21 47 smp/s
+ep29 step31750/32940 loss=0.1885 acc=0.927 lr=7.69e-06 gnorm=1.58 47 smp/s
+ep29 step31800/32940 loss=0.3691 acc=0.877 lr=7.37e-06 gnorm=1.46 47 smp/s
+ep30 step31850/32940 loss=0.2643 acc=0.894 lr=7.05e-06 gnorm=1.68 47 smp/s
+ep30 step31900/32940 loss=0.2358 acc=0.910 lr=6.72e-06 gnorm=2.12 47 smp/s
+ep30 step31950/32940 loss=0.1831 acc=0.936 lr=6.40e-06 gnorm=1.28 47 smp/s
+ep30 step32000/32940 loss=0.2946 acc=0.921 lr=6.08e-06 gnorm=1.16 47 smp/s
+[eval @ 32000] WER=0.214 CER=0.205 SER=0.502 loss=0.320 content_acc=0.854 fill_rate=0.414 entropy=0.132 distinct=30
+   Full: <s> m i s t e r | q u i l t e r | i s | t h e | a p o s t l e | o f | t h e | m i d d l e | c l a s s e s | a n d | w e | a r e | g l a d | 
+   Hyp : mister quilter is the apostle of the middle classes and we are glad to welcome h
+   Ref : mister quilter is the apostle of the middle classes and we are glad to welcome h
+ep30 step32050/32940 loss=0.4455 acc=0.853 lr=5.75e-06 gnorm=1.51 47 smp/s
+ep30 step32100/32940 loss=0.2151 acc=0.911 lr=5.43e-06 gnorm=1.31 47 smp/s
+ep30 step32150/32940 loss=0.3108 acc=0.889 lr=5.11e-06 gnorm=1.93 47 smp/s
+ep30 step32200/32940 loss=0.1920 acc=0.935 lr=4.78e-06 gnorm=1.17 47 smp/s
+ep30 step32250/32940 loss=0.3552 acc=0.888 lr=4.46e-06 gnorm=1.17 47 smp/s
+ep30 step32300/32940 loss=0.3060 acc=0.879 lr=4.14e-06 gnorm=1.58 47 smp/s
+ep30 step32350/32940 loss=0.3256 acc=0.884 lr=3.81e-06 gnorm=1.67 47 smp/s
+ep30 step32400/32940 loss=0.2176 acc=0.919 lr=3.49e-06 gnorm=1.38 47 smp/s
+ep30 step32450/32940 loss=0.2980 acc=0.911 lr=3.17e-06 gnorm=1.27 47 smp/s
+ep30 step32500/32940 loss=0.3243 acc=0.881 lr=2.84e-06 gnorm=1.76 47 smp/s
+ep30 step32550/32940 loss=0.3194 acc=0.897 lr=2.52e-06 gnorm=1.69 47 smp/s
+ep30 step32600/32940 loss=0.3407 acc=0.894 lr=2.20e-06 gnorm=1.24 47 smp/s
+ep30 step32650/32940 loss=0.2222 acc=0.931 lr=1.87e-06 gnorm=1.04 47 smp/s
+ep30 step32700/32940 loss=0.3606 acc=0.876 lr=1.55e-06 gnorm=1.14 47 smp/s
+ep30 step32750/32940 loss=0.1970 acc=0.943 lr=1.23e-06 gnorm=1.58 47 smp/s
+ep30 step32800/32940 loss=0.3847 acc=0.881 lr=9.05e-07 gnorm=1.57 47 smp/s
+ep30 step32850/32940 loss=0.2585 acc=0.937 lr=5.82e-07 gnorm=1.34 47 smp/s
+ep30 step32900/32940 loss=0.2051 acc=0.929 lr=2.59e-07 gnorm=1.34 47 smp/s
+[eval @ 32940] WER=0.210 CER=0.204 SER=0.516 loss=0.334 content_acc=0.847 fill_rate=0.414 entropy=0.128 distinct=30
+   Full: <s> m i s t e r | q u i l t e r | i s | t h e | a p o s t l e | o f | t h e | m i d d l e | c l a s s e s | a n d | w e | a r e | g l a d | 
+   Hyp : mister quilter is the apostle of the middle classes and we are glad to welcome h
+   Ref : mister quilter is the apostle of the middle classes and we are glad to welcome h
+wandb: updating run metadata
+wandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml
+wandb: uploading output.log; uploading config.yaml
+wandb: uploading output.log
+wandb: 
+wandb: Run history:
+wandb:                        epoch ▁▁▁▁▁▂▂▂▂▂▂▂▂▂▃▄▄▄▅▅▅▅▅▅▅▅▅▅▆▆▆▇▇▇▇▇████
+wandb:                     eval/CER █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                     eval/SER █████▇▆▄▄▄▂▁▂▁▁▂▁▂
+wandb:                     eval/WER ██▇▆▆▆▆▅▄▄▂▁▂▁▁▁▁▁
+wandb:       eval/content_frame_acc ▁▃▃▅▅▄▆▆▇▇████████
+wandb: eval/distinct_nonfill_tokens ▁█████████████████
+wandb:          eval/fill_frame_acc ▁█████████████████
+wandb:          eval/fill_pred_rate ▁█████████████████
+wandb:        eval/graded_frame_acc ▁▅▅▆▆▆▇▇▇▇████████
+wandb:                    eval/loss █▃▃▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁
+wandb:                           +6 ...
+wandb: 
+wandb: Run summary:
+wandb:                        epoch 30
+wandb:                     eval/CER 0.20389
+wandb:                     eval/SER 0.516
+wandb:                     eval/WER 0.21019
+wandb:       eval/content_frame_acc 0.84675
+wandb: eval/distinct_nonfill_tokens 30
+wandb:          eval/fill_frame_acc 0.9983
+wandb:          eval/fill_pred_rate 0.41369
+wandb:        eval/graded_frame_acc 0.90844
+wandb:                    eval/loss 0.33388
+wandb:                           +6 ...
+wandb: 
+wandb: 🚀 View run full960_sa8_pe_lmhead_PE_hubert-xlarge-ls960-ft at: https://wandb.ai/tomjrlaishram-iit-madras/filler_asr/runs/l9iwt7l2
+wandb: ⭐️ View project at: https://wandb.ai/tomjrlaishram-iit-madras/filler_asr
+wandb: Synced 5 W&B file(s), 18 media file(s), 36 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20260627_222630-l9iwt7l2/logs
+DONE

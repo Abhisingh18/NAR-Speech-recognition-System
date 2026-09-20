@@ -1,0 +1,49 @@
+>> RUN_DIR=/speech/tomson/filler_asr/train_sa_pe_lm_head/runs/full960_sa8_pe_fps25_lin  GPU=6  port=8677  ckpt=best.pt  max=60s  pid=957437
+INFO:     Started server process [957463]
+INFO:     Waiting for application startup.
+Loading weights:   0%|          | 0/808 [00:00<?, ?it/s]Loading weights:  56%|█████▌    | 450/808 [00:00<00:00, 4280.44it/s]Loading weights: 100%|██████████| 808/808 [00:00<00:00, 3130.99it/s]
+[transformers] [1mFillerHubertSAModel LOAD REPORT[0m from: /speech/tomson/filler_asr/models/hubert-xlarge-ls960-ft
+Key                                                          | Status   |                                                                                           
+-------------------------------------------------------------+----------+-------------------------------------------------------------------------------------------
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.linear2.weight            | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.linear1.weight            | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.linear2.bias              | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.linear1.bias              | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.norm1.weight              | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.self_attn.in_proj_weight  | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.self_attn.out_proj.bias   | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.norm2.weight              | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.self_attn.out_proj.weight | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.norm1.bias                | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.self_attn.in_proj_bias    | MISSING  |                                                                                           
+sa.layers.{0, 1, 2, 3, 4, 5, 6, 7}.norm2.bias                | MISSING  |                                                                                           
+lm_head.weight                                               | MISMATCH | Reinit due to size mismatch - ckpt: torch.Size([32, 1280]) vs model:torch.Size([33, 1280])
+lm_head.bias                                                 | MISMATCH | Reinit due to size mismatch - ckpt: torch.Size([32]) vs model:torch.Size([33])            
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+- MISMATCH:	ckpt weights were loaded, but they did not match the original empty weight shapes.
+[engine] /speech/tomson/filler_asr/train_sa_pe_lm_head/runs/full960_sa8_pe_fps25_lin/best.pt
+[engine] num_sa_layers=8 pe=True fps=25 encoder=/speech/tomson/filler_asr/models/hubert-xlarge-ls960-ft device=cuda (trained step=28000 best_wer=0.2051676407259305)
+[transformers] `use_return_dict` is deprecated! Use `return_dict` instead!
+[app] ready
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8677 (Press CTRL+C to quit)
+INFO:     127.0.0.1:59160 - "POST /transcribe_path HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52222 - "POST /transcribe_path HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33040 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33040 - "GET /info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46568 - "POST /transcribe HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50698 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50698 - "GET /info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48816 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38806 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38806 - "GET /info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38812 - "POST /transcribe HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40974 - "POST /transcribe HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [957463]
+Terminated
+ERROR conda.cli.main_run:execute(142): `conda run python -m uvicorn app:app --host 0.0.0.0 --port 8677 --workers 1` failed. (See above for error)

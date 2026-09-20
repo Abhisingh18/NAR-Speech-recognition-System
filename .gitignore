@@ -1,0 +1,24 @@
+# --- caches / noise ---
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# --- wandb run logs (local artifacts, not code) ---
+wandb/
+**/wandb/
+
+# --- leftover Hindi/English tapcache smoke test data (not Kannada NAR) ---
+/data/
+
+# --- Kannada data manifests: large, reference local-only paths, excluded from repo ---
+/data_kn/*.jsonl
+/data_kn/prep_report.txt
+
+# --- checkpoints: exclude everything under runs/ EXCEPT the one best/final Kannada model ---
+runs/*
+!runs/kn_en_d2vaqcKN_sa8_ACMLM_alibi_fps50_fw003_exp/
+runs/kn_en_d2vaqcKN_sa8_ACMLM_alibi_fps50_fw003_exp/*
+!runs/kn_en_d2vaqcKN_sa8_ACMLM_alibi_fps50_fw003_exp/best.pt
+!runs/kn_en_d2vaqcKN_sa8_ACMLM_alibi_fps50_fw003_exp/vocab.json
+!runs/kn_en_d2vaqcKN_sa8_ACMLM_alibi_fps50_fw003_exp/tokenizer_config.json
+!runs/kn_en_d2vaqcKN_sa8_ACMLM_alibi_fps50_fw003_exp/added_tokens.json

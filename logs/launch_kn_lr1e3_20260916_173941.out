@@ -1,0 +1,1897 @@
+[run_kn] log -> /speech/abhishek/indic-nar-filler_asr/logs/train_kn_lr1e3_75ep_20260916_173941.log
+[run] env=/speech/abhishek/miniconda3/envs/indic-nar-filler_asr GPUs=6,7,8,9 (n=4)  eff_batch=256  out=/speech/abhishek/indic-nar-filler_asr/runs/kn_en_d2vaqcKN_sa8_ACMLM_alibi_fps50_fw003_lr1e3_w10k_75ep
+[run] encoder=/speech/abhishek/kannada_data/encoders/SPRING_INX_data2vec_aqc_Kannada.pt
+W0916 17:39:43.170000 134611698971712 torch/distributed/run.py:779] 
+W0916 17:39:43.170000 134611698971712 torch/distributed/run.py:779] *****************************************
+W0916 17:39:43.170000 134611698971712 torch/distributed/run.py:779] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0916 17:39:43.170000 134611698971712 torch/distributed/run.py:779] *****************************************
+[W916 17:39:47.880788551 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+[W916 17:39:47.366883194 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+[W916 17:39:47.395983861 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+[W916 17:39:47.405869062 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+INFO:Data2VecAQCEncoder:[data2vec_aqc] ckpt:             /speech/abhishek/kannada_data/encoders/SPRING_INX_data2vec_aqc_Kannada.pt
+INFO:Data2VecAQCEncoder:[data2vec_aqc] outer _name:      wav2vec_ctc  (CTC fine-tuned)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] inner _name:      data2vec_audio
+INFO:Data2VecAQCEncoder:[data2vec_aqc] layer_norm_first: False
+INFO:Data2VecAQCEncoder:[data2vec_aqc] tgt_layer:        None (None=run all blocks)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped outside w2v_model.*: ['w2v_encoder.proj.bias', 'w2v_encoder.proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped INSIDE body (AQC extras): ['contr_proj.bias', 'contr_proj.weight', 'project_q.bias', 'project_q.weight', 'quantizer.vars', 'quantizer.weight_proj.bias', 'quantizer.weight_proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] missing keys (expect empty/pretraining-only): []
+INFO:Data2VecAQCEncoder:[data2vec_aqc] ckpt:             /speech/abhishek/kannada_data/encoders/SPRING_INX_data2vec_aqc_Kannada.pt
+INFO:Data2VecAQCEncoder:[data2vec_aqc] outer _name:      wav2vec_ctc  (CTC fine-tuned)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] inner _name:      data2vec_audio
+INFO:Data2VecAQCEncoder:[data2vec_aqc] layer_norm_first: False
+INFO:Data2VecAQCEncoder:[data2vec_aqc] tgt_layer:        None (None=run all blocks)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped outside w2v_model.*: ['w2v_encoder.proj.bias', 'w2v_encoder.proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped INSIDE body (AQC extras): ['contr_proj.bias', 'contr_proj.weight', 'project_q.bias', 'project_q.weight', 'quantizer.vars', 'quantizer.weight_proj.bias', 'quantizer.weight_proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] missing keys (expect empty/pretraining-only): []
+INFO:Data2VecAQCEncoder:[data2vec_aqc] ckpt:             /speech/abhishek/kannada_data/encoders/SPRING_INX_data2vec_aqc_Kannada.pt
+INFO:Data2VecAQCEncoder:[data2vec_aqc] outer _name:      wav2vec_ctc  (CTC fine-tuned)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] inner _name:      data2vec_audio
+INFO:Data2VecAQCEncoder:[data2vec_aqc] layer_norm_first: False
+INFO:Data2VecAQCEncoder:[data2vec_aqc] tgt_layer:        None (None=run all blocks)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped outside w2v_model.*: ['w2v_encoder.proj.bias', 'w2v_encoder.proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped INSIDE body (AQC extras): ['contr_proj.bias', 'contr_proj.weight', 'project_q.bias', 'project_q.weight', 'quantizer.vars', 'quantizer.weight_proj.bias', 'quantizer.weight_proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] missing keys (expect empty/pretraining-only): []
+INFO:Data2VecAQCEncoder:[data2vec_aqc] ckpt:             /speech/abhishek/kannada_data/encoders/SPRING_INX_data2vec_aqc_Kannada.pt
+INFO:Data2VecAQCEncoder:[data2vec_aqc] outer _name:      wav2vec_ctc  (CTC fine-tuned)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] inner _name:      data2vec_audio
+INFO:Data2VecAQCEncoder:[data2vec_aqc] layer_norm_first: False
+INFO:Data2VecAQCEncoder:[data2vec_aqc] tgt_layer:        None (None=run all blocks)
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped outside w2v_model.*: ['w2v_encoder.proj.bias', 'w2v_encoder.proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] dropped INSIDE body (AQC extras): ['contr_proj.bias', 'contr_proj.weight', 'project_q.bias', 'project_q.weight', 'quantizer.vars', 'quantizer.weight_proj.bias', 'quantizer.weight_proj.weight']
+INFO:Data2VecAQCEncoder:[data2vec_aqc] missing keys (expect empty/pretraining-only): []
+DEBUG:asyncio:Using selector: EpollSelector
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/speech/abhishek/indic-nar-filler_asr, stdin=None, shell=False, universal_newlines=False)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/speech/abhishek/indic-nar-filler_asr, stdin=None, shell=False, universal_newlines=False)
+DEBUG:git.util:sys.platform='linux', git_executable='git'
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /speech/abhishek/.netrc.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.wandb.ai:443
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 380
+wandb: Currently logged in as: abhisingh964800 (abhisingh964800-iit-madras-foundation) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+DEBUG:git.util:sys.platform='linux', git_executable='git'
+wandb: setting up run n87dzgef
+wandb: Tracking run with wandb version 0.27.0
+wandb: Run data is saved locally in /speech/abhishek/indic-nar-filler_asr/wandb/run-20260916_174006-n87dzgef
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run kn_en_d2vaqcKN_sa8_ACMLM_alibi_fps50_fw003_lr1e3_w10k_75ep
+wandb: ⭐️ View project at https://wandb.ai/abhisingh964800-iit-madras-foundation/indic_nar_kn_en
+wandb: 🚀 View run at https://wandb.ai/abhisingh964800-iit-madras-foundation/indic_nar_kn_en/runs/n87dzgef
+wandb run: https://wandb.ai/abhisingh964800-iit-madras-foundation/indic_nar_kn_en/runs/n87dzgef
+[setup] world=4 train=478302 dev=500 trainable=100.97M pos_mode=alibi PE=True sa_layers=8 fps=50 sched=exponential mask=0.2-0.3x10 eff_batch=256 steps/epoch=1868 total_steps=140100
+[log] config=/speech/abhishek/indic-nar-filler_asr/log_config.json disabled=none
+/speech/abhishek/indic-nar-filler_asr/deps/fairseq/examples/data2vec/models/data2vec_audio.py:190: FutureWarning: Positional args are being deprecated, use kwargs instead. Refer to https://pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  state = super().state_dict(destination, prefix, keep_vars)
+[ckpt-audit] checkpoint will save 100 trainable tensors / 100.97M params  (hubert tensors included=0)
+[select] best.pt = argmin eval/iter_WER; other metrics are diagnostics only
+[data-audit] ACMLM transform, 1 train clip: T=656 graded(masked)_slots=47
+   frame:input[->CEtarget], first 24/656  (<mask>=input hole; -> = supervised slot)
+   0:<s> 1:ನ 2:ಿ 3:ರ 4:ು 5:ದ 6:್ 7:ಯ 8:ೋ 9:ಗ 10:| 11:<mask>->ಸ 12:ಮ 13:ಸ 14:್ 15:ಸ 16:ೆ 17:| 18:ಬ 19:ಗ 20:್ 21:ಗ 22:ೆ 23:|
+[eval @ 0] WER=1.000 CER=7.641 SER=1.000 loss=5.047 content_acc=0.002 fill_rate=0.000 entropy=4.351 distinct=81
+[eval @ 0] iter32  WER=1.000 CER=3.430 SER=1.000 (mask-predict decode, n=200 clips)
+   Full: ಙ ಙ ಙ ಙ ಓ ಓ ಓ ಓ ಳ ಳ ಳ ಳ ಳ ಳ ಳ ಙ ಙ ೋ ಙ ಙ ಙ ಙ ಙ ಙ ಳ ಙ ಙ ಙ ಙ ಹ ಙ ಙ ಙ ಙ ಙ f ಓ ಅ ಳ ಙ ಙ ಙ ಙ ಙ ಙ ಙ ಙ ಙ ಓ ಳ ಙ ಙ ಳ ಙ ಙ ಙ ಙ ಙ ಙ ಙ ಙ ಙ ಙ ಙ t ಙ ಙ ಙ ಙ ಙ 
+   Hyp : ಙಙಙಙಙಓಓಓಓಳಳಳಳಳಳಳಙಙೋಙಙಙಙಙಙಳಙಙಙಙಹಙಙಙಙಙfಓಅಳಙಙಙಙಙಙಙಙಙಓಳಙಙಳಙಙಙಙಙಙಙಙಙಙಙtಙಙಙಙಙಙಙಙಙಙಓಹಙಙ
+   Ref : ಸಾಂಸ್ಕೃತಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರೋನಾ ಸೋಂಕು ಹೆಚ್ಚುತ್ತಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಇಂದಿನಿಂದ ಐದ
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.wandb.ai:443
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 49
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.wandb.ai:443
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 1040
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 42
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.wandb.ai:443
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 380
+/speech/abhishek/indic-nar-filler_asr/deps/fairseq/examples/data2vec/models/data2vec_audio.py:190: FutureWarning: Positional args are being deprecated, use kwargs instead. Refer to https://pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  state = super().state_dict(destination, prefix, keep_vars)
+   ** new best eval/iter_WER=1.0000 -> best.pt
+[frozen-audit] after model.train(): hubert.training=False hubert_trainable_tensors=0  (expect False / 0 -> no layerdrop, no dropout, deterministic tap)
+[grad-audit step1] micro/window=4 tok_local=3993 tok_global=15931 grad_scale=world/tok=2.511e-04 loss_sum_local=19652.8 win_loss=4.9215 gnorm_preclip=8.460 lr=1.00e-07
+[grad-audit step2] micro/window=4 tok_local=4202 tok_global=17491 grad_scale=world/tok=2.287e-04 loss_sum_local=20600.0 win_loss=4.9027 gnorm_preclip=8.428 lr=2.00e-07
+[grad-audit step3] micro/window=4 tok_local=4999 tok_global=18151 grad_scale=world/tok=2.204e-04 loss_sum_local=24514.4 win_loss=4.9042 gnorm_preclip=8.446 lr=3.00e-07
+[grad-audit step4] micro/window=4 tok_local=4871 tok_global=18120 grad_scale=world/tok=2.207e-04 loss_sum_local=23775.1 win_loss=4.8812 gnorm_preclip=8.583 lr=4.00e-07
+[grad-audit step5] micro/window=4 tok_local=3921 tok_global=16768 grad_scale=world/tok=2.386e-04 loss_sum_local=19102.6 win_loss=4.8723 gnorm_preclip=8.482 lr=5.00e-07
+ep1 step25/140100 loss=4.1313 acc=0.060 lr=2.50e-06 gnorm=3.84 160 smp/s
+ep1 step50/140100 loss=3.6764 acc=0.139 lr=5.00e-06 gnorm=1.09 164 smp/s
+ep1 step75/140100 loss=3.4446 acc=0.222 lr=7.50e-06 gnorm=0.81 165 smp/s
+ep1 step100/140100 loss=3.3971 acc=0.564 lr=1.00e-05 gnorm=1.67 165 smp/s
+ep1 step125/140100 loss=3.2819 acc=0.587 lr=1.25e-05 gnorm=2.59 165 smp/s
+ep1 step150/140100 loss=3.3570 acc=0.464 lr=1.50e-05 gnorm=9.67 165 smp/s
+ep1 step175/140100 loss=3.2206 acc=0.611 lr=1.75e-05 gnorm=3.95 164 smp/s
+ep1 step200/140100 loss=3.2282 acc=0.719 lr=2.00e-05 gnorm=7.97 164 smp/s
+ep1 step225/140100 loss=3.1586 acc=0.759 lr=2.25e-05 gnorm=6.39 164 smp/s
+ep1 step250/140100 loss=3.0980 acc=0.621 lr=2.50e-05 gnorm=2.73 164 smp/s
+ep1 step275/140100 loss=3.1116 acc=0.650 lr=2.75e-05 gnorm=2.73 164 smp/s
+ep1 step300/140100 loss=3.0963 acc=0.730 lr=3.00e-05 gnorm=1.02 164 smp/s
+ep1 step325/140100 loss=3.1468 acc=0.766 lr=3.25e-05 gnorm=7.16 164 smp/s
+ep1 step350/140100 loss=3.1359 acc=0.679 lr=3.50e-05 gnorm=1.51 163 smp/s
+ep1 step375/140100 loss=3.0363 acc=0.768 lr=3.75e-05 gnorm=0.75 163 smp/s
+ep1 step400/140100 loss=3.0939 acc=0.726 lr=4.00e-05 gnorm=1.45 163 smp/s
+ep1 step425/140100 loss=3.0785 acc=0.740 lr=4.25e-05 gnorm=2.72 163 smp/s
+ep1 step450/140100 loss=3.0766 acc=0.710 lr=4.50e-05 gnorm=1.31 163 smp/s
+ep1 step475/140100 loss=3.0151 acc=0.730 lr=4.75e-05 gnorm=0.92 163 smp/s
+ep1 step500/140100 loss=3.0688 acc=0.748 lr=5.00e-05 gnorm=0.79 163 smp/s
+ep1 step525/140100 loss=3.0378 acc=0.763 lr=5.25e-05 gnorm=1.55 163 smp/s
+ep1 step550/140100 loss=3.1265 acc=0.760 lr=5.50e-05 gnorm=0.99 163 smp/s
+ep1 step575/140100 loss=2.9944 acc=0.788 lr=5.75e-05 gnorm=1.25 163 smp/s
+ep1 step600/140100 loss=3.0159 acc=0.773 lr=6.00e-05 gnorm=0.83 163 smp/s
+ep1 step625/140100 loss=2.9456 acc=0.748 lr=6.25e-05 gnorm=0.79 163 smp/s
+ep1 step650/140100 loss=2.9562 acc=0.739 lr=6.50e-05 gnorm=0.67 163 smp/s
+ep1 step675/140100 loss=3.0625 acc=0.747 lr=6.75e-05 gnorm=0.82 163 smp/s
+ep1 step700/140100 loss=2.9622 acc=0.750 lr=7.00e-05 gnorm=0.66 163 smp/s
+ep1 step725/140100 loss=2.9840 acc=0.755 lr=7.25e-05 gnorm=0.69 163 smp/s
+ep1 step750/140100 loss=2.8676 acc=0.797 lr=7.50e-05 gnorm=0.86 163 smp/s
+ep1 step775/140100 loss=2.8834 acc=0.751 lr=7.75e-05 gnorm=0.83 163 smp/s
+ep1 step800/140100 loss=2.8901 acc=0.786 lr=8.00e-05 gnorm=0.65 163 smp/s
+ep1 step825/140100 loss=2.9252 acc=0.737 lr=8.25e-05 gnorm=0.78 163 smp/s
+ep1 step850/140100 loss=2.8221 acc=0.804 lr=8.50e-05 gnorm=0.95 163 smp/s
+ep1 step875/140100 loss=2.8562 acc=0.768 lr=8.75e-05 gnorm=1.26 163 smp/s
+ep1 step900/140100 loss=2.8031 acc=0.774 lr=9.00e-05 gnorm=0.77 163 smp/s
+ep1 step925/140100 loss=2.7865 acc=0.808 lr=9.25e-05 gnorm=0.74 163 smp/s
+ep1 step950/140100 loss=2.7278 acc=0.751 lr=9.50e-05 gnorm=1.04 163 smp/s
+ep1 step975/140100 loss=2.6262 acc=0.786 lr=9.75e-05 gnorm=0.82 163 smp/s
+ep1 step1000/140100 loss=2.7945 acc=0.803 lr=1.00e-04 gnorm=1.08 163 smp/s
+ep1 step1025/140100 loss=2.6719 acc=0.776 lr=1.02e-04 gnorm=1.87 163 smp/s
+ep1 step1050/140100 loss=2.6057 acc=0.779 lr=1.05e-04 gnorm=0.94 163 smp/s
+ep1 step1075/140100 loss=2.6015 acc=0.759 lr=1.07e-04 gnorm=2.36 163 smp/s
+ep1 step1100/140100 loss=2.6286 acc=0.771 lr=1.10e-04 gnorm=2.88 163 smp/s
+ep1 step1125/140100 loss=2.5686 acc=0.717 lr=1.13e-04 gnorm=2.65 163 smp/s
+ep1 step1150/140100 loss=2.5447 acc=0.786 lr=1.15e-04 gnorm=2.55 163 smp/s
+ep1 step1175/140100 loss=2.5650 acc=0.766 lr=1.17e-04 gnorm=1.96 163 smp/s
+ep1 step1200/140100 loss=2.6068 acc=0.780 lr=1.20e-04 gnorm=3.27 163 smp/s
+ep1 step1225/140100 loss=2.6996 acc=0.758 lr=1.22e-04 gnorm=2.53 163 smp/s
+ep1 step1250/140100 loss=2.4574 acc=0.784 lr=1.25e-04 gnorm=1.70 163 smp/s
+ep1 step1275/140100 loss=2.4808 acc=0.771 lr=1.28e-04 gnorm=2.12 163 smp/s
+ep1 step1300/140100 loss=2.4920 acc=0.758 lr=1.30e-04 gnorm=1.86 163 smp/s
+ep1 step1325/140100 loss=2.4979 acc=0.768 lr=1.33e-04 gnorm=3.40 163 smp/s
+ep1 step1350/140100 loss=2.4464 acc=0.767 lr=1.35e-04 gnorm=4.03 163 smp/s
+ep1 step1375/140100 loss=2.4522 acc=0.754 lr=1.38e-04 gnorm=2.41 163 smp/s
+ep1 step1400/140100 loss=2.4183 acc=0.795 lr=1.40e-04 gnorm=1.29 163 smp/s
+ep1 step1425/140100 loss=2.4601 acc=0.779 lr=1.42e-04 gnorm=2.33 163 smp/s
+ep1 step1450/140100 loss=2.4285 acc=0.781 lr=1.45e-04 gnorm=3.05 163 smp/s
+ep1 step1475/140100 loss=2.4155 acc=0.756 lr=1.48e-04 gnorm=2.35 163 smp/s
+ep1 step1500/140100 loss=2.3405 acc=0.778 lr=1.50e-04 gnorm=2.69 163 smp/s
+ep1 step1525/140100 loss=2.3941 acc=0.792 lr=1.52e-04 gnorm=3.57 163 smp/s
+ep1 step1550/140100 loss=2.3324 acc=0.788 lr=1.55e-04 gnorm=1.77 163 smp/s
+ep1 step1575/140100 loss=2.3995 acc=0.788 lr=1.58e-04 gnorm=2.24 163 smp/s
+ep1 step1600/140100 loss=2.3761 acc=0.777 lr=1.60e-04 gnorm=3.01 163 smp/s
+ep1 step1625/140100 loss=2.4257 acc=0.759 lr=1.63e-04 gnorm=3.32 163 smp/s
+ep1 step1650/140100 loss=2.4305 acc=0.789 lr=1.65e-04 gnorm=2.75 163 smp/s
+ep1 step1675/140100 loss=2.4455 acc=0.750 lr=1.68e-04 gnorm=2.42 163 smp/s
+ep1 step1700/140100 loss=2.2671 acc=0.801 lr=1.70e-04 gnorm=1.80 163 smp/s
+ep1 step1725/140100 loss=2.4360 acc=0.795 lr=1.72e-04 gnorm=2.61 163 smp/s
+ep1 step1750/140100 loss=2.3570 acc=0.817 lr=1.75e-04 gnorm=2.68 163 smp/s
+ep1 step1775/140100 loss=2.2259 acc=0.817 lr=1.78e-04 gnorm=3.38 163 smp/s
+ep1 step1800/140100 loss=2.2374 acc=0.804 lr=1.80e-04 gnorm=3.10 163 smp/s
+ep1 step1825/140100 loss=2.2988 acc=0.788 lr=1.82e-04 gnorm=1.73 163 smp/s
+ep1 step1850/140100 loss=2.3300 acc=0.822 lr=1.85e-04 gnorm=2.30 163 smp/s
+ep2 step1875/140100 loss=2.3073 acc=0.826 lr=1.88e-04 gnorm=3.65 162 smp/s
+ep2 step1900/140100 loss=2.2778 acc=0.848 lr=1.90e-04 gnorm=2.49 162 smp/s
+ep2 step1925/140100 loss=2.3121 acc=0.778 lr=1.93e-04 gnorm=4.08 162 smp/s
+ep2 step1950/140100 loss=2.3179 acc=0.815 lr=1.95e-04 gnorm=2.04 162 smp/s
+ep2 step1975/140100 loss=2.2283 acc=0.762 lr=1.98e-04 gnorm=1.81 162 smp/s
+ep2 step2000/140100 loss=2.3422 acc=0.762 lr=2.00e-04 gnorm=4.12 162 smp/s
+[eval @ 2000] WER=1.003 CER=0.888 SER=1.000 loss=1.404 content_acc=0.161 fill_rate=0.599 entropy=1.446 distinct=80
+[eval @ 2000] iter32  WER=1.655 CER=0.903 SER=0.995 (mask-predict decode, n=200 clips)
+   Full: ಸ ಾ ತ ತ ತ ತ | | | | | | | | ಮ ಸ ಸ ಸ ೂ ರ ರ ನ ಲ ಲ ಲ ಲ ಲ ೊ ೊ ೊ ೊ ೊ ೊ ೊ ಾ | | | | ು ು ು ು ು ು ು ು ು ು ು ಹ ಹ ್ ಹ ್ ್ ್ ್ ್ ಲ ಲ ಲ ಲ ಲ ಲ ಲ ಲ ಿ ಿ ಿ 
+   Hyp : ಸಸಾತತತತ        ಮಸಸಸೂರರನಲಲಲಲಲೊೊೊೊೊೊೊಾ    ುುುುುುುುುುುಹಹ್ಹ್್್್್ಲಲಲಲಲಲಲಲಿಿಿಿಿಿಿಿಿಿಿಿ
+   Ref : ಸಾಂಸ್ಕೃತಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರೋನಾ ಸೋಂಕು ಹೆಚ್ಚುತ್ತಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಇಂದಿನಿಂದ ಐದ
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+ep2 step2025/140100 loss=2.2535 acc=0.781 lr=2.03e-04 gnorm=3.12 160 smp/s
+ep2 step2050/140100 loss=2.2149 acc=0.764 lr=2.05e-04 gnorm=2.62 160 smp/s
+ep2 step2075/140100 loss=2.3296 acc=0.748 lr=2.08e-04 gnorm=1.57 160 smp/s
+ep2 step2100/140100 loss=2.3623 acc=0.723 lr=2.10e-04 gnorm=3.73 160 smp/s
+ep2 step2125/140100 loss=2.1516 acc=0.828 lr=2.12e-04 gnorm=2.80 160 smp/s
+ep2 step2150/140100 loss=2.2030 acc=0.818 lr=2.15e-04 gnorm=1.28 160 smp/s
+ep2 step2175/140100 loss=2.3134 acc=0.788 lr=2.18e-04 gnorm=4.87 160 smp/s
+ep2 step2200/140100 loss=2.2736 acc=0.809 lr=2.20e-04 gnorm=3.60 160 smp/s
+ep2 step2225/140100 loss=2.1804 acc=0.793 lr=2.23e-04 gnorm=1.69 160 smp/s
+ep2 step2250/140100 loss=2.2627 acc=0.766 lr=2.25e-04 gnorm=4.23 160 smp/s
+ep2 step2275/140100 loss=2.1649 acc=0.791 lr=2.28e-04 gnorm=2.49 160 smp/s
+ep2 step2300/140100 loss=2.2312 acc=0.739 lr=2.30e-04 gnorm=1.53 160 smp/s
+ep2 step2325/140100 loss=2.0307 acc=0.798 lr=2.33e-04 gnorm=3.31 160 smp/s
+ep2 step2350/140100 loss=2.1954 acc=0.822 lr=2.35e-04 gnorm=2.38 160 smp/s
+ep2 step2375/140100 loss=2.1066 acc=0.853 lr=2.37e-04 gnorm=1.27 160 smp/s
+ep2 step2400/140100 loss=1.9940 acc=0.784 lr=2.40e-04 gnorm=1.93 160 smp/s
+ep2 step2425/140100 loss=2.1930 acc=0.838 lr=2.42e-04 gnorm=3.58 160 smp/s
+ep2 step2450/140100 loss=2.1493 acc=0.784 lr=2.45e-04 gnorm=1.97 160 smp/s
+ep2 step2475/140100 loss=1.9848 acc=0.801 lr=2.47e-04 gnorm=2.15 160 smp/s
+ep2 step2500/140100 loss=2.1268 acc=0.837 lr=2.50e-04 gnorm=3.37 160 smp/s
+ep2 step2525/140100 loss=2.1826 acc=0.821 lr=2.53e-04 gnorm=4.25 160 smp/s
+ep2 step2550/140100 loss=2.1043 acc=0.798 lr=2.55e-04 gnorm=3.10 160 smp/s
+ep2 step2575/140100 loss=2.0655 acc=0.807 lr=2.58e-04 gnorm=1.54 160 smp/s
+ep2 step2600/140100 loss=1.9899 acc=0.840 lr=2.60e-04 gnorm=1.99 160 smp/s
+ep2 step2625/140100 loss=1.9557 acc=0.792 lr=2.63e-04 gnorm=2.34 160 smp/s
+ep2 step2650/140100 loss=2.1770 acc=0.786 lr=2.65e-04 gnorm=2.53 160 smp/s
+ep2 step2675/140100 loss=2.0757 acc=0.816 lr=2.67e-04 gnorm=2.08 160 smp/s
+ep2 step2700/140100 loss=1.9651 acc=0.819 lr=2.70e-04 gnorm=2.68 160 smp/s
+ep2 step2725/140100 loss=2.1306 acc=0.774 lr=2.73e-04 gnorm=3.47 160 smp/s
+ep2 step2750/140100 loss=1.9892 acc=0.813 lr=2.75e-04 gnorm=2.96 160 smp/s
+ep2 step2775/140100 loss=1.9978 acc=0.833 lr=2.78e-04 gnorm=3.36 160 smp/s
+ep2 step2800/140100 loss=2.0007 acc=0.751 lr=2.80e-04 gnorm=1.74 160 smp/s
+ep2 step2825/140100 loss=2.3216 acc=0.777 lr=2.82e-04 gnorm=2.48 160 smp/s
+ep2 step2850/140100 loss=1.9373 acc=0.817 lr=2.85e-04 gnorm=1.18 160 smp/s
+ep2 step2875/140100 loss=1.9276 acc=0.824 lr=2.87e-04 gnorm=1.73 160 smp/s
+ep2 step2900/140100 loss=2.0438 acc=0.798 lr=2.90e-04 gnorm=2.73 160 smp/s
+ep2 step2925/140100 loss=1.7951 acc=0.816 lr=2.93e-04 gnorm=2.69 160 smp/s
+ep2 step2950/140100 loss=1.9518 acc=0.802 lr=2.95e-04 gnorm=1.42 160 smp/s
+ep2 step2975/140100 loss=2.1404 acc=0.790 lr=2.97e-04 gnorm=3.28 160 smp/s
+ep2 step3000/140100 loss=2.1270 acc=0.762 lr=3.00e-04 gnorm=2.45 160 smp/s
+ep2 step3025/140100 loss=1.8131 acc=0.835 lr=3.02e-04 gnorm=1.34 160 smp/s
+ep2 step3050/140100 loss=1.8384 acc=0.779 lr=3.05e-04 gnorm=2.55 160 smp/s
+ep2 step3075/140100 loss=1.8374 acc=0.836 lr=3.07e-04 gnorm=3.11 160 smp/s
+ep2 step3100/140100 loss=2.0328 acc=0.803 lr=3.10e-04 gnorm=1.08 160 smp/s
+ep2 step3125/140100 loss=1.8503 acc=0.850 lr=3.13e-04 gnorm=1.75 160 smp/s
+ep2 step3150/140100 loss=1.7831 acc=0.881 lr=3.15e-04 gnorm=2.68 160 smp/s
+ep2 step3175/140100 loss=1.9900 acc=0.768 lr=3.18e-04 gnorm=4.93 160 smp/s
+ep2 step3200/140100 loss=2.0258 acc=0.792 lr=3.20e-04 gnorm=1.69 160 smp/s
+ep2 step3225/140100 loss=1.5996 acc=0.849 lr=3.23e-04 gnorm=1.79 160 smp/s
+ep2 step3250/140100 loss=1.8235 acc=0.826 lr=3.25e-04 gnorm=3.08 160 smp/s
+ep2 step3275/140100 loss=1.9731 acc=0.805 lr=3.28e-04 gnorm=2.71 160 smp/s
+ep2 step3300/140100 loss=1.8596 acc=0.867 lr=3.30e-04 gnorm=2.02 160 smp/s
+ep2 step3325/140100 loss=1.8426 acc=0.860 lr=3.33e-04 gnorm=3.49 160 smp/s
+ep2 step3350/140100 loss=2.0263 acc=0.815 lr=3.35e-04 gnorm=3.29 160 smp/s
+ep2 step3375/140100 loss=2.0686 acc=0.836 lr=3.38e-04 gnorm=2.93 160 smp/s
+ep2 step3400/140100 loss=1.9527 acc=0.791 lr=3.40e-04 gnorm=3.26 160 smp/s
+ep2 step3425/140100 loss=1.8690 acc=0.816 lr=3.43e-04 gnorm=2.44 160 smp/s
+ep2 step3450/140100 loss=2.0375 acc=0.846 lr=3.45e-04 gnorm=2.14 160 smp/s
+ep2 step3475/140100 loss=1.4214 acc=0.860 lr=3.47e-04 gnorm=2.34 160 smp/s
+ep2 step3500/140100 loss=1.6475 acc=0.879 lr=3.50e-04 gnorm=1.04 160 smp/s
+ep2 step3525/140100 loss=1.6014 acc=0.841 lr=3.53e-04 gnorm=1.31 160 smp/s
+ep2 step3550/140100 loss=1.6472 acc=0.871 lr=3.55e-04 gnorm=2.15 160 smp/s
+ep2 step3575/140100 loss=1.6000 acc=0.835 lr=3.58e-04 gnorm=1.99 160 smp/s
+ep2 step3600/140100 loss=1.6663 acc=0.831 lr=3.60e-04 gnorm=2.80 160 smp/s
+ep2 step3625/140100 loss=1.8720 acc=0.821 lr=3.62e-04 gnorm=2.71 160 smp/s
+ep2 step3650/140100 loss=1.9614 acc=0.835 lr=3.65e-04 gnorm=1.45 160 smp/s
+ep2 step3675/140100 loss=1.7224 acc=0.847 lr=3.67e-04 gnorm=1.00 160 smp/s
+ep2 step3700/140100 loss=1.7719 acc=0.806 lr=3.70e-04 gnorm=2.64 160 smp/s
+ep2 step3725/140100 loss=1.8268 acc=0.805 lr=3.73e-04 gnorm=2.48 160 smp/s
+ep3 step3750/140100 loss=1.8468 acc=0.866 lr=3.75e-04 gnorm=3.79 160 smp/s
+ep3 step3775/140100 loss=1.6548 acc=0.894 lr=3.78e-04 gnorm=2.33 160 smp/s
+ep3 step3800/140100 loss=1.6169 acc=0.829 lr=3.80e-04 gnorm=1.13 160 smp/s
+ep3 step3825/140100 loss=1.6181 acc=0.820 lr=3.83e-04 gnorm=1.14 160 smp/s
+ep3 step3850/140100 loss=1.8890 acc=0.821 lr=3.85e-04 gnorm=1.54 160 smp/s
+ep3 step3875/140100 loss=1.7928 acc=0.823 lr=3.88e-04 gnorm=1.33 160 smp/s
+ep3 step3900/140100 loss=1.7472 acc=0.772 lr=3.90e-04 gnorm=2.17 160 smp/s
+ep3 step3925/140100 loss=1.3538 acc=0.915 lr=3.92e-04 gnorm=0.93 160 smp/s
+ep3 step3950/140100 loss=1.8663 acc=0.784 lr=3.95e-04 gnorm=1.17 160 smp/s
+ep3 step3975/140100 loss=2.0317 acc=0.732 lr=3.98e-04 gnorm=2.01 160 smp/s
+ep3 step4000/140100 loss=1.6034 acc=0.837 lr=4.00e-04 gnorm=1.08 160 smp/s
+[eval @ 4000] WER=1.000 CER=0.760 SER=1.000 loss=0.987 content_acc=0.211 fill_rate=0.655 entropy=1.028 distinct=81
+[eval @ 4000] iter32  WER=1.184 CER=0.510 SER=1.000 (mask-predict decode, n=200 clips)
+   Full: ಸ ಸ ್ ್ ೃ ೃ ಕ ಕ ಕ ಕ ಕ | ಗ ಗ ಗ ಿ ಿ ಸ ಸ ಸ ನ ನ ಲ ಲ ಿ ಕ ೊ ೊ ೊ ೊ ೊ ೊ ೊ | | ು ು ು ು ು ಚ ಚ ಚ ಚ ತ ತ ತ ತ ತ ು ು ು ು ು ಿ ನ ನ ೆ ಲ ಲ ೆ ೆ ಲ ಲ ಲ ಿ ಿ ಿ ಿ ಿ 
+   Hyp : ಸಸಸ್್ೃೃಕಕಕಕಕ ಗಗಗಿಿಸಸಸನನಲಲಿಕೊೊೊೊೊೊೊ  ುುುುುಚಚಚಚತತತತತುುುುುಿನನೆಲಲೆೆಲಲಲಿಿಿಿಿಿಿಿದದದದದದ
+   Ref : ಸಾಂಸ್ಕೃತಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರೋನಾ ಸೋಂಕು ಹೆಚ್ಚುತ್ತಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಇಂದಿನಿಂದ ಐದ
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+ep3 step4025/140100 loss=1.6120 acc=0.835 lr=4.03e-04 gnorm=1.56 159 smp/s
+ep3 step4050/140100 loss=1.5952 acc=0.840 lr=4.05e-04 gnorm=1.47 159 smp/s
+ep3 step4075/140100 loss=1.5478 acc=0.859 lr=4.07e-04 gnorm=2.51 159 smp/s
+ep3 step4100/140100 loss=1.5900 acc=0.857 lr=4.10e-04 gnorm=1.70 159 smp/s
+ep3 step4125/140100 loss=1.5522 acc=0.861 lr=4.12e-04 gnorm=2.56 159 smp/s
+ep3 step4150/140100 loss=1.5436 acc=0.819 lr=4.15e-04 gnorm=1.86 159 smp/s
+ep3 step4175/140100 loss=1.8243 acc=0.816 lr=4.18e-04 gnorm=2.74 159 smp/s
+ep3 step4200/140100 loss=1.6788 acc=0.836 lr=4.20e-04 gnorm=2.56 159 smp/s
+ep3 step4225/140100 loss=1.5627 acc=0.872 lr=4.22e-04 gnorm=2.20 159 smp/s
+ep3 step4250/140100 loss=1.5247 acc=0.859 lr=4.25e-04 gnorm=2.54 159 smp/s
+ep3 step4275/140100 loss=1.5567 acc=0.909 lr=4.27e-04 gnorm=2.52 159 smp/s
+ep3 step4300/140100 loss=1.6046 acc=0.825 lr=4.30e-04 gnorm=1.68 159 smp/s
+ep3 step4325/140100 loss=1.8380 acc=0.870 lr=4.32e-04 gnorm=3.13 159 smp/s
+ep3 step4350/140100 loss=1.6033 acc=0.835 lr=4.35e-04 gnorm=1.86 159 smp/s
+ep3 step4375/140100 loss=1.5597 acc=0.873 lr=4.38e-04 gnorm=1.90 159 smp/s
+ep3 step4400/140100 loss=1.8323 acc=0.830 lr=4.40e-04 gnorm=1.59 159 smp/s
+ep3 step4425/140100 loss=1.6284 acc=0.811 lr=4.43e-04 gnorm=1.86 159 smp/s
+ep3 step4450/140100 loss=1.7902 acc=0.872 lr=4.45e-04 gnorm=1.46 159 smp/s
+ep3 step4475/140100 loss=1.7748 acc=0.870 lr=4.48e-04 gnorm=2.21 159 smp/s
+ep3 step4500/140100 loss=1.5090 acc=0.855 lr=4.50e-04 gnorm=1.70 159 smp/s
+ep3 step4525/140100 loss=1.4872 acc=0.820 lr=4.53e-04 gnorm=1.39 159 smp/s
+ep3 step4550/140100 loss=1.5375 acc=0.814 lr=4.55e-04 gnorm=2.17 159 smp/s
+ep3 step4575/140100 loss=1.2902 acc=0.920 lr=4.58e-04 gnorm=1.23 159 smp/s
+ep3 step4600/140100 loss=1.5096 acc=0.932 lr=4.60e-04 gnorm=2.01 159 smp/s
+ep3 step4625/140100 loss=1.6470 acc=0.838 lr=4.63e-04 gnorm=2.12 159 smp/s
+ep3 step4650/140100 loss=1.2821 acc=0.880 lr=4.65e-04 gnorm=2.11 159 smp/s
+ep3 step4675/140100 loss=1.4299 acc=0.819 lr=4.68e-04 gnorm=1.75 159 smp/s
+ep3 step4700/140100 loss=1.5907 acc=0.869 lr=4.70e-04 gnorm=1.22 159 smp/s
+ep3 step4725/140100 loss=1.1208 acc=0.956 lr=4.72e-04 gnorm=1.45 159 smp/s
+ep3 step4750/140100 loss=1.3676 acc=0.896 lr=4.75e-04 gnorm=1.69 159 smp/s
+ep3 step4775/140100 loss=1.5152 acc=0.835 lr=4.78e-04 gnorm=2.23 159 smp/s
+ep3 step4800/140100 loss=1.7047 acc=0.817 lr=4.80e-04 gnorm=2.47 159 smp/s
+ep3 step4825/140100 loss=1.4639 acc=0.878 lr=4.83e-04 gnorm=3.07 159 smp/s
+ep3 step4850/140100 loss=1.8009 acc=0.810 lr=4.85e-04 gnorm=2.38 159 smp/s
+ep3 step4875/140100 loss=1.6031 acc=0.897 lr=4.87e-04 gnorm=1.61 159 smp/s
+ep3 step4900/140100 loss=1.7921 acc=0.819 lr=4.90e-04 gnorm=2.69 159 smp/s
+ep3 step4925/140100 loss=1.6743 acc=0.876 lr=4.92e-04 gnorm=1.30 159 smp/s
+ep3 step4950/140100 loss=1.4143 acc=0.900 lr=4.95e-04 gnorm=1.86 159 smp/s
+ep3 step4975/140100 loss=1.3179 acc=0.864 lr=4.98e-04 gnorm=1.52 159 smp/s
+ep3 step5000/140100 loss=1.5513 acc=0.851 lr=5.00e-04 gnorm=1.13 159 smp/s
+ep3 step5025/140100 loss=1.5370 acc=0.842 lr=5.02e-04 gnorm=1.32 159 smp/s
+ep3 step5050/140100 loss=1.3614 acc=0.831 lr=5.05e-04 gnorm=1.35 159 smp/s
+ep3 step5075/140100 loss=1.2635 acc=0.905 lr=5.07e-04 gnorm=1.34 159 smp/s
+ep3 step5100/140100 loss=1.5460 acc=0.822 lr=5.10e-04 gnorm=1.68 159 smp/s
+ep3 step5125/140100 loss=1.2572 acc=0.892 lr=5.12e-04 gnorm=1.28 159 smp/s
+ep3 step5150/140100 loss=1.2174 acc=0.895 lr=5.15e-04 gnorm=1.81 159 smp/s
+ep3 step5175/140100 loss=1.3990 acc=0.867 lr=5.17e-04 gnorm=1.31 159 smp/s
+ep3 step5200/140100 loss=1.5838 acc=0.878 lr=5.20e-04 gnorm=1.39 159 smp/s
+ep3 step5225/140100 loss=1.2193 acc=0.851 lr=5.22e-04 gnorm=0.96 159 smp/s
+ep3 step5250/140100 loss=1.3939 acc=0.853 lr=5.25e-04 gnorm=1.10 159 smp/s
+ep3 step5275/140100 loss=1.4857 acc=0.841 lr=5.27e-04 gnorm=1.14 159 smp/s
+ep3 step5300/140100 loss=1.3001 acc=0.835 lr=5.30e-04 gnorm=1.16 159 smp/s
+ep3 step5325/140100 loss=1.5449 acc=0.823 lr=5.32e-04 gnorm=2.92 159 smp/s
+ep3 step5350/140100 loss=1.6654 acc=0.812 lr=5.35e-04 gnorm=1.31 159 smp/s
+ep3 step5375/140100 loss=1.2325 acc=0.848 lr=5.38e-04 gnorm=1.18 159 smp/s
+ep3 step5400/140100 loss=1.6697 acc=0.840 lr=5.40e-04 gnorm=2.10 159 smp/s
+ep3 step5425/140100 loss=1.5292 acc=0.835 lr=5.43e-04 gnorm=1.39 159 smp/s
+ep3 step5450/140100 loss=1.4490 acc=0.803 lr=5.45e-04 gnorm=1.95 159 smp/s
+ep3 step5475/140100 loss=1.3206 acc=0.885 lr=5.48e-04 gnorm=1.75 159 smp/s
+ep3 step5500/140100 loss=1.2989 acc=0.933 lr=5.50e-04 gnorm=1.66 159 smp/s
+ep3 step5525/140100 loss=1.4517 acc=0.838 lr=5.53e-04 gnorm=1.10 159 smp/s
+ep3 step5550/140100 loss=1.2757 acc=0.882 lr=5.55e-04 gnorm=1.66 159 smp/s
+ep3 step5575/140100 loss=1.4394 acc=0.867 lr=5.58e-04 gnorm=1.41 159 smp/s
+ep3 step5600/140100 loss=1.5662 acc=0.819 lr=5.60e-04 gnorm=1.81 159 smp/s
+ep4 step5625/140100 loss=1.8034 acc=0.784 lr=5.63e-04 gnorm=2.76 159 smp/s
+ep4 step5650/140100 loss=1.5925 acc=0.824 lr=5.65e-04 gnorm=1.42 159 smp/s
+ep4 step5675/140100 loss=1.4898 acc=0.863 lr=5.67e-04 gnorm=2.62 159 smp/s
+ep4 step5700/140100 loss=1.2997 acc=0.896 lr=5.70e-04 gnorm=1.09 159 smp/s
+ep4 step5725/140100 loss=1.6618 acc=0.844 lr=5.72e-04 gnorm=1.79 159 smp/s
+ep4 step5750/140100 loss=1.3679 acc=0.902 lr=5.75e-04 gnorm=1.42 159 smp/s
+ep4 step5775/140100 loss=1.2297 acc=0.848 lr=5.77e-04 gnorm=1.72 159 smp/s
+ep4 step5800/140100 loss=1.3586 acc=0.936 lr=5.80e-04 gnorm=1.94 159 smp/s
+ep4 step5825/140100 loss=1.4032 acc=0.869 lr=5.83e-04 gnorm=1.84 159 smp/s
+ep4 step5850/140100 loss=1.3168 acc=0.888 lr=5.85e-04 gnorm=1.04 159 smp/s
+ep4 step5875/140100 loss=1.4051 acc=0.834 lr=5.88e-04 gnorm=2.00 159 smp/s
+ep4 step5900/140100 loss=1.4974 acc=0.870 lr=5.90e-04 gnorm=2.20 159 smp/s
+ep4 step5925/140100 loss=1.4835 acc=0.881 lr=5.93e-04 gnorm=1.63 159 smp/s
+ep4 step5950/140100 loss=1.3733 acc=0.868 lr=5.95e-04 gnorm=2.86 159 smp/s
+ep4 step5975/140100 loss=1.2259 acc=0.899 lr=5.98e-04 gnorm=1.26 159 smp/s
+ep4 step6000/140100 loss=1.4962 acc=0.850 lr=6.00e-04 gnorm=1.21 159 smp/s
+[eval @ 6000] WER=0.995 CER=0.738 SER=1.000 loss=0.909 content_acc=0.223 fill_rate=0.672 entropy=0.980 distinct=81
+[eval @ 6000] iter32  WER=0.909 CER=0.402 SER=1.000 (mask-predict decode, n=200 clips)
+   Full: ಸ ಾ ಸ ಸ ಕ ೃ ತ ತ | | ರ ರ ರ ರ ರ ರ ರ ರ ಿ ಿ ಿ ಲ ಲ ಿ ಿ ಿ ರ ರ ರ ೊ ೊ ೊ ೊ ೊ ೊ ೊ | | | | ಹ ಚ ಚ ಚ ಚ ಚ ಚ ಚ ಚ ಚ ಚ ಚ ಚ ು ು ು ು ಿ ಿ ೆ ೆ ೆ ೆ ೆ ೆ ೆ ೆ ೆ ೆ ೆ 
+   Hyp : ಸಸಾಸಸಕೃತತ  ರರರರರರರರಿಿಿಲಲಿಿಿರರರೊೊೊೊೊೊೊ    ಹಚಚಚಚಚಚಚಚಚಚಚಚುುುುಿಿೆೆೆೆೆೆೆೆೆೆೆಲಲಲಲಲಿಿಿಿ
+   Ref : ಸಾಂಸ್ಕೃತಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರೋನಾ ಸೋಂಕು ಹೆಚ್ಚುತ್ತಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಇಂದಿನಿಂದ ಐದ
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+   ** new best eval/iter_WER=0.9088 -> best.pt
+ep4 step6025/140100 loss=1.2556 acc=0.871 lr=6.03e-04 gnorm=1.67 158 smp/s
+ep4 step6050/140100 loss=1.2724 acc=0.882 lr=6.05e-04 gnorm=1.12 159 smp/s
+ep4 step6075/140100 loss=1.3510 acc=0.870 lr=6.08e-04 gnorm=2.29 159 smp/s
+ep4 step6100/140100 loss=1.3172 acc=0.846 lr=6.10e-04 gnorm=2.11 159 smp/s
+ep4 step6125/140100 loss=1.1863 acc=0.858 lr=6.13e-04 gnorm=0.82 159 smp/s
+ep4 step6150/140100 loss=1.6123 acc=0.897 lr=6.15e-04 gnorm=1.63 159 smp/s
+ep4 step6175/140100 loss=1.3277 acc=0.866 lr=6.18e-04 gnorm=1.09 159 smp/s
+ep4 step6200/140100 loss=1.4135 acc=0.851 lr=6.20e-04 gnorm=1.52 159 smp/s
+ep4 step6225/140100 loss=1.3201 acc=0.879 lr=6.23e-04 gnorm=1.12 159 smp/s
+ep4 step6250/140100 loss=1.6512 acc=0.864 lr=6.25e-04 gnorm=1.75 159 smp/s
+ep4 step6275/140100 loss=1.2999 acc=0.838 lr=6.27e-04 gnorm=1.33 159 smp/s
+ep4 step6300/140100 loss=1.3187 acc=0.871 lr=6.30e-04 gnorm=1.30 159 smp/s
+ep4 step6325/140100 loss=1.3315 acc=0.884 lr=6.32e-04 gnorm=2.07 159 smp/s
+ep4 step6350/140100 loss=1.3118 acc=0.917 lr=6.35e-04 gnorm=1.13 159 smp/s
+ep4 step6375/140100 loss=1.3945 acc=0.873 lr=6.37e-04 gnorm=1.58 159 smp/s
+ep4 step6400/140100 loss=1.5225 acc=0.824 lr=6.40e-04 gnorm=2.93 159 smp/s
+ep4 step6425/140100 loss=1.2510 acc=0.889 lr=6.42e-04 gnorm=1.76 159 smp/s
+ep4 step6450/140100 loss=1.2611 acc=0.856 lr=6.45e-04 gnorm=1.34 159 smp/s
+ep4 step6475/140100 loss=1.3418 acc=0.873 lr=6.47e-04 gnorm=2.39 159 smp/s
+ep4 step6500/140100 loss=1.5246 acc=0.848 lr=6.50e-04 gnorm=2.84 159 smp/s
+ep4 step6525/140100 loss=1.6342 acc=0.884 lr=6.52e-04 gnorm=1.90 159 smp/s
+ep4 step6550/140100 loss=1.2587 acc=0.908 lr=6.55e-04 gnorm=1.94 159 smp/s
+ep4 step6575/140100 loss=1.3556 acc=0.863 lr=6.57e-04 gnorm=2.86 159 smp/s
+ep4 step6600/140100 loss=1.4123 acc=0.906 lr=6.60e-04 gnorm=1.83 159 smp/s
+ep4 step6625/140100 loss=1.4277 acc=0.880 lr=6.63e-04 gnorm=1.60 159 smp/s
+ep4 step6650/140100 loss=1.4437 acc=0.880 lr=6.65e-04 gnorm=1.85 159 smp/s
+ep4 step6675/140100 loss=1.4031 acc=0.839 lr=6.68e-04 gnorm=3.72 159 smp/s
+ep4 step6700/140100 loss=1.3232 acc=0.873 lr=6.70e-04 gnorm=1.04 159 smp/s
+ep4 step6725/140100 loss=1.3689 acc=0.879 lr=6.73e-04 gnorm=1.40 159 smp/s
+ep4 step6750/140100 loss=1.3696 acc=0.875 lr=6.75e-04 gnorm=2.81 159 smp/s
+ep4 step6775/140100 loss=1.3317 acc=0.907 lr=6.78e-04 gnorm=1.39 159 smp/s
+ep4 step6800/140100 loss=1.5627 acc=0.833 lr=6.80e-04 gnorm=1.91 159 smp/s
+ep4 step6825/140100 loss=1.4710 acc=0.850 lr=6.83e-04 gnorm=1.25 159 smp/s
+ep4 step6850/140100 loss=1.2038 acc=0.907 lr=6.85e-04 gnorm=1.63 159 smp/s
+ep4 step6875/140100 loss=1.4202 acc=0.827 lr=6.87e-04 gnorm=1.38 159 smp/s
+ep4 step6900/140100 loss=1.2810 acc=0.891 lr=6.90e-04 gnorm=1.16 159 smp/s
+ep4 step6925/140100 loss=1.4400 acc=0.847 lr=6.92e-04 gnorm=2.08 159 smp/s
+ep4 step6950/140100 loss=1.2270 acc=0.863 lr=6.95e-04 gnorm=1.08 159 smp/s
+ep4 step6975/140100 loss=1.4448 acc=0.890 lr=6.97e-04 gnorm=1.37 159 smp/s
+ep4 step7000/140100 loss=1.3316 acc=0.885 lr=7.00e-04 gnorm=1.88 159 smp/s
+ep4 step7025/140100 loss=1.4154 acc=0.875 lr=7.02e-04 gnorm=1.98 159 smp/s
+ep4 step7050/140100 loss=1.5301 acc=0.901 lr=7.05e-04 gnorm=1.80 159 smp/s
+ep4 step7075/140100 loss=1.5805 acc=0.838 lr=7.08e-04 gnorm=2.58 159 smp/s
+ep4 step7100/140100 loss=1.6375 acc=0.810 lr=7.10e-04 gnorm=2.37 159 smp/s
+ep4 step7125/140100 loss=1.2757 acc=0.848 lr=7.13e-04 gnorm=1.48 159 smp/s
+ep4 step7150/140100 loss=1.2129 acc=0.915 lr=7.15e-04 gnorm=1.60 159 smp/s
+ep4 step7175/140100 loss=1.5203 acc=0.861 lr=7.18e-04 gnorm=2.26 159 smp/s
+ep4 step7200/140100 loss=1.3424 acc=0.884 lr=7.20e-04 gnorm=1.82 159 smp/s
+ep4 step7225/140100 loss=1.5049 acc=0.814 lr=7.23e-04 gnorm=1.33 159 smp/s
+ep4 step7250/140100 loss=1.4307 acc=0.888 lr=7.25e-04 gnorm=2.03 159 smp/s
+ep4 step7275/140100 loss=1.1966 acc=0.916 lr=7.28e-04 gnorm=2.25 159 smp/s
+ep4 step7300/140100 loss=1.1745 acc=0.882 lr=7.30e-04 gnorm=1.84 159 smp/s
+ep4 step7325/140100 loss=1.4893 acc=0.876 lr=7.33e-04 gnorm=2.26 159 smp/s
+ep4 step7350/140100 loss=1.4723 acc=0.880 lr=7.35e-04 gnorm=0.89 159 smp/s
+ep4 step7375/140100 loss=1.3191 acc=0.870 lr=7.38e-04 gnorm=2.21 159 smp/s
+ep4 step7400/140100 loss=1.3796 acc=0.870 lr=7.40e-04 gnorm=3.74 159 smp/s
+ep4 step7425/140100 loss=1.1779 acc=0.882 lr=7.43e-04 gnorm=1.23 159 smp/s
+ep4 step7450/140100 loss=1.2033 acc=0.876 lr=7.45e-04 gnorm=1.60 159 smp/s
+ep5 step7475/140100 loss=1.4001 acc=0.817 lr=7.48e-04 gnorm=1.85 159 smp/s
+ep5 step7500/140100 loss=1.4500 acc=0.833 lr=7.50e-04 gnorm=1.50 159 smp/s
+ep5 step7525/140100 loss=1.2958 acc=0.883 lr=7.52e-04 gnorm=2.00 159 smp/s
+ep5 step7550/140100 loss=1.5417 acc=0.865 lr=7.55e-04 gnorm=2.23 159 smp/s
+ep5 step7575/140100 loss=1.2915 acc=0.914 lr=7.57e-04 gnorm=2.44 159 smp/s
+ep5 step7600/140100 loss=0.9967 acc=0.868 lr=7.60e-04 gnorm=1.00 159 smp/s
+ep5 step7625/140100 loss=1.4558 acc=0.841 lr=7.62e-04 gnorm=3.54 159 smp/s
+ep5 step7650/140100 loss=1.5817 acc=0.824 lr=7.65e-04 gnorm=1.77 159 smp/s
+ep5 step7675/140100 loss=0.9138 acc=0.859 lr=7.67e-04 gnorm=1.58 159 smp/s
+ep5 step7700/140100 loss=1.2446 acc=0.897 lr=7.70e-04 gnorm=1.47 159 smp/s
+ep5 step7725/140100 loss=1.4742 acc=0.824 lr=7.72e-04 gnorm=1.73 159 smp/s
+ep5 step7750/140100 loss=1.4892 acc=0.835 lr=7.75e-04 gnorm=1.25 159 smp/s
+ep5 step7775/140100 loss=1.2161 acc=0.862 lr=7.77e-04 gnorm=2.11 159 smp/s
+ep5 step7800/140100 loss=1.1544 acc=0.907 lr=7.80e-04 gnorm=1.53 159 smp/s
+ep5 step7825/140100 loss=1.2150 acc=0.887 lr=7.82e-04 gnorm=2.09 159 smp/s
+ep5 step7850/140100 loss=1.6540 acc=0.848 lr=7.85e-04 gnorm=2.12 159 smp/s
+ep5 step7875/140100 loss=1.3275 acc=0.851 lr=7.88e-04 gnorm=2.99 159 smp/s
+ep5 step7900/140100 loss=1.2563 acc=0.844 lr=7.90e-04 gnorm=1.06 159 smp/s
+ep5 step7925/140100 loss=1.1678 acc=0.909 lr=7.93e-04 gnorm=1.22 159 smp/s
+ep5 step7950/140100 loss=1.3244 acc=0.935 lr=7.95e-04 gnorm=2.31 159 smp/s
+ep5 step7975/140100 loss=1.5127 acc=0.862 lr=7.98e-04 gnorm=3.11 159 smp/s
+ep5 step8000/140100 loss=1.3513 acc=0.861 lr=8.00e-04 gnorm=0.97 159 smp/s
+[eval @ 8000] WER=0.994 CER=0.717 SER=1.000 loss=0.906 content_acc=0.234 fill_rate=0.668 entropy=1.000 distinct=80
+[eval @ 8000] iter32  WER=0.802 CER=0.334 SER=0.995 (mask-predict decode, n=200 clips)
+   Full: ಸ ಾ ರ ಸ ್ ್ ೃ ತ ತ ನ ನ ರ ರ ರ ೈ ೈ ೂ ೂ ೂ ೂ ಿ ಿ ಲ ್ ಲ ಿ | ಕ ರ ರ ೊ ೊ ಾ | | | | | | | | ಚ ಚ ಚ ಚ ತ ತ ತ ತ ರ ು ು ಹ ಹ ನ ನ ೆ ೆ ೆ ೆ ೆ ೆ ಲ ಲ ಲ ಲ ಲ ಿ ಿ ಿ 
+   Hyp : ಕಸಾರಸ್್ೃತತನನರರರೈೈೂೂೂೂಿಿಲ್ಲಿ ಕರರೊೊಾ        ಚಚಚಚತತತತರುುಹಹನನೆೆೆೆೆೆಲಲಲಲಲಿಿಿಿಿಿಐಐಐಐಐದ
+   Ref : ಸಾಂಸ್ಕೃತಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರೋನಾ ಸೋಂಕು ಹೆಚ್ಚುತ್ತಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಇಂದಿನಿಂದ ಐದ
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+   ** new best eval/iter_WER=0.8019 -> best.pt
+ep5 step8025/140100 loss=1.5582 acc=0.889 lr=8.03e-04 gnorm=2.18 158 smp/s
+ep5 step8050/140100 loss=1.3936 acc=0.900 lr=8.05e-04 gnorm=1.29 158 smp/s
+ep5 step8075/140100 loss=1.5562 acc=0.854 lr=8.08e-04 gnorm=2.94 158 smp/s
+ep5 step8100/140100 loss=1.3449 acc=0.876 lr=8.10e-04 gnorm=1.03 158 smp/s
+ep5 step8125/140100 loss=1.5733 acc=0.869 lr=8.13e-04 gnorm=1.68 158 smp/s
+ep5 step8150/140100 loss=1.4970 acc=0.882 lr=8.15e-04 gnorm=2.24 158 smp/s
+ep5 step8175/140100 loss=1.3274 acc=0.871 lr=8.17e-04 gnorm=2.59 158 smp/s
+ep5 step8200/140100 loss=1.2838 acc=0.835 lr=8.20e-04 gnorm=2.28 158 smp/s
+ep5 step8225/140100 loss=1.1929 acc=0.911 lr=8.22e-04 gnorm=1.25 158 smp/s
+ep5 step8250/140100 loss=1.7789 acc=0.845 lr=8.25e-04 gnorm=1.70 158 smp/s
+ep5 step8275/140100 loss=1.4958 acc=0.854 lr=8.28e-04 gnorm=1.84 158 smp/s
+ep5 step8300/140100 loss=1.2132 acc=0.885 lr=8.30e-04 gnorm=1.25 158 smp/s
+ep5 step8325/140100 loss=1.3476 acc=0.829 lr=8.33e-04 gnorm=1.73 158 smp/s
+ep5 step8350/140100 loss=1.3676 acc=0.877 lr=8.35e-04 gnorm=1.69 158 smp/s
+ep5 step8375/140100 loss=1.2848 acc=0.871 lr=8.38e-04 gnorm=1.06 158 smp/s
+ep5 step8400/140100 loss=1.4183 acc=0.906 lr=8.40e-04 gnorm=1.66 158 smp/s
+ep5 step8425/140100 loss=1.4896 acc=0.856 lr=8.43e-04 gnorm=1.41 158 smp/s
+ep5 step8450/140100 loss=1.3590 acc=0.916 lr=8.45e-04 gnorm=3.84 158 smp/s
+ep5 step8475/140100 loss=0.9073 acc=0.933 lr=8.48e-04 gnorm=2.42 158 smp/s
+ep5 step8500/140100 loss=1.2408 acc=0.941 lr=8.50e-04 gnorm=1.97 158 smp/s
+ep5 step8525/140100 loss=1.1715 acc=0.897 lr=8.53e-04 gnorm=2.34 158 smp/s
+ep5 step8550/140100 loss=1.2137 acc=0.854 lr=8.55e-04 gnorm=1.78 158 smp/s
+ep5 step8575/140100 loss=1.4644 acc=0.857 lr=8.58e-04 gnorm=2.49 158 smp/s
+ep5 step8600/140100 loss=1.3724 acc=0.865 lr=8.60e-04 gnorm=1.18 158 smp/s
+ep5 step8625/140100 loss=1.1646 acc=0.877 lr=8.63e-04 gnorm=1.86 158 smp/s
+ep5 step8650/140100 loss=1.5697 acc=0.853 lr=8.65e-04 gnorm=2.20 158 smp/s
+ep5 step8675/140100 loss=1.3196 acc=0.863 lr=8.68e-04 gnorm=1.42 158 smp/s
+ep5 step8700/140100 loss=1.3272 acc=0.874 lr=8.70e-04 gnorm=2.20 158 smp/s
+ep5 step8725/140100 loss=1.2328 acc=0.910 lr=8.73e-04 gnorm=3.70 158 smp/s
+ep5 step8750/140100 loss=1.4133 acc=0.861 lr=8.75e-04 gnorm=0.93 159 smp/s
+ep5 step8775/140100 loss=1.0027 acc=0.919 lr=8.77e-04 gnorm=1.18 159 smp/s
+ep5 step8800/140100 loss=1.2864 acc=0.862 lr=8.80e-04 gnorm=1.95 159 smp/s
+ep5 step8825/140100 loss=1.6719 acc=0.869 lr=8.82e-04 gnorm=3.75 159 smp/s
+ep5 step8850/140100 loss=1.3253 acc=0.887 lr=8.85e-04 gnorm=2.16 159 smp/s
+ep5 step8875/140100 loss=1.2077 acc=0.881 lr=8.87e-04 gnorm=3.40 159 smp/s
+ep5 step8900/140100 loss=1.5012 acc=0.913 lr=8.90e-04 gnorm=2.07 159 smp/s
+ep5 step8925/140100 loss=1.6065 acc=0.814 lr=8.92e-04 gnorm=2.20 159 smp/s
+ep5 step8950/140100 loss=1.8612 acc=0.838 lr=8.95e-04 gnorm=2.17 159 smp/s
+ep5 step8975/140100 loss=1.2851 acc=0.875 lr=8.97e-04 gnorm=2.43 159 smp/s
+ep5 step9000/140100 loss=1.1680 acc=0.910 lr=9.00e-04 gnorm=2.86 159 smp/s
+ep5 step9025/140100 loss=1.3065 acc=0.896 lr=9.02e-04 gnorm=1.63 159 smp/s
+ep5 step9050/140100 loss=1.3376 acc=0.831 lr=9.05e-04 gnorm=0.89 159 smp/s
+ep5 step9075/140100 loss=1.2655 acc=0.875 lr=9.07e-04 gnorm=2.46 159 smp/s
+ep5 step9100/140100 loss=1.2805 acc=0.864 lr=9.10e-04 gnorm=2.01 159 smp/s
+ep5 step9125/140100 loss=1.2233 acc=0.883 lr=9.13e-04 gnorm=1.70 159 smp/s
+ep5 step9150/140100 loss=1.4335 acc=0.880 lr=9.15e-04 gnorm=4.00 159 smp/s
+ep5 step9175/140100 loss=1.2469 acc=0.873 lr=9.18e-04 gnorm=1.71 159 smp/s
+ep5 step9200/140100 loss=1.2369 acc=0.911 lr=9.20e-04 gnorm=1.17 159 smp/s
+ep5 step9225/140100 loss=1.1787 acc=0.841 lr=9.23e-04 gnorm=1.61 159 smp/s
+ep5 step9250/140100 loss=1.3491 acc=0.887 lr=9.25e-04 gnorm=1.50 159 smp/s
+ep5 step9275/140100 loss=0.9194 acc=0.927 lr=9.28e-04 gnorm=1.58 159 smp/s
+ep5 step9300/140100 loss=1.1588 acc=0.867 lr=9.30e-04 gnorm=1.79 159 smp/s
+ep5 step9325/140100 loss=1.2696 acc=0.890 lr=9.33e-04 gnorm=2.59 159 smp/s
+ep6 step9350/140100 loss=1.5839 acc=0.893 lr=9.35e-04 gnorm=3.74 159 smp/s
+ep6 step9375/140100 loss=1.3563 acc=0.821 lr=9.37e-04 gnorm=1.87 159 smp/s
+ep6 step9400/140100 loss=1.3625 acc=0.810 lr=9.40e-04 gnorm=1.87 159 smp/s
+ep6 step9425/140100 loss=1.6556 acc=0.838 lr=9.42e-04 gnorm=3.08 159 smp/s
+ep6 step9450/140100 loss=1.3443 acc=0.857 lr=9.45e-04 gnorm=1.45 159 smp/s
+ep6 step9475/140100 loss=1.2968 acc=0.893 lr=9.47e-04 gnorm=2.17 159 smp/s
+ep6 step9500/140100 loss=1.0736 acc=0.861 lr=9.50e-04 gnorm=2.23 159 smp/s
+ep6 step9525/140100 loss=1.4650 acc=0.800 lr=9.53e-04 gnorm=1.71 159 smp/s
+ep6 step9550/140100 loss=1.3568 acc=0.850 lr=9.55e-04 gnorm=1.67 159 smp/s
+ep6 step9575/140100 loss=1.2487 acc=0.911 lr=9.58e-04 gnorm=1.41 159 smp/s
+ep6 step9600/140100 loss=1.0537 acc=0.917 lr=9.60e-04 gnorm=1.06 159 smp/s
+ep6 step9625/140100 loss=1.4576 acc=0.903 lr=9.63e-04 gnorm=3.63 159 smp/s
+ep6 step9650/140100 loss=1.4804 acc=0.868 lr=9.65e-04 gnorm=2.91 159 smp/s
+ep6 step9675/140100 loss=1.3757 acc=0.866 lr=9.68e-04 gnorm=2.26 159 smp/s
+ep6 step9700/140100 loss=1.4328 acc=0.903 lr=9.70e-04 gnorm=1.88 159 smp/s
+ep6 step9725/140100 loss=1.2072 acc=0.831 lr=9.73e-04 gnorm=1.31 159 smp/s
+ep6 step9750/140100 loss=1.1947 acc=0.911 lr=9.75e-04 gnorm=2.75 159 smp/s
+ep6 step9775/140100 loss=1.0774 acc=0.929 lr=9.78e-04 gnorm=1.44 159 smp/s
+ep6 step9800/140100 loss=1.3019 acc=0.887 lr=9.80e-04 gnorm=1.62 159 smp/s
+ep6 step9825/140100 loss=1.5447 acc=0.946 lr=9.83e-04 gnorm=1.23 159 smp/s
+ep6 step9850/140100 loss=1.1620 acc=0.866 lr=9.85e-04 gnorm=1.45 159 smp/s
+ep6 step9875/140100 loss=1.1970 acc=0.878 lr=9.88e-04 gnorm=1.75 159 smp/s
+ep6 step9900/140100 loss=1.2328 acc=0.869 lr=9.90e-04 gnorm=1.73 159 smp/s
+ep6 step9925/140100 loss=1.2659 acc=0.893 lr=9.93e-04 gnorm=0.93 159 smp/s
+ep6 step9950/140100 loss=1.4630 acc=0.840 lr=9.95e-04 gnorm=1.17 159 smp/s
+ep6 step9975/140100 loss=1.2665 acc=0.840 lr=9.98e-04 gnorm=2.78 159 smp/s
+ep6 step10000/140100 loss=1.4717 acc=0.786 lr=1.00e-03 gnorm=1.23 159 smp/s
+[eval @ 10000] WER=0.992 CER=0.712 SER=1.000 loss=0.858 content_acc=0.249 fill_rate=0.680 entropy=0.979 distinct=81
+[eval @ 10000] iter32  WER=0.748 CER=0.318 SER=0.990 (mask-predict decode, n=200 clips)
+   Full: ವ ಾ ಸ ್ ತ ೃ ಿ ಿ ಗ ಗ ರ ರ ರ ಸ ಸ ಸ ಸ ೂ ರ ಿ ಲ ಲ ಲ ಿ ೊ ೊ ೊ ೊ ೊ ೊ ೊ ೊ ಾ ೋ ೋ ೋ ಕ ಕ ು ು ು ು ು ು ು ು ು ು ರ ರ ಿ ಿ ಿ ಿ ನ ೆ ೆ ೆ ೆ ಲ ಲ ಲ ಲ ಲ ಲ ಲ ಲ ಲ ಲ ದ 
+   Hyp : ಸವಾಸ್ತೃಿಿಗಗರರರಸಸಸಸೂರಿಲಲಲಿೊೊೊೊೊೊೊೊಾೋೋೋಕಕುುುುುುುುುುರರಿಿಿಿನೆೆೆೆಲಲಲಲಲಲಲಲಲಲದದಿದದದದದದದ
+   Ref : ಸಾಂಸ್ಕೃತಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರೋನಾ ಸೋಂಕು ಹೆಚ್ಚುತ್ತಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಇಂದಿನಿಂದ ಐದ
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+   ** new best eval/iter_WER=0.7483 -> best.pt
+ep6 step10025/140100 loss=1.0925 acc=0.864 lr=9.99e-04 gnorm=1.10 158 smp/s
+ep6 step10050/140100 loss=1.2274 acc=0.893 lr=9.98e-04 gnorm=1.22 158 smp/s
+ep6 step10075/140100 loss=1.0923 acc=0.914 lr=9.97e-04 gnorm=1.23 158 smp/s
+ep6 step10100/140100 loss=1.1343 acc=0.866 lr=9.96e-04 gnorm=2.03 158 smp/s
+ep6 step10125/140100 loss=1.2654 acc=0.929 lr=9.96e-04 gnorm=2.60 158 smp/s
+ep6 step10150/140100 loss=1.2394 acc=0.876 lr=9.95e-04 gnorm=1.37 158 smp/s
+ep6 step10175/140100 loss=1.3565 acc=0.848 lr=9.94e-04 gnorm=1.45 158 smp/s
+ep6 step10200/140100 loss=1.1319 acc=0.923 lr=9.93e-04 gnorm=1.99 158 smp/s
+ep6 step10225/140100 loss=1.1383 acc=0.880 lr=9.92e-04 gnorm=3.02 158 smp/s
+ep6 step10250/140100 loss=1.1136 acc=0.934 lr=9.91e-04 gnorm=2.22 158 smp/s
+ep6 step10275/140100 loss=1.2526 acc=0.924 lr=9.90e-04 gnorm=1.95 158 smp/s
+ep6 step10300/140100 loss=1.3868 acc=0.855 lr=9.89e-04 gnorm=1.90 158 smp/s
+ep6 step10325/140100 loss=1.2564 acc=0.837 lr=9.89e-04 gnorm=1.12 158 smp/s
+ep6 step10350/140100 loss=1.2711 acc=0.823 lr=9.88e-04 gnorm=1.47 158 smp/s
+ep6 step10375/140100 loss=1.2556 acc=0.853 lr=9.87e-04 gnorm=1.68 158 smp/s
+ep6 step10400/140100 loss=1.4809 acc=0.823 lr=9.86e-04 gnorm=2.04 158 smp/s
+ep6 step10425/140100 loss=0.8862 acc=0.957 lr=9.85e-04 gnorm=1.22 158 smp/s
+ep6 step10450/140100 loss=1.2901 acc=0.858 lr=9.84e-04 gnorm=1.11 158 smp/s
+ep6 step10475/140100 loss=1.0161 acc=0.863 lr=9.83e-04 gnorm=2.82 158 smp/s
+ep6 step10500/140100 loss=1.1619 acc=0.824 lr=9.82e-04 gnorm=3.15 158 smp/s
+ep6 step10525/140100 loss=1.1887 acc=0.862 lr=9.82e-04 gnorm=1.47 158 smp/s
+ep6 step10550/140100 loss=1.4040 acc=0.863 lr=9.81e-04 gnorm=2.40 158 smp/s
+ep6 step10575/140100 loss=1.0929 acc=0.916 lr=9.80e-04 gnorm=1.42 158 smp/s
+ep6 step10600/140100 loss=1.0966 acc=0.908 lr=9.79e-04 gnorm=1.29 158 smp/s
+ep6 step10625/140100 loss=1.2669 acc=0.884 lr=9.78e-04 gnorm=1.75 158 smp/s
+ep6 step10650/140100 loss=1.2768 acc=0.862 lr=9.77e-04 gnorm=1.89 158 smp/s
+ep6 step10675/140100 loss=1.2755 acc=0.853 lr=9.76e-04 gnorm=1.99 158 smp/s
+ep6 step10700/140100 loss=1.4318 acc=0.886 lr=9.76e-04 gnorm=3.99 158 smp/s
+ep6 step10725/140100 loss=1.2660 acc=0.840 lr=9.75e-04 gnorm=1.45 158 smp/s
+ep6 step10750/140100 loss=1.1523 acc=0.882 lr=9.74e-04 gnorm=3.15 158 smp/s
+ep6 step10775/140100 loss=1.3953 acc=0.824 lr=9.73e-04 gnorm=1.42 158 smp/s
+ep6 step10800/140100 loss=1.2230 acc=0.856 lr=9.72e-04 gnorm=3.40 158 smp/s
+ep6 step10825/140100 loss=1.3914 acc=0.834 lr=9.71e-04 gnorm=2.47 158 smp/s
+ep6 step10850/140100 loss=1.0407 acc=0.905 lr=9.70e-04 gnorm=2.68 158 smp/s
+ep6 step10875/140100 loss=1.1750 acc=0.905 lr=9.70e-04 gnorm=3.68 158 smp/s
+ep6 step10900/140100 loss=1.4440 acc=0.892 lr=9.69e-04 gnorm=2.62 158 smp/s
+ep6 step10925/140100 loss=1.2593 acc=0.859 lr=9.68e-04 gnorm=1.72 158 smp/s
+ep6 step10950/140100 loss=1.1326 acc=0.911 lr=9.67e-04 gnorm=1.12 158 smp/s
+ep6 step10975/140100 loss=1.4522 acc=0.846 lr=9.66e-04 gnorm=1.21 158 smp/s
+ep6 step11000/140100 loss=1.3714 acc=0.858 lr=9.65e-04 gnorm=1.76 158 smp/s
+ep6 step11025/140100 loss=1.4400 acc=0.820 lr=9.64e-04 gnorm=1.74 158 smp/s
+ep6 step11050/140100 loss=1.4946 acc=0.873 lr=9.64e-04 gnorm=1.67 158 smp/s
+ep6 step11075/140100 loss=1.5024 acc=0.874 lr=9.63e-04 gnorm=2.83 158 smp/s
+ep6 step11100/140100 loss=1.6032 acc=0.944 lr=9.62e-04 gnorm=4.12 158 smp/s
+ep6 step11125/140100 loss=1.4107 acc=0.814 lr=9.61e-04 gnorm=1.86 158 smp/s
+ep6 step11150/140100 loss=1.1690 acc=0.897 lr=9.60e-04 gnorm=2.49 158 smp/s
+ep6 step11175/140100 loss=1.3537 acc=0.902 lr=9.59e-04 gnorm=3.94 158 smp/s
+ep6 step11200/140100 loss=1.3763 acc=0.853 lr=9.58e-04 gnorm=3.60 158 smp/s
+ep7 step11225/140100 loss=1.2276 acc=0.887 lr=9.58e-04 gnorm=2.85 158 smp/s
+ep7 step11250/140100 loss=1.0313 acc=0.923 lr=9.57e-04 gnorm=3.21 158 smp/s
+ep7 step11275/140100 loss=0.9731 acc=0.910 lr=9.56e-04 gnorm=2.21 158 smp/s
+ep7 step11300/140100 loss=1.1747 acc=0.864 lr=9.55e-04 gnorm=1.50 158 smp/s
+ep7 step11325/140100 loss=1.4591 acc=0.858 lr=9.54e-04 gnorm=2.57 158 smp/s
+ep7 step11350/140100 loss=1.2913 acc=0.903 lr=9.53e-04 gnorm=1.66 158 smp/s
+ep7 step11375/140100 loss=1.3473 acc=0.891 lr=9.52e-04 gnorm=1.47 158 smp/s
+ep7 step11400/140100 loss=0.9914 acc=0.890 lr=9.52e-04 gnorm=1.41 158 smp/s
+ep7 step11425/140100 loss=1.4998 acc=0.866 lr=9.51e-04 gnorm=1.54 158 smp/s
+ep7 step11450/140100 loss=1.2370 acc=0.890 lr=9.50e-04 gnorm=1.39 158 smp/s
+ep7 step11475/140100 loss=0.9790 acc=0.919 lr=9.49e-04 gnorm=1.93 158 smp/s
+ep7 step11500/140100 loss=0.9850 acc=0.897 lr=9.48e-04 gnorm=1.39 158 smp/s
+ep7 step11525/140100 loss=1.0270 acc=0.894 lr=9.47e-04 gnorm=1.93 158 smp/s
+ep7 step11550/140100 loss=1.2145 acc=0.823 lr=9.47e-04 gnorm=1.64 158 smp/s
+ep7 step11575/140100 loss=1.3793 acc=0.860 lr=9.46e-04 gnorm=2.23 158 smp/s
+ep7 step11600/140100 loss=1.2238 acc=0.914 lr=9.45e-04 gnorm=3.14 158 smp/s
+ep7 step11625/140100 loss=1.5328 acc=0.854 lr=9.44e-04 gnorm=0.78 158 smp/s
+ep7 step11650/140100 loss=1.1615 acc=0.882 lr=9.43e-04 gnorm=2.29 158 smp/s
+ep7 step11675/140100 loss=1.1021 acc=0.897 lr=9.42e-04 gnorm=2.44 158 smp/s
+ep7 step11700/140100 loss=1.3041 acc=0.832 lr=9.42e-04 gnorm=1.13 158 smp/s
+ep7 step11725/140100 loss=1.2879 acc=0.879 lr=9.41e-04 gnorm=2.01 158 smp/s
+ep7 step11750/140100 loss=1.3389 acc=0.863 lr=9.40e-04 gnorm=2.57 158 smp/s
+ep7 step11775/140100 loss=1.3220 acc=0.839 lr=9.39e-04 gnorm=1.44 158 smp/s
+ep7 step11800/140100 loss=1.0488 acc=0.932 lr=9.38e-04 gnorm=2.20 158 smp/s
+ep7 step11825/140100 loss=0.9250 acc=0.957 lr=9.37e-04 gnorm=2.17 158 smp/s
+ep7 step11850/140100 loss=1.3865 acc=0.908 lr=9.37e-04 gnorm=1.55 158 smp/s
+ep7 step11875/140100 loss=1.1083 acc=0.940 lr=9.36e-04 gnorm=2.61 158 smp/s
+ep7 step11900/140100 loss=1.2725 acc=0.834 lr=9.35e-04 gnorm=1.31 158 smp/s
+ep7 step11925/140100 loss=1.3860 acc=0.847 lr=9.34e-04 gnorm=2.71 158 smp/s
+ep7 step11950/140100 loss=1.1519 acc=0.907 lr=9.33e-04 gnorm=1.40 158 smp/s
+ep7 step11975/140100 loss=1.2313 acc=0.907 lr=9.32e-04 gnorm=2.46 158 smp/s
+ep7 step12000/140100 loss=1.3787 acc=0.821 lr=9.32e-04 gnorm=0.99 158 smp/s
+[eval @ 12000] WER=0.979 CER=0.717 SER=1.000 loss=1.006 content_acc=0.195 fill_rate=0.672 entropy=0.963 distinct=82
+[eval @ 12000] iter32  WER=0.766 CER=0.333 SER=0.995 (mask-predict decode, n=200 clips)
+   Full: ಕ ಾ ರ ್ ಯ ಕ ಿ ಿ ಿ | ರ ರ ರ | ೈ ೈ ೂ ೂ ೂ ಿ ಲ ಲ ಲ ಲ ಲ ಲ ಲ ಕ ಕ ಕ ಕ ೊ ಾ ಾ ಾ ಾ ಸ | | | ಹ ಹ ಹ ಚ ಚ ತ ತ ತ ತ ತ ಿ ಿ ಹ ಹ ಹ ನ ನ ನ ್ ಲ ಲ ಲ ಲ ಲ ಲ ಲ ಲ ಲ ಂ ದ 
+   Hyp : ಕಕಾರ್ಯಕಿಿಿ ರರರ ೈೈೂೂೂಿಲಲಲಲಲಲಲಕಕಕಕೊಾಾಾಾಸ   ಹಹಹಚಚತತತತತಿಿಹಹಹನನನ್ಲಲಲಲಲಲಲಲಲಂದದದದದದದದದದ
+   Ref : ಸಾಂಸ್ಕೃತಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರೋನಾ ಸೋಂಕು ಹೆಚ್ಚುತ್ತಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಇಂದಿನಿಂದ ಐದ
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+ep7 step12025/140100 loss=1.1986 acc=0.858 lr=9.31e-04 gnorm=2.09 158 smp/s
+ep7 step12050/140100 loss=1.1794 acc=0.855 lr=9.30e-04 gnorm=1.49 158 smp/s
+ep7 step12075/140100 loss=1.1581 acc=0.847 lr=9.29e-04 gnorm=1.07 158 smp/s
+ep7 step12100/140100 loss=1.0405 acc=0.900 lr=9.28e-04 gnorm=2.70 158 smp/s
+ep7 step12125/140100 loss=1.2523 acc=0.953 lr=9.28e-04 gnorm=3.41 158 smp/s
+ep7 step12150/140100 loss=1.1598 acc=0.887 lr=9.27e-04 gnorm=2.17 158 smp/s
+ep7 step12175/140100 loss=1.5654 acc=0.785 lr=9.26e-04 gnorm=1.97 158 smp/s
+ep7 step12200/140100 loss=0.8851 acc=0.905 lr=9.25e-04 gnorm=2.69 158 smp/s
+ep7 step12225/140100 loss=1.2016 acc=0.901 lr=9.24e-04 gnorm=2.37 158 smp/s
+ep7 step12250/140100 loss=1.2873 acc=0.930 lr=9.23e-04 gnorm=1.09 158 smp/s
+ep7 step12275/140100 loss=1.2138 acc=0.904 lr=9.23e-04 gnorm=1.29 158 smp/s
+ep7 step12300/140100 loss=1.1262 acc=0.895 lr=9.22e-04 gnorm=1.70 158 smp/s
+ep7 step12325/140100 loss=0.9587 acc=0.892 lr=9.21e-04 gnorm=1.43 158 smp/s
+ep7 step12350/140100 loss=1.1882 acc=0.947 lr=9.20e-04 gnorm=1.44 158 smp/s
+ep7 step12375/140100 loss=0.9732 acc=0.901 lr=9.19e-04 gnorm=2.17 158 smp/s
+ep7 step12400/140100 loss=1.2982 acc=0.836 lr=9.19e-04 gnorm=2.70 158 smp/s
+ep7 step12425/140100 loss=0.9690 acc=0.934 lr=9.18e-04 gnorm=3.15 158 smp/s
+ep7 step12450/140100 loss=0.9683 acc=0.911 lr=9.17e-04 gnorm=1.19 158 smp/s
+ep7 step12475/140100 loss=1.3678 acc=0.855 lr=9.16e-04 gnorm=1.69 158 smp/s
+ep7 step12500/140100 loss=1.1094 acc=0.853 lr=9.15e-04 gnorm=2.37 158 smp/s
+ep7 step12525/140100 loss=1.5042 acc=0.831 lr=9.14e-04 gnorm=1.52 158 smp/s
+ep7 step12550/140100 loss=1.1860 acc=0.878 lr=9.14e-04 gnorm=1.41 158 smp/s
+ep7 step12575/140100 loss=1.2545 acc=0.873 lr=9.13e-04 gnorm=1.15 158 smp/s
+ep7 step12600/140100 loss=1.4057 acc=0.904 lr=9.12e-04 gnorm=2.20 158 smp/s
+ep7 step12625/140100 loss=1.1970 acc=0.886 lr=9.11e-04 gnorm=1.56 158 smp/s
+ep7 step12650/140100 loss=1.2208 acc=0.859 lr=9.10e-04 gnorm=1.19 158 smp/s
+ep7 step12675/140100 loss=1.1635 acc=0.912 lr=9.10e-04 gnorm=1.68 158 smp/s
+ep7 step12700/140100 loss=1.1359 acc=0.937 lr=9.09e-04 gnorm=1.20 158 smp/s
+ep7 step12725/140100 loss=1.1203 acc=0.861 lr=9.08e-04 gnorm=1.53 158 smp/s
+ep7 step12750/140100 loss=1.2768 acc=0.884 lr=9.07e-04 gnorm=1.24 158 smp/s
+ep7 step12775/140100 loss=1.1386 acc=0.893 lr=9.06e-04 gnorm=1.43 158 smp/s
+ep7 step12800/140100 loss=1.0066 acc=0.935 lr=9.06e-04 gnorm=1.80 158 smp/s
+ep7 step12825/140100 loss=1.3151 acc=0.867 lr=9.05e-04 gnorm=1.16 158 smp/s
+ep7 step12850/140100 loss=1.2606 acc=0.913 lr=9.04e-04 gnorm=2.77 158 smp/s
+ep7 step12875/140100 loss=1.2536 acc=0.880 lr=9.03e-04 gnorm=1.04 158 smp/s
+ep7 step12900/140100 loss=1.2022 acc=0.835 lr=9.02e-04 gnorm=1.29 158 smp/s
+ep7 step12925/140100 loss=1.2853 acc=0.892 lr=9.02e-04 gnorm=1.83 158 smp/s
+ep7 step12950/140100 loss=1.0470 acc=0.939 lr=9.01e-04 gnorm=3.21 158 smp/s
+ep7 step12975/140100 loss=1.1465 acc=0.894 lr=9.00e-04 gnorm=1.54 158 smp/s
+ep7 step13000/140100 loss=1.0048 acc=0.918 lr=8.99e-04 gnorm=1.01 158 smp/s
+ep7 step13025/140100 loss=1.1690 acc=0.929 lr=8.98e-04 gnorm=1.84 158 smp/s
+ep7 step13050/140100 loss=1.3893 acc=0.858 lr=8.98e-04 gnorm=0.93 158 smp/s
+ep7 step13075/140100 loss=1.2271 acc=0.904 lr=8.97e-04 gnorm=0.87 158 smp/s
+ep8 step13100/140100 loss=1.0506 acc=0.901 lr=8.96e-04 gnorm=1.12 158 smp/s
+ep8 step13125/140100 loss=1.0841 acc=0.862 lr=8.95e-04 gnorm=2.90 158 smp/s
+ep8 step13150/140100 loss=1.0417 acc=0.936 lr=8.94e-04 gnorm=2.58 158 smp/s
+ep8 step13175/140100 loss=0.7760 acc=0.965 lr=8.94e-04 gnorm=1.70 158 smp/s
+ep8 step13200/140100 loss=1.0521 acc=0.857 lr=8.93e-04 gnorm=1.71 158 smp/s
+ep8 step13225/140100 loss=0.9167 acc=0.947 lr=8.92e-04 gnorm=0.97 158 smp/s
+ep8 step13250/140100 loss=1.2504 acc=0.854 lr=8.91e-04 gnorm=0.96 158 smp/s
+ep8 step13275/140100 loss=1.3706 acc=0.866 lr=8.91e-04 gnorm=1.34 158 smp/s
+ep8 step13300/140100 loss=1.2828 acc=0.856 lr=8.90e-04 gnorm=1.39 158 smp/s
+ep8 step13325/140100 loss=1.0546 acc=0.934 lr=8.89e-04 gnorm=0.90 158 smp/s
+ep8 step13350/140100 loss=0.9688 acc=0.902 lr=8.88e-04 gnorm=1.01 158 smp/s
+ep8 step13375/140100 loss=1.3366 acc=0.831 lr=8.87e-04 gnorm=1.54 158 smp/s
+ep8 step13400/140100 loss=1.2395 acc=0.889 lr=8.87e-04 gnorm=2.55 158 smp/s
+ep8 step13425/140100 loss=1.1365 acc=0.869 lr=8.86e-04 gnorm=0.73 158 smp/s
+ep8 step13450/140100 loss=1.1636 acc=0.851 lr=8.85e-04 gnorm=1.16 158 smp/s
+ep8 step13475/140100 loss=1.0234 acc=0.889 lr=8.84e-04 gnorm=2.38 158 smp/s
+ep8 step13500/140100 loss=1.3270 acc=0.880 lr=8.83e-04 gnorm=1.23 158 smp/s
+ep8 step13525/140100 loss=1.2923 acc=0.871 lr=8.83e-04 gnorm=3.57 158 smp/s
+ep8 step13550/140100 loss=1.4708 acc=0.803 lr=8.82e-04 gnorm=1.45 158 smp/s
+ep8 step13575/140100 loss=0.9142 acc=0.887 lr=8.81e-04 gnorm=1.20 158 smp/s
+ep8 step13600/140100 loss=1.3518 acc=0.894 lr=8.80e-04 gnorm=2.04 158 smp/s
+ep8 step13625/140100 loss=0.8967 acc=0.903 lr=8.80e-04 gnorm=1.20 158 smp/s
+ep8 step13650/140100 loss=0.9976 acc=0.864 lr=8.79e-04 gnorm=1.24 158 smp/s
+ep8 step13675/140100 loss=1.1408 acc=0.869 lr=8.78e-04 gnorm=2.91 158 smp/s
+ep8 step13700/140100 loss=1.0118 acc=0.948 lr=8.77e-04 gnorm=1.40 158 smp/s
+ep8 step13725/140100 loss=1.0965 acc=0.873 lr=8.76e-04 gnorm=1.36 158 smp/s
+ep8 step13750/140100 loss=1.2955 acc=0.851 lr=8.76e-04 gnorm=1.49 158 smp/s
+ep8 step13775/140100 loss=1.1552 acc=0.959 lr=8.75e-04 gnorm=0.92 158 smp/s
+ep8 step13800/140100 loss=0.9981 acc=0.942 lr=8.74e-04 gnorm=2.11 158 smp/s
+ep8 step13825/140100 loss=0.8817 acc=0.964 lr=8.73e-04 gnorm=2.18 158 smp/s
+ep8 step13850/140100 loss=1.1695 acc=0.863 lr=8.73e-04 gnorm=1.73 158 smp/s
+ep8 step13875/140100 loss=1.2065 acc=0.878 lr=8.72e-04 gnorm=0.75 158 smp/s
+ep8 step13900/140100 loss=1.0633 acc=0.943 lr=8.71e-04 gnorm=0.88 158 smp/s
+ep8 step13925/140100 loss=1.1294 acc=0.872 lr=8.70e-04 gnorm=3.63 158 smp/s
+ep8 step13950/140100 loss=1.3119 acc=0.914 lr=8.70e-04 gnorm=3.37 158 smp/s
+ep8 step13975/140100 loss=1.3590 acc=0.852 lr=8.69e-04 gnorm=2.09 158 smp/s
+ep8 step14000/140100 loss=1.2732 acc=0.861 lr=8.68e-04 gnorm=1.12 158 smp/s
+[eval @ 14000] WER=0.981 CER=0.667 SER=1.000 loss=0.984 content_acc=0.195 fill_rate=0.705 entropy=0.911 distinct=81
+[eval @ 14000] iter32  WER=0.745 CER=0.311 SER=0.995 (mask-predict decode, n=200 clips)
+   Full: ತ ತ ತ ತ ತ ತ ನ ನ ರ ರ ರ | | ೈ ೈ ೂ ೂ ರ ನ ನ ಲ ಲ ಲ ಲ ಿ | | ೊ ೊ ರ ೊ ೊ ಾ | | | | | | | ೆ ೆ ್ ್ ್ ತ ತ ತ | | ಿ ನ ನ ನ ನ ೆ ೆ ಲ ಲ ಲ ಲ ಲ ಲ ಿ ಂ ಿ ಿ ಿ ಿ ದ 
+   Hyp : ಸತತತತತತನನರರರ  ೈೈೂೂರನನಲಲಲಲಿ  ೊೊರೊೊಾ       ೆೆ್್್ತತತ  ಿನನನನೆೆಲಲಲಲಲಲಿಂಿಿಿಿದದ      ಕಕ
+   Ref : ಸಾಂಸ್ಕೃತಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರೋನಾ ಸೋಂಕು ಹೆಚ್ಚುತ್ತಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಇಂದಿನಿಂದ ಐದ
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+   ** new best eval/iter_WER=0.7453 -> best.pt
+ep8 step14025/140100 loss=1.1584 acc=0.918 lr=8.67e-04 gnorm=1.33 158 smp/s
+ep8 step14050/140100 loss=1.2880 acc=0.870 lr=8.66e-04 gnorm=0.88 158 smp/s
+ep8 step14075/140100 loss=1.3176 acc=0.912 lr=8.66e-04 gnorm=0.91 158 smp/s
+ep8 step14100/140100 loss=0.9429 acc=0.949 lr=8.65e-04 gnorm=2.16 158 smp/s
+ep8 step14125/140100 loss=1.0808 acc=0.890 lr=8.64e-04 gnorm=1.21 158 smp/s
+ep8 step14150/140100 loss=1.1623 acc=0.934 lr=8.63e-04 gnorm=1.67 158 smp/s
+ep8 step14175/140100 loss=1.2533 acc=0.877 lr=8.63e-04 gnorm=2.05 158 smp/s
+ep8 step14200/140100 loss=1.1578 acc=0.901 lr=8.62e-04 gnorm=1.89 158 smp/s
+ep8 step14225/140100 loss=1.0251 acc=0.937 lr=8.61e-04 gnorm=1.16 158 smp/s
+ep8 step14250/140100 loss=1.1028 acc=0.942 lr=8.60e-04 gnorm=1.63 158 smp/s
+ep8 step14275/140100 loss=0.9599 acc=0.913 lr=8.60e-04 gnorm=0.84 158 smp/s
+ep8 step14300/140100 loss=1.3541 acc=0.866 lr=8.59e-04 gnorm=2.20 158 smp/s
+ep8 step14325/140100 loss=1.2224 acc=0.927 lr=8.58e-04 gnorm=2.18 158 smp/s
+ep8 step14350/140100 loss=0.7724 acc=0.928 lr=8.57e-04 gnorm=2.02 158 smp/s
+ep8 step14375/140100 loss=0.9085 acc=0.891 lr=8.57e-04 gnorm=0.95 158 smp/s
+ep8 step14400/140100 loss=1.1888 acc=0.902 lr=8.56e-04 gnorm=1.39 158 smp/s
+ep8 step14425/140100 loss=1.2738 acc=0.864 lr=8.55e-04 gnorm=1.66 158 smp/s
+ep8 step14450/140100 loss=1.2421 acc=0.890 lr=8.54e-04 gnorm=0.96 158 smp/s
+ep8 step14475/140100 loss=1.2235 acc=0.888 lr=8.54e-04 gnorm=1.56 158 smp/s
+ep8 step14500/140100 loss=1.2570 acc=0.861 lr=8.53e-04 gnorm=2.09 158 smp/s
+ep8 step14525/140100 loss=1.0205 acc=0.936 lr=8.52e-04 gnorm=1.45 158 smp/s
+ep8 step14550/140100 loss=0.9358 acc=0.895 lr=8.51e-04 gnorm=0.91 158 smp/s
+ep8 step14575/140100 loss=0.9847 acc=0.893 lr=8.50e-04 gnorm=1.02 158 smp/s
+ep8 step14600/140100 loss=1.1468 acc=0.903 lr=8.50e-04 gnorm=2.08 158 smp/s
+ep8 step14625/140100 loss=1.2306 acc=0.898 lr=8.49e-04 gnorm=2.57 158 smp/s
+ep8 step14650/140100 loss=1.2003 acc=0.873 lr=8.48e-04 gnorm=0.97 158 smp/s
+ep8 step14675/140100 loss=0.9468 acc=0.903 lr=8.47e-04 gnorm=0.97 158 smp/s
+ep8 step14700/140100 loss=1.3211 acc=0.933 lr=8.47e-04 gnorm=3.48 158 smp/s
+ep8 step14725/140100 loss=0.9563 acc=0.898 lr=8.46e-04 gnorm=1.49 158 smp/s
+ep8 step14750/140100 loss=1.0185 acc=0.883 lr=8.45e-04 gnorm=1.04 158 smp/s
+ep8 step14775/140100 loss=1.0548 acc=0.906 lr=8.44e-04 gnorm=1.20 158 smp/s
+ep8 step14800/140100 loss=1.0013 acc=0.932 lr=8.44e-04 gnorm=1.09 158 smp/s
+ep8 step14825/140100 loss=1.1022 acc=0.895 lr=8.43e-04 gnorm=2.28 158 smp/s
+ep8 step14850/140100 loss=1.1684 acc=0.906 lr=8.42e-04 gnorm=2.07 158 smp/s
+ep8 step14875/140100 loss=1.0904 acc=0.875 lr=8.42e-04 gnorm=1.87 158 smp/s
+ep8 step14900/140100 loss=1.1766 acc=0.890 lr=8.41e-04 gnorm=1.74 158 smp/s
+ep8 step14925/140100 loss=0.9879 acc=0.899 lr=8.40e-04 gnorm=1.30 158 smp/s
+ep9 step14950/140100 loss=1.2492 acc=0.917 lr=8.39e-04 gnorm=1.00 158 smp/s
+ep9 step14975/140100 loss=1.2186 acc=0.885 lr=8.39e-04 gnorm=0.91 158 smp/s
+ep9 step15000/140100 loss=0.8551 acc=0.889 lr=8.38e-04 gnorm=2.95 158 smp/s
+ep9 step15025/140100 loss=1.3766 acc=0.926 lr=8.37e-04 gnorm=2.12 158 smp/s
+ep9 step15050/140100 loss=1.1926 acc=0.872 lr=8.36e-04 gnorm=1.25 158 smp/s
+ep9 step15075/140100 loss=1.1899 acc=0.875 lr=8.36e-04 gnorm=1.43 158 smp/s
+ep9 step15100/140100 loss=1.0680 acc=0.943 lr=8.35e-04 gnorm=1.71 158 smp/s
+ep9 step15125/140100 loss=1.1233 acc=0.802 lr=8.34e-04 gnorm=1.31 158 smp/s
+ep9 step15150/140100 loss=1.0532 acc=0.918 lr=8.33e-04 gnorm=3.48 158 smp/s
+ep9 step15175/140100 loss=1.1434 acc=0.875 lr=8.33e-04 gnorm=1.63 158 smp/s
+ep9 step15200/140100 loss=0.8975 acc=0.912 lr=8.32e-04 gnorm=2.42 158 smp/s
+ep9 step15225/140100 loss=1.1674 acc=0.881 lr=8.31e-04 gnorm=0.71 158 smp/s
+ep9 step15250/140100 loss=1.2569 acc=0.853 lr=8.30e-04 gnorm=1.79 158 smp/s
+ep9 step15275/140100 loss=1.2673 acc=0.843 lr=8.30e-04 gnorm=1.82 158 smp/s
+ep9 step15300/140100 loss=1.2659 acc=0.862 lr=8.29e-04 gnorm=2.33 158 smp/s
+ep9 step15325/140100 loss=1.0325 acc=0.861 lr=8.28e-04 gnorm=0.99 158 smp/s
+ep9 step15350/140100 loss=1.1723 acc=0.967 lr=8.27e-04 gnorm=1.75 158 smp/s
+ep9 step15375/140100 loss=1.3371 acc=0.831 lr=8.27e-04 gnorm=2.74 158 smp/s
+ep9 step15400/140100 loss=1.0823 acc=0.918 lr=8.26e-04 gnorm=2.44 158 smp/s
+ep9 step15425/140100 loss=1.0896 acc=0.848 lr=8.25e-04 gnorm=2.03 158 smp/s
+ep9 step15450/140100 loss=0.9155 acc=0.937 lr=8.25e-04 gnorm=3.25 158 smp/s
+ep9 step15475/140100 loss=1.0105 acc=0.857 lr=8.24e-04 gnorm=1.13 158 smp/s
+ep9 step15500/140100 loss=0.9986 acc=0.939 lr=8.23e-04 gnorm=0.86 158 smp/s
+ep9 step15525/140100 loss=1.2154 acc=0.897 lr=8.22e-04 gnorm=3.47 158 smp/s
+ep9 step15550/140100 loss=1.1662 acc=0.884 lr=8.22e-04 gnorm=2.50 158 smp/s
+ep9 step15575/140100 loss=1.0839 acc=0.896 lr=8.21e-04 gnorm=0.93 158 smp/s
+ep9 step15600/140100 loss=0.9846 acc=0.930 lr=8.20e-04 gnorm=2.24 158 smp/s
+ep9 step15625/140100 loss=1.1969 acc=0.879 lr=8.19e-04 gnorm=2.07 158 smp/s
+ep9 step15650/140100 loss=0.9524 acc=0.926 lr=8.19e-04 gnorm=1.05 158 smp/s
+ep9 step15675/140100 loss=1.2464 acc=0.831 lr=8.18e-04 gnorm=0.90 158 smp/s
+ep9 step15700/140100 loss=1.0133 acc=0.879 lr=8.17e-04 gnorm=1.36 158 smp/s
+ep9 step15725/140100 loss=1.1641 acc=0.900 lr=8.17e-04 gnorm=1.84 158 smp/s
+ep9 step15750/140100 loss=1.4290 acc=0.796 lr=8.16e-04 gnorm=3.53 158 smp/s
+ep9 step15775/140100 loss=1.1460 acc=0.914 lr=8.15e-04 gnorm=1.68 158 smp/s
+ep9 step15800/140100 loss=1.2082 acc=0.921 lr=8.14e-04 gnorm=2.64 158 smp/s
+ep9 step15825/140100 loss=0.9027 acc=0.938 lr=8.14e-04 gnorm=2.22 158 smp/s
+ep9 step15850/140100 loss=0.7167 acc=0.927 lr=8.13e-04 gnorm=1.78 158 smp/s
+ep9 step15875/140100 loss=1.0640 acc=0.876 lr=8.12e-04 gnorm=2.21 158 smp/s
+ep9 step15900/140100 loss=0.9915 acc=0.889 lr=8.12e-04 gnorm=0.97 158 smp/s
+ep9 step15925/140100 loss=1.1131 acc=0.911 lr=8.11e-04 gnorm=1.16 158 smp/s
+ep9 step15950/140100 loss=0.9343 acc=0.947 lr=8.10e-04 gnorm=0.87 158 smp/s
+ep9 step15975/140100 loss=0.8214 acc=0.877 lr=8.09e-04 gnorm=1.29 158 smp/s
+ep9 step16000/140100 loss=1.2256 acc=0.891 lr=8.09e-04 gnorm=1.35 158 smp/s
+[eval @ 16000] WER=0.999 CER=0.941 SER=1.000 loss=1.863 content_acc=0.043 fill_rate=0.901 entropy=0.526 distinct=60
+[eval @ 16000] iter32  WER=0.991 CER=0.867 SER=0.990 (mask-predict decode, n=200 clips)
+   Full: <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fill> 
+   Hyp : 
+   Ref : ಸಾಂಸ್ಕೃತಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರೋನಾ ಸೋಂಕು ಹೆಚ್ಚುತ್ತಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಇಂದಿನಿಂದ ಐದ
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+ep9 step16025/140100 loss=0.8674 acc=0.920 lr=8.08e-04 gnorm=1.53 158 smp/s
+ep9 step16050/140100 loss=1.1808 acc=0.893 lr=8.07e-04 gnorm=1.53 158 smp/s
+ep9 step16075/140100 loss=1.1606 acc=0.888 lr=8.07e-04 gnorm=1.86 158 smp/s
+ep9 step16100/140100 loss=1.2813 acc=0.871 lr=8.06e-04 gnorm=0.90 158 smp/s
+ep9 step16125/140100 loss=1.1636 acc=0.913 lr=8.05e-04 gnorm=1.65 158 smp/s
+ep9 step16150/140100 loss=1.1471 acc=0.881 lr=8.04e-04 gnorm=1.72 158 smp/s
+ep9 step16175/140100 loss=1.0344 acc=0.873 lr=8.04e-04 gnorm=1.79 158 smp/s
+ep9 step16200/140100 loss=1.0615 acc=0.906 lr=8.03e-04 gnorm=1.17 158 smp/s
+ep9 step16225/140100 loss=1.4998 acc=0.881 lr=8.02e-04 gnorm=4.37 158 smp/s
+ep9 step16250/140100 loss=1.0491 acc=0.893 lr=8.02e-04 gnorm=1.26 158 smp/s
+ep9 step16275/140100 loss=1.3621 acc=0.814 lr=8.01e-04 gnorm=1.83 158 smp/s
+ep9 step16300/140100 loss=1.1103 acc=0.882 lr=8.00e-04 gnorm=0.84 158 smp/s
+ep9 step16325/140100 loss=1.0442 acc=0.914 lr=7.99e-04 gnorm=1.82 158 smp/s
+ep9 step16350/140100 loss=1.2712 acc=0.870 lr=7.99e-04 gnorm=0.93 158 smp/s
+ep9 step16375/140100 loss=0.8303 acc=0.886 lr=7.98e-04 gnorm=1.26 158 smp/s
+ep9 step16400/140100 loss=1.1544 acc=0.862 lr=7.97e-04 gnorm=0.82 158 smp/s
+ep9 step16425/140100 loss=0.8164 acc=0.895 lr=7.97e-04 gnorm=0.90 158 smp/s
+ep9 step16450/140100 loss=1.2232 acc=0.828 lr=7.96e-04 gnorm=1.11 158 smp/s
+ep9 step16475/140100 loss=0.9290 acc=0.908 lr=7.95e-04 gnorm=1.86 158 smp/s
+ep9 step16500/140100 loss=0.7596 acc=0.957 lr=7.94e-04 gnorm=0.89 158 smp/s
+ep9 step16525/140100 loss=1.0441 acc=0.916 lr=7.94e-04 gnorm=1.65 158 smp/s
+ep9 step16550/140100 loss=0.9161 acc=0.931 lr=7.93e-04 gnorm=1.48 158 smp/s
+ep9 step16575/140100 loss=1.1330 acc=0.940 lr=7.92e-04 gnorm=3.24 158 smp/s
+ep9 step16600/140100 loss=1.0557 acc=0.941 lr=7.92e-04 gnorm=0.87 158 smp/s
+ep9 step16625/140100 loss=1.2525 acc=0.818 lr=7.91e-04 gnorm=2.20 158 smp/s
+ep9 step16650/140100 loss=1.0773 acc=0.884 lr=7.90e-04 gnorm=1.59 158 smp/s
+ep9 step16675/140100 loss=1.0398 acc=0.883 lr=7.90e-04 gnorm=1.16 158 smp/s
+ep9 step16700/140100 loss=1.1340 acc=0.913 lr=7.89e-04 gnorm=1.34 158 smp/s
+ep9 step16725/140100 loss=1.1454 acc=0.856 lr=7.88e-04 gnorm=1.96 158 smp/s
+ep9 step16750/140100 loss=0.9316 acc=0.946 lr=7.87e-04 gnorm=1.82 158 smp/s
+ep9 step16775/140100 loss=1.1561 acc=0.932 lr=7.87e-04 gnorm=4.27 158 smp/s
+ep9 step16800/140100 loss=1.2132 acc=0.810 lr=7.86e-04 gnorm=1.96 158 smp/s
+ep10 step16825/140100 loss=0.8925 acc=0.945 lr=7.85e-04 gnorm=1.50 158 smp/s
+ep10 step16850/140100 loss=1.0515 acc=0.918 lr=7.85e-04 gnorm=1.04 158 smp/s
+ep10 step16875/140100 loss=1.1896 acc=0.887 lr=7.84e-04 gnorm=2.32 158 smp/s
+ep10 step16900/140100 loss=0.8639 acc=0.887 lr=7.83e-04 gnorm=1.97 158 smp/s
+ep10 step16925/140100 loss=1.1920 acc=0.878 lr=7.83e-04 gnorm=1.54 158 smp/s
+ep10 step16950/140100 loss=1.2723 acc=0.881 lr=7.82e-04 gnorm=0.79 158 smp/s
+ep10 step16975/140100 loss=1.2715 acc=0.903 lr=7.81e-04 gnorm=1.76 158 smp/s
+ep10 step17000/140100 loss=1.2011 acc=0.930 lr=7.81e-04 gnorm=2.55 158 smp/s
+ep10 step17025/140100 loss=1.0918 acc=0.880 lr=7.80e-04 gnorm=1.59 158 smp/s
+ep10 step17050/140100 loss=0.9534 acc=0.871 lr=7.79e-04 gnorm=1.86 158 smp/s
+ep10 step17075/140100 loss=1.0226 acc=0.914 lr=7.78e-04 gnorm=1.33 158 smp/s
+ep10 step17100/140100 loss=1.2421 acc=0.872 lr=7.78e-04 gnorm=1.61 158 smp/s
+ep10 step17125/140100 loss=0.8444 acc=0.932 lr=7.77e-04 gnorm=3.39 158 smp/s
+ep10 step17150/140100 loss=1.0702 acc=0.931 lr=7.76e-04 gnorm=1.25 158 smp/s
+ep10 step17175/140100 loss=0.9557 acc=0.910 lr=7.76e-04 gnorm=1.46 158 smp/s
+ep10 step17200/140100 loss=0.7917 acc=0.897 lr=7.75e-04 gnorm=1.51 158 smp/s
+ep10 step17225/140100 loss=1.1831 acc=0.868 lr=7.74e-04 gnorm=1.61 158 smp/s
+ep10 step17250/140100 loss=1.1098 acc=0.888 lr=7.74e-04 gnorm=1.96 158 smp/s
+ep10 step17275/140100 loss=1.0194 acc=0.862 lr=7.73e-04 gnorm=0.87 158 smp/s
+ep10 step17300/140100 loss=1.0264 acc=0.902 lr=7.72e-04 gnorm=0.82 158 smp/s
+ep10 step17325/140100 loss=1.1702 acc=0.930 lr=7.72e-04 gnorm=1.11 158 smp/s
+ep10 step17350/140100 loss=1.0814 acc=0.849 lr=7.71e-04 gnorm=1.42 158 smp/s
+ep10 step17375/140100 loss=1.1023 acc=0.896 lr=7.70e-04 gnorm=1.01 158 smp/s
+ep10 step17400/140100 loss=1.0041 acc=0.912 lr=7.70e-04 gnorm=1.45 158 smp/s
+ep10 step17425/140100 loss=1.1147 acc=0.958 lr=7.69e-04 gnorm=1.27 158 smp/s
+ep10 step17450/140100 loss=0.9808 acc=0.891 lr=7.68e-04 gnorm=0.75 158 smp/s
+ep10 step17475/140100 loss=0.9955 acc=0.957 lr=7.68e-04 gnorm=1.92 158 smp/s
+ep10 step17500/140100 loss=1.1214 acc=0.882 lr=7.67e-04 gnorm=2.71 158 smp/s
+ep10 step17525/140100 loss=1.2221 acc=0.853 lr=7.66e-04 gnorm=1.98 158 smp/s
+ep10 step17550/140100 loss=1.1436 acc=0.851 lr=7.65e-04 gnorm=2.87 158 smp/s
+ep10 step17575/140100 loss=1.0505 acc=0.913 lr=7.65e-04 gnorm=1.51 158 smp/s
+ep10 step17600/140100 loss=0.9950 acc=0.869 lr=7.64e-04 gnorm=1.04 158 smp/s
+ep10 step17625/140100 loss=0.9146 acc=0.903 lr=7.63e-04 gnorm=2.10 158 smp/s
+ep10 step17650/140100 loss=1.3234 acc=0.914 lr=7.63e-04 gnorm=0.85 158 smp/s
+ep10 step17675/140100 loss=1.2211 acc=0.965 lr=7.62e-04 gnorm=1.47 158 smp/s
+ep10 step17700/140100 loss=1.1007 acc=0.886 lr=7.61e-04 gnorm=1.23 158 smp/s
+ep10 step17725/140100 loss=1.0535 acc=0.919 lr=7.61e-04 gnorm=0.99 158 smp/s
+ep10 step17750/140100 loss=1.1359 acc=0.889 lr=7.60e-04 gnorm=1.56 158 smp/s
+ep10 step17775/140100 loss=1.1217 acc=0.880 lr=7.59e-04 gnorm=1.58 158 smp/s
+ep10 step17800/140100 loss=0.8310 acc=0.898 lr=7.59e-04 gnorm=1.56 158 smp/s
+ep10 step17825/140100 loss=0.8638 acc=0.930 lr=7.58e-04 gnorm=1.31 158 smp/s
+ep10 step17850/140100 loss=1.0091 acc=0.910 lr=7.57e-04 gnorm=1.73 158 smp/s
+ep10 step17875/140100 loss=1.1381 acc=0.905 lr=7.57e-04 gnorm=0.85 158 smp/s
+ep10 step17900/140100 loss=1.2822 acc=0.872 lr=7.56e-04 gnorm=0.74 158 smp/s
+ep10 step17925/140100 loss=1.0489 acc=0.921 lr=7.55e-04 gnorm=0.93 158 smp/s
+ep10 step17950/140100 loss=1.0681 acc=0.845 lr=7.55e-04 gnorm=1.89 158 smp/s
+ep10 step17975/140100 loss=1.3405 acc=0.844 lr=7.54e-04 gnorm=1.43 158 smp/s
+ep10 step18000/140100 loss=0.8632 acc=0.906 lr=7.53e-04 gnorm=0.59 158 smp/s
+[eval @ 18000] WER=0.993 CER=0.788 SER=0.998 loss=1.220 content_acc=0.185 fill_rate=0.681 entropy=1.399 distinct=75
+[eval @ 18000] iter32  WER=1.080 CER=0.572 SER=1.000 (mask-predict decode, n=200 clips)
+   Full: ಮ ಾ ರ ಾ ಾ ರ ೆ ೆ | | | | | ಸ ಸ ಸ ಸ ಸ ಸ ಿ ಿ ಿ ಲ ಲ ಲ ಲ ಲ ಲ ಿ ಿ ೊ ೊ ೊ ು ು ು | | ಂ ಂ ಂ ು | | ಚ ಚ ಚ ಚ ಚ ಚ ಚ ು ು | | | | | | | | | ್ ್ ್ ್ ್ ಿ ಿ ಿ 
+   Hyp : ಕಮಾರಾಾರೆೆ     ಸಸಸಸಸಸಿಿಿಲಲಲಲಲಲಿಿೊೊೊುುು  ಂಂಂು  ಚಚಚಚಚಚಚುು         ್್್್್ಿಿಿಿಿಿಿಿಿಿಿ 
+   Ref : ಸಾಂಸ್ಕೃತಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರೋನಾ ಸೋಂಕು ಹೆಚ್ಚುತ್ತಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಇಂದಿನಿಂದ ಐದ
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+ep10 step18025/140100 loss=0.9607 acc=0.916 lr=7.53e-04 gnorm=1.29 158 smp/s
+ep10 step18050/140100 loss=1.1332 acc=0.887 lr=7.52e-04 gnorm=1.32 158 smp/s
+ep10 step18075/140100 loss=1.2037 acc=0.909 lr=7.51e-04 gnorm=1.14 158 smp/s
+ep10 step18100/140100 loss=0.9804 acc=0.895 lr=7.51e-04 gnorm=1.33 158 smp/s
+ep10 step18125/140100 loss=1.0048 acc=0.933 lr=7.50e-04 gnorm=1.78 158 smp/s
+ep10 step18150/140100 loss=1.0429 acc=0.938 lr=7.49e-04 gnorm=1.21 158 smp/s
+ep10 step18175/140100 loss=1.1190 acc=0.872 lr=7.49e-04 gnorm=3.50 158 smp/s
+ep10 step18200/140100 loss=0.9966 acc=0.854 lr=7.48e-04 gnorm=0.97 158 smp/s
+ep10 step18225/140100 loss=1.2158 acc=0.821 lr=7.47e-04 gnorm=2.27 158 smp/s
+ep10 step18250/140100 loss=1.5701 acc=0.867 lr=7.47e-04 gnorm=2.92 158 smp/s
+ep10 step18275/140100 loss=0.9855 acc=0.910 lr=7.46e-04 gnorm=1.00 158 smp/s
+ep10 step18300/140100 loss=0.9418 acc=0.893 lr=7.45e-04 gnorm=2.30 158 smp/s
+ep10 step18325/140100 loss=1.0355 acc=0.853 lr=7.45e-04 gnorm=0.93 158 smp/s
+ep10 step18350/140100 loss=0.7874 acc=0.933 lr=7.44e-04 gnorm=0.93 158 smp/s
+ep10 step18375/140100 loss=1.2114 acc=0.888 lr=7.43e-04 gnorm=1.24 158 smp/s
+ep10 step18400/140100 loss=0.5724 acc=0.927 lr=7.43e-04 gnorm=0.95 158 smp/s
+ep10 step18425/140100 loss=1.1116 acc=0.865 lr=7.42e-04 gnorm=1.08 158 smp/s
+ep10 step18450/140100 loss=1.1771 acc=0.842 lr=7.41e-04 gnorm=1.07 158 smp/s
+ep10 step18475/140100 loss=1.1291 acc=0.878 lr=7.41e-04 gnorm=3.78 158 smp/s
+ep10 step18500/140100 loss=0.9152 acc=0.923 lr=7.40e-04 gnorm=0.85 158 smp/s
+ep10 step18525/140100 loss=1.3583 acc=0.825 lr=7.40e-04 gnorm=2.48 158 smp/s
+ep10 step18550/140100 loss=0.7652 acc=0.943 lr=7.39e-04 gnorm=0.87 158 smp/s
+ep10 step18575/140100 loss=0.6736 acc=0.936 lr=7.38e-04 gnorm=2.04 158 smp/s
+ep10 step18600/140100 loss=1.2020 acc=0.879 lr=7.38e-04 gnorm=0.64 158 smp/s
+ep10 step18625/140100 loss=1.2057 acc=0.891 lr=7.37e-04 gnorm=2.13 158 smp/s
+ep10 step18650/140100 loss=1.0462 acc=0.909 lr=7.36e-04 gnorm=1.66 158 smp/s
+ep10 step18675/140100 loss=1.2992 acc=0.908 lr=7.36e-04 gnorm=0.74 158 smp/s
+ep11 step18700/140100 loss=1.0266 acc=0.879 lr=7.35e-04 gnorm=1.23 158 smp/s
+ep11 step18725/140100 loss=1.2072 acc=0.885 lr=7.34e-04 gnorm=3.07 158 smp/s
+ep11 step18750/140100 loss=0.9589 acc=0.934 lr=7.34e-04 gnorm=1.05 158 smp/s
+ep11 step18775/140100 loss=1.1451 acc=0.909 lr=7.33e-04 gnorm=0.81 158 smp/s
+ep11 step18800/140100 loss=1.4509 acc=0.892 lr=7.32e-04 gnorm=2.02 158 smp/s
+ep11 step18825/140100 loss=0.9668 acc=0.844 lr=7.32e-04 gnorm=1.53 158 smp/s
+ep11 step18850/140100 loss=0.8606 acc=0.934 lr=7.31e-04 gnorm=0.79 158 smp/s
+ep11 step18875/140100 loss=1.1759 acc=0.868 lr=7.30e-04 gnorm=1.37 158 smp/s
+ep11 step18900/140100 loss=1.0265 acc=0.931 lr=7.30e-04 gnorm=0.82 158 smp/s
+ep11 step18925/140100 loss=0.8770 acc=0.890 lr=7.29e-04 gnorm=0.96 158 smp/s
+ep11 step18950/140100 loss=0.9225 acc=0.923 lr=7.28e-04 gnorm=1.16 158 smp/s
+ep11 step18975/140100 loss=0.9108 acc=0.885 lr=7.28e-04 gnorm=0.74 158 smp/s
+ep11 step19000/140100 loss=0.6400 acc=0.972 lr=7.27e-04 gnorm=1.23 158 smp/s
+ep11 step19025/140100 loss=1.3327 acc=0.866 lr=7.27e-04 gnorm=0.71 158 smp/s
+ep11 step19050/140100 loss=1.1324 acc=0.891 lr=7.26e-04 gnorm=1.36 158 smp/s
+ep11 step19075/140100 loss=0.8037 acc=0.907 lr=7.25e-04 gnorm=0.78 158 smp/s
+ep11 step19100/140100 loss=0.6994 acc=0.905 lr=7.25e-04 gnorm=2.07 158 smp/s
+ep11 step19125/140100 loss=1.1579 acc=0.873 lr=7.24e-04 gnorm=1.36 158 smp/s
+ep11 step19150/140100 loss=0.9870 acc=0.872 lr=7.23e-04 gnorm=1.15 158 smp/s
+ep11 step19175/140100 loss=0.8589 acc=0.951 lr=7.23e-04 gnorm=1.53 158 smp/s
+ep11 step19200/140100 loss=1.1375 acc=0.853 lr=7.22e-04 gnorm=0.79 158 smp/s
+ep11 step19225/140100 loss=0.9927 acc=0.913 lr=7.21e-04 gnorm=0.83 158 smp/s
+ep11 step19250/140100 loss=1.0247 acc=0.930 lr=7.21e-04 gnorm=0.77 158 smp/s
+ep11 step19275/140100 loss=1.0806 acc=0.855 lr=7.20e-04 gnorm=1.14 158 smp/s
+ep11 step19300/140100 loss=0.9906 acc=0.910 lr=7.20e-04 gnorm=1.60 158 smp/s
+ep11 step19325/140100 loss=0.8970 acc=0.901 lr=7.19e-04 gnorm=1.77 158 smp/s
+ep11 step19350/140100 loss=1.1565 acc=0.915 lr=7.18e-04 gnorm=1.76 158 smp/s
+ep11 step19375/140100 loss=0.9026 acc=0.861 lr=7.18e-04 gnorm=0.79 158 smp/s
+ep11 step19400/140100 loss=1.0195 acc=0.920 lr=7.17e-04 gnorm=0.67 158 smp/s
+ep11 step19425/140100 loss=0.9495 acc=0.923 lr=7.16e-04 gnorm=0.66 158 smp/s
+ep11 step19450/140100 loss=1.1649 acc=0.912 lr=7.16e-04 gnorm=1.08 158 smp/s
+ep11 step19475/140100 loss=1.1617 acc=0.838 lr=7.15e-04 gnorm=1.85 158 smp/s
+ep11 step19500/140100 loss=1.3028 acc=0.899 lr=7.14e-04 gnorm=1.15 158 smp/s
+ep11 step19525/140100 loss=0.9804 acc=0.876 lr=7.14e-04 gnorm=2.47 158 smp/s
+ep11 step19550/140100 loss=0.7242 acc=0.928 lr=7.13e-04 gnorm=1.33 158 smp/s
+ep11 step19575/140100 loss=1.0905 acc=0.907 lr=7.13e-04 gnorm=1.45 158 smp/s
+ep11 step19600/140100 loss=1.1192 acc=0.865 lr=7.12e-04 gnorm=1.05 158 smp/s
+ep11 step19625/140100 loss=1.0788 acc=0.931 lr=7.11e-04 gnorm=0.95 158 smp/s
+ep11 step19650/140100 loss=1.1148 acc=0.923 lr=7.11e-04 gnorm=0.78 158 smp/s
+ep11 step19675/140100 loss=0.7408 acc=0.920 lr=7.10e-04 gnorm=0.70 158 smp/s
+ep11 step19700/140100 loss=0.8821 acc=0.877 lr=7.09e-04 gnorm=0.71 158 smp/s
+ep11 step19725/140100 loss=1.2426 acc=0.837 lr=7.09e-04 gnorm=2.33 158 smp/s
+ep11 step19750/140100 loss=1.1322 acc=0.874 lr=7.08e-04 gnorm=2.81 158 smp/s
+ep11 step19775/140100 loss=0.9604 acc=0.942 lr=7.08e-04 gnorm=1.92 158 smp/s
+ep11 step19800/140100 loss=1.3361 acc=0.875 lr=7.07e-04 gnorm=2.59 158 smp/s
+ep11 step19825/140100 loss=1.1052 acc=0.925 lr=7.06e-04 gnorm=1.39 158 smp/s
+ep11 step19850/140100 loss=0.9430 acc=0.935 lr=7.06e-04 gnorm=1.11 158 smp/s
+ep11 step19875/140100 loss=1.0533 acc=0.936 lr=7.05e-04 gnorm=1.33 158 smp/s
+ep11 step19900/140100 loss=1.3348 acc=0.914 lr=7.04e-04 gnorm=1.92 158 smp/s
+ep11 step19925/140100 loss=0.8910 acc=0.927 lr=7.04e-04 gnorm=1.93 158 smp/s
+ep11 step19950/140100 loss=1.0703 acc=0.912 lr=7.03e-04 gnorm=3.44 158 smp/s
+ep11 step19975/140100 loss=1.0653 acc=0.869 lr=7.03e-04 gnorm=1.07 158 smp/s
+ep11 step20000/140100 loss=1.0771 acc=0.873 lr=7.02e-04 gnorm=1.40 158 smp/s
+[eval @ 20000] WER=0.990 CER=0.953 SER=1.000 loss=1.564 content_acc=0.113 fill_rate=0.743 entropy=1.169 distinct=76
+[eval @ 20000] iter32  WER=1.042 CER=0.723 SER=0.995 (mask-predict decode, n=200 clips)
+   Full: <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fill> 
+   Hyp : 
+   Ref : ಸಾಂಸ್ಕೃತಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರೋನಾ ಸೋಂಕು ಹೆಚ್ಚುತ್ತಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಇಂದಿನಿಂದ ಐದ
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+ep11 step20025/140100 loss=0.9386 acc=0.951 lr=7.01e-04 gnorm=0.71 158 smp/s
+ep11 step20050/140100 loss=1.0499 acc=0.881 lr=7.01e-04 gnorm=0.82 158 smp/s
+ep11 step20075/140100 loss=1.0322 acc=0.889 lr=7.00e-04 gnorm=1.31 158 smp/s
+ep11 step20100/140100 loss=0.7544 acc=0.945 lr=6.99e-04 gnorm=1.18 158 smp/s
+ep11 step20125/140100 loss=1.2221 acc=0.870 lr=6.99e-04 gnorm=0.61 158 smp/s
+ep11 step20150/140100 loss=1.1739 acc=0.930 lr=6.98e-04 gnorm=0.64 158 smp/s
+ep11 step20175/140100 loss=0.7058 acc=0.958 lr=6.98e-04 gnorm=1.37 158 smp/s
+ep11 step20200/140100 loss=1.0138 acc=0.877 lr=6.97e-04 gnorm=1.39 158 smp/s
+ep11 step20225/140100 loss=1.1686 acc=0.907 lr=6.96e-04 gnorm=2.26 158 smp/s
+ep11 step20250/140100 loss=1.1255 acc=0.863 lr=6.96e-04 gnorm=0.83 158 smp/s
+ep11 step20275/140100 loss=1.0621 acc=0.887 lr=6.95e-04 gnorm=1.14 158 smp/s
+ep11 step20300/140100 loss=0.6764 acc=0.932 lr=6.94e-04 gnorm=1.48 158 smp/s
+ep11 step20325/140100 loss=1.0820 acc=0.874 lr=6.94e-04 gnorm=0.70 158 smp/s
+ep11 step20350/140100 loss=1.0831 acc=0.856 lr=6.93e-04 gnorm=2.15 158 smp/s
+ep11 step20375/140100 loss=0.8864 acc=0.906 lr=6.93e-04 gnorm=0.87 158 smp/s
+ep11 step20400/140100 loss=1.1827 acc=0.860 lr=6.92e-04 gnorm=1.31 158 smp/s
+ep11 step20425/140100 loss=0.8970 acc=0.897 lr=6.91e-04 gnorm=1.55 158 smp/s
+ep11 step20450/140100 loss=1.2259 acc=0.876 lr=6.91e-04 gnorm=1.34 158 smp/s
+ep11 step20475/140100 loss=1.1484 acc=0.834 lr=6.90e-04 gnorm=0.61 158 smp/s
+ep11 step20500/140100 loss=0.9865 acc=0.878 lr=6.90e-04 gnorm=1.04 158 smp/s
+ep11 step20525/140100 loss=0.9355 acc=0.886 lr=6.89e-04 gnorm=0.87 158 smp/s
+ep12 step20550/140100 loss=0.9918 acc=0.888 lr=6.88e-04 gnorm=1.25 158 smp/s
+ep12 step20575/140100 loss=1.2131 acc=0.895 lr=6.88e-04 gnorm=2.03 158 smp/s
+ep12 step20600/140100 loss=0.6476 acc=0.920 lr=6.87e-04 gnorm=1.36 158 smp/s
+ep12 step20625/140100 loss=0.8241 acc=0.899 lr=6.87e-04 gnorm=0.58 158 smp/s
+ep12 step20650/140100 loss=0.8941 acc=0.964 lr=6.86e-04 gnorm=1.85 158 smp/s
+ep12 step20675/140100 loss=1.0529 acc=0.894 lr=6.85e-04 gnorm=1.00 158 smp/s
+ep12 step20700/140100 loss=0.8797 acc=0.928 lr=6.85e-04 gnorm=0.92 158 smp/s
+ep12 step20725/140100 loss=1.1955 acc=0.898 lr=6.84e-04 gnorm=1.43 158 smp/s
+ep12 step20750/140100 loss=1.0243 acc=0.898 lr=6.84e-04 gnorm=0.66 158 smp/s
+ep12 step20775/140100 loss=0.9012 acc=0.939 lr=6.83e-04 gnorm=1.56 158 smp/s
+ep12 step20800/140100 loss=0.9325 acc=0.907 lr=6.82e-04 gnorm=1.17 158 smp/s
+ep12 step20825/140100 loss=0.8481 acc=0.914 lr=6.82e-04 gnorm=0.61 158 smp/s
+ep12 step20850/140100 loss=0.9110 acc=0.897 lr=6.81e-04 gnorm=1.07 158 smp/s
+ep12 step20875/140100 loss=0.7825 acc=0.910 lr=6.80e-04 gnorm=1.56 158 smp/s
+ep12 step20900/140100 loss=1.1482 acc=0.898 lr=6.80e-04 gnorm=0.91 158 smp/s
+ep12 step20925/140100 loss=0.6965 acc=0.943 lr=6.79e-04 gnorm=0.75 158 smp/s
+ep12 step20950/140100 loss=0.8769 acc=0.921 lr=6.79e-04 gnorm=1.23 158 smp/s
+ep12 step20975/140100 loss=0.8573 acc=0.907 lr=6.78e-04 gnorm=0.77 158 smp/s
+ep12 step21000/140100 loss=0.8727 acc=0.869 lr=6.77e-04 gnorm=0.80 158 smp/s
+ep12 step21025/140100 loss=1.2410 acc=0.847 lr=6.77e-04 gnorm=0.94 158 smp/s
+ep12 step21050/140100 loss=0.9373 acc=0.887 lr=6.76e-04 gnorm=1.86 158 smp/s
+ep12 step21075/140100 loss=0.8678 acc=0.890 lr=6.76e-04 gnorm=1.03 158 smp/s
+ep12 step21100/140100 loss=1.0010 acc=0.890 lr=6.75e-04 gnorm=2.38 158 smp/s
+ep12 step21125/140100 loss=0.8690 acc=0.894 lr=6.74e-04 gnorm=0.88 158 smp/s
+ep12 step21150/140100 loss=1.0335 acc=0.892 lr=6.74e-04 gnorm=0.96 158 smp/s
+ep12 step21175/140100 loss=1.1474 acc=0.936 lr=6.73e-04 gnorm=0.72 158 smp/s
+ep12 step21200/140100 loss=0.7704 acc=0.925 lr=6.73e-04 gnorm=0.70 158 smp/s
+ep12 step21225/140100 loss=0.7823 acc=0.912 lr=6.72e-04 gnorm=1.06 158 smp/s
+ep12 step21250/140100 loss=0.9166 acc=0.916 lr=6.72e-04 gnorm=1.41 158 smp/s
+ep12 step21275/140100 loss=0.7701 acc=0.895 lr=6.71e-04 gnorm=0.68 158 smp/s
+ep12 step21300/140100 loss=0.9438 acc=0.895 lr=6.70e-04 gnorm=0.99 158 smp/s
+ep12 step21325/140100 loss=0.9023 acc=0.910 lr=6.70e-04 gnorm=1.96 158 smp/s
+ep12 step21350/140100 loss=1.0532 acc=0.889 lr=6.69e-04 gnorm=2.18 158 smp/s
+ep12 step21375/140100 loss=0.8044 acc=0.927 lr=6.69e-04 gnorm=0.85 158 smp/s
+ep12 step21400/140100 loss=1.2366 acc=0.864 lr=6.68e-04 gnorm=1.47 158 smp/s
+ep12 step21425/140100 loss=1.0942 acc=0.846 lr=6.67e-04 gnorm=1.03 158 smp/s
+ep12 step21450/140100 loss=0.6520 acc=0.951 lr=6.67e-04 gnorm=0.64 158 smp/s
+ep12 step21475/140100 loss=1.0417 acc=0.880 lr=6.66e-04 gnorm=1.47 158 smp/s
+ep12 step21500/140100 loss=1.0631 acc=0.931 lr=6.66e-04 gnorm=1.83 158 smp/s
+ep12 step21525/140100 loss=0.8943 acc=0.953 lr=6.65e-04 gnorm=0.75 158 smp/s
+ep12 step21550/140100 loss=1.0809 acc=0.884 lr=6.64e-04 gnorm=1.32 158 smp/s
+ep12 step21575/140100 loss=0.9872 acc=0.901 lr=6.64e-04 gnorm=0.67 158 smp/s
+ep12 step21600/140100 loss=0.8890 acc=0.923 lr=6.63e-04 gnorm=2.13 158 smp/s
+ep12 step21625/140100 loss=1.1095 acc=0.885 lr=6.63e-04 gnorm=0.98 158 smp/s
+ep12 step21650/140100 loss=0.8012 acc=0.914 lr=6.62e-04 gnorm=0.89 158 smp/s
+ep12 step21675/140100 loss=1.0175 acc=0.905 lr=6.61e-04 gnorm=0.56 158 smp/s
+ep12 step21700/140100 loss=1.3317 acc=0.896 lr=6.61e-04 gnorm=1.84 158 smp/s
+ep12 step21725/140100 loss=0.8911 acc=0.901 lr=6.60e-04 gnorm=1.03 158 smp/s
+ep12 step21750/140100 loss=1.0636 acc=0.921 lr=6.60e-04 gnorm=1.64 158 smp/s
+ep12 step21775/140100 loss=1.4953 acc=0.876 lr=6.59e-04 gnorm=1.29 159 smp/s
+ep12 step21800/140100 loss=0.9135 acc=0.935 lr=6.59e-04 gnorm=1.77 159 smp/s
+ep12 step21825/140100 loss=1.0971 acc=0.954 lr=6.58e-04 gnorm=2.28 159 smp/s
+ep12 step21850/140100 loss=0.8904 acc=0.895 lr=6.57e-04 gnorm=0.84 159 smp/s
+ep12 step21875/140100 loss=1.2392 acc=0.930 lr=6.57e-04 gnorm=1.06 159 smp/s
+ep12 step21900/140100 loss=0.9136 acc=0.876 lr=6.56e-04 gnorm=0.89 159 smp/s
+ep12 step21925/140100 loss=0.9799 acc=0.956 lr=6.56e-04 gnorm=2.07 159 smp/s
+ep12 step21950/140100 loss=0.9531 acc=0.928 lr=6.55e-04 gnorm=0.90 159 smp/s
+ep12 step21975/140100 loss=0.9828 acc=0.854 lr=6.55e-04 gnorm=0.91 159 smp/s
+ep12 step22000/140100 loss=0.8165 acc=0.925 lr=6.54e-04 gnorm=1.42 159 smp/s
+[eval @ 22000] WER=0.996 CER=0.985 SER=1.000 loss=1.540 content_acc=0.130 fill_rate=0.725 entropy=1.297 distinct=78
+[eval @ 22000] iter32  WER=1.081 CER=0.695 SER=1.000 (mask-predict decode, n=200 clips)
+   Full: | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | <fill> <fill> <fill> <fill> 
+   Hyp : ದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದದ
+   Ref : ಸಾಂಸ್ಕೃತಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರೋನಾ ಸೋಂಕು ಹೆಚ್ಚುತ್ತಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಇಂದಿನಿಂದ ಐದ
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+ep12 step22025/140100 loss=1.1002 acc=0.885 lr=6.53e-04 gnorm=2.02 158 smp/s
+ep12 step22050/140100 loss=0.6854 acc=0.907 lr=6.53e-04 gnorm=0.93 158 smp/s
+ep12 step22075/140100 loss=0.9464 acc=0.849 lr=6.52e-04 gnorm=1.11 158 smp/s
+ep12 step22100/140100 loss=0.9046 acc=0.913 lr=6.52e-04 gnorm=1.15 158 smp/s
+ep12 step22125/140100 loss=0.9410 acc=0.915 lr=6.51e-04 gnorm=1.49 158 smp/s
+ep12 step22150/140100 loss=0.9338 acc=0.922 lr=6.50e-04 gnorm=0.56 158 smp/s
+ep12 step22175/140100 loss=0.9678 acc=0.944 lr=6.50e-04 gnorm=2.00 158 smp/s
+ep12 step22200/140100 loss=0.8352 acc=0.894 lr=6.49e-04 gnorm=1.53 158 smp/s
+ep12 step22225/140100 loss=0.7724 acc=0.873 lr=6.49e-04 gnorm=1.72 158 smp/s
+ep12 step22250/140100 loss=0.8027 acc=0.904 lr=6.48e-04 gnorm=0.59 158 smp/s
+ep12 step22275/140100 loss=0.9811 acc=0.944 lr=6.48e-04 gnorm=1.75 158 smp/s
+ep12 step22300/140100 loss=1.0346 acc=0.893 lr=6.47e-04 gnorm=1.48 158 smp/s
+ep12 step22325/140100 loss=1.0167 acc=0.874 lr=6.46e-04 gnorm=0.76 158 smp/s
+ep12 step22350/140100 loss=1.1081 acc=0.869 lr=6.46e-04 gnorm=0.76 158 smp/s
+ep12 step22375/140100 loss=1.0678 acc=0.851 lr=6.45e-04 gnorm=2.12 158 smp/s
+ep12 step22400/140100 loss=1.1512 acc=0.923 lr=6.45e-04 gnorm=0.59 158 smp/s
+ep13 step22425/140100 loss=0.8283 acc=0.893 lr=6.44e-04 gnorm=0.74 158 smp/s
+ep13 step22450/140100 loss=1.0488 acc=0.853 lr=6.44e-04 gnorm=1.12 158 smp/s
+ep13 step22475/140100 loss=0.8777 acc=0.883 lr=6.43e-04 gnorm=1.83 158 smp/s
+ep13 step22500/140100 loss=0.8712 acc=0.904 lr=6.42e-04 gnorm=0.60 158 smp/s
+ep13 step22525/140100 loss=1.1598 acc=0.877 lr=6.42e-04 gnorm=0.91 158 smp/s
+ep13 step22550/140100 loss=1.2233 acc=0.874 lr=6.41e-04 gnorm=0.87 158 smp/s
+ep13 step22575/140100 loss=0.9102 acc=0.941 lr=6.41e-04 gnorm=0.97 158 smp/s
+ep13 step22600/140100 loss=0.9126 acc=0.940 lr=6.40e-04 gnorm=0.83 158 smp/s
+ep13 step22625/140100 loss=0.7969 acc=0.928 lr=6.40e-04 gnorm=0.69 158 smp/s
+ep13 step22650/140100 loss=0.8975 acc=0.906 lr=6.39e-04 gnorm=1.45 158 smp/s
+ep13 step22675/140100 loss=0.8128 acc=0.925 lr=6.38e-04 gnorm=1.79 158 smp/s
+ep13 step22700/140100 loss=0.7046 acc=0.907 lr=6.38e-04 gnorm=0.69 158 smp/s
+ep13 step22725/140100 loss=0.9840 acc=0.873 lr=6.37e-04 gnorm=0.82 158 smp/s
+ep13 step22750/140100 loss=1.1677 acc=0.870 lr=6.37e-04 gnorm=0.59 158 smp/s
+ep13 step22775/140100 loss=0.7559 acc=0.900 lr=6.36e-04 gnorm=1.71 158 smp/s
+ep13 step22800/140100 loss=1.0661 acc=0.861 lr=6.36e-04 gnorm=1.22 158 smp/s
+ep13 step22825/140100 loss=0.9877 acc=0.922 lr=6.35e-04 gnorm=1.40 158 smp/s
+ep13 step22850/140100 loss=0.7322 acc=0.948 lr=6.35e-04 gnorm=0.92 158 smp/s
+ep13 step22875/140100 loss=0.9877 acc=0.864 lr=6.34e-04 gnorm=0.62 158 smp/s
+ep13 step22900/140100 loss=1.1017 acc=0.896 lr=6.33e-04 gnorm=1.83 158 smp/s
+ep13 step22925/140100 loss=0.7768 acc=0.945 lr=6.33e-04 gnorm=0.75 158 smp/s
+ep13 step22950/140100 loss=1.0038 acc=0.896 lr=6.32e-04 gnorm=0.83 158 smp/s
+ep13 step22975/140100 loss=0.8860 acc=0.869 lr=6.32e-04 gnorm=2.30 158 smp/s
+ep13 step23000/140100 loss=0.9815 acc=0.869 lr=6.31e-04 gnorm=0.67 158 smp/s
+ep13 step23025/140100 loss=1.1179 acc=0.849 lr=6.31e-04 gnorm=1.36 158 smp/s
+ep13 step23050/140100 loss=0.5961 acc=0.917 lr=6.30e-04 gnorm=1.71 158 smp/s
+ep13 step23075/140100 loss=0.8209 acc=0.899 lr=6.30e-04 gnorm=1.58 158 smp/s
+ep13 step23100/140100 loss=0.9913 acc=0.954 lr=6.29e-04 gnorm=1.42 158 smp/s
+ep13 step23125/140100 loss=0.8134 acc=0.942 lr=6.28e-04 gnorm=1.06 158 smp/s
+ep13 step23150/140100 loss=1.3675 acc=0.867 lr=6.28e-04 gnorm=1.77 158 smp/s
+ep13 step23175/140100 loss=1.1723 acc=0.884 lr=6.27e-04 gnorm=1.47 158 smp/s
+ep13 step23200/140100 loss=1.2723 acc=0.850 lr=6.27e-04 gnorm=1.03 158 smp/s
+ep13 step23225/140100 loss=0.9108 acc=0.904 lr=6.26e-04 gnorm=1.51 158 smp/s
+ep13 step23250/140100 loss=0.7228 acc=0.900 lr=6.26e-04 gnorm=0.90 158 smp/s
+ep13 step23275/140100 loss=1.1011 acc=0.852 lr=6.25e-04 gnorm=0.82 158 smp/s
+ep13 step23300/140100 loss=1.0281 acc=0.863 lr=6.25e-04 gnorm=1.01 159 smp/s
+ep13 step23325/140100 loss=0.9887 acc=0.955 lr=6.24e-04 gnorm=1.23 159 smp/s
+ep13 step23350/140100 loss=0.9167 acc=0.909 lr=6.23e-04 gnorm=1.85 159 smp/s
+ep13 step23375/140100 loss=0.5693 acc=0.913 lr=6.23e-04 gnorm=1.17 159 smp/s
+ep13 step23400/140100 loss=0.9343 acc=0.902 lr=6.22e-04 gnorm=0.82 159 smp/s
+ep13 step23425/140100 loss=0.7943 acc=0.881 lr=6.22e-04 gnorm=0.69 159 smp/s
+ep13 step23450/140100 loss=0.8320 acc=0.878 lr=6.21e-04 gnorm=0.75 159 smp/s
+ep13 step23475/140100 loss=0.7900 acc=0.893 lr=6.21e-04 gnorm=1.36 159 smp/s
+ep13 step23500/140100 loss=0.9784 acc=0.898 lr=6.20e-04 gnorm=2.30 159 smp/s
+ep13 step23525/140100 loss=0.8878 acc=0.878 lr=6.20e-04 gnorm=1.01 159 smp/s
+ep13 step23550/140100 loss=1.0401 acc=0.842 lr=6.19e-04 gnorm=0.86 159 smp/s
+ep13 step23575/140100 loss=0.9496 acc=0.950 lr=6.18e-04 gnorm=0.69 159 smp/s
+ep13 step23600/140100 loss=1.1254 acc=0.883 lr=6.18e-04 gnorm=1.11 159 smp/s
+ep13 step23625/140100 loss=1.2340 acc=0.924 lr=6.17e-04 gnorm=0.94 159 smp/s
+ep13 step23650/140100 loss=1.1498 acc=0.901 lr=6.17e-04 gnorm=1.50 159 smp/s
+ep13 step23675/140100 loss=1.1024 acc=0.865 lr=6.16e-04 gnorm=1.32 159 smp/s
+ep13 step23700/140100 loss=1.0214 acc=0.905 lr=6.16e-04 gnorm=0.78 159 smp/s
+ep13 step23725/140100 loss=0.8721 acc=0.900 lr=6.15e-04 gnorm=1.24 159 smp/s
+ep13 step23750/140100 loss=1.0085 acc=0.886 lr=6.15e-04 gnorm=0.63 159 smp/s
+ep13 step23775/140100 loss=0.8828 acc=0.937 lr=6.14e-04 gnorm=1.44 159 smp/s
+ep13 step23800/140100 loss=0.8976 acc=0.881 lr=6.14e-04 gnorm=2.36 159 smp/s
+ep13 step23825/140100 loss=0.8399 acc=0.920 lr=6.13e-04 gnorm=1.40 159 smp/s
+ep13 step23850/140100 loss=0.9620 acc=0.888 lr=6.12e-04 gnorm=1.99 159 smp/s
+ep13 step23875/140100 loss=1.1477 acc=0.832 lr=6.12e-04 gnorm=0.88 159 smp/s
+ep13 step23900/140100 loss=1.0739 acc=0.865 lr=6.11e-04 gnorm=0.88 159 smp/s
+ep13 step23925/140100 loss=0.9848 acc=0.893 lr=6.11e-04 gnorm=1.59 159 smp/s
+ep13 step23950/140100 loss=1.0414 acc=0.884 lr=6.10e-04 gnorm=2.14 159 smp/s
+ep13 step23975/140100 loss=0.9410 acc=0.950 lr=6.10e-04 gnorm=1.41 159 smp/s
+ep13 step24000/140100 loss=0.9868 acc=0.969 lr=6.09e-04 gnorm=1.80 159 smp/s
+[eval @ 24000] WER=1.006 CER=1.575 SER=1.000 loss=2.416 content_acc=0.115 fill_rate=0.466 entropy=2.140 distinct=73
+[eval @ 24000] iter32  WER=1.677 CER=1.004 SER=1.000 (mask-predict decode, n=200 clips)
+   Full: ು ು ಕ ು ು ಿ ಿ ಿ | | | | | | | | | | | | | | | | | | ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ ಿ 
+   Hyp : ುುುಕುುಿಿಿ                  ಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿಿ
+   Ref : ಸಾಂಸ್ಕೃತಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರೋನಾ ಸೋಂಕು ಹೆಚ್ಚುತ್ತಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಇಂದಿನಿಂದ ಐದ
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+ep13 step24025/140100 loss=1.1035 acc=0.902 lr=6.09e-04 gnorm=1.54 158 smp/s
+ep13 step24050/140100 loss=1.0269 acc=0.888 lr=6.08e-04 gnorm=2.05 158 smp/s
+ep13 step24075/140100 loss=1.0529 acc=0.882 lr=6.08e-04 gnorm=1.49 158 smp/s
+ep13 step24100/140100 loss=0.8666 acc=0.890 lr=6.07e-04 gnorm=2.00 158 smp/s
+ep13 step24125/140100 loss=1.0222 acc=0.872 lr=6.07e-04 gnorm=1.36 158 smp/s
+ep13 step24150/140100 loss=1.1079 acc=0.937 lr=6.06e-04 gnorm=1.62 158 smp/s
+ep13 step24175/140100 loss=1.0207 acc=0.862 lr=6.05e-04 gnorm=0.80 158 smp/s
+ep13 step24200/140100 loss=0.7814 acc=0.924 lr=6.05e-04 gnorm=0.86 158 smp/s
+ep13 step24225/140100 loss=0.8798 acc=0.908 lr=6.04e-04 gnorm=0.96 158 smp/s
+ep13 step24250/140100 loss=0.9621 acc=0.897 lr=6.04e-04 gnorm=0.59 158 smp/s
+ep13 step24275/140100 loss=1.1968 acc=0.885 lr=6.03e-04 gnorm=1.99 158 smp/s
+ep14 step24300/140100 loss=0.6513 acc=0.940 lr=6.03e-04 gnorm=0.58 158 smp/s
+ep14 step24325/140100 loss=0.9058 acc=0.927 lr=6.02e-04 gnorm=0.80 158 smp/s
+ep14 step24350/140100 loss=1.2606 acc=0.900 lr=6.02e-04 gnorm=0.57 158 smp/s
+ep14 step24375/140100 loss=0.7268 acc=0.927 lr=6.01e-04 gnorm=0.68 158 smp/s
+ep14 step24400/140100 loss=1.0264 acc=0.892 lr=6.01e-04 gnorm=1.53 158 smp/s
+ep14 step24425/140100 loss=1.0808 acc=0.885 lr=6.00e-04 gnorm=1.98 158 smp/s
+ep14 step24450/140100 loss=1.1533 acc=0.890 lr=6.00e-04 gnorm=1.81 158 smp/s
+ep14 step24475/140100 loss=0.8557 acc=0.882 lr=5.99e-04 gnorm=0.80 158 smp/s
+ep14 step24500/140100 loss=0.9599 acc=0.890 lr=5.99e-04 gnorm=1.26 158 smp/s
+ep14 step24525/140100 loss=0.9073 acc=0.886 lr=5.98e-04 gnorm=0.61 158 smp/s
+ep14 step24550/140100 loss=1.1433 acc=0.872 lr=5.97e-04 gnorm=1.33 158 smp/s
+ep14 step24575/140100 loss=0.9250 acc=0.937 lr=5.97e-04 gnorm=0.76 158 smp/s
+ep14 step24600/140100 loss=1.1027 acc=0.854 lr=5.96e-04 gnorm=3.20 158 smp/s
+ep14 step24625/140100 loss=0.7926 acc=0.949 lr=5.96e-04 gnorm=0.84 158 smp/s
+ep14 step24650/140100 loss=0.9002 acc=0.897 lr=5.95e-04 gnorm=0.91 158 smp/s
+ep14 step24675/140100 loss=1.0872 acc=0.968 lr=5.95e-04 gnorm=0.97 158 smp/s
+ep14 step24700/140100 loss=0.8012 acc=0.937 lr=5.94e-04 gnorm=1.10 158 smp/s
+ep14 step24725/140100 loss=0.7008 acc=0.891 lr=5.94e-04 gnorm=0.66 158 smp/s
+ep14 step24750/140100 loss=0.7600 acc=0.903 lr=5.93e-04 gnorm=0.95 158 smp/s
+ep14 step24775/140100 loss=0.6461 acc=0.931 lr=5.93e-04 gnorm=0.80 158 smp/s
+ep14 step24800/140100 loss=0.9830 acc=0.887 lr=5.92e-04 gnorm=0.64 159 smp/s
+ep14 step24825/140100 loss=0.9058 acc=0.905 lr=5.92e-04 gnorm=1.21 159 smp/s
+ep14 step24850/140100 loss=0.9022 acc=0.898 lr=5.91e-04 gnorm=1.21 159 smp/s
+ep14 step24875/140100 loss=1.1163 acc=0.948 lr=5.91e-04 gnorm=1.13 159 smp/s
+ep14 step24900/140100 loss=0.9326 acc=0.935 lr=5.90e-04 gnorm=0.71 159 smp/s
+ep14 step24925/140100 loss=0.7225 acc=0.938 lr=5.90e-04 gnorm=1.39 159 smp/s
+ep14 step24950/140100 loss=1.1281 acc=0.897 lr=5.89e-04 gnorm=0.91 159 smp/s
+ep14 step24975/140100 loss=1.1718 acc=0.868 lr=5.89e-04 gnorm=1.79 159 smp/s
+ep14 step25000/140100 loss=1.0137 acc=0.891 lr=5.88e-04 gnorm=1.35 159 smp/s
+ep14 step25025/140100 loss=0.6782 acc=0.932 lr=5.88e-04 gnorm=0.56 159 smp/s
+ep14 step25050/140100 loss=1.0586 acc=0.887 lr=5.87e-04 gnorm=1.36 159 smp/s
+ep14 step25075/140100 loss=1.0423 acc=0.925 lr=5.86e-04 gnorm=1.95 159 smp/s
+ep14 step25100/140100 loss=0.5743 acc=0.948 lr=5.86e-04 gnorm=1.19 159 smp/s
+ep14 step25125/140100 loss=0.9610 acc=0.977 lr=5.85e-04 gnorm=1.04 159 smp/s
+ep14 step25150/140100 loss=1.0163 acc=0.917 lr=5.85e-04 gnorm=0.68 159 smp/s
+ep14 step25175/140100 loss=0.9008 acc=0.880 lr=5.84e-04 gnorm=0.65 159 smp/s
+ep14 step25200/140100 loss=1.0455 acc=0.908 lr=5.84e-04 gnorm=1.07 159 smp/s
+ep14 step25225/140100 loss=0.7429 acc=0.855 lr=5.83e-04 gnorm=1.15 159 smp/s
+ep14 step25250/140100 loss=0.8332 acc=0.934 lr=5.83e-04 gnorm=0.62 159 smp/s
+ep14 step25275/140100 loss=1.1290 acc=0.891 lr=5.82e-04 gnorm=1.50 159 smp/s
+ep14 step25300/140100 loss=1.0142 acc=0.870 lr=5.82e-04 gnorm=1.68 159 smp/s
+ep14 step25325/140100 loss=1.1501 acc=0.891 lr=5.81e-04 gnorm=1.63 159 smp/s
+ep14 step25350/140100 loss=1.0772 acc=0.875 lr=5.81e-04 gnorm=1.84 159 smp/s
+ep14 step25375/140100 loss=0.5369 acc=0.942 lr=5.80e-04 gnorm=0.78 159 smp/s
+ep14 step25400/140100 loss=1.0351 acc=0.904 lr=5.80e-04 gnorm=1.44 159 smp/s
+ep14 step25425/140100 loss=1.0811 acc=0.900 lr=5.79e-04 gnorm=0.79 159 smp/s
+ep14 step25450/140100 loss=0.9354 acc=0.909 lr=5.79e-04 gnorm=1.49 159 smp/s
+ep14 step25475/140100 loss=0.7271 acc=0.924 lr=5.78e-04 gnorm=0.95 159 smp/s
+ep14 step25500/140100 loss=0.7306 acc=0.919 lr=5.78e-04 gnorm=0.64 159 smp/s
+ep14 step25525/140100 loss=1.0950 acc=0.855 lr=5.77e-04 gnorm=1.02 159 smp/s
+ep14 step25550/140100 loss=0.7865 acc=0.912 lr=5.77e-04 gnorm=0.60 159 smp/s
+ep14 step25575/140100 loss=0.9141 acc=0.983 lr=5.76e-04 gnorm=1.28 159 smp/s
+ep14 step25600/140100 loss=0.6663 acc=0.959 lr=5.76e-04 gnorm=0.85 159 smp/s
+ep14 step25625/140100 loss=0.9845 acc=0.878 lr=5.75e-04 gnorm=0.73 159 smp/s
+ep14 step25650/140100 loss=1.2749 acc=0.879 lr=5.75e-04 gnorm=0.94 159 smp/s
+ep14 step25675/140100 loss=1.3948 acc=0.891 lr=5.74e-04 gnorm=1.70 159 smp/s
+ep14 step25700/140100 loss=1.0041 acc=0.923 lr=5.74e-04 gnorm=0.76 159 smp/s
+ep14 step25725/140100 loss=0.6954 acc=0.933 lr=5.73e-04 gnorm=1.45 159 smp/s
+ep14 step25750/140100 loss=1.0057 acc=0.904 lr=5.73e-04 gnorm=1.36 159 smp/s
+ep14 step25775/140100 loss=0.8792 acc=0.902 lr=5.72e-04 gnorm=1.04 159 smp/s
+ep14 step25800/140100 loss=1.0971 acc=0.958 lr=5.72e-04 gnorm=0.93 159 smp/s
+ep14 step25825/140100 loss=0.8582 acc=0.916 lr=5.71e-04 gnorm=0.95 159 smp/s
+ep14 step25850/140100 loss=0.8172 acc=0.888 lr=5.71e-04 gnorm=1.52 159 smp/s
+ep14 step25875/140100 loss=0.9661 acc=0.919 lr=5.70e-04 gnorm=0.94 159 smp/s
+ep14 step25900/140100 loss=0.6396 acc=0.959 lr=5.70e-04 gnorm=0.58 159 smp/s
+ep14 step25925/140100 loss=0.6606 acc=0.906 lr=5.69e-04 gnorm=0.55 159 smp/s
+ep14 step25950/140100 loss=0.8944 acc=0.943 lr=5.69e-04 gnorm=0.62 159 smp/s
+ep14 step25975/140100 loss=0.8874 acc=0.909 lr=5.68e-04 gnorm=0.84 159 smp/s
+ep14 step26000/140100 loss=0.7557 acc=0.919 lr=5.68e-04 gnorm=0.77 159 smp/s
+[eval @ 26000] WER=1.001 CER=0.974 SER=1.000 loss=1.804 content_acc=0.109 fill_rate=0.633 entropy=2.008 distinct=60
+[eval @ 26000] iter32  WER=1.115 CER=0.863 SER=1.000 (mask-predict decode, n=200 clips)
+   Full: | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+   Hyp : 
+   Ref : ಸಾಂಸ್ಕೃತಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರೋನಾ ಸೋಂಕು ಹೆಚ್ಚುತ್ತಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಇಂದಿನಿಂದ ಐದ
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+ep14 step26025/140100 loss=1.0572 acc=0.922 lr=5.67e-04 gnorm=1.25 158 smp/s
+ep14 step26050/140100 loss=1.2095 acc=0.848 lr=5.67e-04 gnorm=0.60 158 smp/s
+ep14 step26075/140100 loss=0.8090 acc=0.944 lr=5.66e-04 gnorm=1.29 158 smp/s
+ep14 step26100/140100 loss=1.1279 acc=0.891 lr=5.66e-04 gnorm=2.15 158 smp/s
+ep14 step26125/140100 loss=0.9146 acc=0.933 lr=5.65e-04 gnorm=1.66 158 smp/s
+ep14 step26150/140100 loss=0.7967 acc=0.906 lr=5.65e-04 gnorm=2.57 159 smp/s
+ep15 step26175/140100 loss=0.7746 acc=0.911 lr=5.64e-04 gnorm=0.70 158 smp/s
+ep15 step26200/140100 loss=0.6849 acc=0.928 lr=5.64e-04 gnorm=0.69 159 smp/s
+ep15 step26225/140100 loss=1.2025 acc=0.885 lr=5.63e-04 gnorm=1.00 159 smp/s
+ep15 step26250/140100 loss=0.9171 acc=0.942 lr=5.63e-04 gnorm=2.03 159 smp/s
+ep15 step26275/140100 loss=0.9367 acc=0.857 lr=5.62e-04 gnorm=1.86 159 smp/s
+ep15 step26300/140100 loss=0.8786 acc=0.910 lr=5.62e-04 gnorm=0.58 159 smp/s
+ep15 step26325/140100 loss=1.0190 acc=0.932 lr=5.61e-04 gnorm=1.45 159 smp/s
+ep15 step26350/140100 loss=0.7984 acc=0.904 lr=5.61e-04 gnorm=1.07 159 smp/s
+ep15 step26375/140100 loss=0.9475 acc=0.915 lr=5.60e-04 gnorm=0.71 159 smp/s
+ep15 step26400/140100 loss=0.7601 acc=0.894 lr=5.60e-04 gnorm=0.87 159 smp/s
+ep15 step26425/140100 loss=1.0730 acc=0.877 lr=5.59e-04 gnorm=0.79 159 smp/s
+ep15 step26450/140100 loss=0.7311 acc=0.904 lr=5.59e-04 gnorm=1.39 159 smp/s
+ep15 step26475/140100 loss=0.9548 acc=0.909 lr=5.58e-04 gnorm=1.32 159 smp/s
+ep15 step26500/140100 loss=0.7972 acc=0.976 lr=5.58e-04 gnorm=0.72 159 smp/s
+ep15 step26525/140100 loss=0.6713 acc=0.927 lr=5.57e-04 gnorm=0.70 159 smp/s
+ep15 step26550/140100 loss=1.0133 acc=0.865 lr=5.57e-04 gnorm=0.53 159 smp/s
+ep15 step26575/140100 loss=0.7969 acc=0.925 lr=5.56e-04 gnorm=1.59 159 smp/s
+ep15 step26600/140100 loss=0.9595 acc=0.930 lr=5.56e-04 gnorm=1.27 159 smp/s
+ep15 step26625/140100 loss=0.9413 acc=0.919 lr=5.55e-04 gnorm=1.95 159 smp/s
+ep15 step26650/140100 loss=1.2239 acc=0.834 lr=5.55e-04 gnorm=1.14 159 smp/s
+ep15 step26675/140100 loss=0.9318 acc=0.922 lr=5.54e-04 gnorm=1.65 159 smp/s
+ep15 step26700/140100 loss=1.0522 acc=0.919 lr=5.54e-04 gnorm=1.20 159 smp/s
+ep15 step26725/140100 loss=0.8472 acc=0.939 lr=5.53e-04 gnorm=1.75 159 smp/s
+ep15 step26750/140100 loss=1.0776 acc=0.940 lr=5.53e-04 gnorm=1.53 159 smp/s
+ep15 step26775/140100 loss=0.7633 acc=0.910 lr=5.52e-04 gnorm=1.44 159 smp/s
+ep15 step26800/140100 loss=1.1014 acc=0.923 lr=5.52e-04 gnorm=1.14 159 smp/s
+ep15 step26825/140100 loss=0.8003 acc=0.932 lr=5.51e-04 gnorm=0.87 159 smp/s
+ep15 step26850/140100 loss=0.9408 acc=0.894 lr=5.51e-04 gnorm=0.82 159 smp/s
+ep15 step26875/140100 loss=1.0279 acc=0.926 lr=5.50e-04 gnorm=1.28 159 smp/s
+ep15 step26900/140100 loss=0.6620 acc=0.971 lr=5.50e-04 gnorm=0.83 159 smp/s
+ep15 step26925/140100 loss=0.9238 acc=0.862 lr=5.49e-04 gnorm=1.59 159 smp/s
+ep15 step26950/140100 loss=0.8509 acc=0.919 lr=5.49e-04 gnorm=1.63 159 smp/s
+ep15 step26975/140100 loss=0.9114 acc=0.912 lr=5.48e-04 gnorm=1.12 159 smp/s
+ep15 step27000/140100 loss=0.9496 acc=0.962 lr=5.48e-04 gnorm=1.48 159 smp/s
+ep15 step27025/140100 loss=0.7986 acc=0.900 lr=5.47e-04 gnorm=0.73 159 smp/s
+ep15 step27050/140100 loss=0.8464 acc=0.858 lr=5.47e-04 gnorm=1.12 159 smp/s
+ep15 step27075/140100 loss=0.6969 acc=0.926 lr=5.46e-04 gnorm=1.12 159 smp/s
+ep15 step27100/140100 loss=0.8190 acc=0.911 lr=5.46e-04 gnorm=0.59 159 smp/s
+ep15 step27125/140100 loss=0.7500 acc=0.945 lr=5.45e-04 gnorm=1.38 159 smp/s
+ep15 step27150/140100 loss=1.0240 acc=0.927 lr=5.45e-04 gnorm=2.10 159 smp/s
+ep15 step27175/140100 loss=1.0878 acc=0.865 lr=5.44e-04 gnorm=1.03 159 smp/s
+ep15 step27200/140100 loss=1.1652 acc=0.872 lr=5.44e-04 gnorm=0.58 159 smp/s
+ep15 step27225/140100 loss=0.9079 acc=0.903 lr=5.44e-04 gnorm=2.19 159 smp/s
+ep15 step27250/140100 loss=1.1015 acc=0.869 lr=5.43e-04 gnorm=1.55 159 smp/s
+ep15 step27275/140100 loss=0.7446 acc=0.899 lr=5.43e-04 gnorm=0.67 159 smp/s
+ep15 step27300/140100 loss=1.3670 acc=0.793 lr=5.42e-04 gnorm=1.77 159 smp/s
+ep15 step27325/140100 loss=1.0052 acc=0.926 lr=5.42e-04 gnorm=0.88 159 smp/s
+ep15 step27350/140100 loss=0.8218 acc=0.922 lr=5.41e-04 gnorm=2.13 159 smp/s
+ep15 step27375/140100 loss=0.9066 acc=0.881 lr=5.41e-04 gnorm=0.76 159 smp/s
+ep15 step27400/140100 loss=1.1300 acc=0.893 lr=5.40e-04 gnorm=1.03 159 smp/s
+ep15 step27425/140100 loss=0.9942 acc=0.931 lr=5.40e-04 gnorm=1.98 159 smp/s
+ep15 step27450/140100 loss=1.1036 acc=0.929 lr=5.39e-04 gnorm=0.87 159 smp/s
+ep15 step27475/140100 loss=1.0254 acc=0.882 lr=5.39e-04 gnorm=1.15 159 smp/s
+ep15 step27500/140100 loss=0.8594 acc=0.928 lr=5.38e-04 gnorm=1.85 159 smp/s
+ep15 step27525/140100 loss=1.0206 acc=0.883 lr=5.38e-04 gnorm=0.67 159 smp/s
+ep15 step27550/140100 loss=0.8627 acc=0.872 lr=5.37e-04 gnorm=1.52 159 smp/s
+ep15 step27575/140100 loss=0.9635 acc=0.871 lr=5.37e-04 gnorm=1.40 159 smp/s
+ep15 step27600/140100 loss=0.8623 acc=0.953 lr=5.36e-04 gnorm=0.69 159 smp/s
+ep15 step27625/140100 loss=0.9354 acc=0.941 lr=5.36e-04 gnorm=0.94 159 smp/s
+ep15 step27650/140100 loss=0.6154 acc=0.941 lr=5.35e-04 gnorm=0.57 159 smp/s
+ep15 step27675/140100 loss=0.8002 acc=0.977 lr=5.35e-04 gnorm=1.65 159 smp/s
+ep15 step27700/140100 loss=0.9921 acc=0.915 lr=5.34e-04 gnorm=1.04 159 smp/s
+ep15 step27725/140100 loss=0.9046 acc=0.955 lr=5.34e-04 gnorm=1.48 159 smp/s
+ep15 step27750/140100 loss=1.0409 acc=0.857 lr=5.33e-04 gnorm=0.90 159 smp/s
+ep15 step27775/140100 loss=1.0306 acc=0.948 lr=5.33e-04 gnorm=1.64 159 smp/s
+ep15 step27800/140100 loss=0.5473 acc=0.971 lr=5.33e-04 gnorm=0.70 159 smp/s
+ep15 step27825/140100 loss=0.9814 acc=0.863 lr=5.32e-04 gnorm=1.38 159 smp/s
+ep15 step27850/140100 loss=0.8506 acc=0.914 lr=5.32e-04 gnorm=0.94 159 smp/s
+ep15 step27875/140100 loss=0.9696 acc=0.894 lr=5.31e-04 gnorm=0.83 159 smp/s
+ep15 step27900/140100 loss=0.9868 acc=0.917 lr=5.31e-04 gnorm=0.86 159 smp/s
+ep15 step27925/140100 loss=0.6340 acc=0.964 lr=5.30e-04 gnorm=1.19 159 smp/s
+ep15 step27950/140100 loss=0.7724 acc=0.944 lr=5.30e-04 gnorm=1.03 159 smp/s
+ep15 step27975/140100 loss=0.9190 acc=0.901 lr=5.29e-04 gnorm=0.63 159 smp/s
+ep15 step28000/140100 loss=0.8209 acc=0.926 lr=5.29e-04 gnorm=0.81 159 smp/s
+[eval @ 28000] WER=0.996 CER=0.843 SER=1.000 loss=1.382 content_acc=0.114 fill_rate=0.716 entropy=1.712 distinct=74
+[eval @ 28000] iter32  WER=1.112 CER=0.715 SER=1.000 (mask-predict decode, n=200 clips)
+   Full: ಕ ಾ ಂ ಗ ಾ ೂ ರ ಿ | ನ ಗ ರ ರ | ಮ ಮ ೈ ೈ ರ ನ ಲ ಲ ಲ ಲ ಿ | ಕ ಕ ೊ ೊ ನ ನ ನ ನ ೋ ಕ ಕ ು ಚ ಚ ಚ ಚ ಚ ಚ ತ ತ ತ ತ ತ ತ | | | | ನ ನ ನ ನ ನ ಲ ಲ ಲ ಲ ಲ ಲ ಲ | | | ನ 
+   Hyp : ಕಕಾಂಗಾೂರಿ ನಗರರ ಮಮೈೈರನಲಲಲಲಿ ಕಕೊೊನನನನೋಕಕುಚಚಚಚಚಚತತತತತತ    ನನನನನಲಲಲಲಲಲಲ   ನನನ       
+   Ref : ಸಾಂಸ್ಕೃತಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರೋನಾ ಸೋಂಕು ಹೆಚ್ಚುತ್ತಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಇಂದಿನಿಂದ ಐದ
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+ep16 step28025/140100 loss=1.0660 acc=0.897 lr=5.28e-04 gnorm=0.73 159 smp/s
+ep16 step28050/140100 loss=0.9231 acc=0.867 lr=5.28e-04 gnorm=0.79 159 smp/s
+ep16 step28075/140100 loss=0.8319 acc=0.903 lr=5.27e-04 gnorm=0.86 159 smp/s
+ep16 step28100/140100 loss=0.9606 acc=0.945 lr=5.27e-04 gnorm=1.17 159 smp/s
+ep16 step28125/140100 loss=0.9153 acc=0.893 lr=5.26e-04 gnorm=0.84 159 smp/s
+ep16 step28150/140100 loss=0.5920 acc=0.931 lr=5.26e-04 gnorm=1.33 159 smp/s
+ep16 step28175/140100 loss=0.7379 acc=0.927 lr=5.26e-04 gnorm=0.77 159 smp/s
+ep16 step28200/140100 loss=0.9631 acc=0.904 lr=5.25e-04 gnorm=0.69 159 smp/s
+ep16 step28225/140100 loss=0.9598 acc=0.910 lr=5.25e-04 gnorm=1.47 159 smp/s
+ep16 step28250/140100 loss=0.6649 acc=0.910 lr=5.24e-04 gnorm=1.14 159 smp/s
+ep16 step28275/140100 loss=0.6040 acc=0.914 lr=5.24e-04 gnorm=0.81 159 smp/s
+ep16 step28300/140100 loss=0.9571 acc=0.912 lr=5.23e-04 gnorm=0.62 159 smp/s
+ep16 step28325/140100 loss=0.8014 acc=0.951 lr=5.23e-04 gnorm=1.50 159 smp/s
+ep16 step28350/140100 loss=0.7300 acc=0.966 lr=5.22e-04 gnorm=1.02 159 smp/s
+ep16 step28375/140100 loss=0.8511 acc=0.899 lr=5.22e-04 gnorm=0.85 159 smp/s
+ep16 step28400/140100 loss=1.3076 acc=0.854 lr=5.21e-04 gnorm=1.67 159 smp/s
+ep16 step28425/140100 loss=1.0590 acc=0.913 lr=5.21e-04 gnorm=1.75 159 smp/s
+ep16 step28450/140100 loss=0.7958 acc=0.960 lr=5.20e-04 gnorm=0.67 159 smp/s
+ep16 step28475/140100 loss=0.9889 acc=0.934 lr=5.20e-04 gnorm=1.17 159 smp/s
+ep16 step28500/140100 loss=0.9341 acc=0.906 lr=5.20e-04 gnorm=2.15 159 smp/s
+ep16 step28525/140100 loss=0.9305 acc=0.869 lr=5.19e-04 gnorm=0.69 159 smp/s
+ep16 step28550/140100 loss=0.7775 acc=0.893 lr=5.19e-04 gnorm=1.61 159 smp/s
+ep16 step28575/140100 loss=0.9108 acc=0.919 lr=5.18e-04 gnorm=0.79 159 smp/s
+ep16 step28600/140100 loss=0.9856 acc=0.936 lr=5.18e-04 gnorm=0.79 159 smp/s
+ep16 step28625/140100 loss=0.8809 acc=0.904 lr=5.17e-04 gnorm=0.92 159 smp/s
+ep16 step28650/140100 loss=1.1540 acc=0.903 lr=5.17e-04 gnorm=1.38 159 smp/s
+ep16 step28675/140100 loss=1.0472 acc=0.925 lr=5.16e-04 gnorm=0.94 159 smp/s
+ep16 step28700/140100 loss=1.1982 acc=0.852 lr=5.16e-04 gnorm=1.58 159 smp/s
+ep16 step28725/140100 loss=1.2769 acc=0.910 lr=5.15e-04 gnorm=1.18 159 smp/s
+ep16 step28750/140100 loss=0.9526 acc=0.872 lr=5.15e-04 gnorm=1.26 159 smp/s
+ep16 step28775/140100 loss=0.9338 acc=0.886 lr=5.14e-04 gnorm=0.85 159 smp/s
+ep16 step28800/140100 loss=1.0598 acc=0.889 lr=5.14e-04 gnorm=0.72 159 smp/s
+ep16 step28825/140100 loss=0.9627 acc=0.886 lr=5.14e-04 gnorm=2.32 159 smp/s
+ep16 step28850/140100 loss=1.3310 acc=0.844 lr=5.13e-04 gnorm=0.73 159 smp/s
+ep16 step28875/140100 loss=0.9278 acc=0.921 lr=5.13e-04 gnorm=1.75 159 smp/s
+ep16 step28900/140100 loss=0.8099 acc=0.950 lr=5.12e-04 gnorm=0.60 159 smp/s
+ep16 step28925/140100 loss=1.0329 acc=0.903 lr=5.12e-04 gnorm=0.85 159 smp/s
+ep16 step28950/140100 loss=1.0060 acc=0.893 lr=5.11e-04 gnorm=0.76 159 smp/s
+ep16 step28975/140100 loss=0.9552 acc=0.888 lr=5.11e-04 gnorm=0.60 159 smp/s
+ep16 step29000/140100 loss=0.9044 acc=0.982 lr=5.10e-04 gnorm=2.03 159 smp/s
+ep16 step29025/140100 loss=0.9709 acc=0.860 lr=5.10e-04 gnorm=1.58 159 smp/s
+ep16 step29050/140100 loss=0.7973 acc=0.918 lr=5.10e-04 gnorm=0.88 159 smp/s
+ep16 step29075/140100 loss=1.1222 acc=0.893 lr=5.09e-04 gnorm=2.07 159 smp/s
+ep16 step29100/140100 loss=0.9489 acc=0.886 lr=5.09e-04 gnorm=1.26 159 smp/s
+ep16 step29125/140100 loss=0.8189 acc=0.975 lr=5.08e-04 gnorm=0.63 159 smp/s
+ep16 step29150/140100 loss=0.9640 acc=0.944 lr=5.08e-04 gnorm=0.84 159 smp/s
+ep16 step29175/140100 loss=0.9993 acc=0.915 lr=5.07e-04 gnorm=0.93 159 smp/s
+ep16 step29200/140100 loss=1.0223 acc=0.921 lr=5.07e-04 gnorm=0.65 159 smp/s
+ep16 step29225/140100 loss=1.2104 acc=0.884 lr=5.06e-04 gnorm=2.26 159 smp/s
+ep16 step29250/140100 loss=0.8692 acc=0.920 lr=5.06e-04 gnorm=1.13 159 smp/s
+ep16 step29275/140100 loss=0.8252 acc=0.968 lr=5.05e-04 gnorm=0.79 159 smp/s
+ep16 step29300/140100 loss=0.8656 acc=0.943 lr=5.05e-04 gnorm=1.03 159 smp/s
+ep16 step29325/140100 loss=1.2138 acc=0.865 lr=5.05e-04 gnorm=1.01 159 smp/s
+ep16 step29350/140100 loss=0.8160 acc=0.873 lr=5.04e-04 gnorm=1.00 159 smp/s
+ep16 step29375/140100 loss=1.0105 acc=0.953 lr=5.04e-04 gnorm=1.23 159 smp/s
+ep16 step29400/140100 loss=0.9032 acc=0.917 lr=5.03e-04 gnorm=1.10 159 smp/s
+ep16 step29425/140100 loss=1.0319 acc=0.898 lr=5.03e-04 gnorm=1.08 159 smp/s
+ep16 step29450/140100 loss=1.0508 acc=0.943 lr=5.02e-04 gnorm=1.39 159 smp/s
+ep16 step29475/140100 loss=0.7337 acc=0.888 lr=5.02e-04 gnorm=1.23 159 smp/s
+ep16 step29500/140100 loss=1.0654 acc=0.892 lr=5.01e-04 gnorm=0.78 159 smp/s
+ep16 step29525/140100 loss=0.7375 acc=0.924 lr=5.01e-04 gnorm=0.89 159 smp/s
+ep16 step29550/140100 loss=1.0608 acc=0.885 lr=5.01e-04 gnorm=1.81 159 smp/s
+ep16 step29575/140100 loss=1.1350 acc=0.929 lr=5.00e-04 gnorm=1.96 159 smp/s
+ep16 step29600/140100 loss=0.9180 acc=0.959 lr=5.00e-04 gnorm=1.27 159 smp/s
+ep16 step29625/140100 loss=0.9454 acc=0.902 lr=4.99e-04 gnorm=0.59 159 smp/s
+ep16 step29650/140100 loss=0.8119 acc=0.907 lr=4.99e-04 gnorm=1.12 159 smp/s
+ep16 step29675/140100 loss=1.1415 acc=0.853 lr=4.98e-04 gnorm=1.01 159 smp/s
+ep16 step29700/140100 loss=1.2957 acc=0.861 lr=4.98e-04 gnorm=1.50 159 smp/s
+ep16 step29725/140100 loss=1.1382 acc=0.900 lr=4.97e-04 gnorm=1.27 159 smp/s
+ep16 step29750/140100 loss=1.3946 acc=0.878 lr=4.97e-04 gnorm=0.89 159 smp/s
+ep16 step29775/140100 loss=0.7226 acc=0.960 lr=4.97e-04 gnorm=0.71 159 smp/s
+ep16 step29800/140100 loss=0.9889 acc=0.867 lr=4.96e-04 gnorm=1.21 159 smp/s
+ep16 step29825/140100 loss=1.0786 acc=0.959 lr=4.96e-04 gnorm=0.83 159 smp/s
+ep16 step29850/140100 loss=0.9463 acc=0.875 lr=4.95e-04 gnorm=0.98 159 smp/s
+ep16 step29875/140100 loss=0.9347 acc=0.929 lr=4.95e-04 gnorm=0.88 159 smp/s
+ep17 step29900/140100 loss=0.6604 acc=0.909 lr=4.94e-04 gnorm=0.63 159 smp/s
+ep17 step29925/140100 loss=1.0402 acc=0.908 lr=4.94e-04 gnorm=0.63 159 smp/s
+ep17 step29950/140100 loss=0.9386 acc=0.850 lr=4.94e-04 gnorm=1.26 159 smp/s
+ep17 step29975/140100 loss=0.8891 acc=0.944 lr=4.93e-04 gnorm=0.69 159 smp/s
+ep17 step30000/140100 loss=0.8688 acc=0.901 lr=4.93e-04 gnorm=0.83 159 smp/s
+[eval @ 30000] WER=0.998 CER=0.954 SER=1.000 loss=1.396 content_acc=0.124 fill_rate=0.705 entropy=1.457 distinct=69
+[eval @ 30000] iter32  WER=1.202 CER=0.772 SER=1.000 (mask-predict decode, n=200 clips)
+   Full: ಕ ್ ್ ್ | | | | | | | | | | | | | | | | | | | | ್ ್ ್ ್ ್ ್ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+   Hyp : ಕಕ್್್                    ್್್್್್
+   Ref : ಸಾಂಸ್ಕೃತಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರೋನಾ ಸೋಂಕು ಹೆಚ್ಚುತ್ತಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಇಂದಿನಿಂದ ಐದ
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+ep17 step30025/140100 loss=0.7053 acc=0.936 lr=4.92e-04 gnorm=1.02 159 smp/s
+ep17 step30050/140100 loss=0.5276 acc=0.925 lr=4.92e-04 gnorm=1.15 159 smp/s
+ep17 step30075/140100 loss=0.9799 acc=0.875 lr=4.91e-04 gnorm=0.80 159 smp/s
+ep17 step30100/140100 loss=0.8443 acc=0.890 lr=4.91e-04 gnorm=0.76 159 smp/s
+ep17 step30125/140100 loss=1.1245 acc=0.905 lr=4.90e-04 gnorm=1.09 159 smp/s
+ep17 step30150/140100 loss=0.9072 acc=0.890 lr=4.90e-04 gnorm=1.62 159 smp/s
+ep17 step30175/140100 loss=1.1389 acc=0.897 lr=4.90e-04 gnorm=0.77 159 smp/s
+ep17 step30200/140100 loss=0.8352 acc=0.921 lr=4.89e-04 gnorm=2.04 159 smp/s
+ep17 step30225/140100 loss=0.7496 acc=0.949 lr=4.89e-04 gnorm=0.63 159 smp/s
+ep17 step30250/140100 loss=0.6558 acc=0.932 lr=4.88e-04 gnorm=0.86 159 smp/s
+ep17 step30275/140100 loss=0.8861 acc=0.857 lr=4.88e-04 gnorm=0.91 159 smp/s
+ep17 step30300/140100 loss=1.1748 acc=0.865 lr=4.87e-04 gnorm=0.98 159 smp/s
+ep17 step30325/140100 loss=0.9572 acc=0.905 lr=4.87e-04 gnorm=0.77 159 smp/s
+ep17 step30350/140100 loss=1.1213 acc=0.848 lr=4.87e-04 gnorm=1.14 159 smp/s
+ep17 step30375/140100 loss=0.7862 acc=0.928 lr=4.86e-04 gnorm=0.95 159 smp/s
+ep17 step30400/140100 loss=1.0225 acc=0.916 lr=4.86e-04 gnorm=1.31 159 smp/s
+ep17 step30425/140100 loss=0.9052 acc=0.909 lr=4.85e-04 gnorm=1.43 159 smp/s
+ep17 step30450/140100 loss=0.9480 acc=0.957 lr=4.85e-04 gnorm=0.75 159 smp/s
+ep17 step30475/140100 loss=1.1223 acc=0.890 lr=4.84e-04 gnorm=1.64 159 smp/s
+ep17 step30500/140100 loss=0.8966 acc=0.923 lr=4.84e-04 gnorm=0.72 159 smp/s
+ep17 step30525/140100 loss=0.9180 acc=0.979 lr=4.84e-04 gnorm=0.91 159 smp/s
+ep17 step30550/140100 loss=0.8958 acc=0.882 lr=4.83e-04 gnorm=0.99 159 smp/s
+ep17 step30575/140100 loss=0.8034 acc=0.931 lr=4.83e-04 gnorm=1.30 159 smp/s
+ep17 step30600/140100 loss=0.9519 acc=0.900 lr=4.82e-04 gnorm=1.48 159 smp/s
+ep17 step30625/140100 loss=0.7576 acc=0.931 lr=4.82e-04 gnorm=1.17 159 smp/s
+ep17 step30650/140100 loss=0.9879 acc=0.860 lr=4.81e-04 gnorm=1.48 159 smp/s
+ep17 step30675/140100 loss=0.9073 acc=0.863 lr=4.81e-04 gnorm=0.55 159 smp/s
+ep17 step30700/140100 loss=0.9411 acc=0.919 lr=4.81e-04 gnorm=0.83 159 smp/s
+ep17 step30725/140100 loss=0.7816 acc=0.873 lr=4.80e-04 gnorm=1.06 159 smp/s
+ep17 step30750/140100 loss=0.9482 acc=0.897 lr=4.80e-04 gnorm=1.71 159 smp/s
+ep17 step30775/140100 loss=0.7643 acc=0.945 lr=4.79e-04 gnorm=1.50 159 smp/s
+ep17 step30800/140100 loss=0.6154 acc=0.955 lr=4.79e-04 gnorm=0.60 159 smp/s
+ep17 step30825/140100 loss=1.2012 acc=0.864 lr=4.78e-04 gnorm=1.31 159 smp/s
+ep17 step30850/140100 loss=1.0939 acc=0.845 lr=4.78e-04 gnorm=0.79 159 smp/s
+ep17 step30875/140100 loss=0.8328 acc=0.934 lr=4.78e-04 gnorm=1.45 159 smp/s
+ep17 step30900/140100 loss=0.8391 acc=0.871 lr=4.77e-04 gnorm=0.79 159 smp/s
+ep17 step30925/140100 loss=1.1679 acc=0.868 lr=4.77e-04 gnorm=1.52 159 smp/s
+ep17 step30950/140100 loss=1.0539 acc=0.917 lr=4.76e-04 gnorm=1.71 159 smp/s
+ep17 step30975/140100 loss=0.8399 acc=0.926 lr=4.76e-04 gnorm=1.66 159 smp/s
+ep17 step31000/140100 loss=0.7301 acc=0.941 lr=4.76e-04 gnorm=2.00 159 smp/s
+ep17 step31025/140100 loss=1.3520 acc=0.839 lr=4.75e-04 gnorm=0.82 159 smp/s
+ep17 step31050/140100 loss=0.6228 acc=0.931 lr=4.75e-04 gnorm=0.70 159 smp/s
+ep17 step31075/140100 loss=0.9918 acc=0.916 lr=4.74e-04 gnorm=0.88 159 smp/s
+ep17 step31100/140100 loss=0.8497 acc=0.910 lr=4.74e-04 gnorm=0.59 159 smp/s
+ep17 step31125/140100 loss=1.0873 acc=0.884 lr=4.73e-04 gnorm=2.34 159 smp/s
+ep17 step31150/140100 loss=0.8377 acc=0.897 lr=4.73e-04 gnorm=2.93 159 smp/s
+ep17 step31175/140100 loss=1.0487 acc=0.864 lr=4.73e-04 gnorm=0.95 159 smp/s
+ep17 step31200/140100 loss=0.9439 acc=0.953 lr=4.72e-04 gnorm=1.10 159 smp/s
+ep17 step31225/140100 loss=0.7715 acc=0.918 lr=4.72e-04 gnorm=1.34 159 smp/s
+ep17 step31250/140100 loss=0.8065 acc=0.942 lr=4.71e-04 gnorm=0.69 159 smp/s
+ep17 step31275/140100 loss=1.1560 acc=0.959 lr=4.71e-04 gnorm=0.65 159 smp/s
+ep17 step31300/140100 loss=1.0408 acc=0.888 lr=4.70e-04 gnorm=0.92 159 smp/s
+ep17 step31325/140100 loss=0.8508 acc=0.897 lr=4.70e-04 gnorm=0.81 159 smp/s
+ep17 step31350/140100 loss=0.8078 acc=0.920 lr=4.70e-04 gnorm=1.59 159 smp/s
+ep17 step31375/140100 loss=1.0180 acc=0.916 lr=4.69e-04 gnorm=1.16 159 smp/s
+ep17 step31400/140100 loss=0.8289 acc=0.911 lr=4.69e-04 gnorm=0.74 159 smp/s
+ep17 step31425/140100 loss=0.7305 acc=0.888 lr=4.68e-04 gnorm=0.75 159 smp/s
+ep17 step31450/140100 loss=0.6863 acc=0.908 lr=4.68e-04 gnorm=0.61 159 smp/s
+ep17 step31475/140100 loss=0.7703 acc=0.905 lr=4.68e-04 gnorm=1.43 159 smp/s
+ep17 step31500/140100 loss=1.1127 acc=0.957 lr=4.67e-04 gnorm=0.72 159 smp/s
+ep17 step31525/140100 loss=0.7708 acc=0.924 lr=4.67e-04 gnorm=0.93 159 smp/s
+ep17 step31550/140100 loss=0.8705 acc=0.948 lr=4.66e-04 gnorm=1.24 159 smp/s
+ep17 step31575/140100 loss=0.7506 acc=0.889 lr=4.66e-04 gnorm=1.11 159 smp/s
+ep17 step31600/140100 loss=1.0227 acc=0.918 lr=4.66e-04 gnorm=0.70 159 smp/s
+ep17 step31625/140100 loss=0.7769 acc=0.907 lr=4.65e-04 gnorm=0.86 159 smp/s
+ep17 step31650/140100 loss=0.8402 acc=0.934 lr=4.65e-04 gnorm=0.88 159 smp/s
+ep17 step31675/140100 loss=0.7794 acc=0.945 lr=4.64e-04 gnorm=0.94 159 smp/s
+ep17 step31700/140100 loss=0.8826 acc=0.923 lr=4.64e-04 gnorm=1.72 159 smp/s
+ep17 step31725/140100 loss=0.8577 acc=0.955 lr=4.63e-04 gnorm=1.42 159 smp/s
+ep17 step31750/140100 loss=1.0458 acc=0.914 lr=4.63e-04 gnorm=0.90 159 smp/s
+ep18 step31775/140100 loss=0.5755 acc=0.921 lr=4.63e-04 gnorm=1.19 159 smp/s
+ep18 step31800/140100 loss=0.5428 acc=0.948 lr=4.62e-04 gnorm=1.20 159 smp/s
+ep18 step31825/140100 loss=0.9590 acc=0.915 lr=4.62e-04 gnorm=2.05 159 smp/s
+ep18 step31850/140100 loss=1.0584 acc=0.866 lr=4.61e-04 gnorm=0.89 159 smp/s
+ep18 step31875/140100 loss=1.1603 acc=0.813 lr=4.61e-04 gnorm=1.52 159 smp/s
+ep18 step31900/140100 loss=0.7296 acc=0.954 lr=4.61e-04 gnorm=0.84 159 smp/s
+ep18 step31925/140100 loss=0.7712 acc=0.868 lr=4.60e-04 gnorm=0.82 159 smp/s
+ep18 step31950/140100 loss=0.6275 acc=0.890 lr=4.60e-04 gnorm=0.65 159 smp/s
+ep18 step31975/140100 loss=0.7336 acc=0.955 lr=4.59e-04 gnorm=1.40 159 smp/s
+ep18 step32000/140100 loss=0.6925 acc=0.908 lr=4.59e-04 gnorm=1.24 159 smp/s
+[eval @ 32000] WER=0.997 CER=0.913 SER=1.000 loss=1.331 content_acc=0.097 fill_rate=0.733 entropy=1.467 distinct=75
+[eval @ 32000] iter32  WER=1.313 CER=0.825 SER=1.000 (mask-predict decode, n=200 clips)
+   Full: ಸ ್ ರ ್ | ್ | | | | | | | | | ್ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+   Hyp : ಸಸ್ರ್ ್         ್                                                               
+   Ref : ಸಾಂಸ್ಕೃತಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರೋನಾ ಸೋಂಕು ಹೆಚ್ಚುತ್ತಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಇಂದಿನಿಂದ ಐದ
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+ep18 step32025/140100 loss=0.9081 acc=0.964 lr=4.59e-04 gnorm=0.96 159 smp/s
+ep18 step32050/140100 loss=1.1584 acc=0.871 lr=4.58e-04 gnorm=0.60 159 smp/s
+ep18 step32075/140100 loss=0.8912 acc=0.877 lr=4.58e-04 gnorm=0.87 159 smp/s
+ep18 step32100/140100 loss=1.1496 acc=0.887 lr=4.57e-04 gnorm=0.71 159 smp/s
+ep18 step32125/140100 loss=0.8439 acc=0.941 lr=4.57e-04 gnorm=0.86 159 smp/s
+ep18 step32150/140100 loss=1.2011 acc=0.902 lr=4.57e-04 gnorm=0.67 159 smp/s
+ep18 step32175/140100 loss=0.7423 acc=0.914 lr=4.56e-04 gnorm=0.75 159 smp/s
+ep18 step32200/140100 loss=1.1944 acc=0.878 lr=4.56e-04 gnorm=2.14 159 smp/s
+ep18 step32225/140100 loss=0.7211 acc=0.936 lr=4.55e-04 gnorm=0.95 159 smp/s
+ep18 step32250/140100 loss=0.6724 acc=0.930 lr=4.55e-04 gnorm=0.60 159 smp/s
+ep18 step32275/140100 loss=0.8769 acc=0.918 lr=4.55e-04 gnorm=0.99 159 smp/s
+ep18 step32300/140100 loss=1.0847 acc=0.910 lr=4.54e-04 gnorm=1.03 159 smp/s
+ep18 step32325/140100 loss=0.5891 acc=0.940 lr=4.54e-04 gnorm=0.55 159 smp/s
+ep18 step32350/140100 loss=0.7484 acc=0.884 lr=4.53e-04 gnorm=0.97 159 smp/s
+ep18 step32375/140100 loss=0.8398 acc=0.944 lr=4.53e-04 gnorm=1.42 159 smp/s
+ep18 step32400/140100 loss=0.9362 acc=0.921 lr=4.53e-04 gnorm=1.21 159 smp/s
+ep18 step32425/140100 loss=0.7737 acc=0.921 lr=4.52e-04 gnorm=1.40 159 smp/s
+ep18 step32450/140100 loss=0.9497 acc=0.898 lr=4.52e-04 gnorm=0.67 159 smp/s
+ep18 step32475/140100 loss=0.9181 acc=0.893 lr=4.51e-04 gnorm=1.88 159 smp/s
+ep18 step32500/140100 loss=0.7976 acc=0.950 lr=4.51e-04 gnorm=0.74 159 smp/s
+ep18 step32525/140100 loss=0.8182 acc=0.890 lr=4.51e-04 gnorm=1.17 159 smp/s
+ep18 step32550/140100 loss=0.8011 acc=0.922 lr=4.50e-04 gnorm=1.51 159 smp/s
+ep18 step32575/140100 loss=0.7049 acc=0.892 lr=4.50e-04 gnorm=1.22 159 smp/s
+ep18 step32600/140100 loss=0.9142 acc=0.921 lr=4.49e-04 gnorm=1.54 159 smp/s
+ep18 step32625/140100 loss=1.0708 acc=0.924 lr=4.49e-04 gnorm=2.03 159 smp/s
+ep18 step32650/140100 loss=0.6383 acc=0.947 lr=4.49e-04 gnorm=0.56 159 smp/s
+ep18 step32675/140100 loss=0.7726 acc=0.877 lr=4.48e-04 gnorm=1.24 159 smp/s
+ep18 step32700/140100 loss=0.9694 acc=0.876 lr=4.48e-04 gnorm=1.11 159 smp/s
+ep18 step32725/140100 loss=0.7959 acc=0.898 lr=4.47e-04 gnorm=1.24 159 smp/s
+ep18 step32750/140100 loss=0.8135 acc=0.885 lr=4.47e-04 gnorm=0.79 159 smp/s
+ep18 step32775/140100 loss=1.2431 acc=0.907 lr=4.47e-04 gnorm=0.81 159 smp/s
+ep18 step32800/140100 loss=1.0837 acc=0.832 lr=4.46e-04 gnorm=0.88 159 smp/s
+ep18 step32825/140100 loss=0.7739 acc=0.888 lr=4.46e-04 gnorm=2.21 159 smp/s
+ep18 step32850/140100 loss=1.1489 acc=0.852 lr=4.45e-04 gnorm=1.42 159 smp/s
+ep18 step32875/140100 loss=0.8377 acc=0.931 lr=4.45e-04 gnorm=0.53 159 smp/s
+ep18 step32900/140100 loss=0.6844 acc=0.924 lr=4.45e-04 gnorm=1.17 159 smp/s
+ep18 step32925/140100 loss=0.9541 acc=0.905 lr=4.44e-04 gnorm=0.81 159 smp/s
+ep18 step32950/140100 loss=0.9869 acc=0.892 lr=4.44e-04 gnorm=0.91 159 smp/s
+ep18 step32975/140100 loss=0.7351 acc=0.948 lr=4.43e-04 gnorm=2.37 159 smp/s
+ep18 step33000/140100 loss=1.1625 acc=0.886 lr=4.43e-04 gnorm=1.36 159 smp/s
+ep18 step33025/140100 loss=0.9717 acc=0.958 lr=4.43e-04 gnorm=1.26 159 smp/s
+ep18 step33050/140100 loss=1.2937 acc=0.901 lr=4.42e-04 gnorm=0.81 159 smp/s
+ep18 step33075/140100 loss=0.8818 acc=0.907 lr=4.42e-04 gnorm=1.02 159 smp/s
+ep18 step33100/140100 loss=0.7038 acc=0.896 lr=4.41e-04 gnorm=0.75 159 smp/s
+ep18 step33125/140100 loss=0.8781 acc=0.905 lr=4.41e-04 gnorm=1.36 159 smp/s
+ep18 step33150/140100 loss=0.6456 acc=0.966 lr=4.41e-04 gnorm=1.39 159 smp/s
+ep18 step33175/140100 loss=0.9345 acc=0.894 lr=4.40e-04 gnorm=1.42 159 smp/s
+ep18 step33200/140100 loss=1.0874 acc=0.877 lr=4.40e-04 gnorm=0.94 159 smp/s
+ep18 step33225/140100 loss=0.8938 acc=0.909 lr=4.40e-04 gnorm=0.55 159 smp/s
+ep18 step33250/140100 loss=0.8460 acc=0.918 lr=4.39e-04 gnorm=0.86 159 smp/s
+ep18 step33275/140100 loss=0.9381 acc=0.925 lr=4.39e-04 gnorm=1.26 159 smp/s
+ep18 step33300/140100 loss=0.9217 acc=0.896 lr=4.38e-04 gnorm=1.97 159 smp/s
+ep18 step33325/140100 loss=0.6283 acc=0.935 lr=4.38e-04 gnorm=0.83 159 smp/s
+ep18 step33350/140100 loss=0.6526 acc=0.972 lr=4.38e-04 gnorm=1.46 159 smp/s
+ep18 step33375/140100 loss=0.9308 acc=0.882 lr=4.37e-04 gnorm=0.62 159 smp/s
+ep18 step33400/140100 loss=0.9256 acc=0.931 lr=4.37e-04 gnorm=1.24 159 smp/s
+ep18 step33425/140100 loss=0.4094 acc=0.973 lr=4.36e-04 gnorm=0.86 159 smp/s
+ep18 step33450/140100 loss=0.7682 acc=0.937 lr=4.36e-04 gnorm=0.76 159 smp/s
+ep18 step33475/140100 loss=0.8969 acc=0.897 lr=4.36e-04 gnorm=0.83 159 smp/s
+ep18 step33500/140100 loss=0.9188 acc=0.902 lr=4.35e-04 gnorm=0.57 159 smp/s
+ep18 step33525/140100 loss=0.8243 acc=0.879 lr=4.35e-04 gnorm=1.02 159 smp/s
+ep18 step33550/140100 loss=0.8514 acc=0.910 lr=4.34e-04 gnorm=1.08 159 smp/s
+ep18 step33575/140100 loss=0.7900 acc=0.906 lr=4.34e-04 gnorm=1.09 159 smp/s
+ep18 step33600/140100 loss=1.0465 acc=0.916 lr=4.34e-04 gnorm=0.68 159 smp/s
+ep19 step33625/140100 loss=1.0033 acc=0.929 lr=4.33e-04 gnorm=0.65 159 smp/s
+ep19 step33650/140100 loss=0.9611 acc=0.911 lr=4.33e-04 gnorm=0.93 159 smp/s
+ep19 step33675/140100 loss=0.8137 acc=0.892 lr=4.33e-04 gnorm=0.60 159 smp/s
+ep19 step33700/140100 loss=0.5579 acc=0.975 lr=4.32e-04 gnorm=1.53 159 smp/s
+ep19 step33725/140100 loss=0.8024 acc=0.886 lr=4.32e-04 gnorm=1.21 159 smp/s
+ep19 step33750/140100 loss=0.7603 acc=0.886 lr=4.31e-04 gnorm=0.94 159 smp/s
+ep19 step33775/140100 loss=1.0049 acc=0.936 lr=4.31e-04 gnorm=0.61 159 smp/s
+ep19 step33800/140100 loss=0.7783 acc=0.973 lr=4.31e-04 gnorm=0.87 159 smp/s
+ep19 step33825/140100 loss=1.1291 acc=0.849 lr=4.30e-04 gnorm=2.86 159 smp/s
+ep19 step33850/140100 loss=0.8997 acc=0.947 lr=4.30e-04 gnorm=0.55 159 smp/s
+ep19 step33875/140100 loss=0.6579 acc=0.918 lr=4.30e-04 gnorm=0.88 159 smp/s
+ep19 step33900/140100 loss=0.9550 acc=0.912 lr=4.29e-04 gnorm=1.21 159 smp/s
+ep19 step33925/140100 loss=0.6618 acc=0.926 lr=4.29e-04 gnorm=1.81 159 smp/s
+ep19 step33950/140100 loss=1.0084 acc=0.922 lr=4.28e-04 gnorm=1.70 159 smp/s
+ep19 step33975/140100 loss=0.8884 acc=0.872 lr=4.28e-04 gnorm=0.61 159 smp/s
+ep19 step34000/140100 loss=0.6921 acc=0.857 lr=4.28e-04 gnorm=0.57 159 smp/s
+[eval @ 34000] WER=0.996 CER=0.968 SER=1.000 loss=1.993 content_acc=0.134 fill_rate=0.518 entropy=2.302 distinct=68
+[eval @ 34000] iter32  WER=1.532 CER=0.945 SER=1.000 (mask-predict decode, n=200 clips)
+   Full: ಸ ಾ ್ ್ ್ ್ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | </s> </s> </
+   Hyp : ನಸಾ್್್್
+   Ref : ಸಾಂಸ್ಕೃತಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರೋನಾ ಸೋಂಕು ಹೆಚ್ಚುತ್ತಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಇಂದಿನಿಂದ ಐದ
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+ep19 step34025/140100 loss=1.2677 acc=0.896 lr=4.27e-04 gnorm=0.84 159 smp/s
+ep19 step34050/140100 loss=0.9425 acc=0.915 lr=4.27e-04 gnorm=2.00 159 smp/s
+ep19 step34075/140100 loss=0.6589 acc=0.953 lr=4.26e-04 gnorm=1.87 159 smp/s
+ep19 step34100/140100 loss=1.1208 acc=0.893 lr=4.26e-04 gnorm=1.71 159 smp/s
+ep19 step34125/140100 loss=0.8458 acc=0.933 lr=4.26e-04 gnorm=0.95 159 smp/s
+ep19 step34150/140100 loss=0.8441 acc=0.880 lr=4.25e-04 gnorm=2.05 159 smp/s
+ep19 step34175/140100 loss=0.6547 acc=0.887 lr=4.25e-04 gnorm=0.57 159 smp/s
+ep19 step34200/140100 loss=0.7904 acc=0.899 lr=4.25e-04 gnorm=1.30 159 smp/s
+ep19 step34225/140100 loss=0.7735 acc=0.967 lr=4.24e-04 gnorm=1.36 159 smp/s
+ep19 step34250/140100 loss=0.6858 acc=0.916 lr=4.24e-04 gnorm=0.92 159 smp/s
+ep19 step34275/140100 loss=0.8314 acc=0.904 lr=4.23e-04 gnorm=0.70 159 smp/s
+ep19 step34300/140100 loss=0.6685 acc=0.951 lr=4.23e-04 gnorm=0.71 159 smp/s
+ep19 step34325/140100 loss=0.8826 acc=0.862 lr=4.23e-04 gnorm=0.77 159 smp/s
+ep19 step34350/140100 loss=0.8504 acc=0.875 lr=4.22e-04 gnorm=1.33 159 smp/s
+ep19 step34375/140100 loss=0.8386 acc=0.897 lr=4.22e-04 gnorm=1.52 159 smp/s
+ep19 step34400/140100 loss=0.9509 acc=0.903 lr=4.22e-04 gnorm=0.62 159 smp/s
+ep19 step34425/140100 loss=0.5621 acc=0.942 lr=4.21e-04 gnorm=0.64 159 smp/s
+ep19 step34450/140100 loss=0.8120 acc=0.897 lr=4.21e-04 gnorm=0.95 159 smp/s
+ep19 step34475/140100 loss=1.2919 acc=0.861 lr=4.20e-04 gnorm=1.12 159 smp/s
+ep19 step34500/140100 loss=0.7561 acc=0.906 lr=4.20e-04 gnorm=2.45 159 smp/s
+ep19 step34525/140100 loss=0.9158 acc=0.849 lr=4.20e-04 gnorm=1.33 159 smp/s
+ep19 step34550/140100 loss=0.7590 acc=0.893 lr=4.19e-04 gnorm=1.11 159 smp/s
+ep19 step34575/140100 loss=0.8818 acc=0.910 lr=4.19e-04 gnorm=0.80 159 smp/s
+ep19 step34600/140100 loss=1.1476 acc=0.861 lr=4.19e-04 gnorm=1.18 159 smp/s
+ep19 step34625/140100 loss=0.7728 acc=0.920 lr=4.18e-04 gnorm=0.84 159 smp/s
+ep19 step34650/140100 loss=0.7530 acc=0.899 lr=4.18e-04 gnorm=1.92 159 smp/s
+ep19 step34675/140100 loss=0.8934 acc=0.896 lr=4.18e-04 gnorm=0.79 159 smp/s
+ep19 step34700/140100 loss=0.9826 acc=0.857 lr=4.17e-04 gnorm=1.55 159 smp/s
+ep19 step34725/140100 loss=0.7310 acc=0.889 lr=4.17e-04 gnorm=1.30 159 smp/s
+ep19 step34750/140100 loss=0.6924 acc=0.934 lr=4.16e-04 gnorm=0.92 159 smp/s
+ep19 step34775/140100 loss=1.0754 acc=0.910 lr=4.16e-04 gnorm=0.60 159 smp/s
+ep19 step34800/140100 loss=0.9268 acc=0.949 lr=4.16e-04 gnorm=1.59 159 smp/s
+ep19 step34825/140100 loss=0.9829 acc=0.952 lr=4.15e-04 gnorm=0.55 159 smp/s
+ep19 step34850/140100 loss=0.9120 acc=0.935 lr=4.15e-04 gnorm=1.96 159 smp/s
+ep19 step34875/140100 loss=0.7133 acc=0.965 lr=4.15e-04 gnorm=0.57 159 smp/s
+ep19 step34900/140100 loss=0.5934 acc=0.953 lr=4.14e-04 gnorm=1.16 159 smp/s
+ep19 step34925/140100 loss=0.8447 acc=0.896 lr=4.14e-04 gnorm=0.88 159 smp/s
+ep19 step34950/140100 loss=0.9621 acc=0.867 lr=4.13e-04 gnorm=1.58 159 smp/s
+ep19 step34975/140100 loss=1.0251 acc=0.856 lr=4.13e-04 gnorm=1.00 159 smp/s
+ep19 step35000/140100 loss=0.8027 acc=0.896 lr=4.13e-04 gnorm=0.77 159 smp/s
+ep19 step35025/140100 loss=0.6787 acc=0.980 lr=4.12e-04 gnorm=0.62 159 smp/s
+ep19 step35050/140100 loss=1.0025 acc=0.867 lr=4.12e-04 gnorm=2.04 159 smp/s
+ep19 step35075/140100 loss=0.7462 acc=0.920 lr=4.12e-04 gnorm=1.19 159 smp/s
+ep19 step35100/140100 loss=0.7684 acc=0.948 lr=4.11e-04 gnorm=0.98 159 smp/s
+ep19 step35125/140100 loss=0.7201 acc=0.928 lr=4.11e-04 gnorm=1.92 159 smp/s
+ep19 step35150/140100 loss=0.9169 acc=0.930 lr=4.11e-04 gnorm=1.99 159 smp/s
+ep19 step35175/140100 loss=1.0383 acc=0.918 lr=4.10e-04 gnorm=0.83 159 smp/s
+ep19 step35200/140100 loss=0.8241 acc=0.897 lr=4.10e-04 gnorm=1.11 159 smp/s
+ep19 step35225/140100 loss=1.0000 acc=0.936 lr=4.09e-04 gnorm=1.70 159 smp/s
+ep19 step35250/140100 loss=0.6691 acc=0.975 lr=4.09e-04 gnorm=0.53 159 smp/s
+ep19 step35275/140100 loss=0.8995 acc=0.939 lr=4.09e-04 gnorm=1.08 159 smp/s
+ep19 step35300/140100 loss=0.8050 acc=0.913 lr=4.08e-04 gnorm=0.56 159 smp/s
+ep19 step35325/140100 loss=1.0274 acc=0.877 lr=4.08e-04 gnorm=1.23 159 smp/s
+ep19 step35350/140100 loss=0.6086 acc=0.898 lr=4.08e-04 gnorm=0.73 159 smp/s
+ep19 step35375/140100 loss=0.7968 acc=0.929 lr=4.07e-04 gnorm=0.90 159 smp/s
+ep19 step35400/140100 loss=1.1088 acc=0.856 lr=4.07e-04 gnorm=0.67 159 smp/s
+ep19 step35425/140100 loss=0.7823 acc=0.929 lr=4.07e-04 gnorm=0.69 159 smp/s
+ep19 step35450/140100 loss=0.7396 acc=0.931 lr=4.06e-04 gnorm=0.83 159 smp/s
+ep19 step35475/140100 loss=0.9443 acc=0.876 lr=4.06e-04 gnorm=2.55 159 smp/s
+ep20 step35500/140100 loss=1.2327 acc=0.819 lr=4.06e-04 gnorm=0.57 159 smp/s
+ep20 step35525/140100 loss=0.8764 acc=0.955 lr=4.05e-04 gnorm=1.80 159 smp/s
+ep20 step35550/140100 loss=0.7828 acc=0.951 lr=4.05e-04 gnorm=0.86 159 smp/s
+ep20 step35575/140100 loss=0.6129 acc=0.963 lr=4.04e-04 gnorm=0.85 159 smp/s
+ep20 step35600/140100 loss=0.9970 acc=0.922 lr=4.04e-04 gnorm=0.73 159 smp/s
+ep20 step35625/140100 loss=1.0227 acc=0.889 lr=4.04e-04 gnorm=0.81 159 smp/s
+ep20 step35650/140100 loss=0.9148 acc=0.886 lr=4.03e-04 gnorm=1.07 159 smp/s
+ep20 step35675/140100 loss=1.1250 acc=0.893 lr=4.03e-04 gnorm=0.84 159 smp/s
+ep20 step35700/140100 loss=0.7383 acc=0.894 lr=4.03e-04 gnorm=1.14 159 smp/s
+ep20 step35725/140100 loss=0.9493 acc=0.921 lr=4.02e-04 gnorm=1.82 159 smp/s
+ep20 step35750/140100 loss=0.7294 acc=0.928 lr=4.02e-04 gnorm=1.25 159 smp/s
+ep20 step35775/140100 loss=0.9757 acc=0.877 lr=4.02e-04 gnorm=0.91 159 smp/s
+ep20 step35800/140100 loss=0.6276 acc=0.930 lr=4.01e-04 gnorm=1.46 159 smp/s
+ep20 step35825/140100 loss=1.0146 acc=0.831 lr=4.01e-04 gnorm=1.29 159 smp/s
+ep20 step35850/140100 loss=0.9190 acc=0.862 lr=4.01e-04 gnorm=1.53 159 smp/s
+ep20 step35875/140100 loss=0.9889 acc=0.907 lr=4.00e-04 gnorm=1.35 159 smp/s
+ep20 step35900/140100 loss=0.8068 acc=0.922 lr=4.00e-04 gnorm=1.13 159 smp/s
+ep20 step35925/140100 loss=0.9871 acc=0.924 lr=3.99e-04 gnorm=1.95 159 smp/s
+ep20 step35950/140100 loss=0.7359 acc=0.866 lr=3.99e-04 gnorm=0.73 159 smp/s
+ep20 step35975/140100 loss=0.7616 acc=0.911 lr=3.99e-04 gnorm=0.57 159 smp/s
+ep20 step36000/140100 loss=1.0744 acc=0.886 lr=3.98e-04 gnorm=1.58 159 smp/s
+[eval @ 36000] WER=0.998 CER=0.959 SER=1.000 loss=1.563 content_acc=0.126 fill_rate=0.652 entropy=1.722 distinct=63
+[eval @ 36000] iter32  WER=1.226 CER=0.847 SER=1.000 (mask-predict decode, n=200 clips)
+   Full: ಕ ್ ಕ ್ ತ ಿ ತ ಿ ಿ ಿ ್ ್ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | ಿ ಿ ಿ ಿ ಿ ಿ ಿ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ ್ 
+   Hyp : ನಕ್ಕ್ತಿತಿಿಿ್್                                 ಿಿಿಿಿಿಿ್್್್್್್್್್್್್್್್್್್್್ೆೆೆೆೆೆ
+   Ref : ಸಾಂಸ್ಕೃತಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರೋನಾ ಸೋಂಕು ಹೆಚ್ಚುತ್ತಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಇಂದಿನಿಂದ ಐದ
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+ep20 step36025/140100 loss=0.8947 acc=0.901 lr=3.98e-04 gnorm=1.25 159 smp/s
+ep20 step36050/140100 loss=1.0712 acc=0.907 lr=3.98e-04 gnorm=0.52 159 smp/s
+ep20 step36075/140100 loss=0.5986 acc=0.974 lr=3.97e-04 gnorm=1.13 159 smp/s
+ep20 step36100/140100 loss=0.5341 acc=0.979 lr=3.97e-04 gnorm=0.72 159 smp/s
+ep20 step36125/140100 loss=0.8352 acc=0.945 lr=3.97e-04 gnorm=1.22 159 smp/s
+ep20 step36150/140100 loss=0.9645 acc=0.899 lr=3.96e-04 gnorm=0.74 159 smp/s
+ep20 step36175/140100 loss=0.9323 acc=0.850 lr=3.96e-04 gnorm=0.59 159 smp/s
+ep20 step36200/140100 loss=0.8175 acc=0.916 lr=3.96e-04 gnorm=1.58 159 smp/s
+ep20 step36225/140100 loss=0.6992 acc=0.926 lr=3.95e-04 gnorm=1.55 159 smp/s
+ep20 step36250/140100 loss=1.1470 acc=0.878 lr=3.95e-04 gnorm=0.80 159 smp/s
+ep20 step36275/140100 loss=0.8042 acc=0.924 lr=3.95e-04 gnorm=0.97 159 smp/s
+ep20 step36300/140100 loss=1.0002 acc=0.921 lr=3.94e-04 gnorm=0.97 159 smp/s
+ep20 step36325/140100 loss=0.8401 acc=0.920 lr=3.94e-04 gnorm=1.94 159 smp/s
+ep20 step36350/140100 loss=0.8153 acc=0.914 lr=3.93e-04 gnorm=0.78 159 smp/s
+ep20 step36375/140100 loss=0.8146 acc=0.896 lr=3.93e-04 gnorm=0.96 159 smp/s
+ep20 step36400/140100 loss=0.9553 acc=0.893 lr=3.93e-04 gnorm=1.05 159 smp/s
+ep20 step36425/140100 loss=0.8153 acc=0.887 lr=3.92e-04 gnorm=1.78 159 smp/s
+ep20 step36450/140100 loss=0.8006 acc=0.909 lr=3.92e-04 gnorm=2.30 159 smp/s
+ep20 step36475/140100 loss=0.9628 acc=0.885 lr=3.92e-04 gnorm=0.87 159 smp/s
+ep20 step36500/140100 loss=1.1655 acc=0.904 lr=3.91e-04 gnorm=1.36 159 smp/s
+ep20 step36525/140100 loss=0.7344 acc=0.954 lr=3.91e-04 gnorm=0.98 159 smp/s
+ep20 step36550/140100 loss=0.6841 acc=0.939 lr=3.91e-04 gnorm=0.87 159 smp/s
+ep20 step36575/140100 loss=0.9487 acc=0.954 lr=3.90e-04 gnorm=1.05 159 smp/s
+ep20 step36600/140100 loss=0.9785 acc=0.879 lr=3.90e-04 gnorm=0.65 159 smp/s
+ep20 step36625/140100 loss=1.0604 acc=0.886 lr=3.90e-04 gnorm=1.62 159 smp/s
+ep20 step36650/140100 loss=0.7765 acc=0.896 lr=3.89e-04 gnorm=0.75 159 smp/s
+ep20 step36675/140100 loss=0.6986 acc=0.911 lr=3.89e-04 gnorm=1.81 159 smp/s
+ep20 step36700/140100 loss=0.7388 acc=0.922 lr=3.89e-04 gnorm=0.77 159 smp/s
+ep20 step36725/140100 loss=1.2346 acc=0.886 lr=3.88e-04 gnorm=0.61 159 smp/s
+ep20 step36750/140100 loss=0.8707 acc=0.895 lr=3.88e-04 gnorm=1.79 159 smp/s
+ep20 step36775/140100 loss=0.6338 acc=0.920 lr=3.88e-04 gnorm=0.95 159 smp/s
+ep20 step36800/140100 loss=0.7363 acc=0.949 lr=3.87e-04 gnorm=0.60 159 smp/s
+ep20 step36825/140100 loss=0.7366 acc=0.942 lr=3.87e-04 gnorm=2.83 159 smp/s
+ep20 step36850/140100 loss=0.9430 acc=0.898 lr=3.87e-04 gnorm=1.88 159 smp/s
+ep20 step36875/140100 loss=0.8240 acc=0.917 lr=3.86e-04 gnorm=0.90 159 smp/s
+ep20 step36900/140100 loss=0.9439 acc=0.838 lr=3.86e-04 gnorm=1.57 159 smp/s
+ep20 step36925/140100 loss=0.9792 acc=0.859 lr=3.86e-04 gnorm=0.55 159 smp/s
+ep20 step36950/140100 loss=0.8908 acc=0.946 lr=3.85e-04 gnorm=1.80 159 smp/s
+ep20 step36975/140100 loss=0.8657 acc=0.943 lr=3.85e-04 gnorm=1.37 159 smp/s
+ep20 step37000/140100 loss=0.8371 acc=0.896 lr=3.85e-04 gnorm=1.45 159 smp/s
+ep20 step37025/140100 loss=0.5949 acc=0.972 lr=3.84e-04 gnorm=1.33 159 smp/s
+ep20 step37050/140100 loss=1.0968 acc=0.875 lr=3.84e-04 gnorm=1.67 159 smp/s
+ep20 step37075/140100 loss=0.6718 acc=0.940 lr=3.84e-04 gnorm=0.74 159 smp/s
+ep20 step37100/140100 loss=0.6677 acc=0.963 lr=3.83e-04 gnorm=1.49 159 smp/s
+ep20 step37125/140100 loss=0.8650 acc=0.896 lr=3.83e-04 gnorm=0.98 159 smp/s
+ep20 step37150/140100 loss=0.9195 acc=0.932 lr=3.82e-04 gnorm=2.27 159 smp/s
+ep20 step37175/140100 loss=0.5670 acc=0.961 lr=3.82e-04 gnorm=0.60 159 smp/s
+ep20 step37200/140100 loss=1.0612 acc=0.896 lr=3.82e-04 gnorm=0.74 159 smp/s
+ep20 step37225/140100 loss=0.8447 acc=0.944 lr=3.81e-04 gnorm=0.88 159 smp/s
+ep20 step37250/140100 loss=0.6055 acc=0.919 lr=3.81e-04 gnorm=1.35 159 smp/s
+ep20 step37275/140100 loss=1.0966 acc=0.898 lr=3.81e-04 gnorm=1.70 159 smp/s
+ep20 step37300/140100 loss=0.8441 acc=0.877 lr=3.80e-04 gnorm=1.24 159 smp/s
+ep20 step37325/140100 loss=0.7816 acc=0.928 lr=3.80e-04 gnorm=1.00 159 smp/s
+ep20 step37350/140100 loss=0.6653 acc=0.934 lr=3.80e-04 gnorm=0.84 159 smp/s
+ep21 step37375/140100 loss=0.9852 acc=0.880 lr=3.79e-04 gnorm=1.21 159 smp/s
+ep21 step37400/140100 loss=0.6822 acc=0.934 lr=3.79e-04 gnorm=1.05 159 smp/s
+ep21 step37425/140100 loss=0.7069 acc=0.927 lr=3.79e-04 gnorm=0.92 159 smp/s
+ep21 step37450/140100 loss=0.9490 acc=0.904 lr=3.78e-04 gnorm=2.03 159 smp/s
+ep21 step37475/140100 loss=0.7320 acc=0.920 lr=3.78e-04 gnorm=2.11 159 smp/s
+ep21 step37500/140100 loss=0.5771 acc=0.950 lr=3.78e-04 gnorm=1.04 159 smp/s
+ep21 step37525/140100 loss=0.5437 acc=0.955 lr=3.77e-04 gnorm=0.61 159 smp/s
+ep21 step37550/140100 loss=0.8121 acc=0.910 lr=3.77e-04 gnorm=0.55 159 smp/s
+ep21 step37575/140100 loss=0.9819 acc=0.865 lr=3.77e-04 gnorm=0.85 159 smp/s
+ep21 step37600/140100 loss=0.9718 acc=0.925 lr=3.76e-04 gnorm=1.11 159 smp/s
+ep21 step37625/140100 loss=0.9485 acc=0.911 lr=3.76e-04 gnorm=2.59 159 smp/s
+ep21 step37650/140100 loss=0.9764 acc=0.870 lr=3.76e-04 gnorm=2.64 159 smp/s
+ep21 step37675/140100 loss=1.1623 acc=0.914 lr=3.75e-04 gnorm=1.00 159 smp/s
+ep21 step37700/140100 loss=0.8023 acc=0.951 lr=3.75e-04 gnorm=2.10 159 smp/s
+ep21 step37725/140100 loss=0.8731 acc=0.916 lr=3.75e-04 gnorm=0.84 159 smp/s
+ep21 step37750/140100 loss=0.8027 acc=0.885 lr=3.74e-04 gnorm=1.45 159 smp/s
+ep21 step37775/140100 loss=0.6784 acc=0.951 lr=3.74e-04 gnorm=0.65 159 smp/s
+ep21 step37800/140100 loss=0.8655 acc=0.939 lr=3.74e-04 gnorm=0.93 159 smp/s
+ep21 step37825/140100 loss=0.5812 acc=0.950 lr=3.73e-04 gnorm=0.69 159 smp/s
+ep21 step37850/140100 loss=0.5567 acc=0.941 lr=3.73e-04 gnorm=0.55 159 smp/s
+ep21 step37875/140100 loss=0.6907 acc=0.878 lr=3.73e-04 gnorm=0.84 159 smp/s
+ep21 step37900/140100 loss=1.2449 acc=0.887 lr=3.72e-04 gnorm=0.98 159 smp/s
+ep21 step37925/140100 loss=0.6788 acc=0.962 lr=3.72e-04 gnorm=0.80 159 smp/s
+ep21 step37950/140100 loss=0.8445 acc=0.953 lr=3.72e-04 gnorm=1.03 159 smp/s
+ep21 step37975/140100 loss=1.2428 acc=0.822 lr=3.71e-04 gnorm=0.73 159 smp/s
+ep21 step38000/140100 loss=0.6707 acc=0.968 lr=3.71e-04 gnorm=0.63 159 smp/s
+[eval @ 38000] WER=1.005 CER=1.278 SER=1.000 loss=1.883 content_acc=0.100 fill_rate=0.652 entropy=1.529 distinct=71
+[eval @ 38000] iter32  WER=1.297 CER=0.868 SER=1.000 (mask-predict decode, n=200 clips)
+   Full: | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | 
+   Hyp : 
+   Ref : ಸಾಂಸ್ಕೃತಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರೋನಾ ಸೋಂಕು ಹೆಚ್ಚುತ್ತಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಇಂದಿನಿಂದ ಐದ
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+ep21 step38025/140100 loss=0.8881 acc=0.921 lr=3.71e-04 gnorm=1.49 159 smp/s
+ep21 step38050/140100 loss=0.8306 acc=0.969 lr=3.71e-04 gnorm=1.29 159 smp/s
+ep21 step38075/140100 loss=0.9425 acc=0.917 lr=3.70e-04 gnorm=1.02 159 smp/s
+ep21 step38100/140100 loss=0.7019 acc=0.941 lr=3.70e-04 gnorm=1.21 159 smp/s
+ep21 step38125/140100 loss=1.0168 acc=0.861 lr=3.70e-04 gnorm=0.84 159 smp/s
+ep21 step38150/140100 loss=0.9341 acc=0.923 lr=3.69e-04 gnorm=2.82 159 smp/s
+ep21 step38175/140100 loss=0.5428 acc=0.940 lr=3.69e-04 gnorm=1.71 159 smp/s
+ep21 step38200/140100 loss=0.7550 acc=0.888 lr=3.69e-04 gnorm=1.67 159 smp/s
+ep21 step38225/140100 loss=0.8797 acc=0.878 lr=3.68e-04 gnorm=0.72 159 smp/s
+ep21 step38250/140100 loss=1.0171 acc=0.954 lr=3.68e-04 gnorm=1.28 159 smp/s
+ep21 step38275/140100 loss=0.7435 acc=0.907 lr=3.68e-04 gnorm=0.63 159 smp/s
+ep21 step38300/140100 loss=1.1295 acc=0.846 lr=3.67e-04 gnorm=1.40 159 smp/s
+ep21 step38325/140100 loss=0.4992 acc=0.938 lr=3.67e-04 gnorm=0.97 159 smp/s
+ep21 step38350/140100 loss=0.7980 acc=0.922 lr=3.67e-04 gnorm=0.60 159 smp/s
+ep21 step38375/140100 loss=0.9234 acc=0.945 lr=3.66e-04 gnorm=0.70 159 smp/s
+ep21 step38400/140100 loss=0.9227 acc=0.902 lr=3.66e-04 gnorm=1.16 159 smp/s
+ep21 step38425/140100 loss=0.9784 acc=0.874 lr=3.66e-04 gnorm=1.02 159 smp/s
+ep21 step38450/140100 loss=0.7108 acc=0.896 lr=3.65e-04 gnorm=0.89 159 smp/s
+ep21 step38475/140100 loss=0.6712 acc=0.908 lr=3.65e-04 gnorm=0.76 159 smp/s
+ep21 step38500/140100 loss=1.0373 acc=0.901 lr=3.65e-04 gnorm=0.59 159 smp/s
+ep21 step38525/140100 loss=0.7963 acc=0.937 lr=3.64e-04 gnorm=0.78 159 smp/s
+ep21 step38550/140100 loss=1.0351 acc=0.909 lr=3.64e-04 gnorm=0.77 159 smp/s
+ep21 step38575/140100 loss=1.0495 acc=0.910 lr=3.64e-04 gnorm=0.81 159 smp/s
+ep21 step38600/140100 loss=0.8651 acc=0.840 lr=3.63e-04 gnorm=1.25 159 smp/s
+ep21 step38625/140100 loss=0.6547 acc=0.923 lr=3.63e-04 gnorm=0.73 159 smp/s
+ep21 step38650/140100 loss=0.7323 acc=0.916 lr=3.63e-04 gnorm=0.70 159 smp/s
+ep21 step38675/140100 loss=1.0012 acc=0.894 lr=3.62e-04 gnorm=0.63 159 smp/s
+ep21 step38700/140100 loss=0.7451 acc=0.891 lr=3.62e-04 gnorm=0.79 159 smp/s
+ep21 step38725/140100 loss=0.7000 acc=0.949 lr=3.62e-04 gnorm=0.99 159 smp/s
+ep21 step38750/140100 loss=0.8646 acc=0.944 lr=3.61e-04 gnorm=1.26 159 smp/s
+ep21 step38775/140100 loss=0.7920 acc=0.920 lr=3.61e-04 gnorm=0.67 159 smp/s
+ep21 step38800/140100 loss=0.5170 acc=0.958 lr=3.61e-04 gnorm=1.31 159 smp/s
+ep21 step38825/140100 loss=0.7067 acc=0.936 lr=3.60e-04 gnorm=0.96 159 smp/s
+ep21 step38850/140100 loss=1.0043 acc=0.938 lr=3.60e-04 gnorm=1.07 159 smp/s
+ep21 step38875/140100 loss=0.8651 acc=0.888 lr=3.60e-04 gnorm=0.86 159 smp/s
+ep21 step38900/140100 loss=0.7346 acc=0.948 lr=3.60e-04 gnorm=1.31 159 smp/s
+ep21 step38925/140100 loss=0.7549 acc=0.917 lr=3.59e-04 gnorm=0.68 159 smp/s
+ep21 step38950/140100 loss=0.9800 acc=0.902 lr=3.59e-04 gnorm=0.68 159 smp/s
+ep21 step38975/140100 loss=0.5757 acc=0.977 lr=3.59e-04 gnorm=1.17 159 smp/s
+ep21 step39000/140100 loss=0.9516 acc=0.918 lr=3.58e-04 gnorm=0.51 159 smp/s
+ep21 step39025/140100 loss=0.7324 acc=0.907 lr=3.58e-04 gnorm=1.39 159 smp/s
+ep21 step39050/140100 loss=0.6910 acc=0.962 lr=3.58e-04 gnorm=0.73 159 smp/s
+ep21 step39075/140100 loss=0.7987 acc=0.967 lr=3.57e-04 gnorm=0.94 159 smp/s
+ep21 step39100/140100 loss=0.9507 acc=0.853 lr=3.57e-04 gnorm=0.67 159 smp/s
+ep21 step39125/140100 loss=0.9882 acc=0.945 lr=3.57e-04 gnorm=2.44 159 smp/s
+ep21 step39150/140100 loss=0.7409 acc=0.892 lr=3.56e-04 gnorm=1.98 159 smp/s
+ep21 step39175/140100 loss=0.8057 acc=0.928 lr=3.56e-04 gnorm=0.66 159 smp/s
+ep21 step39200/140100 loss=0.7532 acc=0.951 lr=3.56e-04 gnorm=1.04 159 smp/s
+ep21 step39225/140100 loss=1.0658 acc=0.909 lr=3.55e-04 gnorm=1.41 159 smp/s
+ep22 step39250/140100 loss=0.6043 acc=0.966 lr=3.55e-04 gnorm=0.73 159 smp/s
+ep22 step39275/140100 loss=0.9055 acc=0.952 lr=3.55e-04 gnorm=2.16 159 smp/s
+ep22 step39300/140100 loss=0.5885 acc=0.944 lr=3.54e-04 gnorm=2.59 159 smp/s
+ep22 step39325/140100 loss=0.9209 acc=0.885 lr=3.54e-04 gnorm=0.73 159 smp/s
+ep22 step39350/140100 loss=1.0257 acc=0.904 lr=3.54e-04 gnorm=0.69 159 smp/s
+ep22 step39375/140100 loss=0.8477 acc=0.877 lr=3.54e-04 gnorm=1.33 159 smp/s
+ep22 step39400/140100 loss=0.7610 acc=0.895 lr=3.53e-04 gnorm=1.92 159 smp/s
+ep22 step39425/140100 loss=1.1371 acc=0.922 lr=3.53e-04 gnorm=1.70 159 smp/s
+ep22 step39450/140100 loss=0.8357 acc=0.972 lr=3.53e-04 gnorm=1.39 159 smp/s
+ep22 step39475/140100 loss=0.5055 acc=0.920 lr=3.52e-04 gnorm=0.51 159 smp/s
+ep22 step39500/140100 loss=0.6887 acc=0.936 lr=3.52e-04 gnorm=0.80 159 smp/s
+ep22 step39525/140100 loss=0.6238 acc=0.971 lr=3.52e-04 gnorm=0.42 159 smp/s
+ep22 step39550/140100 loss=0.8346 acc=0.857 lr=3.51e-04 gnorm=0.97 159 smp/s
+ep22 step39575/140100 loss=0.9199 acc=0.908 lr=3.51e-04 gnorm=1.69 159 smp/s
+ep22 step39600/140100 loss=0.7193 acc=0.914 lr=3.51e-04 gnorm=0.88 159 smp/s
+ep22 step39625/140100 loss=0.8290 acc=0.897 lr=3.50e-04 gnorm=1.29 159 smp/s
+ep22 step39650/140100 loss=0.6622 acc=0.887 lr=3.50e-04 gnorm=0.94 159 smp/s
+ep22 step39675/140100 loss=0.8801 acc=0.925 lr=3.50e-04 gnorm=0.78 159 smp/s
+ep22 step39700/140100 loss=0.9803 acc=0.898 lr=3.49e-04 gnorm=0.83 159 smp/s
+ep22 step39725/140100 loss=0.6919 acc=0.959 lr=3.49e-04 gnorm=0.93 159 smp/s
+ep22 step39750/140100 loss=1.0639 acc=0.891 lr=3.49e-04 gnorm=0.63 159 smp/s
+ep22 step39775/140100 loss=0.6905 acc=0.910 lr=3.49e-04 gnorm=2.25 159 smp/s
+ep22 step39800/140100 loss=1.1256 acc=0.886 lr=3.48e-04 gnorm=0.75 159 smp/s
+ep22 step39825/140100 loss=0.8765 acc=0.893 lr=3.48e-04 gnorm=1.18 159 smp/s
+ep22 step39850/140100 loss=0.6315 acc=0.945 lr=3.48e-04 gnorm=0.71 159 smp/s
+ep22 step39875/140100 loss=0.8400 acc=0.875 lr=3.47e-04 gnorm=0.65 159 smp/s
+ep22 step39900/140100 loss=0.8503 acc=0.917 lr=3.47e-04 gnorm=0.91 159 smp/s
+ep22 step39925/140100 loss=0.8068 acc=0.950 lr=3.47e-04 gnorm=1.01 159 smp/s
+ep22 step39950/140100 loss=0.8789 acc=0.884 lr=3.46e-04 gnorm=1.94 159 smp/s
+ep22 step39975/140100 loss=0.8313 acc=0.950 lr=3.46e-04 gnorm=0.94 159 smp/s
+ep22 step40000/140100 loss=0.9084 acc=0.951 lr=3.46e-04 gnorm=1.70 159 smp/s
+[eval @ 40000] WER=0.999 CER=1.223 SER=1.000 loss=1.710 content_acc=0.121 fill_rate=0.621 entropy=1.902 distinct=72
+[eval @ 40000] iter32  WER=1.210 CER=0.852 SER=1.000 (mask-predict decode, n=200 clips)
+   Full: | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fill> <fil
+   Hyp : 
+   Ref : ಸಾಂಸ್ಕೃತಿಕ ನಗರಿ ಮೈಸೂರಿನಲ್ಲಿ ಕೊರೋನಾ ಸೋಂಕು ಹೆಚ್ಚುತ್ತಿರುವ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಇಂದಿನಿಂದ ಐದ
+DEBUG:urllib3.connectionpool:Resetting dropped connection: api.wandb.ai
+DEBUG:urllib3.connectionpool:https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 60
+ep22 step40025/140100 loss=0.9021 acc=0.889 lr=3.45e-04 gnorm=1.03 159 smp/s
+ep22 step40050/140100 loss=0.9917 acc=0.919 lr=3.45e-04 gnorm=1.15 159 smp/s
+ep22 step40075/140100 loss=0.9493 acc=0.933 lr=3.45e-04 gnorm=0.69 159 smp/s
+ep22 step40100/140100 loss=1.0172 acc=0.919 lr=3.45e-04 gnorm=1.47 159 smp/s
+ep22 step40125/140100 loss=0.8647 acc=0.934 lr=3.44e-04 gnorm=0.60 159 smp/s
+ep22 step40150/140100 loss=0.9595 acc=0.951 lr=3.44e-04 gnorm=0.65 159 smp/s
+ep22 step40175/140100 loss=0.7202 acc=0.889 lr=3.44e-04 gnorm=1.26 159 smp/s
+ep22 step40200/140100 loss=0.9578 acc=0.932 lr=3.43e-04 gnorm=1.31 159 smp/s
+ep22 step40225/140100 loss=0.8048 acc=0.944 lr=3.43e-04 gnorm=1.11 159 smp/s
+ep22 step40250/140100 loss=0.8286 acc=0.903 lr=3.43e-04 gnorm=0.66 159 smp/s
+ep22 step40275/140100 loss=0.8513 acc=0.934 lr=3.42e-04 gnorm=0.73 159 smp/s
+ep22 step40300/140100 loss=0.7858 acc=0.966 lr=3.42e-04 gnorm=1.65 159 smp/s
+ep22 step40325/140100 loss=1.0172 acc=0.928 lr=3.42e-04 gnorm=0.84 159 smp/s
+ep22 step40350/140100 loss=0.4480 acc=0.891 lr=3.42e-04 gnorm=0.88 159 smp/s
+ep22 step40375/140100 loss=0.9576 acc=0.927 lr=3.41e-04 gnorm=1.00 159 smp/s
+ep22 step40400/140100 loss=0.8468 acc=0.910 lr=3.41e-04 gnorm=1.50 159 smp/s
+ep22 step40425/140100 loss=0.9904 acc=0.892 lr=3.41e-04 gnorm=0.75 159 smp/s
+ep22 step40450/140100 loss=0.9399 acc=0.885 lr=3.40e-04 gnorm=1.61 159 smp/s
+ep22 step40475/140100 loss=1.0635 acc=0.921 lr=3.40e-04 gnorm=0.57 159 smp/s
+ep22 step40500/140100 loss=0.9172 acc=0.856 lr=3.40e-04 gnorm=0.58 159 smp/s
+ep22 step40525/140100 loss=1.0993 acc=0.840 lr=3.39e-04 gnorm=2.67 159 smp/s
+ep22 step40550/140100 loss=0.8425 acc=0.958 lr=3.39e-04 gnorm=1.26 159 smp/s
+ep22 step40575/140100 loss=0.7586 acc=0.919 lr=3.39e-04 gnorm=0.64 159 smp/s
+ep22 step40600/140100 loss=0.5977 acc=0.966 lr=3.39e-04 gnorm=1.61 159 smp/s
+ep22 step40625/140100 loss=0.9149 acc=0.872 lr=3.38e-04 gnorm=2.14 159 smp/s
+ep22 step40650/140100 loss=0.6200 acc=0.916 lr=3.38e-04 gnorm=0.61 159 smp/s
+ep22 step40675/140100 loss=0.8438 acc=0.909 lr=3.38e-04 gnorm=1.36 159 smp/s
+ep22 step40700/140100 loss=0.8628 acc=0.904 lr=3.37e-04 gnorm=0.98 159 smp/s
+ep22 step40725/140100 loss=0.8293 acc=0.917 lr=3.37e-04 gnorm=0.58 159 smp/s
+ep22 step40750/140100 loss=0.7305 acc=0.933 lr=3.37e-04 gnorm=0.89 159 smp/s
+ep22 step40775/140100 loss=0.8982 acc=0.938 lr=3.36e-04 gnorm=1.35 159 smp/s
+ep22 step40800/140100 loss=0.9778 acc=0.916 lr=3.36e-04 gnorm=1.37 159 smp/s
+ep22 step40825/140100 loss=0.7647 acc=0.909 lr=3.36e-04 gnorm=0.78 159 smp/s
+ep22 step40850/140100 loss=0.8693 acc=0.881 lr=3.36e-04 gnorm=0.81 159 smp/s
+ep22 step40875/140100 loss=0.6985 acc=0.922 lr=3.35e-04 gnorm=0.71 159 smp/s
+ep22 step40900/140100 loss=0.5944 acc=0.924 lr=3.35e-04 gnorm=0.71 159 smp/s
+ep22 step40925/140100 loss=0.7121 acc=0.945 lr=3.35e-04 gnorm=0.82 159 smp/s
+ep22 step40950/140100 loss=0.9770 acc=0.937 lr=3.34e-04 gnorm=1.05 159 smp/s
+ep22 step40975/140100 loss=0.8567 acc=0.888 lr=3.34e-04 gnorm=1.73 159 smp/s
+ep22 step41000/140100 loss=0.8383 acc=0.904 lr=3.34e-04 gnorm=1.55 159 smp/s
+ep22 step41025/140100 loss=0.7134 acc=0.899 lr=3.33e-04 gnorm=2.41 159 smp/s
+ep22 step41050/140100 loss=1.0422 acc=0.908 lr=3.33e-04 gnorm=1.49 159 smp/s
+ep22 step41075/140100 loss=0.8819 acc=0.920 lr=3.33e-04 gnorm=1.05 159 smp/s
+ep23 step41100/140100 loss=0.8006 acc=0.951 lr=3.33e-04 gnorm=0.83 159 smp/s
+ep23 step41125/140100 loss=0.9464 acc=0.964 lr=3.32e-04 gnorm=1.28 159 smp/s
+ep23 step41150/140100 loss=0.7331 acc=0.902 lr=3.32e-04 gnorm=0.93 159 smp/s
+ep23 step41175/140100 loss=0.7329 acc=0.899 lr=3.32e-04 gnorm=1.72 159 smp/s
+ep23 step41200/140100 loss=0.7410 acc=0.938 lr=3.31e-04 gnorm=2.33 159 smp/s
+ep23 step41225/140100 loss=0.7934 acc=0.912 lr=3.31e-04 gnorm=0.92 159 smp/s
+ep23 step41250/140100 loss=0.9376 acc=0.960 lr=3.31e-04 gnorm=1.38 159 smp/s
+ep23 step41275/140100 loss=0.7663 acc=0.895 lr=3.31e-04 gnorm=0.81 159 smp/s
+ep23 step41300/140100 loss=0.9586 acc=0.913 lr=3.30e-04 gnorm=1.53 159 smp/s
+ep23 step41325/140100 loss=1.0825 acc=0.881 lr=3.30e-04 gnorm=0.90 159 smp/s
+ep23 step41350/140100 loss=0.7134 acc=0.938 lr=3.30e-04 gnorm=1.21 159 smp/s
+ep23 step41375/140100 loss=0.7601 acc=0.937 lr=3.29e-04 gnorm=0.57 159 smp/s
+ep23 step41400/140100 loss=0.9356 acc=0.904 lr=3.29e-04 gnorm=0.56 159 smp/s
+ep23 step41425/140100 loss=0.7222 acc=0.924 lr=3.29e-04 gnorm=2.43 159 smp/s
+ep23 step41450/140100 loss=0.8995 acc=0.889 lr=3.28e-04 gnorm=0.71 159 smp/s
+ep23 step41475/140100 loss=0.9956 acc=0.921 lr=3.28e-04 gnorm=0.85 159 smp/s
+ep23 step41500/140100 loss=1.1115 acc=0.890 lr=3.28e-04 gnorm=2.25 159 smp/s
+ep23 step41525/140100 loss=0.8668 acc=0.892 lr=3.28e-04 gnorm=1.05 159 smp/s
+ep23 step41550/140100 loss=0.9425 acc=0.895 lr=3.27e-04 gnorm=0.56 159 smp/s
+ep23 step41575/140100 loss=0.5640 acc=0.931 lr=3.27e-04 gnorm=0.87 159 smp/s
