@@ -4,7 +4,7 @@ Non-autoregressive **A-CMLM** ASR head (the 8-self-attention-block + text-embedd
 recipe from `filler_asr`) on a **frozen data2vec-aqc (SPRING-INX)** encoder instead of frozen
 HuBERT-xlarge. The tap is taken **before the CTC head** — `Data2VecAQCEncoder` instantiates only
 the inner `data2vec_audio` body, so the CTC / AQC pretraining heads (`contr_proj`, `project_q`,
-`quantizer`, `_ema`) are physically absent.
+`quantizer`, `_ema`) are physically absent
 
 Everything downstream of the tap is **reused unchanged** from the verified filler_asr pipeline
 (span masking, ALiBi/PE, ADDITION text fusion, iterative decode, loss). Only the encoder and the
